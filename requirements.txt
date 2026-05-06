@@ -1,0 +1,4 @@
+reportlab>=4.0
+pymupdf>=1.23
+pytest>=8.0
+pypdf>=4.0
