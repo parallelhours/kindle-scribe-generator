@@ -42,6 +42,7 @@ Generated PDFs land in `output/` by default (git-ignored).
 | Key | Name | Pages | Description |
 |-----|------|-------|-------------|
 | `scorecard` | Baseball Scorecard | 6 (+1) | Full baseball scoring sheet — game header, summary, and four lineup pages; optional cover page |
+| `weekly-activities` | Weekly Planner | 7+ | Daily planner — one page per day with task sections, hourly schedule, and brain dump; configurable start day and page count |
 | `worklog` | Colorado MyUI Worklog | 3 | Colorado UI work-search activity log — 5 entries per page |
 
 ### Baseball Scorecard (`scorecard`)
@@ -71,6 +72,30 @@ python generate.py scorecard \
 ```
 
 The cover page renders as page 1 of the PDF and helps identify scorecards in Kindle's library. Values containing spaces must be quoted.
+
+### Weekly Planner (`weekly-activities`)
+
+One page per day, cycling from a configurable start day. Each page includes a task column (TOP 3, TO-DO, and PERSONAL sections with checkboxes), an hourly schedule (5 am–9 pm), and a free-form Brain Dump area with a Vibe Check mood strip at the bottom.
+
+| Page zone | Content |
+|-----------|---------|
+| Header | Day name bar |
+| Left column | TOP 3 (3 rows), TO-DO (6 rows), PERSONAL (4 rows) — all with checkboxes |
+| Right column | Hourly schedule, 5 am–9 pm (17 slots) |
+| Brain Dump | Free-form writing area + Vibe Check mood strip |
+
+```bash
+# Default — 7 days starting Monday
+python generate.py weekly-activities
+
+# Custom start day and length
+python generate.py weekly-activities --params first_day:Sunday days:14
+
+# Custom output path
+python generate.py weekly-activities --params first_day:Monday days:5 -o output/work-week.pdf
+```
+
+Parameters are prompted interactively if omitted.
 
 ### Colorado MyUI Worklog (`worklog`)
 
@@ -139,11 +164,16 @@ Template-specific helpers (column widths, custom drawing functions, etc.) belong
 │   ├── dimensions.py         # Kindle Scribe page dimensions
 │   └── style.py              # Shared visual constants
 ├── templates/
-│   └── scorecard/            # Baseball scorecard template
-│       ├── template.py       # METADATA + generate() + page drawing
-│       └── utils.py          # Column/row constants and draw helpers
+│   ├── scorecard/            # Baseball scorecard template
+│   │   ├── template.py       # METADATA + generate() + page drawing
+│   │   └── utils.py          # Column/row constants and draw helpers
+│   ├── weekly-activities/    # Daily planner template
+│   │   └── template.py       # METADATA + generate() + page drawing
+│   └── worklog/              # Colorado MyUI worklog template
+│       └── template.py       # METADATA + generate() + page drawing
 ├── output/                   # Generated PDFs (git-ignored)
 └── tests/
+    ├── conftest.py           # Shared pytest fixtures
     ├── test_pages.py         # Page-render and dimension tests
     └── test_utils.py         # Unit tests for drawing helpers
 ```
