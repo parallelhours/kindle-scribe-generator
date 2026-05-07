@@ -79,6 +79,13 @@ def main() -> None:
                             "Generate a cover page. Omit values for interactive prompts, "
                             "or pass key:value pairs e.g. --cover visitor:Mets home:Rockies"
                         ))
+    parser.add_argument(
+        "--params", nargs="*", metavar="key:value",
+        help=(
+            "Pass template parameters. Omit values for interactive prompts, "
+            "or pass key:value pairs e.g. --params first_day:Monday days:7"
+        ),
+    )
     args = parser.parse_args()
 
     templates = discover_templates()
@@ -138,8 +145,33 @@ def main() -> None:
             if val:
                 cover_meta[name] = val
 
+    # Resolve template-level params defined in METADATA["template_fields"]
+    params_meta = {}
+    template_fields = mod.METADATA.get("template_fields", [])
+    if template_fields:
+        provided = _parse_cover_tokens(args.params or [])
+        needs_prompt = [f for f in template_fields if f["name"] not in provided]
+        if needs_prompt:
+            print("\n  Template options:")
+        for field in template_fields:
+            name = field["name"]
+            if name in provided:
+                val = provided[name]
+            else:
+                default = field.get("default", "")
+                prompt = f"  {field['prompt']}"
+                if default:
+                    prompt += f" [{default}]"
+                prompt += ": "
+                try:
+                    val = input(prompt).strip() or default
+                except (EOFError, KeyboardInterrupt):
+                    val = default
+            if val:
+                params_meta[name] = val
+
     print(f"\n  Generating {mod.METADATA['name']} …")
-    mod.generate(output_path, **cover_meta)
+    mod.generate(output_path, **params_meta, **cover_meta)
 
     if cover_meta:
         try:

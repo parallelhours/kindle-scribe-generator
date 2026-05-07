@@ -1,6 +1,22 @@
-import pytest
+# Copyright (C) 2026 Paul Monday — GNU GPL v3 or later. See LICENSE.
 from unittest.mock import MagicMock
 from templates.scorecard import utils as U
+
+
+def test_resolve_start_monday(weekly_mod):
+    assert weekly_mod._resolve_start("Monday") == 0
+
+
+def test_resolve_start_sunday(weekly_mod):
+    assert weekly_mod._resolve_start("Sunday") == 6
+
+
+def test_resolve_start_unknown_falls_back_to_monday(weekly_mod):
+    assert weekly_mod._resolve_start("Blursday") == 0
+
+
+def test_resolve_start_case_insensitive(weekly_mod):
+    assert weekly_mod._resolve_start("wednesday") == 2
 
 
 def test_page_dimensions_in_points():

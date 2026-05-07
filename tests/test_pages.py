@@ -1,9 +1,21 @@
+# Copyright (C) 2026 Paul Monday — GNU GPL v3 or later. See LICENSE.
 import io
-import pytest
+import os
+import tempfile
 from reportlab.pdfgen import canvas as rl_canvas
 from pypdf import PdfReader
 from core import dimensions as D
 from templates.scorecard import template as T
+
+
+def test_weekly_activities_metadata(weekly_mod):
+    m = weekly_mod.METADATA
+    assert m["name"] == "Weekly Planner"
+    assert m["output"] == "weekly-activity-notebook.pdf"
+    assert m["pages"] == 7
+    assert "template_fields" in m
+    fields = {f["name"] for f in m["template_fields"]}
+    assert fields == {"first_day", "days"}
 
 
 def _canvas_to_reader(draw_fn):
@@ -118,3 +130,57 @@ def test_parse_cover_tokens_ignores_invalid():
     from generate import _parse_cover_tokens
     result = _parse_cover_tokens(["visitor:Mets", "notakeyvalue", "home:Rockies"])
     assert result == {"visitor": "Mets", "home": "Rockies"}
+
+
+def test_weekly_activities_default_render(weekly_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        weekly_mod.generate(path)
+        reader = PdfReader(path)
+        assert len(reader.pages) == 7
+        page = reader.pages[0]
+        assert abs(float(page.mediabox.width)  - 336.96) < 1.0
+        assert abs(float(page.mediabox.height) - 449.28) < 1.0
+    finally:
+        os.unlink(path)
+
+
+def test_weekly_activities_custom_params(weekly_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        weekly_mod.generate(path, first_day="Sunday", days="3")
+        assert len(PdfReader(path).pages) == 3
+    finally:
+        os.unlink(path)
+
+
+def test_weekly_activities_sunday_start(weekly_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        weekly_mod.generate(path, first_day="Sunday", days="7")
+        assert len(PdfReader(path).pages) == 7
+    finally:
+        os.unlink(path)
+
+
+def test_weekly_activities_more_than_7_days(weekly_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        weekly_mod.generate(path, days="14")
+        assert len(PdfReader(path).pages) == 14
+    finally:
+        os.unlink(path)
+
+
+def test_weekly_activities_unknown_first_day_falls_back_to_monday(weekly_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        weekly_mod.generate(path, first_day="Blursday", days="1")
+        assert len(PdfReader(path).pages) == 1
+    finally:
+        os.unlink(path)
