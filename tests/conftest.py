@@ -1,3 +1,4 @@
+# Copyright (C) 2026 Paul Monday — GNU GPL v3 or later. See LICENSE.
 import importlib.util
 from pathlib import Path
 import pytest

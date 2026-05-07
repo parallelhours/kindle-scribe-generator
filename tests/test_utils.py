@@ -1,3 +1,4 @@
+# Copyright (C) 2026 Paul Monday — GNU GPL v3 or later. See LICENSE.
 from unittest.mock import MagicMock
 from templates.scorecard import utils as U
 
