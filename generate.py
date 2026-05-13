@@ -118,32 +118,51 @@ def main() -> None:
     mod = templates[args.template]
     output_dir = ROOT / "output"
     output_dir.mkdir(exist_ok=True)
-    output_path = args.output or str(output_dir / mod.METADATA["output"])
+    default_path = str(output_dir / mod.METADATA["output"])
+    if args.output:
+        output_path = args.output
+    else:
+        try:
+            raw = input(f"  Output file [{default_path}]: ").strip()
+            output_path = raw if raw else default_path
+        except (EOFError, KeyboardInterrupt):
+            output_path = default_path
 
     # Collect cover metadata
     cover_meta = {}
     cover_fields = mod.METADATA.get("cover_fields", [])
-    if args.cover is not None and cover_fields:
-        provided = _parse_cover_tokens(args.cover)
-        needs_prompt = [f for f in cover_fields if f["name"] not in provided]
-        if needs_prompt:
-            print("\n  Cover page:")
-        for field in cover_fields:
-            name = field["name"]
-            if name in provided:
-                val = provided[name]
-            else:
-                default = field.get("default", "")
-                prompt = f"  {field['prompt']}"
-                if default:
-                    prompt += f" [{default}]"
-                prompt += ": "
-                try:
-                    val = input(prompt).strip() or default
-                except (EOFError, KeyboardInterrupt):
-                    val = default
-            if val:
-                cover_meta[name] = val
+    if cover_fields:
+        if args.cover is not None:
+            generate_cover = True
+            provided = _parse_cover_tokens(args.cover)
+        else:
+            try:
+                raw = input("  Include cover page? [y/N]: ").strip().lower()
+                generate_cover = raw in ("y", "yes")
+            except (EOFError, KeyboardInterrupt):
+                generate_cover = False
+            provided = {}
+
+        if generate_cover:
+            needs_prompt = [f for f in cover_fields if f["name"] not in provided]
+            if needs_prompt:
+                print("\n  Cover page:")
+            for field in cover_fields:
+                name = field["name"]
+                if name in provided:
+                    val = provided[name]
+                else:
+                    default = field.get("default", "")
+                    prompt = f"  {field['prompt']}"
+                    if default:
+                        prompt += f" [{default}]"
+                    prompt += ": "
+                    try:
+                        val = input(prompt).strip() or default
+                    except (EOFError, KeyboardInterrupt):
+                        val = default
+                if val:
+                    cover_meta[name] = val
 
     # Resolve template-level params defined in METADATA["template_fields"]
     params_meta = {}

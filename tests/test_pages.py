@@ -184,3 +184,142 @@ def test_weekly_activities_unknown_first_day_falls_back_to_monday(weekly_mod):
         assert len(PdfReader(path).pages) == 1
     finally:
         os.unlink(path)
+
+
+# ── Prompt Notebook tests ────────────────────────────────────────────────────
+
+
+def test_prompt_notebook_metadata(prompt_mod):
+    m = prompt_mod.METADATA
+    assert m["name"] == "Prompt Notebook"
+    assert m["output"] == "prompt-notebook.pdf"
+    assert m["pages"] == 5
+    assert "cover_fields" in m
+    assert "template_fields" in m
+    fields = {f["name"] for f in m["cover_fields"]}
+    assert fields == {"title", "date"}
+    fields = {f["name"] for f in m["template_fields"]}
+    assert fields == {"count", "layout", "framework"}
+
+
+def test_prompt_notebook_default_generate(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path)
+        reader = PdfReader(path)
+        assert len(reader.pages) == 5
+        for page in reader.pages:
+            assert abs(float(page.mediabox.width)  - D.PAGE_W) < 1.0
+            assert abs(float(page.mediabox.height) - D.PAGE_H) < 1.0
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_with_cover(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path, title="My Book", date="2026-05-01")
+        reader = PdfReader(path)
+        assert len(reader.pages) == 6  # +1 for cover
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_compact_layout(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path, layout="compact")
+        reader = PdfReader(path)
+        assert len(reader.pages) == 2  # 1 overview + 1 prompt
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_expanded_layout(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path, layout="expanded")
+        reader = PdfReader(path)
+        assert len(reader.pages) == 5  # 1 overview + 4 expanded
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_multiple_prompts_compact(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path, count="3", layout="compact")
+        reader = PdfReader(path)
+        assert len(reader.pages) == 4  # 1 overview + 3 prompts
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_multiple_prompts_expanded(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path, count="2", layout="expanded")
+        reader = PdfReader(path)
+        assert len(reader.pages) == 9  # 1 overview + 2 * 4 pages
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_prompt_framework_compact(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path, framework="prompt", layout="compact")
+        reader = PdfReader(path)
+        assert len(reader.pages) == 2  # 1 overview + 1 prompt
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_prompt_framework_expanded(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path, framework="prompt", layout="expanded")
+        reader = PdfReader(path)
+        assert len(reader.pages) == 4  # 1 overview + 3 expanded (6/2)
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_with_cover_and_custom_params(prompt_mod):
+    with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as f:
+        path = f.name
+    try:
+        prompt_mod.generate(path, title="My Book", date="2026-05-01",
+                            count="2", layout="compact")
+        reader = PdfReader(path)
+        assert len(reader.pages) == 4  # cover + overview + 2 prompts
+    finally:
+        os.unlink(path)
+
+
+def test_prompt_notebook_draw_cover(prompt_mod):
+    buf = io.BytesIO()
+    c = rl_canvas.Canvas(buf, pagesize=(D.PAGE_W, D.PAGE_H))
+    prompt_mod.draw_cover(c, title="Test Notebook", date="2026-05-13")
+    c.showPage()
+    c.save()
+    buf.seek(0)
+    assert len(PdfReader(buf).pages) == 1
+
+
+def test_prompt_notebook_draw_cover_empty(prompt_mod):
+    buf = io.BytesIO()
+    c = rl_canvas.Canvas(buf, pagesize=(D.PAGE_W, D.PAGE_H))
+    prompt_mod.draw_cover(c)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+    assert len(PdfReader(buf).pages) == 1
