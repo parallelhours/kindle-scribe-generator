@@ -44,6 +44,7 @@ Generated PDFs land in `output/` by default (git-ignored).
 | `scorecard` | Baseball Scorecard | 6 (+1) | Full baseball scoring sheet — game header, summary, and four lineup pages; optional cover page |
 | `weekly-activities` | Weekly Planner | 7+ | Daily planner — one page per day with task sections, hourly schedule, and brain dump; configurable start day and page count |
 | `worklog` | Colorado MyUI Worklog | 3 | Colorado UI work-search activity log — 5 entries per page |
+| `prompt-notebook` | Prompt Notebook | 5+ | Structured prompt writing notebook with CO-STAR+ or P.R.O.M.P.T. framework; configurable prompt count, compact/expanded layout |
 
 ### Baseball Scorecard (`scorecard`)
 
@@ -117,6 +118,47 @@ python generate.py worklog
 python generate.py worklog -o output/2026-w19-worklog.pdf
 ```
 
+### Prompt Notebook (`prompt-notebook`)
+
+A configurable notebook for writing structured prompts. Choose from two frameworks and two layouts.
+
+**Frameworks:**
+
+| Framework | Components |
+|-----------|------------|
+| **CO-STAR+** | Context, Objective, Style, Tone, Audience, Response, Examples |
+| **P.R.O.M.P.T.** | Persona, Request, Outline, Material, Preference, Test |
+
+**Layouts:**
+
+| Layout | Description |
+|--------|-------------|
+| **Compact** | Header fields + all framework components on a single page per prompt |
+| **Expanded** (default) | Header on first page, then 2 components per page with generous writing space (~17 ruled lines each) |
+
+The first page is always a framework overview reference. Each page gets a footer (`Page N — Overview` / `Page N — Prompt M`).
+
+```bash
+# Default: 1 prompt, expanded, CO-STAR+
+python generate.py prompt-notebook
+
+# 3 prompts, compact, CO-STAR+
+python generate.py prompt-notebook --params count:3 layout:compact
+
+# 2 prompts, expanded, P.R.O.M.P.T.
+python generate.py prompt-notebook --params count:2 framework:prompt
+
+# With cover page
+python generate.py prompt-notebook --cover \
+  --params count:2 layout:expanded framework:co-star
+
+# Fully specified
+python generate.py prompt-notebook \
+  --cover title:"My Prompt Book" date:2026-05-13 \
+  --params count:3 layout:compact framework:prompt \
+  -o output/my-prompts.pdf
+```
+
 ## Adding a new template
 
 1. **Create a subdirectory** under `templates/`:
@@ -169,7 +211,9 @@ Template-specific helpers (column widths, custom drawing functions, etc.) belong
 │   │   └── utils.py          # Column/row constants and draw helpers
 │   ├── weekly-activities/    # Daily planner template
 │   │   └── template.py       # METADATA + generate() + page drawing
-│   └── worklog/              # Colorado MyUI worklog template
+│   ├── worklog/              # Colorado MyUI worklog template
+│   │   └── template.py       # METADATA + generate() + page drawing
+│   └── prompt-notebook/      # Prompt notebook template
 │       └── template.py       # METADATA + generate() + page drawing
 ├── output/                   # Generated PDFs (git-ignored)
 └── tests/
