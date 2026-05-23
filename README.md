@@ -41,10 +41,65 @@ Generated PDFs land in `output/` by default (git-ignored).
 
 | Key | Name | Pages | Description |
 |-----|------|-------|-------------|
+| `crossword` | Cruza y Aprende | 1+2N | Spanish vocabulary crossword puzzles — cover page plus puzzle/solution pairs; difficulty controls grid size, vocabulary depth, and word count |
 | `scorecard` | Baseball Scorecard | 6 (+1) | Full baseball scoring sheet — game header, summary, and four lineup pages; optional cover page |
 | `weekly-activities` | Weekly Planner | 7+ | Daily planner — one page per day with task sections, hourly schedule, and brain dump; configurable start day and page count |
 | `worklog` | Colorado MyUI Worklog | 3 | Colorado UI work-search activity log — 5 entries per page |
 | `prompt-notebook` | Prompt Notebook | 5+ | Structured prompt writing notebook with CO-STAR+ or P.R.O.M.P.T. framework; configurable prompt count, compact/expanded layout |
+
+### Cruza y Aprende — Spanish Crossword (`crossword`)
+
+A Spanish vocabulary crossword puzzle notebook. Each notebook has a cover page followed by N puzzle pairs (puzzle page + solution page). Vocabulary is drawn from a curated 726-entry word list built from LinkedIn Learning Spanish Parts 1–4.
+
+**Difficulty** controls grid size, word count, and vocabulary depth simultaneously:
+
+| Difficulty | Grid | Words | Vocabulary |
+|------------|------|-------|------------|
+| Easy | 9×9 | 8 | Words, phrases, infinitives, present tense |
+| Medium | 11×11 | 10 | Easy + preterite + imperfect |
+| Hard | 15×15 | 15 | Medium + future + conditional + subjunctive + imperative |
+
+```bash
+# Default: 3 easy puzzles (9×9, 8 words each)
+python generate.py crossword
+
+# 5 hard puzzles (15×15, 15 words each)
+python generate.py crossword --params difficulty:hard count:5
+
+# Custom output path
+python generate.py crossword --params difficulty:medium count:10 -o output/spanish-practice.pdf
+```
+
+Parameters are prompted interactively if omitted.
+
+#### Updating the vocabulary list
+
+The vocabulary is stored in `templates/crossword/vocabulary.json` — a flat list of words, phrases, and verbs committed to the repo. You can extend it in three ways:
+
+**By hand:** Add entries directly to `vocabulary.json` following the schema. Set `"source": "added-by-user"`. Minimum fields:
+
+```json
+{ "id": "unique-id", "entry": "WORD", "type": "word", "definition": "english meaning",
+  "tags": [], "source": "added-by-user" }
+```
+
+Verb entries require a `"conjugations"` object with all 7 tenses (`present`, `preterite`, `imperfect`, `future`, `conditional`, `subjunctive`, `imperative`), each mapping the 6 subjects (`yo`, `tú`, `él`, `nosotros`, `vosotros`, `ellos`) plus `usted`/`ustedes` for imperative.
+
+**From an index file:** If you have an `index.json` source file (same format as the LinkedIn Learning export), re-derive `vocabulary.json` with:
+
+```bash
+python templates/crossword/prepare_vocab.py \
+  --source /path/to/index.json \
+  --out templates/crossword/vocabulary.json
+```
+
+**Validate any time:**
+
+```bash
+python templates/crossword/prepare_vocab.py --validate
+```
+
+This checks schema validity, flags duplicate entries, and reports entries shorter than 3 characters (which are skipped during puzzle generation).
 
 ### Baseball Scorecard (`scorecard`)
 
@@ -206,6 +261,14 @@ Template-specific helpers (column widths, custom drawing functions, etc.) belong
 │   ├── dimensions.py         # Kindle Scribe page dimensions
 │   └── style.py              # Shared visual constants
 ├── templates/
+│   ├── crossword/            # Cruza y Aprende Spanish crossword template
+│   │   ├── template.py       # METADATA + generate() + draw_cover()
+│   │   ├── generator.py      # Word selection + backtracking grid placer
+│   │   ├── clues.py          # Difficulty-gated candidate pool + clue strings
+│   │   ├── conjugator.py     # Regular rules + irregular verb tables (47 verbs)
+│   │   ├── renderer.py       # ReportLab: cover, puzzle page, solution page
+│   │   ├── prepare_vocab.py  # Build/validate vocabulary.json from source
+│   │   └── vocabulary.json   # 726-entry curated word list (committed)
 │   ├── scorecard/            # Baseball scorecard template
 │   │   ├── template.py       # METADATA + generate() + page drawing
 │   │   └── utils.py          # Column/row constants and draw helpers

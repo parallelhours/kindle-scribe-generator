@@ -60,6 +60,23 @@ Template-specific helpers (column widths, custom drawing functions, domain const
 
 ## Current templates
 
+### `crossword` — Cruza y Aprende Spanish Crossword (1 + 2N pages)
+
+Difficulty drives grid size, word count, and vocabulary depth:
+
+| Difficulty | Grid | Words | Tenses |
+|------------|------|-------|--------|
+| easy | 9×9 | 8 | present only |
+| medium | 11×11 | 10 | + preterite + imperfect |
+| hard | 15×15 | 15 | + future + conditional + subjunctive + imperative |
+
+Key files:
+- `templates/crossword/template.py` — `METADATA` + `generate()` + `draw_cover()`; `_DIFFICULTY_CONFIG` maps difficulty → grid size/target/label
+- `templates/crossword/generator.py` — backtracking crossword placer; `_MAX_CALLS = 200_000` budget
+- `templates/crossword/clues.py` — builds candidate pool from vocabulary filtered by difficulty tenses
+- `templates/crossword/renderer.py` — cover, puzzle page (grid + clues), solution page; cell size is computed dynamically from grid size
+- `templates/crossword/vocabulary.json` — curated 726-entry word list
+
 ### `scorecard` — Baseball Scorecard (6 pages)
 
 | Page | Content |
