@@ -42,6 +42,7 @@ Generated PDFs land in `output/` by default (git-ignored).
 | Key | Name | Pages | Description |
 |-----|------|-------|-------------|
 | `crossword` | Cruza y Aprende | 1+2N | Spanish vocabulary crossword puzzles — cover page plus puzzle/solution pairs; difficulty controls grid size, vocabulary depth, and word count |
+| `sudoku` | Sudoku | 1+2N | Sudoku puzzle notebook — cover page plus puzzle/solution pairs at four difficulty levels (easy/medium/hard/expert) |
 | `scorecard` | Baseball Scorecard | 6 (+1) | Full baseball scoring sheet — game header, summary, and four lineup pages; optional cover page |
 | `weekly-activities` | Weekly Planner | 7+ | Daily planner — one page per day with task sections, hourly schedule, and brain dump; configurable start day and page count |
 | `worklog` | Colorado MyUI Worklog | 3 | Colorado UI work-search activity log — 5 entries per page |
@@ -100,6 +101,32 @@ python templates/crossword/prepare_vocab.py --validate
 ```
 
 This checks schema validity, flags duplicate entries, and reports entries shorter than 3 characters (which are skipped during puzzle generation).
+
+### Sudoku (`sudoku`)
+
+A Sudoku puzzle notebook. Each notebook has a cover page followed by N puzzle pairs (puzzle page + solution page). Every puzzle is guaranteed to have exactly one solution.
+
+**Difficulty** controls how many digits are pre-filled:
+
+| Difficulty | Givens | Feel |
+|------------|--------|------|
+| Easy | ~46 | Many filled; straightforward logic |
+| Medium | ~36 | Requires elimination chains |
+| Hard | ~28 | Needs advanced techniques |
+| Expert | ~22 | Near-minimum; very sparse |
+
+```bash
+# Default: 3 easy puzzles
+python generate.py sudoku
+
+# 5 hard puzzles
+python generate.py sudoku --params difficulty:hard count:5
+
+# Custom output path
+python generate.py sudoku --params difficulty:expert count:10 -o output/expert-sudoku.pdf
+```
+
+Parameters are prompted interactively if omitted.
 
 ### Baseball Scorecard (`scorecard`)
 

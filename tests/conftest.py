@@ -32,3 +32,13 @@ def weekly_mod():
 @pytest.fixture
 def prompt_mod():
     return _load_prompt_notebook()
+
+
+def _load_sudoku():
+    import importlib
+    return importlib.import_module("templates.sudoku.template")
+
+
+@pytest.fixture
+def sudoku_mod():
+    return _load_sudoku()
