@@ -148,6 +148,7 @@ def main():
     parser = argparse.ArgumentParser(description="Prepare vocabulary.json for Cruza y Aprende")
     parser.add_argument("--source", help="Path to index.json")
     parser.add_argument("--out", default=str(_VOCAB_PATH), help="Output path")
+    parser.add_argument("--existing", default=str(_VOCAB_PATH), help="Path to existing vocabulary.json to preserve user-added entries from")
     parser.add_argument("--validate", action="store_true", help="Validate existing vocabulary.json")
     args = parser.parse_args()
 
@@ -165,7 +166,25 @@ def main():
     if not args.source:
         parser.error("--source is required unless --validate is used")
 
+    # Preserve any manually added entries before regenerating
+    preserved = []
+    existing_path = Path(args.existing)
+    if existing_path.exists():
+        with open(existing_path, encoding="utf-8") as f:
+            existing = json.load(f)
+        preserved = [e for e in existing if e.get("source") == "added-by-user"]
+
     entries = squash(args.source, args.out)
+
+    # Merge preserved entries, skipping any whose entry string already appears
+    existing_entry_strings = {e["entry"] for e in entries}
+    merged_count = 0
+    for e in preserved:
+        if e["entry"] not in existing_entry_strings:
+            entries.append(e)
+            existing_entry_strings.add(e["entry"])
+            merged_count += 1
+
     errors = validate_vocab(entries)
     if errors:
         for e in errors:
@@ -173,7 +192,7 @@ def main():
 
     with open(args.out, "w", encoding="utf-8") as f:
         json.dump(entries, f, ensure_ascii=False, indent=2)
-    print(f"Wrote {len(entries)} entries to {args.out}")
+    print(f"Wrote {len(entries)} entries to {args.out} ({merged_count} user-added preserved)")
 
 
 if __name__ == "__main__":

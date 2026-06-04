@@ -12461,6 +12461,1806 @@
     "source": "linkedin-learning"
   },
   {
+    "id": "ese",
+    "entry": "ese",
+    "type": "word",
+    "definition": "that [masculine, singular]",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "aquel",
+    "entry": "aquel",
+    "type": "word",
+    "definition": "that over there [masculine, singular]",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "esto",
+    "entry": "esto",
+    "type": "word",
+    "definition": "this",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "eso",
+    "entry": "eso",
+    "type": "word",
+    "definition": "that",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "demostrativo",
+    "entry": "demostrativo",
+    "type": "word",
+    "definition": "demonstrative",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "afirmativo",
+    "entry": "afirmativo",
+    "type": "word",
+    "definition": "affirmative",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "negativo",
+    "entry": "negativo",
+    "type": "word",
+    "definition": "negative",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-mundo",
+    "entry": "mundo",
+    "type": "phrase",
+    "full_phrase": "el mundo",
+    "clue_template": "el ___: world",
+    "definition": "world",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-agua-mineral",
+    "entry": "mineral",
+    "type": "phrase",
+    "full_phrase": "el agua mineral",
+    "clue_template": "el agua ___: mineral water [feminine]",
+    "definition": "mineral water [feminine]",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-vino-blanco",
+    "entry": "blanco",
+    "type": "phrase",
+    "full_phrase": "el vino blanco",
+    "clue_template": "el vino ___: white wine",
+    "definition": "white wine",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-vino-tinto",
+    "entry": "tinto",
+    "type": "phrase",
+    "full_phrase": "el vino tinto",
+    "clue_template": "el vino ___: red wine",
+    "definition": "red wine",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-aperitivo",
+    "entry": "aperitivo",
+    "type": "phrase",
+    "full_phrase": "el aperitivo",
+    "clue_template": "el ___: appetizer",
+    "definition": "appetizer",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-lechuga",
+    "entry": "lechuga",
+    "type": "phrase",
+    "full_phrase": "la lechuga",
+    "clue_template": "la ___: lettuce",
+    "definition": "lettuce",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-tomate",
+    "entry": "tomate",
+    "type": "phrase",
+    "full_phrase": "el tomate",
+    "clue_template": "el ___: tomato",
+    "definition": "tomato",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "las-verduras",
+    "entry": "verduras",
+    "type": "phrase",
+    "full_phrase": "las verduras",
+    "clue_template": "las ___: vegetables",
+    "definition": "vegetables",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-ensalada",
+    "entry": "ensalada",
+    "type": "phrase",
+    "full_phrase": "la ensalada",
+    "clue_template": "la ___: salad",
+    "definition": "salad",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-ma-z",
+    "entry": "maíz",
+    "type": "phrase",
+    "full_phrase": "el maíz",
+    "clue_template": "el ___: corn",
+    "definition": "corn",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-guisantes",
+    "entry": "guisantes",
+    "type": "phrase",
+    "full_phrase": "los guisantes",
+    "clue_template": "los ___: peas",
+    "definition": "peas",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "algo",
+    "entry": "algo",
+    "type": "word",
+    "definition": "something",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "alguien",
+    "entry": "alguien",
+    "type": "word",
+    "definition": "someone",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nada",
+    "entry": "nada",
+    "type": "word",
+    "definition": "nothing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nadie",
+    "entry": "nadie",
+    "type": "word",
+    "definition": "no one",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nunca",
+    "entry": "nunca",
+    "type": "word",
+    "definition": "never",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "aqu-",
+    "entry": "aquí",
+    "type": "word",
+    "definition": "here",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "all-",
+    "entry": "allí",
+    "type": "word",
+    "definition": "there",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "all-",
+    "entry": "allá",
+    "type": "word",
+    "definition": "over there",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "aquello",
+    "entry": "aquello",
+    "type": "word",
+    "definition": "that",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "t-pico",
+    "entry": "típico",
+    "type": "word",
+    "definition": "typical",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "-til",
+    "entry": "útil",
+    "type": "word",
+    "definition": "useful",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-regi-n",
+    "entry": "región",
+    "type": "phrase",
+    "full_phrase": "la región",
+    "clue_template": "la ___: region",
+    "definition": "region",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "las-espinacas",
+    "entry": "espinacas",
+    "type": "phrase",
+    "full_phrase": "las espinacas",
+    "clue_template": "las ___: spinach",
+    "definition": "spinach",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pollo",
+    "entry": "pollo",
+    "type": "phrase",
+    "full_phrase": "el pollo",
+    "clue_template": "el ___: chicken",
+    "definition": "chicken",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pescado",
+    "entry": "pescado",
+    "type": "phrase",
+    "full_phrase": "el pescado",
+    "clue_template": "el ___: fish",
+    "definition": "fish",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-carne",
+    "entry": "carne",
+    "type": "phrase",
+    "full_phrase": "la carne",
+    "clue_template": "la ___: meat",
+    "definition": "meat",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-bistec",
+    "entry": "bistec",
+    "type": "phrase",
+    "full_phrase": "el bistec",
+    "clue_template": "el ___: steak",
+    "definition": "steak",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pastel",
+    "entry": "pastel",
+    "type": "phrase",
+    "full_phrase": "el pastel",
+    "clue_template": "el ___: cake",
+    "definition": "cake",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-helado",
+    "entry": "helado",
+    "type": "phrase",
+    "full_phrase": "el helado",
+    "clue_template": "el ___: ice cream",
+    "definition": "ice cream",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-carta",
+    "entry": "carta",
+    "type": "phrase",
+    "full_phrase": "la carta",
+    "clue_template": "la ___: menu",
+    "definition": "menu",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-men-",
+    "entry": "menú",
+    "type": "phrase",
+    "full_phrase": "el menú",
+    "clue_template": "el ___: menu",
+    "definition": "menu",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "tambi-n",
+    "entry": "también",
+    "type": "word",
+    "definition": "also",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "o-o",
+    "entry": "o…o",
+    "type": "word",
+    "definition": "either…or",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "tampoco",
+    "entry": "tampoco",
+    "type": "word",
+    "definition": "neither",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "ni-ni",
+    "entry": "ni…ni",
+    "type": "word",
+    "definition": "neither…nor",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "favorito",
+    "entry": "favorito",
+    "type": "word",
+    "definition": "favorite",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "diferente",
+    "entry": "diferente",
+    "type": "word",
+    "definition": "different",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-inter-s",
+    "entry": "interés",
+    "type": "phrase",
+    "full_phrase": "el interés",
+    "clue_template": "el ___: interest",
+    "definition": "interest",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-deseo",
+    "entry": "deseo",
+    "type": "phrase",
+    "full_phrase": "el deseo",
+    "clue_template": "el ___: desire",
+    "definition": "desire",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-bandera",
+    "entry": "bandera",
+    "type": "phrase",
+    "full_phrase": "la bandera",
+    "clue_template": "la ___: flag",
+    "definition": "flag",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-perro",
+    "entry": "perro",
+    "type": "phrase",
+    "full_phrase": "el perro",
+    "clue_template": "el ___: dog",
+    "definition": "dog",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "rojo",
+    "entry": "rojo",
+    "type": "word",
+    "definition": "red",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "anaranjado",
+    "entry": "anaranjado",
+    "type": "word",
+    "definition": "orange",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "amarillo",
+    "entry": "amarillo",
+    "type": "word",
+    "definition": "yellow",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "verde",
+    "entry": "verde",
+    "type": "word",
+    "definition": "green",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "azul",
+    "entry": "azul",
+    "type": "word",
+    "definition": "blue",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "morado",
+    "entry": "morado",
+    "type": "word",
+    "definition": "purple",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-ropa",
+    "entry": "ropa",
+    "type": "phrase",
+    "full_phrase": "la ropa",
+    "clue_template": "la ___: clothing",
+    "definition": "clothing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-camisa",
+    "entry": "camisa",
+    "type": "phrase",
+    "full_phrase": "la camisa",
+    "clue_template": "la ___: shirt",
+    "definition": "shirt",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-saco",
+    "entry": "saco",
+    "type": "phrase",
+    "full_phrase": "el saco",
+    "clue_template": "el ___: suit jacket",
+    "definition": "suit jacket",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-corbata",
+    "entry": "corbata",
+    "type": "phrase",
+    "full_phrase": "la corbata",
+    "clue_template": "la ___: tie",
+    "definition": "tie",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-cintur-n",
+    "entry": "cinturón",
+    "type": "phrase",
+    "full_phrase": "el cinturón",
+    "clue_template": "el ___: belt",
+    "definition": "belt",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-pantalones",
+    "entry": "pantalones",
+    "type": "phrase",
+    "full_phrase": "los pantalones",
+    "clue_template": "los ___: pants",
+    "definition": "pants",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-traje",
+    "entry": "traje",
+    "type": "phrase",
+    "full_phrase": "el traje",
+    "clue_template": "el ___: suit",
+    "definition": "suit",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-calcetines",
+    "entry": "calcetines",
+    "type": "phrase",
+    "full_phrase": "los calcetines",
+    "clue_template": "los ___: socks",
+    "definition": "socks",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-zapatos",
+    "entry": "zapatos",
+    "type": "phrase",
+    "full_phrase": "los zapatos",
+    "clue_template": "los ___: shoes",
+    "definition": "shoes",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-sombrero",
+    "entry": "sombrero",
+    "type": "phrase",
+    "full_phrase": "el sombrero",
+    "clue_template": "el ___: hat",
+    "definition": "hat",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-gorra",
+    "entry": "gorra",
+    "type": "phrase",
+    "full_phrase": "la gorra",
+    "clue_template": "la ___: cap",
+    "definition": "cap",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-camiseta",
+    "entry": "camiseta",
+    "type": "phrase",
+    "full_phrase": "la camiseta",
+    "clue_template": "la ___: T-shirt",
+    "definition": "T-shirt",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "otra-vez",
+    "entry": "otra",
+    "type": "phrase",
+    "full_phrase": "otra vez",
+    "clue_template": "___ vez: again",
+    "definition": "again",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "alguno",
+    "entry": "alguno",
+    "type": "word",
+    "definition": "any, one",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "algunos",
+    "entry": "algunos",
+    "type": "word",
+    "definition": "some",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "ninguno",
+    "entry": "ninguno",
+    "type": "word",
+    "definition": "none, not any",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-elefante",
+    "entry": "elefante",
+    "type": "phrase",
+    "full_phrase": "el elefante",
+    "clue_template": "el ___: elephant",
+    "definition": "elephant",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-sol",
+    "entry": "sol",
+    "type": "phrase",
+    "full_phrase": "el sol",
+    "clue_template": "el ___: sun",
+    "definition": "sun",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-cielo",
+    "entry": "cielo",
+    "type": "phrase",
+    "full_phrase": "el cielo",
+    "clue_template": "el ___: sky",
+    "definition": "sky",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-color",
+    "entry": "color",
+    "type": "phrase",
+    "full_phrase": "el color",
+    "clue_template": "el ___: color",
+    "definition": "color",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "rosado",
+    "entry": "rosado",
+    "type": "word",
+    "definition": "pink",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "negro",
+    "entry": "negro",
+    "type": "word",
+    "definition": "black",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "marr-n",
+    "entry": "marrón",
+    "type": "word",
+    "definition": "brown",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "gris",
+    "entry": "gris",
+    "type": "word",
+    "definition": "gray",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-su-ter",
+    "entry": "suéter",
+    "type": "phrase",
+    "full_phrase": "el suéter",
+    "clue_template": "el ___: sweater",
+    "definition": "sweater",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-chaqueta",
+    "entry": "chaqueta",
+    "type": "phrase",
+    "full_phrase": "la chaqueta",
+    "clue_template": "la ___: jacket",
+    "definition": "jacket",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-abrigo",
+    "entry": "abrigo",
+    "type": "phrase",
+    "full_phrase": "el abrigo",
+    "clue_template": "el ___: coat",
+    "definition": "coat",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-blusa",
+    "entry": "blusa",
+    "type": "phrase",
+    "full_phrase": "la blusa",
+    "clue_template": "la ___: blouse",
+    "definition": "blouse",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-falda",
+    "entry": "falda",
+    "type": "phrase",
+    "full_phrase": "la falda",
+    "clue_template": "la ___: skirt",
+    "definition": "skirt",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-vestido",
+    "entry": "vestido",
+    "type": "phrase",
+    "full_phrase": "el vestido",
+    "clue_template": "el ___: dress",
+    "definition": "dress",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-ropa-interior",
+    "entry": "interior",
+    "type": "phrase",
+    "full_phrase": "la ropa interior",
+    "clue_template": "la ropa ___: underwear",
+    "definition": "underwear",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "las-medias",
+    "entry": "medias",
+    "type": "phrase",
+    "full_phrase": "las medias",
+    "clue_template": "las ___: stockings",
+    "definition": "stockings",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "las-botas",
+    "entry": "botas",
+    "type": "phrase",
+    "full_phrase": "las botas",
+    "clue_template": "las ___: boots",
+    "definition": "boots",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "las-sandalias",
+    "entry": "sandalias",
+    "type": "phrase",
+    "full_phrase": "las sandalias",
+    "clue_template": "las ___: sandals",
+    "definition": "sandals",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-prenda",
+    "entry": "prenda",
+    "type": "phrase",
+    "full_phrase": "la prenda",
+    "clue_template": "la ___: item of clothing",
+    "definition": "item of clothing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pijama",
+    "entry": "pijama",
+    "type": "phrase",
+    "full_phrase": "el pijama",
+    "clue_template": "el ___: pajamas",
+    "definition": "pajamas",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-jeans",
+    "entry": "jeans",
+    "type": "phrase",
+    "full_phrase": "los jeans",
+    "clue_template": "los ___: jeans",
+    "definition": "jeans",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-cartera",
+    "entry": "cartera",
+    "type": "phrase",
+    "full_phrase": "la cartera",
+    "clue_template": "la ___: wallet",
+    "definition": "wallet",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-bolsa",
+    "entry": "bolsa",
+    "type": "phrase",
+    "full_phrase": "la bolsa",
+    "clue_template": "la ___: purse",
+    "definition": "purse",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-lentes",
+    "entry": "lentes",
+    "type": "phrase",
+    "full_phrase": "los lentes",
+    "clue_template": "los ___: glasses",
+    "definition": "glasses",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-anillo",
+    "entry": "anillo",
+    "type": "phrase",
+    "full_phrase": "el anillo",
+    "clue_template": "el ___: ring",
+    "definition": "ring",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-algod-n",
+    "entry": "algodón",
+    "type": "phrase",
+    "full_phrase": "el algodón",
+    "clue_template": "el ___: cotton",
+    "definition": "cotton",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-seda",
+    "entry": "seda",
+    "type": "phrase",
+    "full_phrase": "la seda",
+    "clue_template": "la ___: silk",
+    "definition": "silk",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-lana",
+    "entry": "lana",
+    "type": "phrase",
+    "full_phrase": "la lana",
+    "clue_template": "la ___: wool",
+    "definition": "wool",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-cuero",
+    "entry": "cuero",
+    "type": "phrase",
+    "full_phrase": "el cuero",
+    "clue_template": "el ___: leather",
+    "definition": "leather",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-talla",
+    "entry": "talla",
+    "type": "phrase",
+    "full_phrase": "la talla",
+    "clue_template": "la ___: size",
+    "definition": "size",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "ir-de-compras",
+    "entry": "compras",
+    "type": "phrase",
+    "full_phrase": "ir de compras",
+    "clue_template": "ir de ___: to go shopping",
+    "definition": "to go shopping",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "caro",
+    "entry": "caro",
+    "type": "word",
+    "definition": "expensive",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "barato",
+    "entry": "barato",
+    "type": "word",
+    "definition": "inexpensive",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "expandir",
+    "entry": "expandir",
+    "type": "verb",
+    "definition": "to expand",
+    "conjugations": {
+      "present": {
+        "yo": "expando",
+        "tú": "expandes",
+        "él": "expande",
+        "nosotros": "expandimos",
+        "vosotros": "expandís",
+        "ellos": "expanden"
+      },
+      "preterite": {
+        "yo": "expandí",
+        "tú": "expandiste",
+        "él": "expandió",
+        "nosotros": "expandimos",
+        "vosotros": "expandisteis",
+        "ellos": "expandieron"
+      },
+      "imperfect": {
+        "yo": "expandía",
+        "tú": "expandías",
+        "él": "expandía",
+        "nosotros": "expandíamos",
+        "vosotros": "expandíais",
+        "ellos": "expandían"
+      },
+      "future": {
+        "yo": "expandiré",
+        "tú": "expandirás",
+        "él": "expandirá",
+        "nosotros": "expandiremos",
+        "vosotros": "expandiréis",
+        "ellos": "expandirán"
+      },
+      "conditional": {
+        "yo": "expandiría",
+        "tú": "expandirías",
+        "él": "expandiría",
+        "nosotros": "expandiríamos",
+        "vosotros": "expandiríais",
+        "ellos": "expandirían"
+      },
+      "subjunctive": {
+        "yo": "expanda",
+        "tú": "expandas",
+        "él": "expanda",
+        "nosotros": "expandamos",
+        "vosotros": "expandáis",
+        "ellos": "expandan"
+      },
+      "imperative": {
+        "tú": "expande",
+        "usted": "expanda",
+        "nosotros": "expandamos",
+        "vosotros": "expandid",
+        "ustedes": "expandan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "gustar",
+    "entry": "gustar",
+    "type": "verb",
+    "definition": "to be pleasing",
+    "conjugations": {
+      "present": {
+        "yo": "gusto",
+        "tú": "gustas",
+        "él": "gusta",
+        "nosotros": "gustamos",
+        "vosotros": "gustáis",
+        "ellos": "gustan"
+      },
+      "preterite": {
+        "yo": "gusté",
+        "tú": "gustaste",
+        "él": "gustó",
+        "nosotros": "gustamos",
+        "vosotros": "gustasteis",
+        "ellos": "gustaron"
+      },
+      "imperfect": {
+        "yo": "gustaba",
+        "tú": "gustabas",
+        "él": "gustaba",
+        "nosotros": "gustábamos",
+        "vosotros": "gustabais",
+        "ellos": "gustaban"
+      },
+      "future": {
+        "yo": "gustaré",
+        "tú": "gustarás",
+        "él": "gustará",
+        "nosotros": "gustaremos",
+        "vosotros": "gustaréis",
+        "ellos": "gustarán"
+      },
+      "conditional": {
+        "yo": "gustaría",
+        "tú": "gustarías",
+        "él": "gustaría",
+        "nosotros": "gustaríamos",
+        "vosotros": "gustaríais",
+        "ellos": "gustarían"
+      },
+      "subjunctive": {
+        "yo": "guste",
+        "tú": "gustes",
+        "él": "guste",
+        "nosotros": "gustemos",
+        "vosotros": "gustéis",
+        "ellos": "gusten"
+      },
+      "imperative": {
+        "tú": "gusta",
+        "usted": "guste",
+        "nosotros": "gustemos",
+        "vosotros": "gustad",
+        "ustedes": "gusten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "encantar",
+    "entry": "encantar",
+    "type": "verb",
+    "definition": "to be very pleasing",
+    "conjugations": {
+      "present": {
+        "yo": "encanto",
+        "tú": "encantas",
+        "él": "encanta",
+        "nosotros": "encantamos",
+        "vosotros": "encantáis",
+        "ellos": "encantan"
+      },
+      "preterite": {
+        "yo": "encanté",
+        "tú": "encantaste",
+        "él": "encantó",
+        "nosotros": "encantamos",
+        "vosotros": "encantasteis",
+        "ellos": "encantaron"
+      },
+      "imperfect": {
+        "yo": "encantaba",
+        "tú": "encantabas",
+        "él": "encantaba",
+        "nosotros": "encantábamos",
+        "vosotros": "encantabais",
+        "ellos": "encantaban"
+      },
+      "future": {
+        "yo": "encantaré",
+        "tú": "encantarás",
+        "él": "encantará",
+        "nosotros": "encantaremos",
+        "vosotros": "encantaréis",
+        "ellos": "encantarán"
+      },
+      "conditional": {
+        "yo": "encantaría",
+        "tú": "encantarías",
+        "él": "encantaría",
+        "nosotros": "encantaríamos",
+        "vosotros": "encantaríais",
+        "ellos": "encantarían"
+      },
+      "subjunctive": {
+        "yo": "encante",
+        "tú": "encantes",
+        "él": "encante",
+        "nosotros": "encantemos",
+        "vosotros": "encantéis",
+        "ellos": "encanten"
+      },
+      "imperative": {
+        "tú": "encanta",
+        "usted": "encante",
+        "nosotros": "encantemos",
+        "vosotros": "encantad",
+        "ustedes": "encanten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "les",
+    "entry": "les",
+    "type": "word",
+    "definition": "to them, to ustedes",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-impermeable",
+    "entry": "impermeable",
+    "type": "phrase",
+    "full_phrase": "el impermeable",
+    "clue_template": "el ___: raincoat",
+    "definition": "raincoat",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-bufanda",
+    "entry": "bufanda",
+    "type": "phrase",
+    "full_phrase": "la bufanda",
+    "clue_template": "la ___: scarf",
+    "definition": "scarf",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-guantes",
+    "entry": "guantes",
+    "type": "phrase",
+    "full_phrase": "los guantes",
+    "clue_template": "los ___: gloves",
+    "definition": "gloves",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pa-uelo",
+    "entry": "pañuelo",
+    "type": "phrase",
+    "full_phrase": "el pañuelo",
+    "clue_template": "el ___: handkerchief",
+    "definition": "handkerchief",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-pulsera",
+    "entry": "pulsera",
+    "type": "phrase",
+    "full_phrase": "la pulsera",
+    "clue_template": "la ___: bracelet",
+    "definition": "bracelet",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-aretes",
+    "entry": "aretes",
+    "type": "phrase",
+    "full_phrase": "los aretes",
+    "clue_template": "los ___: earrings",
+    "definition": "earrings",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-collar",
+    "entry": "collar",
+    "type": "phrase",
+    "full_phrase": "el collar",
+    "clue_template": "el ___: necklace",
+    "definition": "necklace",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-joyer-a",
+    "entry": "joyería",
+    "type": "phrase",
+    "full_phrase": "la joyería",
+    "clue_template": "la ___: jewelry",
+    "definition": "jewelry",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-asiento",
+    "entry": "asiento",
+    "type": "phrase",
+    "full_phrase": "el asiento",
+    "clue_template": "el ___: seat",
+    "definition": "seat",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-oro",
+    "entry": "oro",
+    "type": "phrase",
+    "full_phrase": "el oro",
+    "clue_template": "el ___: gold",
+    "definition": "gold",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-plata",
+    "entry": "plata",
+    "type": "phrase",
+    "full_phrase": "la plata",
+    "clue_template": "la ___: silver",
+    "definition": "silver",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-tela",
+    "entry": "tela",
+    "type": "phrase",
+    "full_phrase": "la tela",
+    "clue_template": "la ___: fabric",
+    "definition": "fabric",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-material",
+    "entry": "material",
+    "type": "phrase",
+    "full_phrase": "el material",
+    "clue_template": "el ___: material",
+    "definition": "material",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "mediano",
+    "entry": "mediano",
+    "type": "word",
+    "definition": "medium",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "expresar",
+    "entry": "expresar",
+    "type": "verb",
+    "definition": "to express",
+    "conjugations": {
+      "present": {
+        "yo": "expreso",
+        "tú": "expresas",
+        "él": "expresa",
+        "nosotros": "expresamos",
+        "vosotros": "expresáis",
+        "ellos": "expresan"
+      },
+      "preterite": {
+        "yo": "expresé",
+        "tú": "expresaste",
+        "él": "expresó",
+        "nosotros": "expresamos",
+        "vosotros": "expresasteis",
+        "ellos": "expresaron"
+      },
+      "imperfect": {
+        "yo": "expresaba",
+        "tú": "expresabas",
+        "él": "expresaba",
+        "nosotros": "expresábamos",
+        "vosotros": "expresabais",
+        "ellos": "expresaban"
+      },
+      "future": {
+        "yo": "expresaré",
+        "tú": "expresarás",
+        "él": "expresará",
+        "nosotros": "expresaremos",
+        "vosotros": "expresaréis",
+        "ellos": "expresarán"
+      },
+      "conditional": {
+        "yo": "expresaría",
+        "tú": "expresarías",
+        "él": "expresaría",
+        "nosotros": "expresaríamos",
+        "vosotros": "expresaríais",
+        "ellos": "expresarían"
+      },
+      "subjunctive": {
+        "yo": "exprese",
+        "tú": "expreses",
+        "él": "exprese",
+        "nosotros": "expresemos",
+        "vosotros": "expreséis",
+        "ellos": "expresen"
+      },
+      "imperative": {
+        "tú": "expresa",
+        "usted": "exprese",
+        "nosotros": "expresemos",
+        "vosotros": "expresad",
+        "ustedes": "expresen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "interesar",
+    "entry": "interesar",
+    "type": "verb",
+    "definition": "to interest",
+    "conjugations": {
+      "present": {
+        "yo": "intereso",
+        "tú": "interesas",
+        "él": "interesa",
+        "nosotros": "interesamos",
+        "vosotros": "interesáis",
+        "ellos": "interesan"
+      },
+      "preterite": {
+        "yo": "interesé",
+        "tú": "interesaste",
+        "él": "interesó",
+        "nosotros": "interesamos",
+        "vosotros": "interesasteis",
+        "ellos": "interesaron"
+      },
+      "imperfect": {
+        "yo": "interesaba",
+        "tú": "interesabas",
+        "él": "interesaba",
+        "nosotros": "interesábamos",
+        "vosotros": "interesabais",
+        "ellos": "interesaban"
+      },
+      "future": {
+        "yo": "interesaré",
+        "tú": "interesarás",
+        "él": "interesará",
+        "nosotros": "interesaremos",
+        "vosotros": "interesaréis",
+        "ellos": "interesarán"
+      },
+      "conditional": {
+        "yo": "interesaría",
+        "tú": "interesarías",
+        "él": "interesaría",
+        "nosotros": "interesaríamos",
+        "vosotros": "interesaríais",
+        "ellos": "interesarían"
+      },
+      "subjunctive": {
+        "yo": "interese",
+        "tú": "intereses",
+        "él": "interese",
+        "nosotros": "interesemos",
+        "vosotros": "intereséis",
+        "ellos": "interesen"
+      },
+      "imperative": {
+        "tú": "interesa",
+        "usted": "interese",
+        "nosotros": "interesemos",
+        "vosotros": "interesad",
+        "ustedes": "interesen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "molestar",
+    "entry": "molestar",
+    "type": "verb",
+    "definition": "to bother",
+    "conjugations": {
+      "present": {
+        "yo": "molesto",
+        "tú": "molestas",
+        "él": "molesta",
+        "nosotros": "molestamos",
+        "vosotros": "molestáis",
+        "ellos": "molestan"
+      },
+      "preterite": {
+        "yo": "molesté",
+        "tú": "molestaste",
+        "él": "molestó",
+        "nosotros": "molestamos",
+        "vosotros": "molestasteis",
+        "ellos": "molestaron"
+      },
+      "imperfect": {
+        "yo": "molestaba",
+        "tú": "molestabas",
+        "él": "molestaba",
+        "nosotros": "molestábamos",
+        "vosotros": "molestabais",
+        "ellos": "molestaban"
+      },
+      "future": {
+        "yo": "molestaré",
+        "tú": "molestarás",
+        "él": "molestará",
+        "nosotros": "molestaremos",
+        "vosotros": "molestaréis",
+        "ellos": "molestarán"
+      },
+      "conditional": {
+        "yo": "molestaría",
+        "tú": "molestarías",
+        "él": "molestaría",
+        "nosotros": "molestaríamos",
+        "vosotros": "molestaríais",
+        "ellos": "molestarían"
+      },
+      "subjunctive": {
+        "yo": "moleste",
+        "tú": "molestes",
+        "él": "moleste",
+        "nosotros": "molestemos",
+        "vosotros": "molestéis",
+        "ellos": "molesten"
+      },
+      "imperative": {
+        "tú": "molesta",
+        "usted": "moleste",
+        "nosotros": "molestemos",
+        "vosotros": "molestad",
+        "ustedes": "molesten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-garaje",
+    "entry": "garaje",
+    "type": "phrase",
+    "full_phrase": "el garaje",
+    "clue_template": "el ___: garage",
+    "definition": "garage",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-sala",
+    "entry": "sala",
+    "type": "phrase",
+    "full_phrase": "la sala",
+    "clue_template": "la ___: living room",
+    "definition": "living room",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-habitaci-n",
+    "entry": "habitación",
+    "type": "phrase",
+    "full_phrase": "la habitación",
+    "clue_template": "la ___: bedroom",
+    "definition": "bedroom",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-dormitorio",
+    "entry": "dormitorio",
+    "type": "phrase",
+    "full_phrase": "el dormitorio",
+    "clue_template": "el ___: bedroom",
+    "definition": "bedroom",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pasillo",
+    "entry": "pasillo",
+    "type": "phrase",
+    "full_phrase": "el pasillo",
+    "clue_template": "el ___: hall",
+    "definition": "hall",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-suelo",
+    "entry": "suelo",
+    "type": "phrase",
+    "full_phrase": "el suelo",
+    "clue_template": "el ___: floor",
+    "definition": "floor",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-almohada",
+    "entry": "almohada",
+    "type": "phrase",
+    "full_phrase": "la almohada",
+    "clue_template": "la ___: pillow",
+    "definition": "pillow",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-armario",
+    "entry": "armario",
+    "type": "phrase",
+    "full_phrase": "el armario",
+    "clue_template": "el ___: closet",
+    "definition": "closet",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-refrigerador",
+    "entry": "refrigerador",
+    "type": "phrase",
+    "full_phrase": "el refrigerador",
+    "clue_template": "el ___: refrigerator",
+    "definition": "refrigerator",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-estufa",
+    "entry": "estufa",
+    "type": "phrase",
+    "full_phrase": "la estufa",
+    "clue_template": "la ___: stove",
+    "definition": "stove",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "primero",
+    "entry": "primero",
+    "type": "word",
+    "definition": "first",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "tercero",
+    "entry": "tercero",
+    "type": "word",
+    "definition": "third",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "quinto",
+    "entry": "quinto",
+    "type": "word",
+    "definition": "fifth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-horno",
+    "entry": "horno",
+    "type": "phrase",
+    "full_phrase": "el horno",
+    "clue_template": "el ___: oven",
+    "definition": "oven",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-microondas",
+    "entry": "microondas",
+    "type": "phrase",
+    "full_phrase": "el microondas",
+    "clue_template": "el ___: microwave oven",
+    "definition": "microwave oven",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-lavaplatos",
+    "entry": "lavaplatos",
+    "type": "phrase",
+    "full_phrase": "el lavaplatos",
+    "clue_template": "el ___: dishwasher",
+    "definition": "dishwasher",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-fregadero",
+    "entry": "fregadero",
+    "type": "phrase",
+    "full_phrase": "el fregadero",
+    "clue_template": "el ___: kitchen sink",
+    "definition": "kitchen sink",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-espejo",
+    "entry": "espejo",
+    "type": "phrase",
+    "full_phrase": "el espejo",
+    "clue_template": "el ___: mirror",
+    "definition": "mirror",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-ducha",
+    "entry": "ducha",
+    "type": "phrase",
+    "full_phrase": "la ducha",
+    "clue_template": "la ___: shower",
+    "definition": "shower",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-ba-era",
+    "entry": "bañera",
+    "type": "phrase",
+    "full_phrase": "la bañera",
+    "clue_template": "la ___: bathtub",
+    "definition": "bathtub",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-inodoro",
+    "entry": "inodoro",
+    "type": "phrase",
+    "full_phrase": "el inodoro",
+    "clue_template": "el ___: toilet",
+    "definition": "toilet",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-lavabo",
+    "entry": "lavabo",
+    "type": "phrase",
+    "full_phrase": "el lavabo",
+    "clue_template": "el ___: bathroom sink",
+    "definition": "bathroom sink",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-residencia-estudiantil",
+    "entry": "estudiantil",
+    "type": "phrase",
+    "full_phrase": "la residencia estudiantil",
+    "clue_template": "la residencia ___: dormitory",
+    "definition": "dormitory",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-regalo",
+    "entry": "regalo",
+    "type": "phrase",
+    "full_phrase": "el regalo",
+    "clue_template": "el ___: gift",
+    "definition": "gift",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "sexto",
+    "entry": "sexto",
+    "type": "word",
+    "definition": "sixth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "s-ptimo",
+    "entry": "séptimo",
+    "type": "word",
+    "definition": "seventh",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "octavo",
+    "entry": "octavo",
+    "type": "word",
+    "definition": "eighth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "noveno",
+    "entry": "noveno",
+    "type": "word",
+    "definition": "ninth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "d-cimo",
+    "entry": "décimo",
+    "type": "word",
+    "definition": "tenth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "pienso-leer-",
+    "entry": "Pienso",
+    "type": "phrase",
+    "full_phrase": "Pienso leer.",
+    "clue_template": "___ leer.: I plan to read.",
+    "definition": "I plan to read.",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
     "id": "sin-embargo",
     "entry": "embargo",
     "type": "phrase",
@@ -12497,36 +14297,6 @@
     "entry": "mientras",
     "type": "word",
     "definition": "while, whereas",
-    "tags": [
-      "connector"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "tambien",
-    "entry": "también",
-    "type": "word",
-    "definition": "also, too",
-    "tags": [
-      "connector"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "tampoco",
-    "entry": "tampoco",
-    "type": "word",
-    "definition": "neither, not either",
-    "tags": [
-      "connector"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "nunca",
-    "entry": "nunca",
-    "type": "word",
-    "definition": "never",
     "tags": [
       "connector"
     ],
@@ -12619,56 +14389,6 @@
     "definition": "perhaps, maybe, by chance",
     "tags": [
       "adverb"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "primero",
-    "entry": "primero",
-    "type": "word",
-    "definition": "first",
-    "tags": [
-      "ordinal"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "tercero",
-    "entry": "tercero",
-    "type": "word",
-    "definition": "third",
-    "tags": [
-      "ordinal"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "quinto",
-    "entry": "quinto",
-    "type": "word",
-    "definition": "fifth",
-    "tags": [
-      "ordinal"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "sexto",
-    "entry": "sexto",
-    "type": "word",
-    "definition": "sixth",
-    "tags": [
-      "ordinal"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "septimo",
-    "entry": "séptimo",
-    "type": "word",
-    "definition": "seventh",
-    "tags": [
-      "ordinal"
     ],
     "source": "added-by-user"
   },
@@ -12803,16 +14523,6 @@
     "source": "added-by-user"
   },
   {
-    "id": "mundo",
-    "entry": "mundo",
-    "type": "word",
-    "definition": "world",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "gente",
     "entry": "gente",
     "type": "word",
@@ -12909,26 +14619,6 @@
     "entry": "ayer",
     "type": "word",
     "definition": "yesterday",
-    "tags": [
-      "adverb"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "aqui",
-    "entry": "aquí",
-    "type": "word",
-    "definition": "here",
-    "tags": [
-      "adverb"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "alli",
-    "entry": "allí",
-    "type": "word",
-    "definition": "there",
     "tags": [
       "adverb"
     ],
