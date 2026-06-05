@@ -14633,5 +14633,725 @@
       "adverb"
     ],
     "source": "added-by-user"
+  },
+  {
+    "id": "la-betabel",
+    "entry": "betabel",
+    "type": "phrase",
+    "full_phrase": "la betabel",
+    "clue_template": "la ___: beet",
+    "definition": "beet",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-zanahoria",
+    "entry": "zanahoria",
+    "type": "phrase",
+    "full_phrase": "la zanahoria",
+    "clue_template": "la ___: carrot",
+    "definition": "carrot",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-nabo",
+    "entry": "nabo",
+    "type": "phrase",
+    "full_phrase": "el nabo",
+    "clue_template": "el ___: turnip",
+    "definition": "turnip",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-rabano",
+    "entry": "rábano",
+    "type": "phrase",
+    "full_phrase": "el rábano",
+    "clue_template": "el ___: radish",
+    "definition": "radish",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-papa-cambray",
+    "entry": "cambray",
+    "type": "phrase",
+    "full_phrase": "la papa cambray",
+    "clue_template": "la papa ___: baby potato",
+    "definition": "baby potato",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-camote",
+    "entry": "camote",
+    "type": "phrase",
+    "full_phrase": "el camote",
+    "clue_template": "el ___: sweet potato",
+    "definition": "sweet potato",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-mandioca",
+    "entry": "mandioca",
+    "type": "phrase",
+    "full_phrase": "la mandioca",
+    "clue_template": "la ___: cassava",
+    "definition": "cassava",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-cebolla",
+    "entry": "cebolla",
+    "type": "phrase",
+    "full_phrase": "la cebolla",
+    "clue_template": "la ___: onion",
+    "definition": "onion",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-cebollita",
+    "entry": "cebollita",
+    "type": "phrase",
+    "full_phrase": "la cebollita",
+    "clue_template": "la ___: shallot",
+    "definition": "shallot",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-cebollita-cambray",
+    "entry": "cambray",
+    "type": "phrase",
+    "full_phrase": "la cebollita cambray",
+    "clue_template": "la cebollita ___: green onion",
+    "definition": "green onion",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-ajo",
+    "entry": "ajo",
+    "type": "phrase",
+    "full_phrase": "el ajo",
+    "clue_template": "el ___: garlic",
+    "definition": "garlic",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-apio",
+    "entry": "apio",
+    "type": "phrase",
+    "full_phrase": "el apio",
+    "clue_template": "el ___: celery",
+    "definition": "celery",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-jitomate",
+    "entry": "jitomate",
+    "type": "phrase",
+    "full_phrase": "el jitomate",
+    "clue_template": "el ___: tomato (Mexican Spanish)",
+    "definition": "tomato (Mexican Spanish)",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-tomatillo",
+    "entry": "tomatillo",
+    "type": "phrase",
+    "full_phrase": "el tomatillo",
+    "clue_template": "el ___: small green husk tomato",
+    "definition": "small green husk tomato",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-brocoli",
+    "entry": "brócoli",
+    "type": "phrase",
+    "full_phrase": "el brócoli",
+    "clue_template": "el ___: broccoli",
+    "definition": "broccoli",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-coliflor",
+    "entry": "coliflor",
+    "type": "phrase",
+    "full_phrase": "la coliflor",
+    "clue_template": "la ___: cauliflower",
+    "definition": "cauliflower",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-esparrago",
+    "entry": "espárrago",
+    "type": "phrase",
+    "full_phrase": "el espárrago",
+    "clue_template": "el ___: asparagus",
+    "definition": "asparagus",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-acelga",
+    "entry": "acelga",
+    "type": "phrase",
+    "full_phrase": "la acelga",
+    "clue_template": "la ___: Swiss chard",
+    "definition": "Swiss chard",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-espinaca",
+    "entry": "espinaca",
+    "type": "phrase",
+    "full_phrase": "la espinaca",
+    "clue_template": "la ___: spinach",
+    "definition": "spinach",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-kale",
+    "entry": "kale",
+    "type": "phrase",
+    "full_phrase": "el kale",
+    "clue_template": "el ___: kale",
+    "definition": "kale",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-col",
+    "entry": "col",
+    "type": "phrase",
+    "full_phrase": "la col",
+    "clue_template": "la ___: cabbage",
+    "definition": "cabbage",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-aguacate",
+    "entry": "aguacate",
+    "type": "phrase",
+    "full_phrase": "el aguacate",
+    "clue_template": "el ___: avocado",
+    "definition": "avocado",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-berenjena",
+    "entry": "berenjena",
+    "type": "phrase",
+    "full_phrase": "la berenjena",
+    "clue_template": "la ___: eggplant",
+    "definition": "eggplant",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-calabacin",
+    "entry": "calabacín",
+    "type": "phrase",
+    "full_phrase": "el calabacín",
+    "clue_template": "el ___: zucchini",
+    "definition": "zucchini",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-calabaza",
+    "entry": "calabaza",
+    "type": "phrase",
+    "full_phrase": "la calabaza",
+    "clue_template": "la ___: pumpkin",
+    "definition": "pumpkin",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-pepino",
+    "entry": "pepino",
+    "type": "phrase",
+    "full_phrase": "el pepino",
+    "clue_template": "el ___: cucumber",
+    "definition": "cucumber",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-pimiento-morron",
+    "entry": "pimiento",
+    "type": "phrase",
+    "full_phrase": "el pimiento morrón",
+    "clue_template": "el ___ morrón: bell pepper",
+    "definition": "bell pepper",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-chile",
+    "entry": "chile",
+    "type": "phrase",
+    "full_phrase": "el chile",
+    "clue_template": "el ___: chili pepper",
+    "definition": "chili pepper",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-chicharo",
+    "entry": "chícharo",
+    "type": "phrase",
+    "full_phrase": "el chícharo",
+    "clue_template": "el ___: pea",
+    "definition": "pea",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-manzana",
+    "entry": "manzana",
+    "type": "phrase",
+    "full_phrase": "la manzana",
+    "clue_template": "la ___: apple",
+    "definition": "apple",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-pera",
+    "entry": "pera",
+    "type": "phrase",
+    "full_phrase": "la pera",
+    "clue_template": "la ___: pear",
+    "definition": "pear",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-mango",
+    "entry": "mango",
+    "type": "phrase",
+    "full_phrase": "el mango",
+    "clue_template": "el ___: mango",
+    "definition": "mango",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-guayaba",
+    "entry": "guayaba",
+    "type": "phrase",
+    "full_phrase": "la guayaba",
+    "clue_template": "la ___: guava",
+    "definition": "guava",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-limon-amarillo",
+    "entry": "limón",
+    "type": "phrase",
+    "full_phrase": "el limón amarillo",
+    "clue_template": "el ___ amarillo: lemon",
+    "definition": "lemon",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-limon",
+    "entry": "limón",
+    "type": "phrase",
+    "full_phrase": "el limón",
+    "clue_template": "el ___: lime",
+    "definition": "lime",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-toronja",
+    "entry": "toronja",
+    "type": "phrase",
+    "full_phrase": "la toronja",
+    "clue_template": "la ___: grapefruit",
+    "definition": "grapefruit",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-pina",
+    "entry": "piña",
+    "type": "phrase",
+    "full_phrase": "la piña",
+    "clue_template": "la ___: pineapple",
+    "definition": "pineapple",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-melon",
+    "entry": "melón",
+    "type": "phrase",
+    "full_phrase": "el melón",
+    "clue_template": "el ___: melon",
+    "definition": "melon",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-melon-valenciano",
+    "entry": "valenciano",
+    "type": "phrase",
+    "full_phrase": "el melón valenciano",
+    "clue_template": "el melón ___: honeydew melon",
+    "definition": "honeydew melon",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-sandia",
+    "entry": "sandía",
+    "type": "phrase",
+    "full_phrase": "la sandía",
+    "clue_template": "la ___: watermelon",
+    "definition": "watermelon",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-papaya",
+    "entry": "papaya",
+    "type": "phrase",
+    "full_phrase": "la papaya",
+    "clue_template": "la ___: papaya",
+    "definition": "papaya",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-durazno",
+    "entry": "durazno",
+    "type": "phrase",
+    "full_phrase": "el durazno",
+    "clue_template": "el ___: peach",
+    "definition": "peach",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-ciruela",
+    "entry": "ciruela",
+    "type": "phrase",
+    "full_phrase": "la ciruela",
+    "clue_template": "la ___: plum",
+    "definition": "plum",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-chabacano",
+    "entry": "chabacano",
+    "type": "phrase",
+    "full_phrase": "el chabacano",
+    "clue_template": "el ___: apricot",
+    "definition": "apricot",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-fresa",
+    "entry": "fresa",
+    "type": "phrase",
+    "full_phrase": "la fresa",
+    "clue_template": "la ___: strawberry",
+    "definition": "strawberry",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-cereza",
+    "entry": "cereza",
+    "type": "phrase",
+    "full_phrase": "la cereza",
+    "clue_template": "la ___: cherry",
+    "definition": "cherry",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-zarzamora",
+    "entry": "zarzamora",
+    "type": "phrase",
+    "full_phrase": "la zarzamora",
+    "clue_template": "la ___: blackberry",
+    "definition": "blackberry",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-frambuesa",
+    "entry": "frambuesa",
+    "type": "phrase",
+    "full_phrase": "la frambuesa",
+    "clue_template": "la ___: raspberry",
+    "definition": "raspberry",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-mora-azul",
+    "entry": "mora",
+    "type": "phrase",
+    "full_phrase": "la mora azul",
+    "clue_template": "la ___ azul: blueberry",
+    "definition": "blueberry",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-arandano",
+    "entry": "arándano",
+    "type": "phrase",
+    "full_phrase": "el arándano",
+    "clue_template": "el ___: blueberry",
+    "definition": "blueberry",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-grosella",
+    "entry": "grosella",
+    "type": "phrase",
+    "full_phrase": "la grosella",
+    "clue_template": "la ___: currant",
+    "definition": "currant",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-uva",
+    "entry": "uva",
+    "type": "phrase",
+    "full_phrase": "la uva",
+    "clue_template": "la ___: grape",
+    "definition": "grape",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-granada",
+    "entry": "granada",
+    "type": "phrase",
+    "full_phrase": "la granada",
+    "clue_template": "la ___: pomegranate",
+    "definition": "pomegranate",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-kiwi",
+    "entry": "kiwi",
+    "type": "phrase",
+    "full_phrase": "el kiwi",
+    "clue_template": "el ___: kiwi",
+    "definition": "kiwi",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-higo",
+    "entry": "higo",
+    "type": "phrase",
+    "full_phrase": "el higo",
+    "clue_template": "el ___: fig",
+    "definition": "fig",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "la-carambola",
+    "entry": "carambola",
+    "type": "phrase",
+    "full_phrase": "la carambola",
+    "clue_template": "la ___: starfruit",
+    "definition": "starfruit",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-maracuya",
+    "entry": "maracuyá",
+    "type": "phrase",
+    "full_phrase": "el maracuyá",
+    "clue_template": "el ___: passion fruit",
+    "definition": "passion fruit",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-membrillo",
+    "entry": "membrillo",
+    "type": "phrase",
+    "full_phrase": "el membrillo",
+    "clue_template": "el ___: quince",
+    "definition": "quince",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-platano-macho",
+    "entry": "macho",
+    "type": "phrase",
+    "full_phrase": "el plátano macho",
+    "clue_template": "el plátano ___: plantain",
+    "definition": "plantain",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
+  },
+  {
+    "id": "el-platano",
+    "entry": "plátano",
+    "type": "phrase",
+    "full_phrase": "el plátano",
+    "clue_template": "el ___: banana",
+    "definition": "banana",
+    "tags": [
+      "noun"
+    ],
+    "source": "added-by-user"
   }
 ]
