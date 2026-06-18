@@ -4695,7 +4695,7 @@
   },
   {
     "id": "-no-",
-    "entry": "¿no?",
+    "entry": "no",
     "type": "word",
     "definition": "Isn’t that so?",
     "tags": [],
@@ -4703,7 +4703,7 @@
   },
   {
     "id": "-verdad-",
-    "entry": "¿verdad?",
+    "entry": "verdad",
     "type": "word",
     "definition": "right?",
     "tags": [],
@@ -5373,7 +5373,7 @@
   },
   {
     "id": "-cierto-",
-    "entry": "¿cierto?",
+    "entry": "cierto",
     "type": "word",
     "definition": "right?",
     "tags": [],
@@ -5653,7 +5653,7 @@
   },
   {
     "id": "-c-mo-",
-    "entry": "¿cómo?",
+    "entry": "cómo",
     "type": "word",
     "definition": "how?",
     "tags": [],
@@ -5661,7 +5661,7 @@
   },
   {
     "id": "-qu--",
-    "entry": "¿qué?",
+    "entry": "qué",
     "type": "word",
     "definition": "what?",
     "tags": [],
@@ -5669,7 +5669,7 @@
   },
   {
     "id": "-d-nde-",
-    "entry": "¿dónde?",
+    "entry": "dónde",
     "type": "word",
     "definition": "where?",
     "tags": [],
@@ -5677,7 +5677,7 @@
   },
   {
     "id": "-ad-nde-",
-    "entry": "¿adónde?",
+    "entry": "adónde",
     "type": "word",
     "definition": "to where?",
     "tags": [],
@@ -5897,7 +5897,7 @@
   },
   {
     "id": "-qui-n-",
-    "entry": "¿quién?",
+    "entry": "quién",
     "type": "word",
     "definition": "who? [singular]",
     "tags": [],
@@ -5905,7 +5905,7 @@
   },
   {
     "id": "-qui-nes-",
-    "entry": "¿quiénes?",
+    "entry": "quiénes",
     "type": "word",
     "definition": "who? [plural]",
     "tags": [],
@@ -5923,7 +5923,7 @@
   },
   {
     "id": "-cu-ndo-",
-    "entry": "¿cuándo?",
+    "entry": "cuándo",
     "type": "word",
     "definition": "when?",
     "tags": [],
@@ -6137,7 +6137,7 @@
   },
   {
     "id": "-entiendes-",
-    "entry": "¿Entiendes?",
+    "entry": "Entiendes",
     "type": "word",
     "definition": "Do you understand? [informal, singular]",
     "tags": [],
@@ -14261,22 +14261,6930 @@
     "source": "linkedin-learning"
   },
   {
+    "id": "la-parte",
+    "entry": "parte",
+    "type": "phrase",
+    "full_phrase": "la parte",
+    "clue_template": "la ___: part",
+    "definition": "part",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-miembro",
+    "entry": "miembro",
+    "type": "phrase",
+    "full_phrase": "el miembro",
+    "clue_template": "el ___: member",
+    "definition": "member",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-verbo-reflexivo",
+    "entry": "reflexivo",
+    "type": "phrase",
+    "full_phrase": "el verbo reflexivo",
+    "clue_template": "el verbo ___: reflexive verb",
+    "definition": "reflexive verb",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "rico",
+    "entry": "rico",
+    "type": "word",
+    "definition": "rich, delicious",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "llamarse",
+    "entry": "llamarse",
+    "type": "word",
+    "definition": "to call oneself",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-llamo",
+    "entry": "llamo",
+    "type": "phrase",
+    "full_phrase": "me llamo María",
+    "clue_template": "me ___: my name is María",
+    "definition": "my name is",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-llama",
+    "entry": "llama",
+    "type": "phrase",
+    "full_phrase": "se llama Juan",
+    "clue_template": "se ___: his/her name is Juan",
+    "definition": "his/her name is",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-llamamos",
+    "entry": "llamamos",
+    "type": "phrase",
+    "full_phrase": "nos llamamos los García",
+    "clue_template": "nos ___: we are called the Garcías",
+    "definition": "we are called",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-llaman",
+    "entry": "llaman",
+    "type": "phrase",
+    "full_phrase": "se llaman amigos",
+    "clue_template": "se ___: they call themselves friends",
+    "definition": "they are called",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "despertarse",
+    "entry": "despertarse",
+    "type": "word",
+    "definition": "to wake up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-despierto",
+    "entry": "despierto",
+    "type": "phrase",
+    "full_phrase": "me despierto temprano",
+    "clue_template": "me ___ temprano: I wake up early",
+    "definition": "I wake up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-despiertas",
+    "entry": "despiertas",
+    "type": "phrase",
+    "full_phrase": "te despiertas tarde",
+    "clue_template": "te ___ tarde: you wake up late",
+    "definition": "you wake up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-despierta",
+    "entry": "despierta",
+    "type": "phrase",
+    "full_phrase": "se despierta a las siete",
+    "clue_template": "se ___ a las siete: wakes up at seven",
+    "definition": "wakes up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-despertamos",
+    "entry": "despertamos",
+    "type": "phrase",
+    "full_phrase": "nos despertamos juntos",
+    "clue_template": "nos ___: we wake up together",
+    "definition": "we wake up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-despiertan",
+    "entry": "despiertan",
+    "type": "phrase",
+    "full_phrase": "se despiertan con el sol",
+    "clue_template": "se ___ con el sol: wake up with the sun",
+    "definition": "they wake up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "levantarse",
+    "entry": "levantarse",
+    "type": "word",
+    "definition": "to get up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-levanto",
+    "entry": "levanto",
+    "type": "phrase",
+    "full_phrase": "me levanto a las ocho",
+    "clue_template": "me ___ a las ocho: I get up at eight",
+    "definition": "I get up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-levantas",
+    "entry": "levantas",
+    "type": "phrase",
+    "full_phrase": "te levantas tarde",
+    "clue_template": "te ___ tarde: you get up late",
+    "definition": "you get up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-levanta",
+    "entry": "levanta",
+    "type": "phrase",
+    "full_phrase": "se levanta de la cama",
+    "clue_template": "se ___ de la cama: gets up from bed",
+    "definition": "gets up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-levantamos",
+    "entry": "levantamos",
+    "type": "phrase",
+    "full_phrase": "nos levantamos temprano",
+    "clue_template": "nos ___ temprano: we get up early",
+    "definition": "we get up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-levantan",
+    "entry": "levantan",
+    "type": "phrase",
+    "full_phrase": "se levantan con el sol",
+    "clue_template": "se ___ con el sol: they get up with the sun",
+    "definition": "they get up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "acostarse",
+    "entry": "acostarse",
+    "type": "word",
+    "definition": "to go to bed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-acuesto",
+    "entry": "acuesto",
+    "type": "phrase",
+    "full_phrase": "me acuesto en la noche",
+    "clue_template": "me ___ en la noche: I go to bed at night",
+    "definition": "I go to bed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-acuestas",
+    "entry": "acuestas",
+    "type": "phrase",
+    "full_phrase": "te acuestas tarde",
+    "clue_template": "te ___ tarde: you go to bed late",
+    "definition": "you go to bed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-acuesta",
+    "entry": "acuesta",
+    "type": "phrase",
+    "full_phrase": "se acuesta temprano",
+    "clue_template": "se ___ temprano: goes to bed early",
+    "definition": "goes to bed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-acostamos",
+    "entry": "acostamos",
+    "type": "phrase",
+    "full_phrase": "nos acostamos a las diez",
+    "clue_template": "nos ___ a las diez: we go to bed at ten",
+    "definition": "we go to bed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-acuestan",
+    "entry": "acuestan",
+    "type": "phrase",
+    "full_phrase": "se acuestan juntos",
+    "clue_template": "se ___ juntos: they go to bed together",
+    "definition": "they go to bed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "dormirse",
+    "entry": "dormirse",
+    "type": "word",
+    "definition": "to fall asleep",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-duermo",
+    "entry": "duermo",
+    "type": "phrase",
+    "full_phrase": "me duermo enseguida",
+    "clue_template": "me ___ enseguida: I fall asleep right away",
+    "definition": "I fall asleep",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-duermes",
+    "entry": "duermes",
+    "type": "phrase",
+    "full_phrase": "te duermes en el sofá",
+    "clue_template": "te ___ en el sofá: you fall asleep on the couch",
+    "definition": "you fall asleep",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-duerme",
+    "entry": "duerme",
+    "type": "phrase",
+    "full_phrase": "se duerme en clase",
+    "clue_template": "se ___ en clase: falls asleep in class",
+    "definition": "falls asleep",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-dormimos",
+    "entry": "dormimos",
+    "type": "phrase",
+    "full_phrase": "nos dormimos tarde",
+    "clue_template": "nos ___ tarde: we fall asleep late",
+    "definition": "we fall asleep",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-duermen",
+    "entry": "duermen",
+    "type": "phrase",
+    "full_phrase": "se duermen leyendo",
+    "clue_template": "se ___ leyendo: they fall asleep reading",
+    "definition": "they fall asleep",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "ba-arse",
+    "entry": "bañarse",
+    "type": "word",
+    "definition": "to bathe oneself",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-banas",
+    "entry": "bañas",
+    "type": "phrase",
+    "full_phrase": "te bañas todos los días",
+    "clue_template": "te ___ todos los días: you bathe every day",
+    "definition": "you bathe",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-bana",
+    "entry": "baña",
+    "type": "phrase",
+    "full_phrase": "se baña en la tina",
+    "clue_template": "se ___ en la tina: bathes in the tub",
+    "definition": "bathes",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-banamos",
+    "entry": "bañamos",
+    "type": "phrase",
+    "full_phrase": "nos bañamos en el río",
+    "clue_template": "nos ___ en el río: we bathe in the river",
+    "definition": "we bathe",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-banan",
+    "entry": "bañan",
+    "type": "phrase",
+    "full_phrase": "se bañan por la tarde",
+    "clue_template": "se ___ por la tarde: they bathe in the afternoon",
+    "definition": "they bathe",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "lavarse",
+    "entry": "lavarse",
+    "type": "word",
+    "definition": "to wash oneself",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-lavo",
+    "entry": "lavo",
+    "type": "phrase",
+    "full_phrase": "me lavo las manos",
+    "clue_template": "me ___ las manos: I wash my hands",
+    "definition": "I wash up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-lavas",
+    "entry": "lavas",
+    "type": "phrase",
+    "full_phrase": "te lavas el pelo",
+    "clue_template": "te ___ el pelo: you wash your hair",
+    "definition": "you wash up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-lava",
+    "entry": "lava",
+    "type": "phrase",
+    "full_phrase": "se lava la cara",
+    "clue_template": "se ___ la cara: washes their face",
+    "definition": "washes up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-lavamos",
+    "entry": "lavamos",
+    "type": "phrase",
+    "full_phrase": "nos lavamos antes de comer",
+    "clue_template": "nos ___ antes de comer: we wash up before eating",
+    "definition": "we wash up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-lavan",
+    "entry": "lavan",
+    "type": "phrase",
+    "full_phrase": "se lavan los dientes",
+    "clue_template": "se ___ los dientes: they brush their teeth",
+    "definition": "they wash up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "ducharse",
+    "entry": "ducharse",
+    "type": "word",
+    "definition": "to shower",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-ducho",
+    "entry": "ducho",
+    "type": "phrase",
+    "full_phrase": "me ducho por la mañana",
+    "clue_template": "me ___ por la mañana: I shower in the morning",
+    "definition": "I shower",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-duchas",
+    "entry": "duchas",
+    "type": "phrase",
+    "full_phrase": "te duchas antes del trabajo",
+    "clue_template": "te ___ antes del trabajo: you shower before work",
+    "definition": "you shower",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-duchamos",
+    "entry": "duchamos",
+    "type": "phrase",
+    "full_phrase": "nos duchamos después del gimnasio",
+    "clue_template": "nos ___ después del gimnasio: we shower after the gym",
+    "definition": "we shower",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-duchan",
+    "entry": "duchan",
+    "type": "phrase",
+    "full_phrase": "se duchan cada mañana",
+    "clue_template": "se ___ cada mañana: they shower every morning",
+    "definition": "they shower",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-fresa",
+    "entry": "fresa",
+    "type": "phrase",
+    "full_phrase": "la fresa",
+    "clue_template": "la ___: strawberry",
+    "definition": "strawberry",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-manzana",
+    "entry": "manzana",
+    "type": "phrase",
+    "full_phrase": "la manzana",
+    "clue_template": "la ___: apple",
+    "definition": "apple",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-mel-n",
+    "entry": "melón",
+    "type": "phrase",
+    "full_phrase": "el melón",
+    "clue_template": "el ___: melon",
+    "definition": "melon",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-aguacate",
+    "entry": "aguacate",
+    "type": "phrase",
+    "full_phrase": "el aguacate",
+    "clue_template": "el ___: avocado",
+    "definition": "avocado",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-pi-a",
+    "entry": "piña",
+    "type": "phrase",
+    "full_phrase": "la piña",
+    "clue_template": "la ___: pineapple",
+    "definition": "pineapple",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-toronja",
+    "entry": "toronja",
+    "type": "phrase",
+    "full_phrase": "la toronja",
+    "clue_template": "la ___: grapefruit",
+    "definition": "grapefruit",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-br-coli",
+    "entry": "brócoli",
+    "type": "phrase",
+    "full_phrase": "el brócoli",
+    "clue_template": "el ___: broccoli",
+    "definition": "broccoli",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-zanahoria",
+    "entry": "zanahoria",
+    "type": "phrase",
+    "full_phrase": "la zanahoria",
+    "clue_template": "la ___: carrot",
+    "definition": "carrot",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-categor-a",
+    "entry": "categoría",
+    "type": "phrase",
+    "full_phrase": "la categoría",
+    "clue_template": "la ___: category",
+    "definition": "category",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "varios",
+    "entry": "varios",
+    "type": "word",
+    "definition": "various",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-ciudad",
+    "entry": "ciudad",
+    "type": "phrase",
+    "full_phrase": "la ciudad",
+    "clue_template": "la ___: city",
+    "definition": "city",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "delicioso",
+    "entry": "delicioso",
+    "type": "word",
+    "definition": "delicious",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "casado",
+    "entry": "casado",
+    "type": "word",
+    "definition": "married",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "secarse",
+    "entry": "secarse",
+    "type": "word",
+    "definition": "to dry oneself",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-seco",
+    "entry": "seco",
+    "type": "phrase",
+    "full_phrase": "me seco con la toalla",
+    "clue_template": "me ___ con la toalla: I dry off with the towel",
+    "definition": "I dry off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-secas",
+    "entry": "secas",
+    "type": "phrase",
+    "full_phrase": "te secas el cabello",
+    "clue_template": "te ___ el cabello: you dry your hair",
+    "definition": "you dry off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-seca",
+    "entry": "seca",
+    "type": "phrase",
+    "full_phrase": "se seca después del baño",
+    "clue_template": "se ___ después del baño: dries off after the bath",
+    "definition": "dries off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-secamos",
+    "entry": "secamos",
+    "type": "phrase",
+    "full_phrase": "nos secamos con la toalla",
+    "clue_template": "nos ___ con la toalla: we dry off with the towel",
+    "definition": "we dry off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-secan",
+    "entry": "secan",
+    "type": "phrase",
+    "full_phrase": "se secan al sol",
+    "clue_template": "se ___ al sol: they dry in the sun",
+    "definition": "they dry off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "afeitarse",
+    "entry": "afeitarse",
+    "type": "word",
+    "definition": "to shave",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-afeito",
+    "entry": "afeito",
+    "type": "phrase",
+    "full_phrase": "me afeito cada mañana",
+    "clue_template": "me ___ cada mañana: I shave every morning",
+    "definition": "I shave",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-afeitas",
+    "entry": "afeitas",
+    "type": "phrase",
+    "full_phrase": "te afeitas la barba",
+    "clue_template": "te ___ la barba: you shave your beard",
+    "definition": "you shave",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-afeita",
+    "entry": "afeita",
+    "type": "phrase",
+    "full_phrase": "se afeita antes del trabajo",
+    "clue_template": "se ___ antes del trabajo: shaves before work",
+    "definition": "shaves",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-afeitamos",
+    "entry": "afeitamos",
+    "type": "phrase",
+    "full_phrase": "nos afeitamos en el baño",
+    "clue_template": "nos ___ en el baño: we shave in the bathroom",
+    "definition": "we shave",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-afeitan",
+    "entry": "afeitan",
+    "type": "phrase",
+    "full_phrase": "se afeitan los jugadores",
+    "clue_template": "se ___ los jugadores: the players shave",
+    "definition": "they shave",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "cepillarse-los-dientes",
+    "entry": "cepillarse",
+    "type": "phrase",
+    "full_phrase": "cepillarse los dientes",
+    "clue_template": "___ los dientes: to brush your teeth",
+    "definition": "to brush your teeth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-cepillo",
+    "entry": "cepillo",
+    "type": "phrase",
+    "full_phrase": "me cepillo los dientes",
+    "clue_template": "me ___ los dientes: I brush my teeth",
+    "definition": "I brush my teeth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-cepillas",
+    "entry": "cepillas",
+    "type": "phrase",
+    "full_phrase": "te cepillas el pelo",
+    "clue_template": "te ___ el pelo: you brush your hair",
+    "definition": "you brush",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-cepilla",
+    "entry": "cepilla",
+    "type": "phrase",
+    "full_phrase": "se cepilla los dientes",
+    "clue_template": "se ___ los dientes: brushes their teeth",
+    "definition": "brushes teeth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-cepillamos",
+    "entry": "cepillamos",
+    "type": "phrase",
+    "full_phrase": "nos cepillamos después de comer",
+    "clue_template": "nos ___ después de comer: we brush after eating",
+    "definition": "we brush",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-cepillan",
+    "entry": "cepillan",
+    "type": "phrase",
+    "full_phrase": "se cepillan el cabello",
+    "clue_template": "se ___ el cabello: they brush their hair",
+    "definition": "they brush",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "maquillarse",
+    "entry": "maquillarse",
+    "type": "word",
+    "definition": "to put on makeup",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-maquillo",
+    "entry": "maquillo",
+    "type": "phrase",
+    "full_phrase": "me maquillo en el espejo",
+    "clue_template": "me ___ en el espejo: I put on makeup in the mirror",
+    "definition": "I put on makeup",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-maquillas",
+    "entry": "maquillas",
+    "type": "phrase",
+    "full_phrase": "te maquillas para la fiesta",
+    "clue_template": "te ___ para la fiesta: you put on makeup for the party",
+    "definition": "you put on makeup",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-maquilla",
+    "entry": "maquilla",
+    "type": "phrase",
+    "full_phrase": "se maquilla todos los días",
+    "clue_template": "se ___ todos los días: puts on makeup every day",
+    "definition": "puts on makeup",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-maquillamos",
+    "entry": "maquillamos",
+    "type": "phrase",
+    "full_phrase": "nos maquillamos juntas",
+    "clue_template": "nos ___ juntas: we put on makeup together",
+    "definition": "we put on makeup",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-maquillan",
+    "entry": "maquillan",
+    "type": "phrase",
+    "full_phrase": "se maquillan para el show",
+    "clue_template": "se ___ para el show: they put on makeup for the show",
+    "definition": "they put on makeup",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "ponerse-la-ropa",
+    "entry": "ponerse",
+    "type": "phrase",
+    "full_phrase": "ponerse la ropa",
+    "clue_template": "___ la ropa: to put on clothing",
+    "definition": "to put on clothing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-pongo",
+    "entry": "pongo",
+    "type": "phrase",
+    "full_phrase": "me pongo el abrigo",
+    "clue_template": "me ___ el abrigo: I put on my coat",
+    "definition": "I put on",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-pones",
+    "entry": "pones",
+    "type": "phrase",
+    "full_phrase": "te pones los zapatos",
+    "clue_template": "te ___ los zapatos: you put on your shoes",
+    "definition": "you put on",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-pone",
+    "entry": "pone",
+    "type": "phrase",
+    "full_phrase": "se pone el sombrero",
+    "clue_template": "se ___ el sombrero: puts on the hat",
+    "definition": "puts on",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-ponemos",
+    "entry": "ponemos",
+    "type": "phrase",
+    "full_phrase": "nos ponemos los guantes",
+    "clue_template": "nos ___ los guantes: we put on gloves",
+    "definition": "we put on",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-ponen",
+    "entry": "ponen",
+    "type": "phrase",
+    "full_phrase": "se ponen los uniformes",
+    "clue_template": "se ___ los uniformes: they put on uniforms",
+    "definition": "they put on",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "quitarse-la-ropa",
+    "entry": "quitarse",
+    "type": "phrase",
+    "full_phrase": "quitarse la ropa",
+    "clue_template": "___ la ropa: to take off clothing",
+    "definition": "to take off clothing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-quito",
+    "entry": "quito",
+    "type": "phrase",
+    "full_phrase": "me quito los zapatos",
+    "clue_template": "me ___ los zapatos: I take off my shoes",
+    "definition": "I take off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-quitas",
+    "entry": "quitas",
+    "type": "phrase",
+    "full_phrase": "te quitas el abrigo",
+    "clue_template": "te ___ el abrigo: you take off your coat",
+    "definition": "you take off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-quita",
+    "entry": "quita",
+    "type": "phrase",
+    "full_phrase": "se quita el sombrero",
+    "clue_template": "se ___ el sombrero: takes off the hat",
+    "definition": "takes off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-quitamos",
+    "entry": "quitamos",
+    "type": "phrase",
+    "full_phrase": "nos quitamos los zapatos",
+    "clue_template": "nos ___ los zapatos: we take off our shoes",
+    "definition": "we take off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-quitan",
+    "entry": "quitan",
+    "type": "phrase",
+    "full_phrase": "se quitan los guantes",
+    "clue_template": "se ___ los guantes: they take off their gloves",
+    "definition": "they take off",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "vestirse",
+    "entry": "vestirse",
+    "type": "word",
+    "definition": "to get dressed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-visto",
+    "entry": "visto",
+    "type": "phrase",
+    "full_phrase": "me visto para el trabajo",
+    "clue_template": "me ___ para el trabajo: I get dressed for work",
+    "definition": "I get dressed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-vistes",
+    "entry": "vistes",
+    "type": "phrase",
+    "full_phrase": "te vistes rápido",
+    "clue_template": "te ___ rápido: you get dressed quickly",
+    "definition": "you get dressed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-viste",
+    "entry": "viste",
+    "type": "phrase",
+    "full_phrase": "se viste con elegancia",
+    "clue_template": "se ___ con elegancia: gets dressed elegantly",
+    "definition": "gets dressed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-vestimos",
+    "entry": "vestimos",
+    "type": "phrase",
+    "full_phrase": "nos vestimos para salir",
+    "clue_template": "nos ___ para salir: we get dressed to go out",
+    "definition": "we get dressed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-visten",
+    "entry": "visten",
+    "type": "phrase",
+    "full_phrase": "se visten igual",
+    "clue_template": "se ___ igual: they dress the same",
+    "definition": "they get dressed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pl-tano-la-banana-el-banano",
+    "entry": "plátano/la",
+    "type": "phrase",
+    "full_phrase": "el plátano/la banana/el banano",
+    "clue_template": "el ___ banana/el banano: banana",
+    "definition": "banana",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-pera",
+    "entry": "pera",
+    "type": "phrase",
+    "full_phrase": "la pera",
+    "clue_template": "la ___: pear",
+    "definition": "pear",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-uva",
+    "entry": "uva",
+    "type": "phrase",
+    "full_phrase": "la uva",
+    "clue_template": "la ___: grape",
+    "definition": "grape",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-lim-n",
+    "entry": "limón",
+    "type": "phrase",
+    "full_phrase": "el limón",
+    "clue_template": "el ___: lemon",
+    "definition": "lemon",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-cebolla",
+    "entry": "cebolla",
+    "type": "phrase",
+    "full_phrase": "la cebolla",
+    "clue_template": "la ___: onion",
+    "definition": "onion",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-chile",
+    "entry": "chile",
+    "type": "phrase",
+    "full_phrase": "el chile",
+    "clue_template": "el ___: chili, chili pepper",
+    "definition": "chili, chili pepper",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-chocolate",
+    "entry": "chocolate",
+    "type": "phrase",
+    "full_phrase": "el chocolate",
+    "clue_template": "el ___: chocolate",
+    "definition": "chocolate",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-flan",
+    "entry": "flan",
+    "type": "phrase",
+    "full_phrase": "el flan",
+    "clue_template": "el ___: custard",
+    "definition": "custard",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-dulces",
+    "entry": "dulces",
+    "type": "phrase",
+    "full_phrase": "los dulces",
+    "clue_template": "los ___: candy",
+    "definition": "candy",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-gram-tica",
+    "entry": "gramática",
+    "type": "phrase",
+    "full_phrase": "la gramática",
+    "clue_template": "la ___: grammar",
+    "definition": "grammar",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pasado",
+    "entry": "pasado",
+    "type": "phrase",
+    "full_phrase": "el pasado",
+    "clue_template": "el ___: past",
+    "definition": "past",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-televisi-n",
+    "entry": "televisión",
+    "type": "phrase",
+    "full_phrase": "la televisión",
+    "clue_template": "la ___: television",
+    "definition": "television",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "permitir",
+    "entry": "permitir",
+    "type": "verb",
+    "definition": "to allow, to permit",
+    "conjugations": {
+      "present": {
+        "yo": "permito",
+        "tú": "permites",
+        "él": "permite",
+        "nosotros": "permitimos",
+        "vosotros": "permitís",
+        "ellos": "permiten"
+      },
+      "preterite": {
+        "yo": "permití",
+        "tú": "permitiste",
+        "él": "permitió",
+        "nosotros": "permitimos",
+        "vosotros": "permitisteis",
+        "ellos": "permitieron"
+      },
+      "imperfect": {
+        "yo": "permitía",
+        "tú": "permitías",
+        "él": "permitía",
+        "nosotros": "permitíamos",
+        "vosotros": "permitíais",
+        "ellos": "permitían"
+      },
+      "future": {
+        "yo": "permitiré",
+        "tú": "permitirás",
+        "él": "permitirá",
+        "nosotros": "permitiremos",
+        "vosotros": "permitiréis",
+        "ellos": "permitirán"
+      },
+      "conditional": {
+        "yo": "permitiría",
+        "tú": "permitirías",
+        "él": "permitiría",
+        "nosotros": "permitiríamos",
+        "vosotros": "permitiríais",
+        "ellos": "permitirían"
+      },
+      "subjunctive": {
+        "yo": "permita",
+        "tú": "permitas",
+        "él": "permita",
+        "nosotros": "permitamos",
+        "vosotros": "permitáis",
+        "ellos": "permitan"
+      },
+      "imperative": {
+        "tú": "permite",
+        "usted": "permita",
+        "nosotros": "permitamos",
+        "vosotros": "permitid",
+        "ustedes": "permitan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "montar",
+    "entry": "montar",
+    "type": "verb",
+    "definition": "to ride",
+    "conjugations": {
+      "present": {
+        "yo": "monto",
+        "tú": "montas",
+        "él": "monta",
+        "nosotros": "montamos",
+        "vosotros": "montáis",
+        "ellos": "montan"
+      },
+      "preterite": {
+        "yo": "monté",
+        "tú": "montaste",
+        "él": "montó",
+        "nosotros": "montamos",
+        "vosotros": "montasteis",
+        "ellos": "montaron"
+      },
+      "imperfect": {
+        "yo": "montaba",
+        "tú": "montabas",
+        "él": "montaba",
+        "nosotros": "montábamos",
+        "vosotros": "montabais",
+        "ellos": "montaban"
+      },
+      "future": {
+        "yo": "montaré",
+        "tú": "montarás",
+        "él": "montará",
+        "nosotros": "montaremos",
+        "vosotros": "montaréis",
+        "ellos": "montarán"
+      },
+      "conditional": {
+        "yo": "montaría",
+        "tú": "montarías",
+        "él": "montaría",
+        "nosotros": "montaríamos",
+        "vosotros": "montaríais",
+        "ellos": "montarían"
+      },
+      "subjunctive": {
+        "yo": "monte",
+        "tú": "montes",
+        "él": "monte",
+        "nosotros": "montemos",
+        "vosotros": "montéis",
+        "ellos": "monten"
+      },
+      "imperative": {
+        "tú": "monta",
+        "usted": "monte",
+        "nosotros": "montemos",
+        "vosotros": "montad",
+        "ustedes": "monten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "volar",
+    "entry": "volar",
+    "type": "verb",
+    "definition": "to fly",
+    "conjugations": {
+      "present": {
+        "yo": "volo",
+        "tú": "volas",
+        "él": "vola",
+        "nosotros": "volamos",
+        "vosotros": "voláis",
+        "ellos": "volan"
+      },
+      "preterite": {
+        "yo": "volé",
+        "tú": "volaste",
+        "él": "voló",
+        "nosotros": "volamos",
+        "vosotros": "volasteis",
+        "ellos": "volaron"
+      },
+      "imperfect": {
+        "yo": "volaba",
+        "tú": "volabas",
+        "él": "volaba",
+        "nosotros": "volábamos",
+        "vosotros": "volabais",
+        "ellos": "volaban"
+      },
+      "future": {
+        "yo": "volaré",
+        "tú": "volarás",
+        "él": "volará",
+        "nosotros": "volaremos",
+        "vosotros": "volaréis",
+        "ellos": "volarán"
+      },
+      "conditional": {
+        "yo": "volaría",
+        "tú": "volarías",
+        "él": "volaría",
+        "nosotros": "volaríamos",
+        "vosotros": "volaríais",
+        "ellos": "volarían"
+      },
+      "subjunctive": {
+        "yo": "vole",
+        "tú": "voles",
+        "él": "vole",
+        "nosotros": "volemos",
+        "vosotros": "voléis",
+        "ellos": "volen"
+      },
+      "imperative": {
+        "tú": "vola",
+        "usted": "vole",
+        "nosotros": "volemos",
+        "vosotros": "volad",
+        "ustedes": "volen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "-ltimo",
+    "entry": "último",
+    "type": "word",
+    "definition": "last",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "cada",
+    "entry": "cada",
+    "type": "word",
+    "definition": "each",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-dilema",
+    "entry": "dilema",
+    "type": "phrase",
+    "full_phrase": "el dilema",
+    "clue_template": "el ___: dilemma",
+    "definition": "dilemma",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-drama",
+    "entry": "drama",
+    "type": "phrase",
+    "full_phrase": "el drama",
+    "clue_template": "el ___: drama",
+    "definition": "drama",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "a-pie",
+    "entry": "pie",
+    "type": "phrase",
+    "full_phrase": "a pie",
+    "clue_template": "a ___: by foot",
+    "definition": "by foot",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-bicicleta",
+    "entry": "bicicleta",
+    "type": "phrase",
+    "full_phrase": "la bicicleta",
+    "clue_template": "la ___: bicycle",
+    "definition": "bicycle",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-autob-s",
+    "entry": "autobús",
+    "type": "phrase",
+    "full_phrase": "el autobús",
+    "clue_template": "el ___: bus",
+    "definition": "bus",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-metro",
+    "entry": "metro",
+    "type": "phrase",
+    "full_phrase": "el metro",
+    "clue_template": "el ___: subway",
+    "definition": "subway",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-tren",
+    "entry": "tren",
+    "type": "phrase",
+    "full_phrase": "el tren",
+    "clue_template": "el ___: train",
+    "definition": "train",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "olvidarse-de",
+    "entry": "olvidarse",
+    "type": "phrase",
+    "full_phrase": "olvidarse de",
+    "clue_template": "___ de: to forget",
+    "definition": "to forget",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-olvido",
+    "entry": "olvido",
+    "type": "phrase",
+    "full_phrase": "me olvido de todo",
+    "clue_template": "me ___ de todo: I forget everything",
+    "definition": "I forget",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-olvidas",
+    "entry": "olvidas",
+    "type": "phrase",
+    "full_phrase": "te olvidas de las llaves",
+    "clue_template": "te ___ de las llaves: you forget your keys",
+    "definition": "you forget",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-olvida",
+    "entry": "olvida",
+    "type": "phrase",
+    "full_phrase": "se olvida de mi cumpleaños",
+    "clue_template": "se ___ de mi cumpleaños: forgets my birthday",
+    "definition": "forgets",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-olvidamos",
+    "entry": "olvidamos",
+    "type": "phrase",
+    "full_phrase": "nos olvidamos del plan",
+    "clue_template": "nos ___ del plan: we forget the plan",
+    "definition": "we forget",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-olvidan",
+    "entry": "olvidan",
+    "type": "phrase",
+    "full_phrase": "se olvidan de llamar",
+    "clue_template": "se ___ de llamar: they forget to call",
+    "definition": "they forget",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "acordarse-de",
+    "entry": "acordarse",
+    "type": "phrase",
+    "full_phrase": "acordarse de",
+    "clue_template": "___ de: to remember",
+    "definition": "to remember",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-acuerdo",
+    "entry": "acuerdo",
+    "type": "phrase",
+    "full_phrase": "me acuerdo de ti",
+    "clue_template": "me ___ de ti: I remember you",
+    "definition": "I remember",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-acuerdas",
+    "entry": "acuerdas",
+    "type": "phrase",
+    "full_phrase": "te acuerdas de eso",
+    "clue_template": "te ___ de eso: you remember that",
+    "definition": "you remember",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-acuerda",
+    "entry": "acuerda",
+    "type": "phrase",
+    "full_phrase": "se acuerda de todo",
+    "clue_template": "se ___ de todo: remembers everything",
+    "definition": "remembers",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-acordamos",
+    "entry": "acordamos",
+    "type": "phrase",
+    "full_phrase": "nos acordamos del viaje",
+    "clue_template": "nos ___ del viaje: we remember the trip",
+    "definition": "we remember",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-acuerdan",
+    "entry": "acuerdan",
+    "type": "phrase",
+    "full_phrase": "se acuerdan de ella",
+    "clue_template": "se ___ de ella: they remember her",
+    "definition": "they remember",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "alegrarse-de",
+    "entry": "alegrarse",
+    "type": "phrase",
+    "full_phrase": "alegrarse de",
+    "clue_template": "___ de: to become happy",
+    "definition": "to become happy",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "me-alegro",
+    "entry": "alegro",
+    "type": "phrase",
+    "full_phrase": "me alegro de verte",
+    "clue_template": "me ___ de verte: I'm glad to see you",
+    "definition": "I'm glad",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "te-alegras",
+    "entry": "alegras",
+    "type": "phrase",
+    "full_phrase": "te alegras con la noticia",
+    "clue_template": "te ___ con la noticia: you're happy with the news",
+    "definition": "you're happy",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-alegra",
+    "entry": "alegra",
+    "type": "phrase",
+    "full_phrase": "se alegra de estar aquí",
+    "clue_template": "se ___ de estar aquí: is happy to be here",
+    "definition": "is glad",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nos-alegramos",
+    "entry": "alegramos",
+    "type": "phrase",
+    "full_phrase": "nos alegramos de verte",
+    "clue_template": "nos ___ de verte: we're glad to see you",
+    "definition": "we're glad",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "se-alegran",
+    "entry": "alegran",
+    "type": "phrase",
+    "full_phrase": "se alegran de la victoria",
+    "clue_template": "se ___ de la victoria: they rejoice in the victory",
+    "definition": "they're glad",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "acabar",
+    "entry": "acabar",
+    "type": "verb",
+    "definition": "to finish",
+    "conjugations": {
+      "present": {
+        "yo": "acabo",
+        "tú": "acabas",
+        "él": "acaba",
+        "nosotros": "acabamos",
+        "vosotros": "acabáis",
+        "ellos": "acaban"
+      },
+      "preterite": {
+        "yo": "acabé",
+        "tú": "acabaste",
+        "él": "acabó",
+        "nosotros": "acabamos",
+        "vosotros": "acabasteis",
+        "ellos": "acabaron"
+      },
+      "imperfect": {
+        "yo": "acababa",
+        "tú": "acababas",
+        "él": "acababa",
+        "nosotros": "acabábamos",
+        "vosotros": "acababais",
+        "ellos": "acababan"
+      },
+      "future": {
+        "yo": "acabaré",
+        "tú": "acabarás",
+        "él": "acabará",
+        "nosotros": "acabaremos",
+        "vosotros": "acabaréis",
+        "ellos": "acabarán"
+      },
+      "conditional": {
+        "yo": "acabaría",
+        "tú": "acabarías",
+        "él": "acabaría",
+        "nosotros": "acabaríamos",
+        "vosotros": "acabaríais",
+        "ellos": "acabarían"
+      },
+      "subjunctive": {
+        "yo": "acabe",
+        "tú": "acabes",
+        "él": "acabe",
+        "nosotros": "acabemos",
+        "vosotros": "acabéis",
+        "ellos": "acaben"
+      },
+      "imperative": {
+        "tú": "acaba",
+        "usted": "acabe",
+        "nosotros": "acabemos",
+        "vosotros": "acabad",
+        "ustedes": "acaben"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "esperar",
+    "entry": "esperar",
+    "type": "verb",
+    "definition": "to wait for, to hope",
+    "conjugations": {
+      "present": {
+        "yo": "espero",
+        "tú": "esperas",
+        "él": "espera",
+        "nosotros": "esperamos",
+        "vosotros": "esperáis",
+        "ellos": "esperan"
+      },
+      "preterite": {
+        "yo": "esperé",
+        "tú": "esperaste",
+        "él": "esperó",
+        "nosotros": "esperamos",
+        "vosotros": "esperasteis",
+        "ellos": "esperaron"
+      },
+      "imperfect": {
+        "yo": "esperaba",
+        "tú": "esperabas",
+        "él": "esperaba",
+        "nosotros": "esperábamos",
+        "vosotros": "esperabais",
+        "ellos": "esperaban"
+      },
+      "future": {
+        "yo": "esperaré",
+        "tú": "esperarás",
+        "él": "esperará",
+        "nosotros": "esperaremos",
+        "vosotros": "esperaréis",
+        "ellos": "esperarán"
+      },
+      "conditional": {
+        "yo": "esperaría",
+        "tú": "esperarías",
+        "él": "esperaría",
+        "nosotros": "esperaríamos",
+        "vosotros": "esperaríais",
+        "ellos": "esperarían"
+      },
+      "subjunctive": {
+        "yo": "espere",
+        "tú": "esperes",
+        "él": "espere",
+        "nosotros": "esperemos",
+        "vosotros": "esperéis",
+        "ellos": "esperen"
+      },
+      "imperative": {
+        "tú": "espera",
+        "usted": "espere",
+        "nosotros": "esperemos",
+        "vosotros": "esperad",
+        "ustedes": "esperen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "todo",
+    "entry": "todo",
+    "type": "word",
+    "definition": "all, every",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-programa",
+    "entry": "programa",
+    "type": "phrase",
+    "full_phrase": "el programa",
+    "clue_template": "el ___: program",
+    "definition": "program",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-t-pico",
+    "entry": "tópico",
+    "type": "phrase",
+    "full_phrase": "el tópico",
+    "clue_template": "el ___: cliché",
+    "definition": "cliché",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-barco",
+    "entry": "barco",
+    "type": "phrase",
+    "full_phrase": "el barco",
+    "clue_template": "el ___: boat",
+    "definition": "boat",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-avi-n",
+    "entry": "avión",
+    "type": "phrase",
+    "full_phrase": "el avión",
+    "clue_template": "el ___: airplane",
+    "definition": "airplane",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-coche",
+    "entry": "coche",
+    "type": "phrase",
+    "full_phrase": "el coche",
+    "clue_template": "el ___: car",
+    "definition": "car",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-autom-vil",
+    "entry": "automóvil",
+    "type": "phrase",
+    "full_phrase": "el automóvil",
+    "clue_template": "el ___: car",
+    "definition": "car",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "divertirse",
+    "entry": "divertirse",
+    "type": "word",
+    "definition": "to enjoy oneself",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "enamorarse-de",
+    "entry": "enamorarse",
+    "type": "phrase",
+    "full_phrase": "enamorarse de",
+    "clue_template": "___ de: to fall in love",
+    "definition": "to fall in love",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-intercambio",
+    "entry": "intercambio",
+    "type": "phrase",
+    "full_phrase": "el intercambio",
+    "clue_template": "el ___: exchange",
+    "definition": "exchange",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "sumo",
+    "entry": "sumo",
+    "type": "word",
+    "definition": "extreme",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "sumamente",
+    "entry": "sumamente",
+    "type": "word",
+    "definition": "extremely",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-ocio",
+    "entry": "ocio",
+    "type": "phrase",
+    "full_phrase": "el ocio",
+    "clue_template": "el ___: leisure",
+    "definition": "leisure",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-quehaceres",
+    "entry": "quehaceres",
+    "type": "phrase",
+    "full_phrase": "los quehaceres",
+    "clue_template": "los ___: chores",
+    "definition": "chores",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "libre",
+    "entry": "libre",
+    "type": "word",
+    "definition": "free",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-concierto",
+    "entry": "concierto",
+    "type": "phrase",
+    "full_phrase": "el concierto",
+    "clue_template": "el ___: concert",
+    "definition": "concert",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-orquesta",
+    "entry": "orquesta",
+    "type": "phrase",
+    "full_phrase": "la orquesta",
+    "clue_template": "la ___: orchestra",
+    "definition": "orchestra",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-funci-n",
+    "entry": "función",
+    "type": "phrase",
+    "full_phrase": "la función",
+    "clue_template": "la ___: show",
+    "definition": "show",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-espect-culo",
+    "entry": "espectáculo",
+    "type": "phrase",
+    "full_phrase": "el espectáculo",
+    "clue_template": "el ___: show",
+    "definition": "show",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-entrada",
+    "entry": "entrada",
+    "type": "phrase",
+    "full_phrase": "la entrada",
+    "clue_template": "la ___: admission ticket",
+    "definition": "admission ticket",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-boleto",
+    "entry": "boleto",
+    "type": "phrase",
+    "full_phrase": "el boleto",
+    "clue_template": "el ___: ticket",
+    "definition": "ticket",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "pasear",
+    "entry": "pasear",
+    "type": "verb",
+    "definition": "to take a walk",
+    "conjugations": {
+      "present": {
+        "yo": "paseo",
+        "tú": "paseas",
+        "él": "pasea",
+        "nosotros": "paseamos",
+        "vosotros": "paseáis",
+        "ellos": "pasean"
+      },
+      "preterite": {
+        "yo": "paseé",
+        "tú": "paseaste",
+        "él": "paseó",
+        "nosotros": "paseamos",
+        "vosotros": "paseasteis",
+        "ellos": "pasearon"
+      },
+      "imperfect": {
+        "yo": "paseaba",
+        "tú": "paseabas",
+        "él": "paseaba",
+        "nosotros": "paseábamos",
+        "vosotros": "paseabais",
+        "ellos": "paseaban"
+      },
+      "future": {
+        "yo": "pasearé",
+        "tú": "pasearás",
+        "él": "paseará",
+        "nosotros": "pasearemos",
+        "vosotros": "pasearéis",
+        "ellos": "pasearán"
+      },
+      "conditional": {
+        "yo": "pasearía",
+        "tú": "pasearías",
+        "él": "pasearía",
+        "nosotros": "pasearíamos",
+        "vosotros": "pasearíais",
+        "ellos": "pasearían"
+      },
+      "subjunctive": {
+        "yo": "pasee",
+        "tú": "pasees",
+        "él": "pasee",
+        "nosotros": "paseemos",
+        "vosotros": "paseéis",
+        "ellos": "paseen"
+      },
+      "imperative": {
+        "tú": "pasea",
+        "usted": "pasee",
+        "nosotros": "paseemos",
+        "vosotros": "pasead",
+        "ustedes": "paseen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "limpiar",
+    "entry": "limpiar",
+    "type": "verb",
+    "definition": "to clean",
+    "conjugations": {
+      "present": {
+        "yo": "limpio",
+        "tú": "limpias",
+        "él": "limpia",
+        "nosotros": "limpiamos",
+        "vosotros": "limpiáis",
+        "ellos": "limpian"
+      },
+      "preterite": {
+        "yo": "limpié",
+        "tú": "limpiaste",
+        "él": "limpió",
+        "nosotros": "limpiamos",
+        "vosotros": "limpiasteis",
+        "ellos": "limpiaron"
+      },
+      "imperfect": {
+        "yo": "limpiaba",
+        "tú": "limpiabas",
+        "él": "limpiaba",
+        "nosotros": "limpiábamos",
+        "vosotros": "limpiabais",
+        "ellos": "limpiaban"
+      },
+      "future": {
+        "yo": "limpiaré",
+        "tú": "limpiarás",
+        "él": "limpiará",
+        "nosotros": "limpiaremos",
+        "vosotros": "limpiaréis",
+        "ellos": "limpiarán"
+      },
+      "conditional": {
+        "yo": "limpiaría",
+        "tú": "limpiarías",
+        "él": "limpiaría",
+        "nosotros": "limpiaríamos",
+        "vosotros": "limpiaríais",
+        "ellos": "limpiarían"
+      },
+      "subjunctive": {
+        "yo": "limpie",
+        "tú": "limpies",
+        "él": "limpie",
+        "nosotros": "limpiemos",
+        "vosotros": "limpiéis",
+        "ellos": "limpien"
+      },
+      "imperative": {
+        "tú": "limpia",
+        "usted": "limpie",
+        "nosotros": "limpiemos",
+        "vosotros": "limpiad",
+        "ustedes": "limpien"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "pasar-la-aspiradora",
+    "entry": "aspiradora",
+    "type": "phrase",
+    "full_phrase": "pasar la aspiradora",
+    "clue_template": "pasar la ___: to vacuum",
+    "definition": "to vacuum",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "barrer",
+    "entry": "barrer",
+    "type": "verb",
+    "definition": "to sweep",
+    "conjugations": {
+      "present": {
+        "yo": "barro",
+        "tú": "barres",
+        "él": "barre",
+        "nosotros": "barremos",
+        "vosotros": "barréis",
+        "ellos": "barren"
+      },
+      "preterite": {
+        "yo": "barrí",
+        "tú": "barriste",
+        "él": "barrió",
+        "nosotros": "barrimos",
+        "vosotros": "barristeis",
+        "ellos": "barrieron"
+      },
+      "imperfect": {
+        "yo": "barría",
+        "tú": "barrías",
+        "él": "barría",
+        "nosotros": "barríamos",
+        "vosotros": "barríais",
+        "ellos": "barrían"
+      },
+      "future": {
+        "yo": "barreré",
+        "tú": "barrerás",
+        "él": "barrerá",
+        "nosotros": "barreremos",
+        "vosotros": "barreréis",
+        "ellos": "barrerán"
+      },
+      "conditional": {
+        "yo": "barrería",
+        "tú": "barrerías",
+        "él": "barrería",
+        "nosotros": "barreríamos",
+        "vosotros": "barreríais",
+        "ellos": "barrerían"
+      },
+      "subjunctive": {
+        "yo": "barra",
+        "tú": "barras",
+        "él": "barra",
+        "nosotros": "barramos",
+        "vosotros": "barráis",
+        "ellos": "barran"
+      },
+      "imperative": {
+        "tú": "barre",
+        "usted": "barra",
+        "nosotros": "barramos",
+        "vosotros": "barred",
+        "ustedes": "barran"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "er-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "recoger",
+    "entry": "recoger",
+    "type": "verb",
+    "definition": "to pick up",
+    "conjugations": {
+      "present": {
+        "yo": "recogo",
+        "tú": "recoges",
+        "él": "recoge",
+        "nosotros": "recogemos",
+        "vosotros": "recogéis",
+        "ellos": "recogen"
+      },
+      "preterite": {
+        "yo": "recogí",
+        "tú": "recogiste",
+        "él": "recogió",
+        "nosotros": "recogimos",
+        "vosotros": "recogisteis",
+        "ellos": "recogieron"
+      },
+      "imperfect": {
+        "yo": "recogía",
+        "tú": "recogías",
+        "él": "recogía",
+        "nosotros": "recogíamos",
+        "vosotros": "recogíais",
+        "ellos": "recogían"
+      },
+      "future": {
+        "yo": "recogeré",
+        "tú": "recogerás",
+        "él": "recogerá",
+        "nosotros": "recogeremos",
+        "vosotros": "recogeréis",
+        "ellos": "recogerán"
+      },
+      "conditional": {
+        "yo": "recogería",
+        "tú": "recogerías",
+        "él": "recogería",
+        "nosotros": "recogeríamos",
+        "vosotros": "recogeríais",
+        "ellos": "recogerían"
+      },
+      "subjunctive": {
+        "yo": "recoga",
+        "tú": "recogas",
+        "él": "recoga",
+        "nosotros": "recogamos",
+        "vosotros": "recogáis",
+        "ellos": "recogan"
+      },
+      "imperative": {
+        "tú": "recoge",
+        "usted": "recoga",
+        "nosotros": "recogamos",
+        "vosotros": "recoged",
+        "ustedes": "recogan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "er-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-pareja",
+    "entry": "pareja",
+    "type": "phrase",
+    "full_phrase": "la pareja",
+    "clue_template": "la ___: partner, couple",
+    "definition": "partner, couple",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "mejorar",
+    "entry": "mejorar",
+    "type": "verb",
+    "definition": "to improve",
+    "conjugations": {
+      "present": {
+        "yo": "mejoro",
+        "tú": "mejoras",
+        "él": "mejora",
+        "nosotros": "mejoramos",
+        "vosotros": "mejoráis",
+        "ellos": "mejoran"
+      },
+      "preterite": {
+        "yo": "mejoré",
+        "tú": "mejoraste",
+        "él": "mejoró",
+        "nosotros": "mejoramos",
+        "vosotros": "mejorasteis",
+        "ellos": "mejoraron"
+      },
+      "imperfect": {
+        "yo": "mejoraba",
+        "tú": "mejorabas",
+        "él": "mejoraba",
+        "nosotros": "mejorábamos",
+        "vosotros": "mejorabais",
+        "ellos": "mejoraban"
+      },
+      "future": {
+        "yo": "mejoraré",
+        "tú": "mejorarás",
+        "él": "mejorará",
+        "nosotros": "mejoraremos",
+        "vosotros": "mejoraréis",
+        "ellos": "mejorarán"
+      },
+      "conditional": {
+        "yo": "mejoraría",
+        "tú": "mejorarías",
+        "él": "mejoraría",
+        "nosotros": "mejoraríamos",
+        "vosotros": "mejoraríais",
+        "ellos": "mejorarían"
+      },
+      "subjunctive": {
+        "yo": "mejore",
+        "tú": "mejores",
+        "él": "mejore",
+        "nosotros": "mejoremos",
+        "vosotros": "mejoréis",
+        "ellos": "mejoren"
+      },
+      "imperative": {
+        "tú": "mejora",
+        "usted": "mejore",
+        "nosotros": "mejoremos",
+        "vosotros": "mejorad",
+        "ustedes": "mejoren"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "entrar",
+    "entry": "entrar",
+    "type": "verb",
+    "definition": "to enter",
+    "conjugations": {
+      "present": {
+        "yo": "entro",
+        "tú": "entras",
+        "él": "entra",
+        "nosotros": "entramos",
+        "vosotros": "entráis",
+        "ellos": "entran"
+      },
+      "preterite": {
+        "yo": "entré",
+        "tú": "entraste",
+        "él": "entró",
+        "nosotros": "entramos",
+        "vosotros": "entrasteis",
+        "ellos": "entraron"
+      },
+      "imperfect": {
+        "yo": "entraba",
+        "tú": "entrabas",
+        "él": "entraba",
+        "nosotros": "entrábamos",
+        "vosotros": "entrabais",
+        "ellos": "entraban"
+      },
+      "future": {
+        "yo": "entraré",
+        "tú": "entrarás",
+        "él": "entrará",
+        "nosotros": "entraremos",
+        "vosotros": "entraréis",
+        "ellos": "entrarán"
+      },
+      "conditional": {
+        "yo": "entraría",
+        "tú": "entrarías",
+        "él": "entraría",
+        "nosotros": "entraríamos",
+        "vosotros": "entraríais",
+        "ellos": "entrarían"
+      },
+      "subjunctive": {
+        "yo": "entre",
+        "tú": "entres",
+        "él": "entre",
+        "nosotros": "entremos",
+        "vosotros": "entréis",
+        "ellos": "entren"
+      },
+      "imperative": {
+        "tú": "entra",
+        "usted": "entre",
+        "nosotros": "entremos",
+        "vosotros": "entrad",
+        "ustedes": "entren"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "-desde-cu-ndo--",
+    "entry": "cuándo…",
+    "type": "phrase",
+    "full_phrase": "¿Desde cuándo…?",
+    "clue_template": "¿Desde ___?: Since when…?",
+    "definition": "Since when…?",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-pel-cula",
+    "entry": "película",
+    "type": "phrase",
+    "full_phrase": "la película",
+    "clue_template": "la ___: movie",
+    "definition": "movie",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-film",
+    "entry": "film",
+    "type": "phrase",
+    "full_phrase": "el film",
+    "clue_template": "el ___: film",
+    "definition": "film",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-filme",
+    "entry": "filme",
+    "type": "phrase",
+    "full_phrase": "el filme",
+    "clue_template": "el ___: film",
+    "definition": "film",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-partido",
+    "entry": "partido",
+    "type": "phrase",
+    "full_phrase": "el partido",
+    "clue_template": "el ___: game",
+    "definition": "game",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "acampar",
+    "entry": "acampar",
+    "type": "verb",
+    "definition": "to camp",
+    "conjugations": {
+      "present": {
+        "yo": "acampo",
+        "tú": "acampas",
+        "él": "acampa",
+        "nosotros": "acampamos",
+        "vosotros": "acampáis",
+        "ellos": "acampan"
+      },
+      "preterite": {
+        "yo": "acampé",
+        "tú": "acampaste",
+        "él": "acampó",
+        "nosotros": "acampamos",
+        "vosotros": "acampasteis",
+        "ellos": "acamparon"
+      },
+      "imperfect": {
+        "yo": "acampaba",
+        "tú": "acampabas",
+        "él": "acampaba",
+        "nosotros": "acampábamos",
+        "vosotros": "acampabais",
+        "ellos": "acampaban"
+      },
+      "future": {
+        "yo": "acamparé",
+        "tú": "acamparás",
+        "él": "acampará",
+        "nosotros": "acamparemos",
+        "vosotros": "acamparéis",
+        "ellos": "acamparán"
+      },
+      "conditional": {
+        "yo": "acamparía",
+        "tú": "acamparías",
+        "él": "acamparía",
+        "nosotros": "acamparíamos",
+        "vosotros": "acamparíais",
+        "ellos": "acamparían"
+      },
+      "subjunctive": {
+        "yo": "acampe",
+        "tú": "acampes",
+        "él": "acampe",
+        "nosotros": "acampemos",
+        "vosotros": "acampéis",
+        "ellos": "acampen"
+      },
+      "imperative": {
+        "tú": "acampa",
+        "usted": "acampe",
+        "nosotros": "acampemos",
+        "vosotros": "acampad",
+        "ustedes": "acampen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-playa",
+    "entry": "playa",
+    "type": "phrase",
+    "full_phrase": "la playa",
+    "clue_template": "la ___: beach",
+    "definition": "beach",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "las-vacaciones",
+    "entry": "vacaciones",
+    "type": "phrase",
+    "full_phrase": "las vacaciones",
+    "clue_template": "las ___: vacation",
+    "definition": "vacation",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "sacar-la-basura",
+    "entry": "basura",
+    "type": "phrase",
+    "full_phrase": "sacar la basura",
+    "clue_template": "sacar la ___: to take out the trash",
+    "definition": "to take out the trash",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "quitar-el-polvo",
+    "entry": "quitar",
+    "type": "phrase",
+    "full_phrase": "quitar el polvo",
+    "clue_template": "___ el polvo: to dust",
+    "definition": "to dust",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "planchar",
+    "entry": "planchar",
+    "type": "verb",
+    "definition": "to iron",
+    "conjugations": {
+      "present": {
+        "yo": "plancho",
+        "tú": "planchas",
+        "él": "plancha",
+        "nosotros": "planchamos",
+        "vosotros": "plancháis",
+        "ellos": "planchan"
+      },
+      "preterite": {
+        "yo": "planché",
+        "tú": "planchaste",
+        "él": "planchó",
+        "nosotros": "planchamos",
+        "vosotros": "planchasteis",
+        "ellos": "plancharon"
+      },
+      "imperfect": {
+        "yo": "planchaba",
+        "tú": "planchabas",
+        "él": "planchaba",
+        "nosotros": "planchábamos",
+        "vosotros": "planchabais",
+        "ellos": "planchaban"
+      },
+      "future": {
+        "yo": "plancharé",
+        "tú": "plancharás",
+        "él": "planchará",
+        "nosotros": "plancharemos",
+        "vosotros": "plancharéis",
+        "ellos": "plancharán"
+      },
+      "conditional": {
+        "yo": "plancharía",
+        "tú": "plancharías",
+        "él": "plancharía",
+        "nosotros": "plancharíamos",
+        "vosotros": "plancharíais",
+        "ellos": "plancharían"
+      },
+      "subjunctive": {
+        "yo": "planche",
+        "tú": "planches",
+        "él": "planche",
+        "nosotros": "planchemos",
+        "vosotros": "planchéis",
+        "ellos": "planchen"
+      },
+      "imperative": {
+        "tú": "plancha",
+        "usted": "planche",
+        "nosotros": "planchemos",
+        "vosotros": "planchad",
+        "ustedes": "planchen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-alma",
+    "entry": "alma",
+    "type": "phrase",
+    "full_phrase": "el alma",
+    "clue_template": "el ___: soul [feminine]",
+    "definition": "soul [feminine]",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-alma-gemela",
+    "entry": "gemela",
+    "type": "phrase",
+    "full_phrase": "el alma gemela",
+    "clue_template": "el alma ___: soul mate",
+    "definition": "soul mate",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "ya-voy-",
+    "entry": "voy",
+    "type": "phrase",
+    "full_phrase": "Ya voy.",
+    "clue_template": "Ya ___.: I’m coming.",
+    "definition": "I’m coming.",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "escuche",
+    "entry": "escuche",
+    "type": "word",
+    "definition": "listen [usted command]",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "tanto-como",
+    "entry": "tanto",
+    "type": "phrase",
+    "full_phrase": "tanto como",
+    "clue_template": "___ como: as well as",
+    "definition": "as well as",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-variedad",
+    "entry": "variedad",
+    "type": "phrase",
+    "full_phrase": "la variedad",
+    "clue_template": "la ___: variety",
+    "definition": "variety",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-mandato",
+    "entry": "mandato",
+    "type": "phrase",
+    "full_phrase": "el mandato",
+    "clue_template": "el ___: command",
+    "definition": "command",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-atenci-n",
+    "entry": "atención",
+    "type": "phrase",
+    "full_phrase": "la atención",
+    "clue_template": "la ___: attention",
+    "definition": "attention",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-librer-a",
+    "entry": "librería",
+    "type": "phrase",
+    "full_phrase": "la librería",
+    "clue_template": "la ___: bookstore",
+    "definition": "bookstore",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-pizzer-a",
+    "entry": "pizzería",
+    "type": "phrase",
+    "full_phrase": "la pizzería",
+    "clue_template": "la ___: pizzeria",
+    "definition": "pizzeria",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-fruter-a",
+    "entry": "frutería",
+    "type": "phrase",
+    "full_phrase": "la frutería",
+    "clue_template": "la ___: fruit store",
+    "definition": "fruit store",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-gimnasio",
+    "entry": "gimnasio",
+    "type": "phrase",
+    "full_phrase": "el gimnasio",
+    "clue_template": "el ___: gymnasium",
+    "definition": "gymnasium",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-estadio",
+    "entry": "estadio",
+    "type": "phrase",
+    "full_phrase": "el estadio",
+    "clue_template": "el ___: stadium",
+    "definition": "stadium",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-bar",
+    "entry": "bar",
+    "type": "phrase",
+    "full_phrase": "el bar",
+    "clue_template": "el ___: bar",
+    "definition": "bar",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-zool-gico",
+    "entry": "zoológico",
+    "type": "phrase",
+    "full_phrase": "el zoológico",
+    "clue_template": "el ___: zoo",
+    "definition": "zoo",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-catedral",
+    "entry": "catedral",
+    "type": "phrase",
+    "full_phrase": "la catedral",
+    "clue_template": "la ___: cathedral",
+    "definition": "cathedral",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "es-pan-comido-",
+    "entry": "comido",
+    "type": "phrase",
+    "full_phrase": "Es pan comido.",
+    "clue_template": "Es pan ___.: It’s a piece of cake.",
+    "definition": "It’s a piece of cake.",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "peor",
+    "entry": "peor",
+    "type": "word",
+    "definition": "worse",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-frase",
+    "entry": "frase",
+    "type": "phrase",
+    "full_phrase": "la frase",
+    "clue_template": "la ___: sentence",
+    "definition": "sentence",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-gente",
+    "entry": "gente",
+    "type": "phrase",
+    "full_phrase": "la gente",
+    "clue_template": "la ___: people",
+    "definition": "people",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-perfume",
+    "entry": "perfume",
+    "type": "phrase",
+    "full_phrase": "el perfume",
+    "clue_template": "el ___: perfume",
+    "definition": "perfume",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "depositar",
+    "entry": "depositar",
+    "type": "verb",
+    "definition": "to deposit",
+    "conjugations": {
+      "present": {
+        "yo": "deposito",
+        "tú": "depositas",
+        "él": "deposita",
+        "nosotros": "depositamos",
+        "vosotros": "depositáis",
+        "ellos": "depositan"
+      },
+      "preterite": {
+        "yo": "deposité",
+        "tú": "depositaste",
+        "él": "depositó",
+        "nosotros": "depositamos",
+        "vosotros": "depositasteis",
+        "ellos": "depositaron"
+      },
+      "imperfect": {
+        "yo": "depositaba",
+        "tú": "depositabas",
+        "él": "depositaba",
+        "nosotros": "depositábamos",
+        "vosotros": "depositabais",
+        "ellos": "depositaban"
+      },
+      "future": {
+        "yo": "depositaré",
+        "tú": "depositarás",
+        "él": "depositará",
+        "nosotros": "depositaremos",
+        "vosotros": "depositaréis",
+        "ellos": "depositarán"
+      },
+      "conditional": {
+        "yo": "depositaría",
+        "tú": "depositarías",
+        "él": "depositaría",
+        "nosotros": "depositaríamos",
+        "vosotros": "depositaríais",
+        "ellos": "depositarían"
+      },
+      "subjunctive": {
+        "yo": "deposite",
+        "tú": "deposites",
+        "él": "deposite",
+        "nosotros": "depositemos",
+        "vosotros": "depositéis",
+        "ellos": "depositen"
+      },
+      "imperative": {
+        "tú": "deposita",
+        "usted": "deposite",
+        "nosotros": "depositemos",
+        "vosotros": "depositad",
+        "ustedes": "depositen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-zapater-a",
+    "entry": "zapatería",
+    "type": "phrase",
+    "full_phrase": "la zapatería",
+    "clue_template": "la ___: shoe store",
+    "definition": "shoe store",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-panader-a",
+    "entry": "panadería",
+    "type": "phrase",
+    "full_phrase": "la panadería",
+    "clue_template": "la ___: bakery",
+    "definition": "bakery",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-perfumer-a",
+    "entry": "perfumería",
+    "type": "phrase",
+    "full_phrase": "la perfumería",
+    "clue_template": "la ___: perfume store",
+    "definition": "perfume store",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-correo",
+    "entry": "correo",
+    "type": "phrase",
+    "full_phrase": "el correo",
+    "clue_template": "el ___: post office",
+    "definition": "post office",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-calle",
+    "entry": "calle",
+    "type": "phrase",
+    "full_phrase": "la calle",
+    "clue_template": "la ___: street",
+    "definition": "street",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-autopista",
+    "entry": "autopista",
+    "type": "phrase",
+    "full_phrase": "la autopista",
+    "clue_template": "la ___: highway",
+    "definition": "highway",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-edificio",
+    "entry": "edificio",
+    "type": "phrase",
+    "full_phrase": "el edificio",
+    "clue_template": "el ___: building",
+    "definition": "building",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "mayor",
+    "entry": "mayor",
+    "type": "word",
+    "definition": "older",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "menor",
+    "entry": "menor",
+    "type": "word",
+    "definition": "younger",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "incorporar",
+    "entry": "incorporar",
+    "type": "verb",
+    "definition": "to incorporate",
+    "conjugations": {
+      "present": {
+        "yo": "incorporo",
+        "tú": "incorporas",
+        "él": "incorpora",
+        "nosotros": "incorporamos",
+        "vosotros": "incorporáis",
+        "ellos": "incorporan"
+      },
+      "preterite": {
+        "yo": "incorporé",
+        "tú": "incorporaste",
+        "él": "incorporó",
+        "nosotros": "incorporamos",
+        "vosotros": "incorporasteis",
+        "ellos": "incorporaron"
+      },
+      "imperfect": {
+        "yo": "incorporaba",
+        "tú": "incorporabas",
+        "él": "incorporaba",
+        "nosotros": "incorporábamos",
+        "vosotros": "incorporabais",
+        "ellos": "incorporaban"
+      },
+      "future": {
+        "yo": "incorporaré",
+        "tú": "incorporarás",
+        "él": "incorporará",
+        "nosotros": "incorporaremos",
+        "vosotros": "incorporaréis",
+        "ellos": "incorporarán"
+      },
+      "conditional": {
+        "yo": "incorporaría",
+        "tú": "incorporarías",
+        "él": "incorporaría",
+        "nosotros": "incorporaríamos",
+        "vosotros": "incorporaríais",
+        "ellos": "incorporarían"
+      },
+      "subjunctive": {
+        "yo": "incorpore",
+        "tú": "incorpores",
+        "él": "incorpore",
+        "nosotros": "incorporemos",
+        "vosotros": "incorporéis",
+        "ellos": "incorporen"
+      },
+      "imperative": {
+        "tú": "incorpora",
+        "usted": "incorpore",
+        "nosotros": "incorporemos",
+        "vosotros": "incorporad",
+        "ustedes": "incorporen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "perd-neme-",
+    "entry": "Perdóneme.",
+    "type": "word",
+    "definition": "Pardon me. [usted command]",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-casita",
+    "entry": "casita",
+    "type": "phrase",
+    "full_phrase": "la casita",
+    "clue_template": "la ___: little house",
+    "definition": "little house",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-abuelita",
+    "entry": "abuelita",
+    "type": "phrase",
+    "full_phrase": "la abuelita",
+    "clue_template": "la ___: granny",
+    "definition": "granny",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-cuerpo",
+    "entry": "cuerpo",
+    "type": "phrase",
+    "full_phrase": "el cuerpo",
+    "clue_template": "el ___: body",
+    "definition": "body",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-cabeza",
+    "entry": "cabeza",
+    "type": "phrase",
+    "full_phrase": "la cabeza",
+    "clue_template": "la ___: head",
+    "definition": "head",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pelo",
+    "entry": "pelo",
+    "type": "phrase",
+    "full_phrase": "el pelo",
+    "clue_template": "el ___: hair",
+    "definition": "hair",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-cara",
+    "entry": "cara",
+    "type": "phrase",
+    "full_phrase": "la cara",
+    "clue_template": "la ___: face",
+    "definition": "face",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-frente",
+    "entry": "frente",
+    "type": "phrase",
+    "full_phrase": "la frente",
+    "clue_template": "la ___: forehead",
+    "definition": "forehead",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-ojo",
+    "entry": "ojo",
+    "type": "phrase",
+    "full_phrase": "el ojo",
+    "clue_template": "el ___: eye",
+    "definition": "eye",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-nariz",
+    "entry": "nariz",
+    "type": "phrase",
+    "full_phrase": "la nariz",
+    "clue_template": "la ___: nose",
+    "definition": "nose",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-mejilla",
+    "entry": "mejilla",
+    "type": "phrase",
+    "full_phrase": "la mejilla",
+    "clue_template": "la ___: cheek",
+    "definition": "cheek",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-boca",
+    "entry": "boca",
+    "type": "phrase",
+    "full_phrase": "la boca",
+    "clue_template": "la ___: mouth",
+    "definition": "mouth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-labio",
+    "entry": "labio",
+    "type": "phrase",
+    "full_phrase": "el labio",
+    "clue_template": "el ___: lip",
+    "definition": "lip",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-diente",
+    "entry": "diente",
+    "type": "phrase",
+    "full_phrase": "el diente",
+    "clue_template": "el ___: tooth",
+    "definition": "tooth",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-oreja",
+    "entry": "oreja",
+    "type": "phrase",
+    "full_phrase": "la oreja",
+    "clue_template": "la ___: ear",
+    "definition": "ear",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-cuello",
+    "entry": "cuello",
+    "type": "phrase",
+    "full_phrase": "el cuello",
+    "clue_template": "el ___: neck",
+    "definition": "neck",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-hombro",
+    "entry": "hombro",
+    "type": "phrase",
+    "full_phrase": "el hombro",
+    "clue_template": "el ___: shoulder",
+    "definition": "shoulder",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pecho",
+    "entry": "pecho",
+    "type": "phrase",
+    "full_phrase": "el pecho",
+    "clue_template": "el ___: chest",
+    "definition": "chest",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "disc-lpeme-",
+    "entry": "Discúlpeme.",
+    "type": "word",
+    "definition": "Excuse me. [usted command]",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-paz",
+    "entry": "paz",
+    "type": "phrase",
+    "full_phrase": "la paz",
+    "clue_template": "la ___: peace",
+    "definition": "peace",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "humano",
+    "entry": "humano",
+    "type": "word",
+    "definition": "human",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-espalda",
+    "entry": "espalda",
+    "type": "phrase",
+    "full_phrase": "la espalda",
+    "clue_template": "la ___: back",
+    "definition": "back",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-est-mago",
+    "entry": "estómago",
+    "type": "phrase",
+    "full_phrase": "el estómago",
+    "clue_template": "el ___: stomach",
+    "definition": "stomach",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-brazo",
+    "entry": "brazo",
+    "type": "phrase",
+    "full_phrase": "el brazo",
+    "clue_template": "el ___: arm",
+    "definition": "arm",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-codo",
+    "entry": "codo",
+    "type": "phrase",
+    "full_phrase": "el codo",
+    "clue_template": "el ___: elbow",
+    "definition": "elbow",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-mu-eca",
+    "entry": "muñeca",
+    "type": "phrase",
+    "full_phrase": "la muñeca",
+    "clue_template": "la ___: wrist",
+    "definition": "wrist",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-dedo",
+    "entry": "dedo",
+    "type": "phrase",
+    "full_phrase": "el dedo",
+    "clue_template": "el ___: finger",
+    "definition": "finger",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-cintura",
+    "entry": "cintura",
+    "type": "phrase",
+    "full_phrase": "la cintura",
+    "clue_template": "la ___: waist",
+    "definition": "waist",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-pierna",
+    "entry": "pierna",
+    "type": "phrase",
+    "full_phrase": "la pierna",
+    "clue_template": "la ___: leg",
+    "definition": "leg",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-rodilla",
+    "entry": "rodilla",
+    "type": "phrase",
+    "full_phrase": "la rodilla",
+    "clue_template": "la ___: knee",
+    "definition": "knee",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-tobillo",
+    "entry": "tobillo",
+    "type": "phrase",
+    "full_phrase": "el tobillo",
+    "clue_template": "el ___: ankle",
+    "definition": "ankle",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "los-pulmones",
+    "entry": "pulmones",
+    "type": "phrase",
+    "full_phrase": "los pulmones",
+    "clue_template": "los ___: lungs",
+    "definition": "lungs",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-garganta",
+    "entry": "garganta",
+    "type": "phrase",
+    "full_phrase": "la garganta",
+    "clue_template": "la ___: throat",
+    "definition": "throat",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-coraz-n",
+    "entry": "corazón",
+    "type": "phrase",
+    "full_phrase": "el corazón",
+    "clue_template": "el ___: heart",
+    "definition": "heart",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-liga",
+    "entry": "liga",
+    "type": "phrase",
+    "full_phrase": "la liga",
+    "clue_template": "la ___: league",
+    "definition": "league",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-f-tbol",
+    "entry": "fútbol",
+    "type": "phrase",
+    "full_phrase": "el fútbol",
+    "clue_template": "el ___: soccer",
+    "definition": "soccer",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-f-tbol-americano",
+    "entry": "americano",
+    "type": "phrase",
+    "full_phrase": "el fútbol americano",
+    "clue_template": "el fútbol ___: football",
+    "definition": "football",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-b-squetbol",
+    "entry": "básquetbol",
+    "type": "phrase",
+    "full_phrase": "el básquetbol",
+    "clue_template": "el ___: basketball",
+    "definition": "basketball",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-jugador",
+    "entry": "jugador",
+    "type": "phrase",
+    "full_phrase": "el jugador",
+    "clue_template": "el ___: player",
+    "definition": "player",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-aficionado",
+    "entry": "aficionado",
+    "type": "phrase",
+    "full_phrase": "el aficionado",
+    "clue_template": "el ___: fan",
+    "definition": "fan",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-raqueta",
+    "entry": "raqueta",
+    "type": "phrase",
+    "full_phrase": "la raqueta",
+    "clue_template": "la ___: racquet",
+    "definition": "racquet",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-bate",
+    "entry": "bate",
+    "type": "phrase",
+    "full_phrase": "el bate",
+    "clue_template": "el ___: bat",
+    "definition": "bat",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-palo-de-golf",
+    "entry": "golf",
+    "type": "phrase",
+    "full_phrase": "el palo de golf",
+    "clue_template": "el palo de ___: golf club",
+    "definition": "golf club",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-pelota",
+    "entry": "pelota",
+    "type": "phrase",
+    "full_phrase": "la pelota",
+    "clue_template": "la ___: ball",
+    "definition": "ball",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-bal-n",
+    "entry": "balón",
+    "type": "phrase",
+    "full_phrase": "el balón",
+    "clue_template": "el ___: ball",
+    "definition": "ball",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-equipo",
+    "entry": "equipo",
+    "type": "phrase",
+    "full_phrase": "el equipo",
+    "clue_template": "el ___: team",
+    "definition": "team",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "esquiar",
+    "entry": "esquiar",
+    "type": "verb",
+    "definition": "to ski",
+    "conjugations": {
+      "present": {
+        "yo": "esquio",
+        "tú": "esquias",
+        "él": "esquia",
+        "nosotros": "esquiamos",
+        "vosotros": "esquiáis",
+        "ellos": "esquian"
+      },
+      "preterite": {
+        "yo": "esquié",
+        "tú": "esquiaste",
+        "él": "esquió",
+        "nosotros": "esquiamos",
+        "vosotros": "esquiasteis",
+        "ellos": "esquiaron"
+      },
+      "imperfect": {
+        "yo": "esquiaba",
+        "tú": "esquiabas",
+        "él": "esquiaba",
+        "nosotros": "esquiábamos",
+        "vosotros": "esquiabais",
+        "ellos": "esquiaban"
+      },
+      "future": {
+        "yo": "esquiaré",
+        "tú": "esquiarás",
+        "él": "esquiará",
+        "nosotros": "esquiaremos",
+        "vosotros": "esquiaréis",
+        "ellos": "esquiarán"
+      },
+      "conditional": {
+        "yo": "esquiaría",
+        "tú": "esquiarías",
+        "él": "esquiaría",
+        "nosotros": "esquiaríamos",
+        "vosotros": "esquiaríais",
+        "ellos": "esquiarían"
+      },
+      "subjunctive": {
+        "yo": "esquie",
+        "tú": "esquies",
+        "él": "esquie",
+        "nosotros": "esquiemos",
+        "vosotros": "esquiéis",
+        "ellos": "esquien"
+      },
+      "imperative": {
+        "tú": "esquia",
+        "usted": "esquie",
+        "nosotros": "esquiemos",
+        "vosotros": "esquiad",
+        "ustedes": "esquien"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-esqu--acu-tico",
+    "entry": "acuático",
+    "type": "phrase",
+    "full_phrase": "el esquí acuático",
+    "clue_template": "el esquí ___: water skiiing",
+    "definition": "water skiiing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-buceo",
+    "entry": "buceo",
+    "type": "phrase",
+    "full_phrase": "el buceo",
+    "clue_template": "el ___: scuba diving",
+    "definition": "scuba diving",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "bucear",
+    "entry": "bucear",
+    "type": "verb",
+    "definition": "to scuba dive",
+    "conjugations": {
+      "present": {
+        "yo": "buceo",
+        "tú": "buceas",
+        "él": "bucea",
+        "nosotros": "buceamos",
+        "vosotros": "buceáis",
+        "ellos": "bucean"
+      },
+      "preterite": {
+        "yo": "buceé",
+        "tú": "buceaste",
+        "él": "buceó",
+        "nosotros": "buceamos",
+        "vosotros": "buceasteis",
+        "ellos": "bucearon"
+      },
+      "imperfect": {
+        "yo": "buceaba",
+        "tú": "buceabas",
+        "él": "buceaba",
+        "nosotros": "buceábamos",
+        "vosotros": "buceabais",
+        "ellos": "buceaban"
+      },
+      "future": {
+        "yo": "bucearé",
+        "tú": "bucearás",
+        "él": "buceará",
+        "nosotros": "bucearemos",
+        "vosotros": "bucearéis",
+        "ellos": "bucearán"
+      },
+      "conditional": {
+        "yo": "bucearía",
+        "tú": "bucearías",
+        "él": "bucearía",
+        "nosotros": "bucearíamos",
+        "vosotros": "bucearíais",
+        "ellos": "bucearían"
+      },
+      "subjunctive": {
+        "yo": "bucee",
+        "tú": "bucees",
+        "él": "bucee",
+        "nosotros": "buceemos",
+        "vosotros": "buceéis",
+        "ellos": "buceen"
+      },
+      "imperative": {
+        "tú": "bucea",
+        "usted": "bucee",
+        "nosotros": "buceemos",
+        "vosotros": "bucead",
+        "ustedes": "buceen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "crear",
+    "entry": "crear",
+    "type": "verb",
+    "definition": "to create",
+    "conjugations": {
+      "present": {
+        "yo": "creo",
+        "tú": "creas",
+        "él": "crea",
+        "nosotros": "creamos",
+        "vosotros": "creáis",
+        "ellos": "crean"
+      },
+      "preterite": {
+        "yo": "creé",
+        "tú": "creaste",
+        "él": "creó",
+        "nosotros": "creamos",
+        "vosotros": "creasteis",
+        "ellos": "crearon"
+      },
+      "imperfect": {
+        "yo": "creaba",
+        "tú": "creabas",
+        "él": "creaba",
+        "nosotros": "creábamos",
+        "vosotros": "creabais",
+        "ellos": "creaban"
+      },
+      "future": {
+        "yo": "crearé",
+        "tú": "crearás",
+        "él": "creará",
+        "nosotros": "crearemos",
+        "vosotros": "crearéis",
+        "ellos": "crearán"
+      },
+      "conditional": {
+        "yo": "crearía",
+        "tú": "crearías",
+        "él": "crearía",
+        "nosotros": "crearíamos",
+        "vosotros": "crearíais",
+        "ellos": "crearían"
+      },
+      "subjunctive": {
+        "yo": "cree",
+        "tú": "crees",
+        "él": "cree",
+        "nosotros": "creemos",
+        "vosotros": "creéis",
+        "ellos": "creen"
+      },
+      "imperative": {
+        "tú": "crea",
+        "usted": "cree",
+        "nosotros": "creemos",
+        "vosotros": "cread",
+        "ustedes": "creen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "creador",
+    "entry": "creador",
+    "type": "word",
+    "definition": "creator",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "conquistar",
+    "entry": "conquistar",
+    "type": "verb",
+    "definition": "to conquer",
+    "conjugations": {
+      "present": {
+        "yo": "conquisto",
+        "tú": "conquistas",
+        "él": "conquista",
+        "nosotros": "conquistamos",
+        "vosotros": "conquistáis",
+        "ellos": "conquistan"
+      },
+      "preterite": {
+        "yo": "conquisté",
+        "tú": "conquistaste",
+        "él": "conquistó",
+        "nosotros": "conquistamos",
+        "vosotros": "conquistasteis",
+        "ellos": "conquistaron"
+      },
+      "imperfect": {
+        "yo": "conquistaba",
+        "tú": "conquistabas",
+        "él": "conquistaba",
+        "nosotros": "conquistábamos",
+        "vosotros": "conquistabais",
+        "ellos": "conquistaban"
+      },
+      "future": {
+        "yo": "conquistaré",
+        "tú": "conquistarás",
+        "él": "conquistará",
+        "nosotros": "conquistaremos",
+        "vosotros": "conquistaréis",
+        "ellos": "conquistarán"
+      },
+      "conditional": {
+        "yo": "conquistaría",
+        "tú": "conquistarías",
+        "él": "conquistaría",
+        "nosotros": "conquistaríamos",
+        "vosotros": "conquistaríais",
+        "ellos": "conquistarían"
+      },
+      "subjunctive": {
+        "yo": "conquiste",
+        "tú": "conquistes",
+        "él": "conquiste",
+        "nosotros": "conquistemos",
+        "vosotros": "conquistéis",
+        "ellos": "conquisten"
+      },
+      "imperative": {
+        "tú": "conquista",
+        "usted": "conquiste",
+        "nosotros": "conquistemos",
+        "vosotros": "conquistad",
+        "ustedes": "conquisten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-boxeo",
+    "entry": "boxeo",
+    "type": "phrase",
+    "full_phrase": "el boxeo",
+    "clue_template": "el ___: boxing",
+    "definition": "boxing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-esqu-",
+    "entry": "esquí",
+    "type": "phrase",
+    "full_phrase": "el esquí",
+    "clue_template": "el ___: skiing",
+    "definition": "skiing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-ciclismo",
+    "entry": "ciclismo",
+    "type": "phrase",
+    "full_phrase": "el ciclismo",
+    "clue_template": "el ___: cycling",
+    "definition": "cycling",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-campe-n",
+    "entry": "campeón",
+    "type": "phrase",
+    "full_phrase": "el campeón",
+    "clue_template": "el ___: champion",
+    "definition": "champion",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "nadar",
+    "entry": "nadar",
+    "type": "verb",
+    "definition": "to swim",
+    "conjugations": {
+      "present": {
+        "yo": "nado",
+        "tú": "nadas",
+        "él": "nada",
+        "nosotros": "nadamos",
+        "vosotros": "nadáis",
+        "ellos": "nadan"
+      },
+      "preterite": {
+        "yo": "nadé",
+        "tú": "nadaste",
+        "él": "nadó",
+        "nosotros": "nadamos",
+        "vosotros": "nadasteis",
+        "ellos": "nadaron"
+      },
+      "imperfect": {
+        "yo": "nadaba",
+        "tú": "nadabas",
+        "él": "nadaba",
+        "nosotros": "nadábamos",
+        "vosotros": "nadabais",
+        "ellos": "nadaban"
+      },
+      "future": {
+        "yo": "nadaré",
+        "tú": "nadarás",
+        "él": "nadará",
+        "nosotros": "nadaremos",
+        "vosotros": "nadaréis",
+        "ellos": "nadarán"
+      },
+      "conditional": {
+        "yo": "nadaría",
+        "tú": "nadarías",
+        "él": "nadaría",
+        "nosotros": "nadaríamos",
+        "vosotros": "nadaríais",
+        "ellos": "nadarían"
+      },
+      "subjunctive": {
+        "yo": "nade",
+        "tú": "nades",
+        "él": "nade",
+        "nosotros": "nademos",
+        "vosotros": "nadéis",
+        "ellos": "naden"
+      },
+      "imperative": {
+        "tú": "nada",
+        "usted": "nade",
+        "nosotros": "nademos",
+        "vosotros": "nadad",
+        "ustedes": "naden"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-nataci-n",
+    "entry": "natación",
+    "type": "phrase",
+    "full_phrase": "la natación",
+    "clue_template": "la ___: swimming",
+    "definition": "swimming",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-piscina",
+    "entry": "piscina",
+    "type": "phrase",
+    "full_phrase": "la piscina",
+    "clue_template": "la ___: swimming pool",
+    "definition": "swimming pool",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "levantar-pesas",
+    "entry": "levantar",
+    "type": "phrase",
+    "full_phrase": "levantar pesas",
+    "clue_template": "___ pesas: to lift weights",
+    "definition": "to lift weights",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "entrenar",
+    "entry": "entrenar",
+    "type": "verb",
+    "definition": "to train",
+    "conjugations": {
+      "present": {
+        "yo": "entreno",
+        "tú": "entrenas",
+        "él": "entrena",
+        "nosotros": "entrenamos",
+        "vosotros": "entrenáis",
+        "ellos": "entrenan"
+      },
+      "preterite": {
+        "yo": "entrené",
+        "tú": "entrenaste",
+        "él": "entrenó",
+        "nosotros": "entrenamos",
+        "vosotros": "entrenasteis",
+        "ellos": "entrenaron"
+      },
+      "imperfect": {
+        "yo": "entrenaba",
+        "tú": "entrenabas",
+        "él": "entrenaba",
+        "nosotros": "entrenábamos",
+        "vosotros": "entrenabais",
+        "ellos": "entrenaban"
+      },
+      "future": {
+        "yo": "entrenaré",
+        "tú": "entrenarás",
+        "él": "entrenará",
+        "nosotros": "entrenaremos",
+        "vosotros": "entrenaréis",
+        "ellos": "entrenarán"
+      },
+      "conditional": {
+        "yo": "entrenaría",
+        "tú": "entrenarías",
+        "él": "entrenaría",
+        "nosotros": "entrenaríamos",
+        "vosotros": "entrenaríais",
+        "ellos": "entrenarían"
+      },
+      "subjunctive": {
+        "yo": "entrene",
+        "tú": "entrenes",
+        "él": "entrene",
+        "nosotros": "entrenemos",
+        "vosotros": "entrenéis",
+        "ellos": "entrenen"
+      },
+      "imperative": {
+        "tú": "entrena",
+        "usted": "entrene",
+        "nosotros": "entrenemos",
+        "vosotros": "entrenad",
+        "ustedes": "entrenen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-entrenador",
+    "entry": "entrenador",
+    "type": "phrase",
+    "full_phrase": "el entrenador",
+    "clue_template": "el ___: coach, trainer",
+    "definition": "coach, trainer",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-competencia",
+    "entry": "competencia",
+    "type": "phrase",
+    "full_phrase": "la competencia",
+    "clue_template": "la ___: competition",
+    "definition": "competition",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "montar-a-caballo",
+    "entry": "caballo",
+    "type": "phrase",
+    "full_phrase": "montar a caballo",
+    "clue_template": "montar a ___: to ride a horse",
+    "definition": "to ride a horse",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "conquistador",
+    "entry": "conquistador",
+    "type": "word",
+    "definition": "conqueror",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "de-hecho",
+    "entry": "hecho",
+    "type": "phrase",
+    "full_phrase": "de hecho",
+    "clue_template": "de ___: in fact",
+    "definition": "in fact",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "gratis",
+    "entry": "gratis",
+    "type": "word",
+    "definition": "free, at no cost",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "ayer",
+    "entry": "ayer",
+    "type": "word",
+    "definition": "yesterday",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "anteayer",
+    "entry": "anteayer",
+    "type": "word",
+    "definition": "the day before yesterday",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "anoche",
+    "entry": "anoche",
+    "type": "word",
+    "definition": "last night",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-semana-pasada",
+    "entry": "pasada",
+    "type": "phrase",
+    "full_phrase": "la semana pasada",
+    "clue_template": "la semana ___: last week",
+    "definition": "last week",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "por-tres-horas",
+    "entry": "horas",
+    "type": "phrase",
+    "full_phrase": "por tres horas",
+    "clue_template": "por tres ___: for three hours",
+    "definition": "for three hours",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "bajar",
+    "entry": "bajar",
+    "type": "verb",
+    "definition": "to take down",
+    "conjugations": {
+      "present": {
+        "yo": "bajo",
+        "tú": "bajas",
+        "él": "baja",
+        "nosotros": "bajamos",
+        "vosotros": "bajáis",
+        "ellos": "bajan"
+      },
+      "preterite": {
+        "yo": "bajé",
+        "tú": "bajaste",
+        "él": "bajó",
+        "nosotros": "bajamos",
+        "vosotros": "bajasteis",
+        "ellos": "bajaron"
+      },
+      "imperfect": {
+        "yo": "bajaba",
+        "tú": "bajabas",
+        "él": "bajaba",
+        "nosotros": "bajábamos",
+        "vosotros": "bajabais",
+        "ellos": "bajaban"
+      },
+      "future": {
+        "yo": "bajaré",
+        "tú": "bajarás",
+        "él": "bajará",
+        "nosotros": "bajaremos",
+        "vosotros": "bajaréis",
+        "ellos": "bajarán"
+      },
+      "conditional": {
+        "yo": "bajaría",
+        "tú": "bajarías",
+        "él": "bajaría",
+        "nosotros": "bajaríamos",
+        "vosotros": "bajaríais",
+        "ellos": "bajarían"
+      },
+      "subjunctive": {
+        "yo": "baje",
+        "tú": "bajes",
+        "él": "baje",
+        "nosotros": "bajemos",
+        "vosotros": "bajéis",
+        "ellos": "bajen"
+      },
+      "imperative": {
+        "tú": "baja",
+        "usted": "baje",
+        "nosotros": "bajemos",
+        "vosotros": "bajad",
+        "ustedes": "bajen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "avanzar",
+    "entry": "avanzar",
+    "type": "verb",
+    "definition": "to progress",
+    "conjugations": {
+      "present": {
+        "yo": "avanzo",
+        "tú": "avanzas",
+        "él": "avanza",
+        "nosotros": "avanzamos",
+        "vosotros": "avanzáis",
+        "ellos": "avanzan"
+      },
+      "preterite": {
+        "yo": "avanzé",
+        "tú": "avanzaste",
+        "él": "avanzó",
+        "nosotros": "avanzamos",
+        "vosotros": "avanzasteis",
+        "ellos": "avanzaron"
+      },
+      "imperfect": {
+        "yo": "avanzaba",
+        "tú": "avanzabas",
+        "él": "avanzaba",
+        "nosotros": "avanzábamos",
+        "vosotros": "avanzabais",
+        "ellos": "avanzaban"
+      },
+      "future": {
+        "yo": "avanzaré",
+        "tú": "avanzarás",
+        "él": "avanzará",
+        "nosotros": "avanzaremos",
+        "vosotros": "avanzaréis",
+        "ellos": "avanzarán"
+      },
+      "conditional": {
+        "yo": "avanzaría",
+        "tú": "avanzarías",
+        "él": "avanzaría",
+        "nosotros": "avanzaríamos",
+        "vosotros": "avanzaríais",
+        "ellos": "avanzarían"
+      },
+      "subjunctive": {
+        "yo": "avanze",
+        "tú": "avanzes",
+        "él": "avanze",
+        "nosotros": "avanzemos",
+        "vosotros": "avanzéis",
+        "ellos": "avanzen"
+      },
+      "imperative": {
+        "tú": "avanza",
+        "usted": "avanze",
+        "nosotros": "avanzemos",
+        "vosotros": "avanzad",
+        "ustedes": "avanzen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "explorar",
+    "entry": "explorar",
+    "type": "verb",
+    "definition": "to explore",
+    "conjugations": {
+      "present": {
+        "yo": "exploro",
+        "tú": "exploras",
+        "él": "explora",
+        "nosotros": "exploramos",
+        "vosotros": "exploráis",
+        "ellos": "exploran"
+      },
+      "preterite": {
+        "yo": "exploré",
+        "tú": "exploraste",
+        "él": "exploró",
+        "nosotros": "exploramos",
+        "vosotros": "explorasteis",
+        "ellos": "exploraron"
+      },
+      "imperfect": {
+        "yo": "exploraba",
+        "tú": "explorabas",
+        "él": "exploraba",
+        "nosotros": "explorábamos",
+        "vosotros": "explorabais",
+        "ellos": "exploraban"
+      },
+      "future": {
+        "yo": "exploraré",
+        "tú": "explorarás",
+        "él": "explorará",
+        "nosotros": "exploraremos",
+        "vosotros": "exploraréis",
+        "ellos": "explorarán"
+      },
+      "conditional": {
+        "yo": "exploraría",
+        "tú": "explorarías",
+        "él": "exploraría",
+        "nosotros": "exploraríamos",
+        "vosotros": "exploraríais",
+        "ellos": "explorarían"
+      },
+      "subjunctive": {
+        "yo": "explore",
+        "tú": "explores",
+        "él": "explore",
+        "nosotros": "exploremos",
+        "vosotros": "exploréis",
+        "ellos": "exploren"
+      },
+      "imperative": {
+        "tú": "explora",
+        "usted": "explore",
+        "nosotros": "exploremos",
+        "vosotros": "explorad",
+        "ustedes": "exploren"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "comentar",
+    "entry": "comentar",
+    "type": "verb",
+    "definition": "to comment on",
+    "conjugations": {
+      "present": {
+        "yo": "comento",
+        "tú": "comentas",
+        "él": "comenta",
+        "nosotros": "comentamos",
+        "vosotros": "comentáis",
+        "ellos": "comentan"
+      },
+      "preterite": {
+        "yo": "comenté",
+        "tú": "comentaste",
+        "él": "comentó",
+        "nosotros": "comentamos",
+        "vosotros": "comentasteis",
+        "ellos": "comentaron"
+      },
+      "imperfect": {
+        "yo": "comentaba",
+        "tú": "comentabas",
+        "él": "comentaba",
+        "nosotros": "comentábamos",
+        "vosotros": "comentabais",
+        "ellos": "comentaban"
+      },
+      "future": {
+        "yo": "comentaré",
+        "tú": "comentarás",
+        "él": "comentará",
+        "nosotros": "comentaremos",
+        "vosotros": "comentaréis",
+        "ellos": "comentarán"
+      },
+      "conditional": {
+        "yo": "comentaría",
+        "tú": "comentarías",
+        "él": "comentaría",
+        "nosotros": "comentaríamos",
+        "vosotros": "comentaríais",
+        "ellos": "comentarían"
+      },
+      "subjunctive": {
+        "yo": "comente",
+        "tú": "comentes",
+        "él": "comente",
+        "nosotros": "comentemos",
+        "vosotros": "comentéis",
+        "ellos": "comenten"
+      },
+      "imperative": {
+        "tú": "comenta",
+        "usted": "comente",
+        "nosotros": "comentemos",
+        "vosotros": "comentad",
+        "ustedes": "comenten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "mencionar",
+    "entry": "mencionar",
+    "type": "verb",
+    "definition": "to mention",
+    "conjugations": {
+      "present": {
+        "yo": "menciono",
+        "tú": "mencionas",
+        "él": "menciona",
+        "nosotros": "mencionamos",
+        "vosotros": "mencionáis",
+        "ellos": "mencionan"
+      },
+      "preterite": {
+        "yo": "mencioné",
+        "tú": "mencionaste",
+        "él": "mencionó",
+        "nosotros": "mencionamos",
+        "vosotros": "mencionasteis",
+        "ellos": "mencionaron"
+      },
+      "imperfect": {
+        "yo": "mencionaba",
+        "tú": "mencionabas",
+        "él": "mencionaba",
+        "nosotros": "mencionábamos",
+        "vosotros": "mencionabais",
+        "ellos": "mencionaban"
+      },
+      "future": {
+        "yo": "mencionaré",
+        "tú": "mencionarás",
+        "él": "mencionará",
+        "nosotros": "mencionaremos",
+        "vosotros": "mencionaréis",
+        "ellos": "mencionarán"
+      },
+      "conditional": {
+        "yo": "mencionaría",
+        "tú": "mencionarías",
+        "él": "mencionaría",
+        "nosotros": "mencionaríamos",
+        "vosotros": "mencionaríais",
+        "ellos": "mencionarían"
+      },
+      "subjunctive": {
+        "yo": "mencione",
+        "tú": "menciones",
+        "él": "mencione",
+        "nosotros": "mencionemos",
+        "vosotros": "mencionéis",
+        "ellos": "mencionen"
+      },
+      "imperative": {
+        "tú": "menciona",
+        "usted": "mencione",
+        "nosotros": "mencionemos",
+        "vosotros": "mencionad",
+        "ustedes": "mencionen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "pronunciar",
+    "entry": "pronunciar",
+    "type": "verb",
+    "definition": "to pronounce",
+    "conjugations": {
+      "present": {
+        "yo": "pronuncio",
+        "tú": "pronuncias",
+        "él": "pronuncia",
+        "nosotros": "pronunciamos",
+        "vosotros": "pronunciáis",
+        "ellos": "pronuncian"
+      },
+      "preterite": {
+        "yo": "pronuncié",
+        "tú": "pronunciaste",
+        "él": "pronunció",
+        "nosotros": "pronunciamos",
+        "vosotros": "pronunciasteis",
+        "ellos": "pronunciaron"
+      },
+      "imperfect": {
+        "yo": "pronunciaba",
+        "tú": "pronunciabas",
+        "él": "pronunciaba",
+        "nosotros": "pronunciábamos",
+        "vosotros": "pronunciabais",
+        "ellos": "pronunciaban"
+      },
+      "future": {
+        "yo": "pronunciaré",
+        "tú": "pronunciarás",
+        "él": "pronunciará",
+        "nosotros": "pronunciaremos",
+        "vosotros": "pronunciaréis",
+        "ellos": "pronunciarán"
+      },
+      "conditional": {
+        "yo": "pronunciaría",
+        "tú": "pronunciarías",
+        "él": "pronunciaría",
+        "nosotros": "pronunciaríamos",
+        "vosotros": "pronunciaríais",
+        "ellos": "pronunciarían"
+      },
+      "subjunctive": {
+        "yo": "pronuncie",
+        "tú": "pronuncies",
+        "él": "pronuncie",
+        "nosotros": "pronunciemos",
+        "vosotros": "pronunciéis",
+        "ellos": "pronuncien"
+      },
+      "imperative": {
+        "tú": "pronuncia",
+        "usted": "pronuncie",
+        "nosotros": "pronunciemos",
+        "vosotros": "pronunciad",
+        "ustedes": "pronuncien"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "durante-una-semana",
+    "entry": "durante",
+    "type": "phrase",
+    "full_phrase": "durante una semana",
+    "clue_template": "___ una semana: during a week",
+    "definition": "during a week",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "entonces",
+    "entry": "entonces",
+    "type": "word",
+    "definition": "then",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "criticar",
+    "entry": "criticar",
+    "type": "verb",
+    "definition": "to criticize",
+    "conjugations": {
+      "present": {
+        "yo": "critico",
+        "tú": "criticas",
+        "él": "critica",
+        "nosotros": "criticamos",
+        "vosotros": "criticáis",
+        "ellos": "critican"
+      },
+      "preterite": {
+        "yo": "criticé",
+        "tú": "criticaste",
+        "él": "criticó",
+        "nosotros": "criticamos",
+        "vosotros": "criticasteis",
+        "ellos": "criticaron"
+      },
+      "imperfect": {
+        "yo": "criticaba",
+        "tú": "criticabas",
+        "él": "criticaba",
+        "nosotros": "criticábamos",
+        "vosotros": "criticabais",
+        "ellos": "criticaban"
+      },
+      "future": {
+        "yo": "criticaré",
+        "tú": "criticarás",
+        "él": "criticará",
+        "nosotros": "criticaremos",
+        "vosotros": "criticaréis",
+        "ellos": "criticarán"
+      },
+      "conditional": {
+        "yo": "criticaría",
+        "tú": "criticarías",
+        "él": "criticaría",
+        "nosotros": "criticaríamos",
+        "vosotros": "criticaríais",
+        "ellos": "criticarían"
+      },
+      "subjunctive": {
+        "yo": "critice",
+        "tú": "critices",
+        "él": "critice",
+        "nosotros": "criticemos",
+        "vosotros": "criticéis",
+        "ellos": "criticen"
+      },
+      "imperative": {
+        "tú": "critica",
+        "usted": "critice",
+        "nosotros": "criticemos",
+        "vosotros": "criticad",
+        "ustedes": "criticen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "charlar",
+    "entry": "charlar",
+    "type": "verb",
+    "definition": "to chat",
+    "conjugations": {
+      "present": {
+        "yo": "charlo",
+        "tú": "charlas",
+        "él": "charla",
+        "nosotros": "charlamos",
+        "vosotros": "charláis",
+        "ellos": "charlan"
+      },
+      "preterite": {
+        "yo": "charlé",
+        "tú": "charlaste",
+        "él": "charló",
+        "nosotros": "charlamos",
+        "vosotros": "charlasteis",
+        "ellos": "charlaron"
+      },
+      "imperfect": {
+        "yo": "charlaba",
+        "tú": "charlabas",
+        "él": "charlaba",
+        "nosotros": "charlábamos",
+        "vosotros": "charlabais",
+        "ellos": "charlaban"
+      },
+      "future": {
+        "yo": "charlaré",
+        "tú": "charlarás",
+        "él": "charlará",
+        "nosotros": "charlaremos",
+        "vosotros": "charlaréis",
+        "ellos": "charlarán"
+      },
+      "conditional": {
+        "yo": "charlaría",
+        "tú": "charlarías",
+        "él": "charlaría",
+        "nosotros": "charlaríamos",
+        "vosotros": "charlaríais",
+        "ellos": "charlarían"
+      },
+      "subjunctive": {
+        "yo": "charle",
+        "tú": "charles",
+        "él": "charle",
+        "nosotros": "charlemos",
+        "vosotros": "charléis",
+        "ellos": "charlen"
+      },
+      "imperative": {
+        "tú": "charla",
+        "usted": "charle",
+        "nosotros": "charlemos",
+        "vosotros": "charlad",
+        "ustedes": "charlen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "afirmar",
+    "entry": "afirmar",
+    "type": "verb",
+    "definition": "to declare",
+    "conjugations": {
+      "present": {
+        "yo": "afirmo",
+        "tú": "afirmas",
+        "él": "afirma",
+        "nosotros": "afirmamos",
+        "vosotros": "afirmáis",
+        "ellos": "afirman"
+      },
+      "preterite": {
+        "yo": "afirmé",
+        "tú": "afirmaste",
+        "él": "afirmó",
+        "nosotros": "afirmamos",
+        "vosotros": "afirmasteis",
+        "ellos": "afirmaron"
+      },
+      "imperfect": {
+        "yo": "afirmaba",
+        "tú": "afirmabas",
+        "él": "afirmaba",
+        "nosotros": "afirmábamos",
+        "vosotros": "afirmabais",
+        "ellos": "afirmaban"
+      },
+      "future": {
+        "yo": "afirmaré",
+        "tú": "afirmarás",
+        "él": "afirmará",
+        "nosotros": "afirmaremos",
+        "vosotros": "afirmaréis",
+        "ellos": "afirmarán"
+      },
+      "conditional": {
+        "yo": "afirmaría",
+        "tú": "afirmarías",
+        "él": "afirmaría",
+        "nosotros": "afirmaríamos",
+        "vosotros": "afirmaríais",
+        "ellos": "afirmarían"
+      },
+      "subjunctive": {
+        "yo": "afirme",
+        "tú": "afirmes",
+        "él": "afirme",
+        "nosotros": "afirmemos",
+        "vosotros": "afirméis",
+        "ellos": "afirmen"
+      },
+      "imperative": {
+        "tú": "afirma",
+        "usted": "afirme",
+        "nosotros": "afirmemos",
+        "vosotros": "afirmad",
+        "ustedes": "afirmen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "existir",
+    "entry": "existir",
+    "type": "verb",
+    "definition": "to exist",
+    "conjugations": {
+      "present": {
+        "yo": "existo",
+        "tú": "existes",
+        "él": "existe",
+        "nosotros": "existimos",
+        "vosotros": "existís",
+        "ellos": "existen"
+      },
+      "preterite": {
+        "yo": "existí",
+        "tú": "exististe",
+        "él": "existió",
+        "nosotros": "existimos",
+        "vosotros": "exististeis",
+        "ellos": "existieron"
+      },
+      "imperfect": {
+        "yo": "existía",
+        "tú": "existías",
+        "él": "existía",
+        "nosotros": "existíamos",
+        "vosotros": "existíais",
+        "ellos": "existían"
+      },
+      "future": {
+        "yo": "existiré",
+        "tú": "existirás",
+        "él": "existirá",
+        "nosotros": "existiremos",
+        "vosotros": "existiréis",
+        "ellos": "existirán"
+      },
+      "conditional": {
+        "yo": "existiría",
+        "tú": "existirías",
+        "él": "existiría",
+        "nosotros": "existiríamos",
+        "vosotros": "existiríais",
+        "ellos": "existirían"
+      },
+      "subjunctive": {
+        "yo": "exista",
+        "tú": "existas",
+        "él": "exista",
+        "nosotros": "existamos",
+        "vosotros": "existáis",
+        "ellos": "existan"
+      },
+      "imperative": {
+        "tú": "existe",
+        "usted": "exista",
+        "nosotros": "existamos",
+        "vosotros": "existid",
+        "ustedes": "existan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "resultar",
+    "entry": "resultar",
+    "type": "verb",
+    "definition": "to turn out to be",
+    "conjugations": {
+      "present": {
+        "yo": "resulto",
+        "tú": "resultas",
+        "él": "resulta",
+        "nosotros": "resultamos",
+        "vosotros": "resultáis",
+        "ellos": "resultan"
+      },
+      "preterite": {
+        "yo": "resulté",
+        "tú": "resultaste",
+        "él": "resultó",
+        "nosotros": "resultamos",
+        "vosotros": "resultasteis",
+        "ellos": "resultaron"
+      },
+      "imperfect": {
+        "yo": "resultaba",
+        "tú": "resultabas",
+        "él": "resultaba",
+        "nosotros": "resultábamos",
+        "vosotros": "resultabais",
+        "ellos": "resultaban"
+      },
+      "future": {
+        "yo": "resultaré",
+        "tú": "resultarás",
+        "él": "resultará",
+        "nosotros": "resultaremos",
+        "vosotros": "resultaréis",
+        "ellos": "resultarán"
+      },
+      "conditional": {
+        "yo": "resultaría",
+        "tú": "resultarías",
+        "él": "resultaría",
+        "nosotros": "resultaríamos",
+        "vosotros": "resultaríais",
+        "ellos": "resultarían"
+      },
+      "subjunctive": {
+        "yo": "resulte",
+        "tú": "resultes",
+        "él": "resulte",
+        "nosotros": "resultemos",
+        "vosotros": "resultéis",
+        "ellos": "resulten"
+      },
+      "imperative": {
+        "tú": "resulta",
+        "usted": "resulte",
+        "nosotros": "resultemos",
+        "vosotros": "resultad",
+        "ustedes": "resulten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "considerar",
+    "entry": "considerar",
+    "type": "verb",
+    "definition": "to consider",
+    "conjugations": {
+      "present": {
+        "yo": "considero",
+        "tú": "consideras",
+        "él": "considera",
+        "nosotros": "consideramos",
+        "vosotros": "consideráis",
+        "ellos": "consideran"
+      },
+      "preterite": {
+        "yo": "consideré",
+        "tú": "consideraste",
+        "él": "consideró",
+        "nosotros": "consideramos",
+        "vosotros": "considerasteis",
+        "ellos": "consideraron"
+      },
+      "imperfect": {
+        "yo": "consideraba",
+        "tú": "considerabas",
+        "él": "consideraba",
+        "nosotros": "considerábamos",
+        "vosotros": "considerabais",
+        "ellos": "consideraban"
+      },
+      "future": {
+        "yo": "consideraré",
+        "tú": "considerarás",
+        "él": "considerará",
+        "nosotros": "consideraremos",
+        "vosotros": "consideraréis",
+        "ellos": "considerarán"
+      },
+      "conditional": {
+        "yo": "consideraría",
+        "tú": "considerarías",
+        "él": "consideraría",
+        "nosotros": "consideraríamos",
+        "vosotros": "consideraríais",
+        "ellos": "considerarían"
+      },
+      "subjunctive": {
+        "yo": "considere",
+        "tú": "consideres",
+        "él": "considere",
+        "nosotros": "consideremos",
+        "vosotros": "consideréis",
+        "ellos": "consideren"
+      },
+      "imperative": {
+        "tú": "considera",
+        "usted": "considere",
+        "nosotros": "consideremos",
+        "vosotros": "considerad",
+        "ustedes": "consideren"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "formar",
+    "entry": "formar",
+    "type": "verb",
+    "definition": "to form",
+    "conjugations": {
+      "present": {
+        "yo": "formo",
+        "tú": "formas",
+        "él": "forma",
+        "nosotros": "formamos",
+        "vosotros": "formáis",
+        "ellos": "forman"
+      },
+      "preterite": {
+        "yo": "formé",
+        "tú": "formaste",
+        "él": "formó",
+        "nosotros": "formamos",
+        "vosotros": "formasteis",
+        "ellos": "formaron"
+      },
+      "imperfect": {
+        "yo": "formaba",
+        "tú": "formabas",
+        "él": "formaba",
+        "nosotros": "formábamos",
+        "vosotros": "formabais",
+        "ellos": "formaban"
+      },
+      "future": {
+        "yo": "formaré",
+        "tú": "formarás",
+        "él": "formará",
+        "nosotros": "formaremos",
+        "vosotros": "formaréis",
+        "ellos": "formarán"
+      },
+      "conditional": {
+        "yo": "formaría",
+        "tú": "formarías",
+        "él": "formaría",
+        "nosotros": "formaríamos",
+        "vosotros": "formaríais",
+        "ellos": "formarían"
+      },
+      "subjunctive": {
+        "yo": "forme",
+        "tú": "formes",
+        "él": "forme",
+        "nosotros": "formemos",
+        "vosotros": "forméis",
+        "ellos": "formen"
+      },
+      "imperative": {
+        "tú": "forma",
+        "usted": "forme",
+        "nosotros": "formemos",
+        "vosotros": "formad",
+        "ustedes": "formen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "conoc--a-juan-",
+    "entry": "Conocí",
+    "type": "phrase",
+    "full_phrase": "Conocí a Juan.",
+    "clue_template": "___ a Juan.: I met Juan.",
+    "definition": "I met Juan.",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-terminaci-n",
+    "entry": "terminación",
+    "type": "phrase",
+    "full_phrase": "la terminación",
+    "clue_template": "la ___: ending",
+    "definition": "ending",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-formaci-n",
+    "entry": "formación",
+    "type": "phrase",
+    "full_phrase": "la formación",
+    "clue_template": "la ___: formation",
+    "definition": "formation",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-muchacho",
+    "entry": "muchacho",
+    "type": "phrase",
+    "full_phrase": "el muchacho",
+    "clue_template": "el ___: boy",
+    "definition": "boy",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-muchacha",
+    "entry": "muchacha",
+    "type": "phrase",
+    "full_phrase": "la muchacha",
+    "clue_template": "la ___: girl",
+    "definition": "girl",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "general",
+    "entry": "general",
+    "type": "word",
+    "definition": "general",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "capaz",
+    "entry": "capaz",
+    "type": "word",
+    "definition": "capable",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "suficiente",
+    "entry": "suficiente",
+    "type": "word",
+    "definition": "sufficient",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "dispuesto",
+    "entry": "dispuesto",
+    "type": "word",
+    "definition": "willing",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "convencido",
+    "entry": "convencido",
+    "type": "word",
+    "definition": "convinced",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "satisfecho",
+    "entry": "satisfecho",
+    "type": "word",
+    "definition": "satisfied",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "acostumbrado",
+    "entry": "acostumbrado",
+    "type": "word",
+    "definition": "accustomed",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "sentado",
+    "entry": "sentado",
+    "type": "word",
+    "definition": "seated",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "caber",
+    "entry": "caber",
+    "type": "verb",
+    "definition": "to fit",
+    "conjugations": {
+      "present": {
+        "yo": "cabo",
+        "tú": "cabes",
+        "él": "cabe",
+        "nosotros": "cabemos",
+        "vosotros": "cabéis",
+        "ellos": "caben"
+      },
+      "preterite": {
+        "yo": "cabí",
+        "tú": "cabiste",
+        "él": "cabió",
+        "nosotros": "cabimos",
+        "vosotros": "cabisteis",
+        "ellos": "cabieron"
+      },
+      "imperfect": {
+        "yo": "cabía",
+        "tú": "cabías",
+        "él": "cabía",
+        "nosotros": "cabíamos",
+        "vosotros": "cabíais",
+        "ellos": "cabían"
+      },
+      "future": {
+        "yo": "caberé",
+        "tú": "caberás",
+        "él": "caberá",
+        "nosotros": "caberemos",
+        "vosotros": "caberéis",
+        "ellos": "caberán"
+      },
+      "conditional": {
+        "yo": "cabería",
+        "tú": "caberías",
+        "él": "cabería",
+        "nosotros": "caberíamos",
+        "vosotros": "caberíais",
+        "ellos": "caberían"
+      },
+      "subjunctive": {
+        "yo": "caba",
+        "tú": "cabas",
+        "él": "caba",
+        "nosotros": "cabamos",
+        "vosotros": "cabáis",
+        "ellos": "caban"
+      },
+      "imperative": {
+        "tú": "cabe",
+        "usted": "caba",
+        "nosotros": "cabamos",
+        "vosotros": "cabed",
+        "ustedes": "caban"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "er-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "andar",
+    "entry": "andar",
+    "type": "verb",
+    "definition": "to walk, to go",
+    "conjugations": {
+      "present": {
+        "yo": "ando",
+        "tú": "andas",
+        "él": "anda",
+        "nosotros": "andamos",
+        "vosotros": "andáis",
+        "ellos": "andan"
+      },
+      "preterite": {
+        "yo": "andé",
+        "tú": "andaste",
+        "él": "andó",
+        "nosotros": "andamos",
+        "vosotros": "andasteis",
+        "ellos": "andaron"
+      },
+      "imperfect": {
+        "yo": "andaba",
+        "tú": "andabas",
+        "él": "andaba",
+        "nosotros": "andábamos",
+        "vosotros": "andabais",
+        "ellos": "andaban"
+      },
+      "future": {
+        "yo": "andaré",
+        "tú": "andarás",
+        "él": "andará",
+        "nosotros": "andaremos",
+        "vosotros": "andaréis",
+        "ellos": "andarán"
+      },
+      "conditional": {
+        "yo": "andaría",
+        "tú": "andarías",
+        "él": "andaría",
+        "nosotros": "andaríamos",
+        "vosotros": "andaríais",
+        "ellos": "andarían"
+      },
+      "subjunctive": {
+        "yo": "ande",
+        "tú": "andes",
+        "él": "ande",
+        "nosotros": "andemos",
+        "vosotros": "andéis",
+        "ellos": "anden"
+      },
+      "imperative": {
+        "tú": "anda",
+        "usted": "ande",
+        "nosotros": "andemos",
+        "vosotros": "andad",
+        "ustedes": "anden"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "repasar",
+    "entry": "repasar",
+    "type": "verb",
+    "definition": "to review",
+    "conjugations": {
+      "present": {
+        "yo": "repaso",
+        "tú": "repasas",
+        "él": "repasa",
+        "nosotros": "repasamos",
+        "vosotros": "repasáis",
+        "ellos": "repasan"
+      },
+      "preterite": {
+        "yo": "repasé",
+        "tú": "repasaste",
+        "él": "repasó",
+        "nosotros": "repasamos",
+        "vosotros": "repasasteis",
+        "ellos": "repasaron"
+      },
+      "imperfect": {
+        "yo": "repasaba",
+        "tú": "repasabas",
+        "él": "repasaba",
+        "nosotros": "repasábamos",
+        "vosotros": "repasabais",
+        "ellos": "repasaban"
+      },
+      "future": {
+        "yo": "repasaré",
+        "tú": "repasarás",
+        "él": "repasará",
+        "nosotros": "repasaremos",
+        "vosotros": "repasaréis",
+        "ellos": "repasarán"
+      },
+      "conditional": {
+        "yo": "repasaría",
+        "tú": "repasarías",
+        "él": "repasaría",
+        "nosotros": "repasaríamos",
+        "vosotros": "repasaríais",
+        "ellos": "repasarían"
+      },
+      "subjunctive": {
+        "yo": "repase",
+        "tú": "repases",
+        "él": "repase",
+        "nosotros": "repasemos",
+        "vosotros": "repaséis",
+        "ellos": "repasen"
+      },
+      "imperative": {
+        "tú": "repasa",
+        "usted": "repase",
+        "nosotros": "repasemos",
+        "vosotros": "repasad",
+        "ustedes": "repasen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-explicaci-n",
+    "entry": "explicación",
+    "type": "phrase",
+    "full_phrase": "la explicación",
+    "clue_template": "la ___: explanation",
+    "definition": "explanation",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-aula",
+    "entry": "aula",
+    "type": "phrase",
+    "full_phrase": "el aula",
+    "clue_template": "el ___: classroom",
+    "definition": "classroom",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-ni-o",
+    "entry": "niño",
+    "type": "phrase",
+    "full_phrase": "el niño",
+    "clue_template": "el ___: boy",
+    "definition": "boy",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-ni-a",
+    "entry": "niña",
+    "type": "phrase",
+    "full_phrase": "la niña",
+    "clue_template": "la ___: girl",
+    "definition": "girl",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "enorme",
+    "entry": "enorme",
+    "type": "word",
+    "definition": "enormous",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "com-n",
+    "entry": "común",
+    "type": "word",
+    "definition": "common",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "absoluto",
+    "entry": "absoluto",
+    "type": "word",
+    "definition": "absolute",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "contrario",
+    "entry": "contrario",
+    "type": "word",
+    "definition": "contrary",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "disponible",
+    "entry": "disponible",
+    "type": "word",
+    "definition": "available",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "resuelto",
+    "entry": "resuelto",
+    "type": "word",
+    "definition": "resolved",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "agotado",
+    "entry": "agotado",
+    "type": "word",
+    "definition": "used up",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "escondido",
+    "entry": "escondido",
+    "type": "word",
+    "definition": "hidden",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "huir",
+    "entry": "huir",
+    "type": "verb",
+    "definition": "to run away",
+    "conjugations": {
+      "present": {
+        "yo": "huo",
+        "tú": "hues",
+        "él": "hue",
+        "nosotros": "huimos",
+        "vosotros": "huís",
+        "ellos": "huen"
+      },
+      "preterite": {
+        "yo": "huí",
+        "tú": "huiste",
+        "él": "huió",
+        "nosotros": "huimos",
+        "vosotros": "huisteis",
+        "ellos": "huieron"
+      },
+      "imperfect": {
+        "yo": "huía",
+        "tú": "huías",
+        "él": "huía",
+        "nosotros": "huíamos",
+        "vosotros": "huíais",
+        "ellos": "huían"
+      },
+      "future": {
+        "yo": "huiré",
+        "tú": "huirás",
+        "él": "huirá",
+        "nosotros": "huiremos",
+        "vosotros": "huiréis",
+        "ellos": "huirán"
+      },
+      "conditional": {
+        "yo": "huiría",
+        "tú": "huirías",
+        "él": "huiría",
+        "nosotros": "huiríamos",
+        "vosotros": "huiríais",
+        "ellos": "huirían"
+      },
+      "subjunctive": {
+        "yo": "hua",
+        "tú": "huas",
+        "él": "hua",
+        "nosotros": "huamos",
+        "vosotros": "huáis",
+        "ellos": "huan"
+      },
+      "imperative": {
+        "tú": "hue",
+        "usted": "hua",
+        "nosotros": "huamos",
+        "vosotros": "huid",
+        "ustedes": "huan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "incluir",
+    "entry": "incluir",
+    "type": "verb",
+    "definition": "to include",
+    "conjugations": {
+      "present": {
+        "yo": "incluo",
+        "tú": "inclues",
+        "él": "inclue",
+        "nosotros": "incluimos",
+        "vosotros": "incluís",
+        "ellos": "incluen"
+      },
+      "preterite": {
+        "yo": "incluí",
+        "tú": "incluiste",
+        "él": "incluió",
+        "nosotros": "incluimos",
+        "vosotros": "incluisteis",
+        "ellos": "incluieron"
+      },
+      "imperfect": {
+        "yo": "incluía",
+        "tú": "incluías",
+        "él": "incluía",
+        "nosotros": "incluíamos",
+        "vosotros": "incluíais",
+        "ellos": "incluían"
+      },
+      "future": {
+        "yo": "incluiré",
+        "tú": "incluirás",
+        "él": "incluirá",
+        "nosotros": "incluiremos",
+        "vosotros": "incluiréis",
+        "ellos": "incluirán"
+      },
+      "conditional": {
+        "yo": "incluiría",
+        "tú": "incluirías",
+        "él": "incluiría",
+        "nosotros": "incluiríamos",
+        "vosotros": "incluiríais",
+        "ellos": "incluirían"
+      },
+      "subjunctive": {
+        "yo": "inclua",
+        "tú": "incluas",
+        "él": "inclua",
+        "nosotros": "incluamos",
+        "vosotros": "incluáis",
+        "ellos": "incluan"
+      },
+      "imperative": {
+        "tú": "inclue",
+        "usted": "inclua",
+        "nosotros": "incluamos",
+        "vosotros": "incluid",
+        "ustedes": "incluan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "influir",
+    "entry": "influir",
+    "type": "verb",
+    "definition": "to influence",
+    "conjugations": {
+      "present": {
+        "yo": "influo",
+        "tú": "influes",
+        "él": "influe",
+        "nosotros": "influimos",
+        "vosotros": "influís",
+        "ellos": "influen"
+      },
+      "preterite": {
+        "yo": "influí",
+        "tú": "influiste",
+        "él": "influió",
+        "nosotros": "influimos",
+        "vosotros": "influisteis",
+        "ellos": "influieron"
+      },
+      "imperfect": {
+        "yo": "influía",
+        "tú": "influías",
+        "él": "influía",
+        "nosotros": "influíamos",
+        "vosotros": "influíais",
+        "ellos": "influían"
+      },
+      "future": {
+        "yo": "influiré",
+        "tú": "influirás",
+        "él": "influirá",
+        "nosotros": "influiremos",
+        "vosotros": "influiréis",
+        "ellos": "influirán"
+      },
+      "conditional": {
+        "yo": "influiría",
+        "tú": "influirías",
+        "él": "influiría",
+        "nosotros": "influiríamos",
+        "vosotros": "influiríais",
+        "ellos": "influirían"
+      },
+      "subjunctive": {
+        "yo": "influa",
+        "tú": "influas",
+        "él": "influa",
+        "nosotros": "influamos",
+        "vosotros": "influáis",
+        "ellos": "influan"
+      },
+      "imperative": {
+        "tú": "influe",
+        "usted": "influa",
+        "nosotros": "influamos",
+        "vosotros": "influid",
+        "ustedes": "influan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "construir",
+    "entry": "construir",
+    "type": "verb",
+    "definition": "to build",
+    "conjugations": {
+      "present": {
+        "yo": "construo",
+        "tú": "construes",
+        "él": "construe",
+        "nosotros": "construimos",
+        "vosotros": "construís",
+        "ellos": "construen"
+      },
+      "preterite": {
+        "yo": "construí",
+        "tú": "construiste",
+        "él": "construió",
+        "nosotros": "construimos",
+        "vosotros": "construisteis",
+        "ellos": "construieron"
+      },
+      "imperfect": {
+        "yo": "construía",
+        "tú": "construías",
+        "él": "construía",
+        "nosotros": "construíamos",
+        "vosotros": "construíais",
+        "ellos": "construían"
+      },
+      "future": {
+        "yo": "construiré",
+        "tú": "construirás",
+        "él": "construirá",
+        "nosotros": "construiremos",
+        "vosotros": "construiréis",
+        "ellos": "construirán"
+      },
+      "conditional": {
+        "yo": "construiría",
+        "tú": "construirías",
+        "él": "construiría",
+        "nosotros": "construiríamos",
+        "vosotros": "construiríais",
+        "ellos": "construirían"
+      },
+      "subjunctive": {
+        "yo": "construa",
+        "tú": "construas",
+        "él": "construa",
+        "nosotros": "construamos",
+        "vosotros": "construáis",
+        "ellos": "construan"
+      },
+      "imperative": {
+        "tú": "construe",
+        "usted": "construa",
+        "nosotros": "construamos",
+        "vosotros": "construid",
+        "ustedes": "construan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-construcci-n",
+    "entry": "construcción",
+    "type": "phrase",
+    "full_phrase": "la construcción",
+    "clue_template": "la ___: construction",
+    "definition": "construction",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-contribuci-n",
+    "entry": "contribución",
+    "type": "phrase",
+    "full_phrase": "la contribución",
+    "clue_template": "la ___: contribution",
+    "definition": "contribution",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "organizar",
+    "entry": "organizar",
+    "type": "verb",
+    "definition": "to organize",
+    "conjugations": {
+      "present": {
+        "yo": "organizo",
+        "tú": "organizas",
+        "él": "organiza",
+        "nosotros": "organizamos",
+        "vosotros": "organizáis",
+        "ellos": "organizan"
+      },
+      "preterite": {
+        "yo": "organizé",
+        "tú": "organizaste",
+        "él": "organizó",
+        "nosotros": "organizamos",
+        "vosotros": "organizasteis",
+        "ellos": "organizaron"
+      },
+      "imperfect": {
+        "yo": "organizaba",
+        "tú": "organizabas",
+        "él": "organizaba",
+        "nosotros": "organizábamos",
+        "vosotros": "organizabais",
+        "ellos": "organizaban"
+      },
+      "future": {
+        "yo": "organizaré",
+        "tú": "organizarás",
+        "él": "organizará",
+        "nosotros": "organizaremos",
+        "vosotros": "organizaréis",
+        "ellos": "organizarán"
+      },
+      "conditional": {
+        "yo": "organizaría",
+        "tú": "organizarías",
+        "él": "organizaría",
+        "nosotros": "organizaríamos",
+        "vosotros": "organizaríais",
+        "ellos": "organizarían"
+      },
+      "subjunctive": {
+        "yo": "organize",
+        "tú": "organizes",
+        "él": "organize",
+        "nosotros": "organizemos",
+        "vosotros": "organizéis",
+        "ellos": "organizen"
+      },
+      "imperative": {
+        "tú": "organiza",
+        "usted": "organize",
+        "nosotros": "organizemos",
+        "vosotros": "organizad",
+        "ustedes": "organizen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-entrevista",
+    "entry": "entrevista",
+    "type": "phrase",
+    "full_phrase": "la entrevista",
+    "clue_template": "la ___: interview",
+    "definition": "interview",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "entrevistar",
+    "entry": "entrevistar",
+    "type": "verb",
+    "definition": "to interview",
+    "conjugations": {
+      "present": {
+        "yo": "entrevisto",
+        "tú": "entrevistas",
+        "él": "entrevista",
+        "nosotros": "entrevistamos",
+        "vosotros": "entrevistáis",
+        "ellos": "entrevistan"
+      },
+      "preterite": {
+        "yo": "entrevisté",
+        "tú": "entrevistaste",
+        "él": "entrevistó",
+        "nosotros": "entrevistamos",
+        "vosotros": "entrevistasteis",
+        "ellos": "entrevistaron"
+      },
+      "imperfect": {
+        "yo": "entrevistaba",
+        "tú": "entrevistabas",
+        "él": "entrevistaba",
+        "nosotros": "entrevistábamos",
+        "vosotros": "entrevistabais",
+        "ellos": "entrevistaban"
+      },
+      "future": {
+        "yo": "entrevistaré",
+        "tú": "entrevistarás",
+        "él": "entrevistará",
+        "nosotros": "entrevistaremos",
+        "vosotros": "entrevistaréis",
+        "ellos": "entrevistarán"
+      },
+      "conditional": {
+        "yo": "entrevistaría",
+        "tú": "entrevistarías",
+        "él": "entrevistaría",
+        "nosotros": "entrevistaríamos",
+        "vosotros": "entrevistaríais",
+        "ellos": "entrevistarían"
+      },
+      "subjunctive": {
+        "yo": "entreviste",
+        "tú": "entrevistes",
+        "él": "entreviste",
+        "nosotros": "entrevistemos",
+        "vosotros": "entrevistéis",
+        "ellos": "entrevisten"
+      },
+      "imperative": {
+        "tú": "entrevista",
+        "usted": "entreviste",
+        "nosotros": "entrevistemos",
+        "vosotros": "entrevistad",
+        "ustedes": "entrevisten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "emplear",
+    "entry": "emplear",
+    "type": "verb",
+    "definition": "to employ",
+    "conjugations": {
+      "present": {
+        "yo": "empleo",
+        "tú": "empleas",
+        "él": "emplea",
+        "nosotros": "empleamos",
+        "vosotros": "empleáis",
+        "ellos": "emplean"
+      },
+      "preterite": {
+        "yo": "empleé",
+        "tú": "empleaste",
+        "él": "empleó",
+        "nosotros": "empleamos",
+        "vosotros": "empleasteis",
+        "ellos": "emplearon"
+      },
+      "imperfect": {
+        "yo": "empleaba",
+        "tú": "empleabas",
+        "él": "empleaba",
+        "nosotros": "empleábamos",
+        "vosotros": "empleabais",
+        "ellos": "empleaban"
+      },
+      "future": {
+        "yo": "emplearé",
+        "tú": "emplearás",
+        "él": "empleará",
+        "nosotros": "emplearemos",
+        "vosotros": "emplearéis",
+        "ellos": "emplearán"
+      },
+      "conditional": {
+        "yo": "emplearía",
+        "tú": "emplearías",
+        "él": "emplearía",
+        "nosotros": "emplearíamos",
+        "vosotros": "emplearíais",
+        "ellos": "emplearían"
+      },
+      "subjunctive": {
+        "yo": "emplee",
+        "tú": "emplees",
+        "él": "emplee",
+        "nosotros": "empleemos",
+        "vosotros": "empleéis",
+        "ellos": "empleen"
+      },
+      "imperative": {
+        "tú": "emplea",
+        "usted": "emplee",
+        "nosotros": "empleemos",
+        "vosotros": "emplead",
+        "ustedes": "empleen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "contratar",
+    "entry": "contratar",
+    "type": "verb",
+    "definition": "to hire",
+    "conjugations": {
+      "present": {
+        "yo": "contrato",
+        "tú": "contratas",
+        "él": "contrata",
+        "nosotros": "contratamos",
+        "vosotros": "contratáis",
+        "ellos": "contratan"
+      },
+      "preterite": {
+        "yo": "contraté",
+        "tú": "contrataste",
+        "él": "contrató",
+        "nosotros": "contratamos",
+        "vosotros": "contratasteis",
+        "ellos": "contrataron"
+      },
+      "imperfect": {
+        "yo": "contrataba",
+        "tú": "contratabas",
+        "él": "contrataba",
+        "nosotros": "contratábamos",
+        "vosotros": "contratabais",
+        "ellos": "contrataban"
+      },
+      "future": {
+        "yo": "contrataré",
+        "tú": "contratarás",
+        "él": "contratará",
+        "nosotros": "contrataremos",
+        "vosotros": "contrataréis",
+        "ellos": "contratarán"
+      },
+      "conditional": {
+        "yo": "contrataría",
+        "tú": "contratarías",
+        "él": "contrataría",
+        "nosotros": "contrataríamos",
+        "vosotros": "contrataríais",
+        "ellos": "contratarían"
+      },
+      "subjunctive": {
+        "yo": "contrate",
+        "tú": "contrates",
+        "él": "contrate",
+        "nosotros": "contratemos",
+        "vosotros": "contratéis",
+        "ellos": "contraten"
+      },
+      "imperative": {
+        "tú": "contrata",
+        "usted": "contrate",
+        "nosotros": "contratemos",
+        "vosotros": "contratad",
+        "ustedes": "contraten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "despedir",
+    "entry": "despedir",
+    "type": "verb",
+    "definition": "to fire",
+    "conjugations": {
+      "present": {
+        "yo": "despedo",
+        "tú": "despedes",
+        "él": "despede",
+        "nosotros": "despedimos",
+        "vosotros": "despedís",
+        "ellos": "despeden"
+      },
+      "preterite": {
+        "yo": "despedí",
+        "tú": "despediste",
+        "él": "despedió",
+        "nosotros": "despedimos",
+        "vosotros": "despedisteis",
+        "ellos": "despedieron"
+      },
+      "imperfect": {
+        "yo": "despedía",
+        "tú": "despedías",
+        "él": "despedía",
+        "nosotros": "despedíamos",
+        "vosotros": "despedíais",
+        "ellos": "despedían"
+      },
+      "future": {
+        "yo": "despediré",
+        "tú": "despedirás",
+        "él": "despedirá",
+        "nosotros": "despediremos",
+        "vosotros": "despediréis",
+        "ellos": "despedirán"
+      },
+      "conditional": {
+        "yo": "despediría",
+        "tú": "despedirías",
+        "él": "despediría",
+        "nosotros": "despediríamos",
+        "vosotros": "despediríais",
+        "ellos": "despedirían"
+      },
+      "subjunctive": {
+        "yo": "despeda",
+        "tú": "despedas",
+        "él": "despeda",
+        "nosotros": "despedamos",
+        "vosotros": "despedáis",
+        "ellos": "despedan"
+      },
+      "imperative": {
+        "tú": "despede",
+        "usted": "despeda",
+        "nosotros": "despedamos",
+        "vosotros": "despedid",
+        "ustedes": "despedan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-cajero-autom-tico",
+    "entry": "automático",
+    "type": "phrase",
+    "full_phrase": "el cajero automático",
+    "clue_template": "el cajero ___: automated teller machine",
+    "definition": "automated teller machine",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-cheque",
+    "entry": "cheque",
+    "type": "phrase",
+    "full_phrase": "el cheque",
+    "clue_template": "el ___: check",
+    "definition": "check",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-dinero-en-efectivo",
+    "entry": "efectivo",
+    "type": "phrase",
+    "full_phrase": "el dinero en efectivo",
+    "clue_template": "el dinero en ___: cash",
+    "definition": "cash",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-pr-stamo",
+    "entry": "préstamo",
+    "type": "phrase",
+    "full_phrase": "el préstamo",
+    "clue_template": "el ___: loan",
+    "definition": "loan",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "contribuir",
+    "entry": "contribuir",
+    "type": "verb",
+    "definition": "to contribute",
+    "conjugations": {
+      "present": {
+        "yo": "contribuo",
+        "tú": "contribues",
+        "él": "contribue",
+        "nosotros": "contribuimos",
+        "vosotros": "contribuís",
+        "ellos": "contribuen"
+      },
+      "preterite": {
+        "yo": "contribuí",
+        "tú": "contribuiste",
+        "él": "contribuió",
+        "nosotros": "contribuimos",
+        "vosotros": "contribuisteis",
+        "ellos": "contribuieron"
+      },
+      "imperfect": {
+        "yo": "contribuía",
+        "tú": "contribuías",
+        "él": "contribuía",
+        "nosotros": "contribuíamos",
+        "vosotros": "contribuíais",
+        "ellos": "contribuían"
+      },
+      "future": {
+        "yo": "contribuiré",
+        "tú": "contribuirás",
+        "él": "contribuirá",
+        "nosotros": "contribuiremos",
+        "vosotros": "contribuiréis",
+        "ellos": "contribuirán"
+      },
+      "conditional": {
+        "yo": "contribuiría",
+        "tú": "contribuirías",
+        "él": "contribuiría",
+        "nosotros": "contribuiríamos",
+        "vosotros": "contribuiríais",
+        "ellos": "contribuirían"
+      },
+      "subjunctive": {
+        "yo": "contribua",
+        "tú": "contribuas",
+        "él": "contribua",
+        "nosotros": "contribuamos",
+        "vosotros": "contribuáis",
+        "ellos": "contribuan"
+      },
+      "imperative": {
+        "tú": "contribue",
+        "usted": "contribua",
+        "nosotros": "contribuamos",
+        "vosotros": "contribuid",
+        "ustedes": "contribuan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "destruir",
+    "entry": "destruir",
+    "type": "verb",
+    "definition": "to destroy",
+    "conjugations": {
+      "present": {
+        "yo": "destruo",
+        "tú": "destrues",
+        "él": "destrue",
+        "nosotros": "destruimos",
+        "vosotros": "destruís",
+        "ellos": "destruen"
+      },
+      "preterite": {
+        "yo": "destruí",
+        "tú": "destruiste",
+        "él": "destruió",
+        "nosotros": "destruimos",
+        "vosotros": "destruisteis",
+        "ellos": "destruieron"
+      },
+      "imperfect": {
+        "yo": "destruía",
+        "tú": "destruías",
+        "él": "destruía",
+        "nosotros": "destruíamos",
+        "vosotros": "destruíais",
+        "ellos": "destruían"
+      },
+      "future": {
+        "yo": "destruiré",
+        "tú": "destruirás",
+        "él": "destruirá",
+        "nosotros": "destruiremos",
+        "vosotros": "destruiréis",
+        "ellos": "destruirán"
+      },
+      "conditional": {
+        "yo": "destruiría",
+        "tú": "destruirías",
+        "él": "destruiría",
+        "nosotros": "destruiríamos",
+        "vosotros": "destruiríais",
+        "ellos": "destruirían"
+      },
+      "subjunctive": {
+        "yo": "destrua",
+        "tú": "destruas",
+        "él": "destrua",
+        "nosotros": "destruamos",
+        "vosotros": "destruáis",
+        "ellos": "destruan"
+      },
+      "imperative": {
+        "tú": "destrue",
+        "usted": "destrua",
+        "nosotros": "destruamos",
+        "vosotros": "destruid",
+        "ustedes": "destruan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "caer",
+    "entry": "caer",
+    "type": "verb",
+    "definition": "to fall",
+    "conjugations": {
+      "present": {
+        "yo": "cao",
+        "tú": "caes",
+        "él": "cae",
+        "nosotros": "caemos",
+        "vosotros": "caéis",
+        "ellos": "caen"
+      },
+      "preterite": {
+        "yo": "caí",
+        "tú": "caiste",
+        "él": "caió",
+        "nosotros": "caimos",
+        "vosotros": "caisteis",
+        "ellos": "caieron"
+      },
+      "imperfect": {
+        "yo": "caía",
+        "tú": "caías",
+        "él": "caía",
+        "nosotros": "caíamos",
+        "vosotros": "caíais",
+        "ellos": "caían"
+      },
+      "future": {
+        "yo": "caeré",
+        "tú": "caerás",
+        "él": "caerá",
+        "nosotros": "caeremos",
+        "vosotros": "caeréis",
+        "ellos": "caerán"
+      },
+      "conditional": {
+        "yo": "caería",
+        "tú": "caerías",
+        "él": "caería",
+        "nosotros": "caeríamos",
+        "vosotros": "caeríais",
+        "ellos": "caerían"
+      },
+      "subjunctive": {
+        "yo": "caa",
+        "tú": "caas",
+        "él": "caa",
+        "nosotros": "caamos",
+        "vosotros": "caáis",
+        "ellos": "caan"
+      },
+      "imperative": {
+        "tú": "cae",
+        "usted": "caa",
+        "nosotros": "caamos",
+        "vosotros": "caed",
+        "ustedes": "caan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "er-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-destrucci-n",
+    "entry": "destrucción",
+    "type": "phrase",
+    "full_phrase": "la destrucción",
+    "clue_template": "la ___: destruction",
+    "definition": "destruction",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-influencia",
+    "entry": "influencia",
+    "type": "phrase",
+    "full_phrase": "la influencia",
+    "clue_template": "la ___: influence",
+    "definition": "influence",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-asistente",
+    "entry": "asistente",
+    "type": "phrase",
+    "full_phrase": "el asistente",
+    "clue_template": "el ___: assistant",
+    "definition": "assistant",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-contador",
+    "entry": "contador",
+    "type": "phrase",
+    "full_phrase": "el contador",
+    "clue_template": "el ___: accountant",
+    "definition": "accountant",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-due-o",
+    "entry": "dueño",
+    "type": "phrase",
+    "full_phrase": "el dueño",
+    "clue_template": "el ___: owner",
+    "definition": "owner",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-gerente",
+    "entry": "gerente",
+    "type": "phrase",
+    "full_phrase": "el gerente",
+    "clue_template": "el ___: manager",
+    "definition": "manager",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-secretario",
+    "entry": "secretario",
+    "type": "phrase",
+    "full_phrase": "el secretario",
+    "clue_template": "el ___: secretary",
+    "definition": "secretary",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-supervisor",
+    "entry": "supervisor",
+    "type": "phrase",
+    "full_phrase": "el supervisor",
+    "clue_template": "el ___: supervisor",
+    "definition": "supervisor",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-empleado",
+    "entry": "empleado",
+    "type": "phrase",
+    "full_phrase": "el empleado",
+    "clue_template": "el ___: employee",
+    "definition": "employee",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "retirar",
+    "entry": "retirar",
+    "type": "verb",
+    "definition": "to withdraw",
+    "conjugations": {
+      "present": {
+        "yo": "retiro",
+        "tú": "retiras",
+        "él": "retira",
+        "nosotros": "retiramos",
+        "vosotros": "retiráis",
+        "ellos": "retiran"
+      },
+      "preterite": {
+        "yo": "retiré",
+        "tú": "retiraste",
+        "él": "retiró",
+        "nosotros": "retiramos",
+        "vosotros": "retirasteis",
+        "ellos": "retiraron"
+      },
+      "imperfect": {
+        "yo": "retiraba",
+        "tú": "retirabas",
+        "él": "retiraba",
+        "nosotros": "retirábamos",
+        "vosotros": "retirabais",
+        "ellos": "retiraban"
+      },
+      "future": {
+        "yo": "retiraré",
+        "tú": "retirarás",
+        "él": "retirará",
+        "nosotros": "retiraremos",
+        "vosotros": "retiraréis",
+        "ellos": "retirarán"
+      },
+      "conditional": {
+        "yo": "retiraría",
+        "tú": "retirarías",
+        "él": "retiraría",
+        "nosotros": "retiraríamos",
+        "vosotros": "retiraríais",
+        "ellos": "retirarían"
+      },
+      "subjunctive": {
+        "yo": "retire",
+        "tú": "retires",
+        "él": "retire",
+        "nosotros": "retiremos",
+        "vosotros": "retiréis",
+        "ellos": "retiren"
+      },
+      "imperative": {
+        "tú": "retira",
+        "usted": "retire",
+        "nosotros": "retiremos",
+        "vosotros": "retirad",
+        "ustedes": "retiren"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-tarjeta-de-cr-dito",
+    "entry": "crédito",
+    "type": "phrase",
+    "full_phrase": "la tarjeta de crédito",
+    "clue_template": "la tarjeta de ___: credit card",
+    "definition": "credit card",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-tarjeta-de-d-bito",
+    "entry": "tarjeta",
+    "type": "phrase",
+    "full_phrase": "la tarjeta de débito",
+    "clue_template": "la ___ de débito: debit card",
+    "definition": "debit card",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-transacci-n-bancaria",
+    "entry": "transacción",
+    "type": "phrase",
+    "full_phrase": "la transacción bancaria",
+    "clue_template": "la ___ bancaria: bank transaction",
+    "definition": "bank transaction",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-profesi-n",
+    "entry": "profesión",
+    "type": "phrase",
+    "full_phrase": "la profesión",
+    "clue_template": "la ___: profession",
+    "definition": "profession",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-maestro",
+    "entry": "maestro",
+    "type": "phrase",
+    "full_phrase": "el maestro",
+    "clue_template": "el ___: teacher",
+    "definition": "teacher",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-abogado",
+    "entry": "abogado",
+    "type": "phrase",
+    "full_phrase": "el abogado",
+    "clue_template": "el ___: lawyer",
+    "definition": "lawyer",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-hombre-de-negocios",
+    "entry": "negocios",
+    "type": "phrase",
+    "full_phrase": "el hombre de negocios",
+    "clue_template": "el hombre de ___: businessman",
+    "definition": "businessman",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-arquitecto",
+    "entry": "arquitecto",
+    "type": "phrase",
+    "full_phrase": "el arquitecto",
+    "clue_template": "el ___: architect",
+    "definition": "architect",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-sitio-web",
+    "entry": "sitio",
+    "type": "phrase",
+    "full_phrase": "el sitio web",
+    "clue_template": "el ___ web: website",
+    "definition": "website",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-p-gina-web",
+    "entry": "página",
+    "type": "phrase",
+    "full_phrase": "la página web",
+    "clue_template": "la ___ web: web page",
+    "definition": "web page",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-blog",
+    "entry": "blog",
+    "type": "phrase",
+    "full_phrase": "el blog",
+    "clue_template": "el ___: blog",
+    "definition": "blog",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-correo-electr-nico",
+    "entry": "electrónico",
+    "type": "phrase",
+    "full_phrase": "el correo electrónico",
+    "clue_template": "el correo ___: e-mail",
+    "definition": "e-mail",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-mensaje-de-texto",
+    "entry": "mensaje",
+    "type": "phrase",
+    "full_phrase": "el mensaje de texto",
+    "clue_template": "el ___ de texto: text message",
+    "definition": "text message",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "chatear",
+    "entry": "chatear",
+    "type": "verb",
+    "definition": "to chat online",
+    "conjugations": {
+      "present": {
+        "yo": "chateo",
+        "tú": "chateas",
+        "él": "chatea",
+        "nosotros": "chateamos",
+        "vosotros": "chateáis",
+        "ellos": "chatean"
+      },
+      "preterite": {
+        "yo": "chateé",
+        "tú": "chateaste",
+        "él": "chateó",
+        "nosotros": "chateamos",
+        "vosotros": "chateasteis",
+        "ellos": "chatearon"
+      },
+      "imperfect": {
+        "yo": "chateaba",
+        "tú": "chateabas",
+        "él": "chateaba",
+        "nosotros": "chateábamos",
+        "vosotros": "chateabais",
+        "ellos": "chateaban"
+      },
+      "future": {
+        "yo": "chatearé",
+        "tú": "chatearás",
+        "él": "chateará",
+        "nosotros": "chatearemos",
+        "vosotros": "chatearéis",
+        "ellos": "chatearán"
+      },
+      "conditional": {
+        "yo": "chatearía",
+        "tú": "chatearías",
+        "él": "chatearía",
+        "nosotros": "chatearíamos",
+        "vosotros": "chatearíais",
+        "ellos": "chatearían"
+      },
+      "subjunctive": {
+        "yo": "chatee",
+        "tú": "chatees",
+        "él": "chatee",
+        "nosotros": "chateemos",
+        "vosotros": "chateéis",
+        "ellos": "chateen"
+      },
+      "imperative": {
+        "tú": "chatea",
+        "usted": "chatee",
+        "nosotros": "chateemos",
+        "vosotros": "chatead",
+        "ustedes": "chateen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "acceder-a-internet",
+    "entry": "Internet",
+    "type": "phrase",
+    "full_phrase": "acceder a Internet",
+    "clue_template": "acceder a ___: to access the Internet",
+    "definition": "to access the Internet",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "descargar",
+    "entry": "descargar",
+    "type": "verb",
+    "definition": "to download",
+    "conjugations": {
+      "present": {
+        "yo": "descargo",
+        "tú": "descargas",
+        "él": "descarga",
+        "nosotros": "descargamos",
+        "vosotros": "descargáis",
+        "ellos": "descargan"
+      },
+      "preterite": {
+        "yo": "descargé",
+        "tú": "descargaste",
+        "él": "descargó",
+        "nosotros": "descargamos",
+        "vosotros": "descargasteis",
+        "ellos": "descargaron"
+      },
+      "imperfect": {
+        "yo": "descargaba",
+        "tú": "descargabas",
+        "él": "descargaba",
+        "nosotros": "descargábamos",
+        "vosotros": "descargabais",
+        "ellos": "descargaban"
+      },
+      "future": {
+        "yo": "descargaré",
+        "tú": "descargarás",
+        "él": "descargará",
+        "nosotros": "descargaremos",
+        "vosotros": "descargaréis",
+        "ellos": "descargarán"
+      },
+      "conditional": {
+        "yo": "descargaría",
+        "tú": "descargarías",
+        "él": "descargaría",
+        "nosotros": "descargaríamos",
+        "vosotros": "descargaríais",
+        "ellos": "descargarían"
+      },
+      "subjunctive": {
+        "yo": "descarge",
+        "tú": "descarges",
+        "él": "descarge",
+        "nosotros": "descargemos",
+        "vosotros": "descargéis",
+        "ellos": "descargen"
+      },
+      "imperative": {
+        "tú": "descarga",
+        "usted": "descarge",
+        "nosotros": "descargemos",
+        "vosotros": "descargad",
+        "ustedes": "descargen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "navegar-por-la-red",
+    "entry": "navegar",
+    "type": "phrase",
+    "full_phrase": "navegar por la red",
+    "clue_template": "___ por la red: to surf the Internet",
+    "definition": "to surf the Internet",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-nombre-de-usuario",
+    "entry": "usuario",
+    "type": "phrase",
+    "full_phrase": "el nombre de usuario",
+    "clue_template": "el nombre de ___: username",
+    "definition": "username",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-tecnolog-a",
+    "entry": "tecnología",
+    "type": "phrase",
+    "full_phrase": "la tecnología",
+    "clue_template": "la ___: technology",
+    "definition": "technology",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-enfermero",
+    "entry": "enfermero",
+    "type": "phrase",
+    "full_phrase": "el enfermero",
+    "clue_template": "el ___: nurse",
+    "definition": "nurse",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-director-de-escuela",
+    "entry": "director",
+    "type": "phrase",
+    "full_phrase": "el director de escuela",
+    "clue_template": "el ___ de escuela: school principal",
+    "definition": "school principal",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-polic-a",
+    "entry": "policía",
+    "type": "phrase",
+    "full_phrase": "el policía",
+    "clue_template": "el ___: police officer",
+    "definition": "police officer",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-enlace",
+    "entry": "enlace",
+    "type": "phrase",
+    "full_phrase": "el enlace",
+    "clue_template": "el ___: link",
+    "definition": "link",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-conexi-n",
+    "entry": "conexión",
+    "type": "phrase",
+    "full_phrase": "la conexión",
+    "clue_template": "la ___: connection",
+    "definition": "connection",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-buscador",
+    "entry": "buscador",
+    "type": "phrase",
+    "full_phrase": "el buscador",
+    "clue_template": "el ___: search engine",
+    "definition": "search engine",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-contrase-a",
+    "entry": "contraseña",
+    "type": "phrase",
+    "full_phrase": "la contraseña",
+    "clue_template": "la ___: password",
+    "definition": "password",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "la-conexi-n-inal-mbrica",
+    "entry": "inalámbrica",
+    "type": "phrase",
+    "full_phrase": "la conexión inalámbrica",
+    "clue_template": "la conexión ___: wireless connection",
+    "definition": "wireless connection",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-tel-fono-inal-mbrico",
+    "entry": "inalámbrico",
+    "type": "phrase",
+    "full_phrase": "el teléfono inalámbrico",
+    "clue_template": "el teléfono ___: cordless phone",
+    "definition": "cordless phone",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "el-tel-fono-celular-el-celular-el-m-vil",
+    "entry": "celular/el",
+    "type": "phrase",
+    "full_phrase": "el teléfono celular/el celular/el móvil",
+    "clue_template": "el teléfono ___ ___ móvil: cell phone",
+    "definition": "cell phone",
+    "tags": [],
+    "source": "linkedin-learning"
+  },
+  {
+    "id": "animar",
+    "entry": "animar",
+    "type": "verb",
+    "definition": "to encourage",
+    "conjugations": {
+      "present": {
+        "yo": "animo",
+        "tú": "animas",
+        "él": "anima",
+        "nosotros": "animamos",
+        "vosotros": "animáis",
+        "ellos": "animan"
+      },
+      "preterite": {
+        "yo": "animé",
+        "tú": "animaste",
+        "él": "animó",
+        "nosotros": "animamos",
+        "vosotros": "animasteis",
+        "ellos": "animaron"
+      },
+      "imperfect": {
+        "yo": "animaba",
+        "tú": "animabas",
+        "él": "animaba",
+        "nosotros": "animábamos",
+        "vosotros": "animabais",
+        "ellos": "animaban"
+      },
+      "future": {
+        "yo": "animaré",
+        "tú": "animarás",
+        "él": "animará",
+        "nosotros": "animaremos",
+        "vosotros": "animaréis",
+        "ellos": "animarán"
+      },
+      "conditional": {
+        "yo": "animaría",
+        "tú": "animarías",
+        "él": "animaría",
+        "nosotros": "animaríamos",
+        "vosotros": "animaríais",
+        "ellos": "animarían"
+      },
+      "subjunctive": {
+        "yo": "anime",
+        "tú": "animes",
+        "él": "anime",
+        "nosotros": "animemos",
+        "vosotros": "animéis",
+        "ellos": "animen"
+      },
+      "imperative": {
+        "tú": "anima",
+        "usted": "anime",
+        "nosotros": "animemos",
+        "vosotros": "animad",
+        "ustedes": "animen"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "linkedin-learning"
+  },
+  {
     "id": "sin-embargo",
     "entry": "embargo",
     "type": "phrase",
     "full_phrase": "sin embargo",
     "clue_template": "sin ___: however, nevertheless",
     "definition": "however, nevertheless",
-    "tags": [
-      "connector"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "entonces",
-    "entry": "entonces",
-    "type": "word",
-    "definition": "then, so, therefore",
     "tags": [
       "connector"
     ],
@@ -14337,16 +21245,6 @@
     "entry": "según",
     "type": "word",
     "definition": "according to, depending on",
-    "tags": [
-      "preposition"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "durante",
-    "entry": "durante",
-    "type": "word",
-    "definition": "during",
     "tags": [
       "preposition"
     ],
@@ -14473,16 +21371,6 @@
     "source": "added-by-user"
   },
   {
-    "id": "rico",
-    "entry": "rico",
-    "type": "word",
-    "definition": "rich, delicious",
-    "tags": [
-      "adjective"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "pobre",
     "entry": "pobre",
     "type": "word",
@@ -14493,40 +21381,10 @@
     "source": "added-by-user"
   },
   {
-    "id": "ciudad",
-    "entry": "ciudad",
-    "type": "word",
-    "definition": "city",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "pueblo",
     "entry": "pueblo",
     "type": "word",
     "definition": "town, village, people",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "calle",
-    "entry": "calle",
-    "type": "word",
-    "definition": "street",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "gente",
-    "entry": "gente",
-    "type": "word",
-    "definition": "people",
     "tags": [
       "noun"
     ],
@@ -14575,16 +21433,6 @@
     "source": "added-by-user"
   },
   {
-    "id": "parte",
-    "entry": "parte",
-    "type": "word",
-    "definition": "part",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "fuera",
     "entry": "fuera",
     "type": "word",
@@ -14615,16 +21463,6 @@
     "source": "added-by-user"
   },
   {
-    "id": "ayer",
-    "entry": "ayer",
-    "type": "word",
-    "definition": "yesterday",
-    "tags": [
-      "adverb"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "quizas",
     "entry": "quizás",
     "type": "word",
@@ -14641,18 +21479,6 @@
     "full_phrase": "la betabel",
     "clue_template": "la ___: beet",
     "definition": "beet",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "la-zanahoria",
-    "entry": "zanahoria",
-    "type": "phrase",
-    "full_phrase": "la zanahoria",
-    "clue_template": "la ___: carrot",
-    "definition": "carrot",
     "tags": [
       "noun"
     ],
@@ -14719,36 +21545,12 @@
     "source": "added-by-user"
   },
   {
-    "id": "la-cebolla",
-    "entry": "cebolla",
-    "type": "phrase",
-    "full_phrase": "la cebolla",
-    "clue_template": "la ___: onion",
-    "definition": "onion",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "la-cebollita",
     "entry": "cebollita",
     "type": "phrase",
     "full_phrase": "la cebollita",
     "clue_template": "la ___: shallot",
     "definition": "shallot",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "la-cebollita-cambray",
-    "entry": "cambray",
-    "type": "phrase",
-    "full_phrase": "la cebollita cambray",
-    "clue_template": "la cebollita ___: green onion",
-    "definition": "green onion",
     "tags": [
       "noun"
     ],
@@ -14797,18 +21599,6 @@
     "full_phrase": "el tomatillo",
     "clue_template": "el ___: small green husk tomato",
     "definition": "small green husk tomato",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "el-brocoli",
-    "entry": "brócoli",
-    "type": "phrase",
-    "full_phrase": "el brócoli",
-    "clue_template": "el ___: broccoli",
-    "definition": "broccoli",
     "tags": [
       "noun"
     ],
@@ -14887,18 +21677,6 @@
     "source": "added-by-user"
   },
   {
-    "id": "el-aguacate",
-    "entry": "aguacate",
-    "type": "phrase",
-    "full_phrase": "el aguacate",
-    "clue_template": "el ___: avocado",
-    "definition": "avocado",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "la-berenjena",
     "entry": "berenjena",
     "type": "phrase",
@@ -14959,48 +21737,12 @@
     "source": "added-by-user"
   },
   {
-    "id": "el-chile",
-    "entry": "chile",
-    "type": "phrase",
-    "full_phrase": "el chile",
-    "clue_template": "el ___: chili pepper",
-    "definition": "chili pepper",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "el-chicharo",
     "entry": "chícharo",
     "type": "phrase",
     "full_phrase": "el chícharo",
     "clue_template": "el ___: pea",
     "definition": "pea",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "la-manzana",
-    "entry": "manzana",
-    "type": "phrase",
-    "full_phrase": "la manzana",
-    "clue_template": "la ___: apple",
-    "definition": "apple",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "la-pera",
-    "entry": "pera",
-    "type": "phrase",
-    "full_phrase": "la pera",
-    "clue_template": "la ___: pear",
-    "definition": "pear",
     "tags": [
       "noun"
     ],
@@ -15025,66 +21767,6 @@
     "full_phrase": "la guayaba",
     "clue_template": "la ___: guava",
     "definition": "guava",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "el-limon-amarillo",
-    "entry": "limón",
-    "type": "phrase",
-    "full_phrase": "el limón amarillo",
-    "clue_template": "el ___ amarillo: lemon",
-    "definition": "lemon",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "el-limon",
-    "entry": "limón",
-    "type": "phrase",
-    "full_phrase": "el limón",
-    "clue_template": "el ___: lime",
-    "definition": "lime",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "la-toronja",
-    "entry": "toronja",
-    "type": "phrase",
-    "full_phrase": "la toronja",
-    "clue_template": "la ___: grapefruit",
-    "definition": "grapefruit",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "la-pina",
-    "entry": "piña",
-    "type": "phrase",
-    "full_phrase": "la piña",
-    "clue_template": "la ___: pineapple",
-    "definition": "pineapple",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "el-melon",
-    "entry": "melón",
-    "type": "phrase",
-    "full_phrase": "el melón",
-    "clue_template": "el ___: melon",
-    "definition": "melon",
     "tags": [
       "noun"
     ],
@@ -15163,18 +21845,6 @@
     "source": "added-by-user"
   },
   {
-    "id": "la-fresa",
-    "entry": "fresa",
-    "type": "phrase",
-    "full_phrase": "la fresa",
-    "clue_template": "la ___: strawberry",
-    "definition": "strawberry",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
     "id": "la-cereza",
     "entry": "cereza",
     "type": "phrase",
@@ -15241,18 +21911,6 @@
     "full_phrase": "la grosella",
     "clue_template": "la ___: currant",
     "definition": "currant",
-    "tags": [
-      "noun"
-    ],
-    "source": "added-by-user"
-  },
-  {
-    "id": "la-uva",
-    "entry": "uva",
-    "type": "phrase",
-    "full_phrase": "la uva",
-    "clue_template": "la ___: grape",
-    "definition": "grape",
     "tags": [
       "noun"
     ],
