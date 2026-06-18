@@ -11,6 +11,8 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parents[2]))
+
 from templates.crossword.conjugator import get_all_conjugations
 
 _VOCAB_PATH = Path(__file__).parent / "vocabulary.json"
