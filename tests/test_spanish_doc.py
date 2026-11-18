@@ -88,3 +88,78 @@ def test_header_section_labels(tmp_path):
     r = PdfReader(str(p))
     for page, label in zip(r.pages, ("Verbs", "Phrases & Grammar", "Vocab")):
         assert label in page.extract_text()
+
+
+# ---- Task 4: shared pages -------------------------------------------------
+from templates.spanish import pages as P  # noqa: E402
+
+
+def _page_texts(path):
+    return [pg.extract_text() for pg in PdfReader(str(path)).pages]
+
+
+def _render(tmp_path, fn, page_of=None, name="p.pdf"):
+    d = Doc(canvas_at(tmp_path / name), "e", page_of=page_of)
+    fn(d)
+    d.c.save()
+    return d, _page_texts(tmp_path / name)
+
+
+def test_practice_page_kind_and_title(tmp_path):
+    d, t = _render(tmp_path, lambda d: P.draw_practice_page(d, "verbs", "pret", "Preterite"))
+    assert d.log[0].kind == "practice"
+    assert "Practice: Preterite" in t[0] and "Notes" in t[0]
+
+
+def test_my_verbs_page_has_no_vosotros(tmp_path):
+    d, t = _render(tmp_path, P.draw_my_verbs_page)
+    assert "nosotros" in t[0] and "ellos/Uds." in t[0]
+    assert "vosotros" not in t[0].replace("nosotros", "")
+    assert d.log[0].kind == "fill-verb"
+
+
+def test_my_verbs_page_columns(tmp_path):
+    _, t = _render(tmp_path, P.draw_my_verbs_page)
+    for w in ("present", "preterite", "imperfect", "future", "subjunctive"):
+        assert w in t[0]
+
+
+def test_word_page_row_count(tmp_path):
+    assert P.WORD_ROWS_PER_PAGE >= 40
+    d, _ = _render(tmp_path, lambda d: P.draw_word_page(d, "vocab"))
+    assert d.log[0].kind == "fill-word"
+
+
+def test_contents_missing_dest_unlinked(tmp_path):
+    entries = [("Known", "contents", 0), ("Missing", "nope", 0)]
+    pof = {"contents": 1}
+    d = Doc(canvas_at(tmp_path / "c.pdf"), "e", page_of=pof)
+    P.draw_contents_page(d, None, "Contents", entries)
+    d.c.save()
+    assert count_link_annots(tmp_path / "c.pdf") == 1
+    text = _page_texts(tmp_path / "c.pdf")[0]
+    assert text.count("p. ") == 1
+    assert d.dests["contents"] == 1
+
+
+def test_contents_continues_and_layout_stable(tmp_path):
+    entries = [(f"Item {i}", f"d{i}", i % 2) for i in range(80)]
+    d1 = Doc(canvas_to_buffer(), "e")
+    P.draw_contents_page(d1, "verbs", "Verbs", entries)
+    d2 = Doc(canvas_to_buffer(), "e", page_of={f"d{i}": i for i in range(80)})
+    P.draw_contents_page(d2, "verbs", "Verbs", entries)
+    assert d1.page == d2.page and d1.page > 1
+    assert d2.dests == {"verbs-contents": 1}
+
+
+def test_my_verbs_filled_prints_forms(tmp_path):
+    e = {"verb": "dormir", "en": "to sleep", "forms": {"present": ["duermo", "duermes", "duerme", "dormimos", "duermen"]},
+         "examples": [("Duermo bien.", "I sleep well.")]}
+    d, t = _render(tmp_path, lambda d: P.draw_my_verbs_page(d, [e]))
+    assert "duermo" in t[0] and "dormir" in t[0]
+    assert d.log[0].kind == "added-verbs"
+
+
+def test_phrase_blank_page(tmp_path):
+    d, t = _render(tmp_path, P.draw_phrase_blank_page)
+    assert d.log[0].kind == "fill-phrase" and d.log[0].section == "phrases"
