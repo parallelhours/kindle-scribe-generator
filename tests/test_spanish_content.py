@@ -599,3 +599,17 @@ def test_word_page_fits_long_text():
             assert size >= 6.0 - 1e-6, (text, size)
             right = x + stringWidth(text, font, size)
             assert any(lo - 1e-6 <= x and right <= hi + 1e-6 for lo, hi in cells), (text, x, right)
+
+
+def test_export_markdown_covers_content():
+    from templates.spanish import export
+    from templates.spanish.content import confused, grammar, phrases, verb_topics, vocab
+    md = export.export_markdown()
+    for t in (verb_topics.VERB_TOPICS + grammar.TOPICS + confused.TOPICS + vocab.TOPICS):
+        assert t["title"] in md
+        assert f"({t['id']})" in md
+    for p in phrases.PHRASES:
+        assert p["es"] in md
+    for v in VERBS:
+        assert v in md
+    assert "**" not in md and "~" not in md
