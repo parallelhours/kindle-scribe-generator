@@ -205,7 +205,7 @@ _SUPERLATIVES = {
            "**mejor** and **peor** usually go before the noun: la **mejor** película ~the best "
            "movie~."),
         _h("-ísimo: very, extremely"),
-        _t("To say very or extremely (no comparison), drop the final vowel and add **-ísimo** "
+        _t("To say very or extremely (no comparison), drop the final vowel (if there is one) and add **-ísimo** "
            "(-ísima, -ísimos, -ísimas): rico: **riquísimo**, fácil: **facilísimo**, mucho: "
            "**muchísimo**, cansado: **cansadísimo**."),
         _t("Spelling keeps the sound: c becomes **qu** (rico: riquísimo), g becomes **gu** "
@@ -282,9 +282,9 @@ _PERSONAL_A = {
            "anyone? I didn't see anyone.~ ¿**A** quién llamaste? ~Who did you call?~",
            "Pets you think of as family: Llevo **a** mi perro al parque. ~I take my dog to "
            "the park.~",
-           "**a** + **el** contracts to **al**: Visité **al** médico. ~I went to the doctor.~"),
+           "**a** + **el** contracts to **al**: Conozco **al** médico. ~I know the doctor.~"),
         _h("Usually no a"),
-        _b("After **tener**: Tengo dos hermanos. ~I have two brothers.~",
+        _b("After **tener**: Tengo dos hermanos. ~I have two brothers / two siblings.~",
            "After **hay**: Hay muchos turistas. ~There are a lot of tourists.~",
            "When the person isn't anyone specific: Busco **un** profesor de guitarra. ~I'm "
            "looking for a guitar teacher (any one).~ Compare: Busco **al** profesor de "

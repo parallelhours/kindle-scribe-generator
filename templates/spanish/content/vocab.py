@@ -218,17 +218,17 @@ _PRONOUNS_TOPIC = {
                "**se** can mean to him, to her, to you, to them. Add **a él, a ella, a usted, "
                "a ellos** if it isn't clear: Se lo di **a ella**."),
             _table(["Spanish", "English"], [
-                ["**Se lo** di.", "~I gave it to him (her, them).~"],
+                ["**Se lo** di.", "~I gave it to him (her, you, them).~"],
                 ["**Me la** trajeron.", "~They brought it to me.~"],
-                ["¡Dá**selo**!", "~Give it to him!~"],
+                ["¡Dá**selo**!", "~Give it to him/her!~"],
                 ["¡Mánda**noslo**!", "~Send it to us!~"],
             ], [0.5, 0.5]),
             _h("Where the pronoun goes"),
             _table(["With ...", "Pronoun goes", "Example"], [
                 ["a conjugated verb", "before it, as a separate word",
                  "**Lo** compro. No **lo** compro."],
-                ["an infinitive", "attached to the end", "Quiero comprar**lo**."],
-                ["an -ndo form", "attached to the end", "Estoy comprándo**lo**."],
+                ["an infinitive", "attached to the end", "Salí sin comprar**lo**."],
+                ["an -ndo form", "attached to the end", "Aprendí la canción escuchándo**la**."],
                 ["an affirmative command", "attached to the end", "¡Cómpra**lo**!"],
                 ["a negative command", "before the verb, after no", "¡No **lo** compres!"],
                 ["two verbs (ir a, querer, estar + -ndo ...)",

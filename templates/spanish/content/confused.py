@@ -63,7 +63,7 @@ _SER_ESTAR = {
                 ["verde", "**es** verde ~is green (color)~",
                  "**está** verde ~is unripe; is inexperienced~"],
                 ["seguro", "**es** seguro ~is safe~", "**está** seguro ~is sure~"],
-                ["vivo", "**es** vivo ~is sharp, quick-witted~", "**está** vivo ~is alive~"],
+                ["vivo", "**es** vivo ~is sharp, quick-witted; in Colombia often 'sly, a smart operator'~", "**está** vivo ~is alive~"],
                 ["callado", "**es** callado ~is a quiet person~",
                  "**está** callado ~is being quiet~"],
                 ["nervioso", "**es** nervioso ~is a nervous person~",

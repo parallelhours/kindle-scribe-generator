@@ -9,7 +9,7 @@ from templates.spanish.content import (
     additions, confused, grammar, phrases, verb_topics, vocab,
 )
 from templates.spanish.content.verbs_data import VERBS
-from templates.spanish.layout import _expand_conj
+from templates.spanish.layout import TENSE_LABELS, _expand_conj
 from templates.spanish.pages import spanish_sort_key
 
 _RICH = re.compile(r"\*\*(.+?)\*\*|~(.+?)~")
@@ -97,11 +97,11 @@ def export_markdown() -> str:
     for v, d in VERBS.items():
         out += [f"### {v} — {d['en']}", ""]
         tenses = [k for k in d if k not in ("en", "participle", "gerund")]
-        out += _table([""] + tenses,
+        out += _table([""] + [TENSE_LABELS.get(t, t) for t in tenses],
                       [[p] + [d[t][i] for t in tenses] for i, p in
                        enumerate(["yo", "tú", "él/ella/Ud.", "nosotros", "vosotros",
                                   "ellos/Uds."])])
-        out += ["", f"participle: {d['participle']}; gerund: {d['gerund']}", ""]
+        out += ["", f"participle: {d['participle']}; -ndo form: {d['gerund']}", ""]
     out += ["# Phrases & Grammar", "", "## A. Connector phrases A–Z (phrases-a)", ""]
     cmp_after = {}
     for c in phrases.PHRASE_COMPARISONS:

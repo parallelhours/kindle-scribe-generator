@@ -108,7 +108,7 @@ _PRESENT = {
         [
             _h("Irregular yo forms"),
             _t("Only the **yo** form is irregular; the other persons follow the normal pattern "
-               "(some also stem-change: tengo, **tienes**; digo, **dices**)."),
+               "(some also stem-change: tengo, **tienes**; digo, **dices**; **oír** adds a y: oyes, oye, oyen)."),
             {"type": "table", "header": ["Type", "Infinitive", "yo", "English"],
              "rows": [
                  ["-go", "tener", _f("tener", "present", 0), "~I have~ (tienes, tiene...)"],
@@ -136,7 +136,7 @@ _PRESENT = {
         ],
         [
             _h("Fully irregular verbs"),
-            _t("Memorize these whole. **ser** and **estar** both mean \"to be\"; **ir** = to go."),
+            _t("Memorize **ser**, **estar** and **ir** whole. **ser** and **estar** both mean \"to be\"; **ir** = to go."),
             {"type": "conj", "verbs": ["ser", "estar", "ir"], "tenses": ["present"]},
             _sp(2),
             {"type": "conj", "verbs": ["haber", "dar", "saber", "ver"], "tenses": ["present"]},
@@ -513,7 +513,7 @@ _CMP_PRET_IMP = {
                 {"pos": 1.0, "label": "ahora", "mark": "now"},
             ], "caption": "**Estaba** en casa (imperfect) is the background that was going on; "
                           "**llegaste** (preterite) is the event that happened in the middle of it."},
-            _ex("Estaba en la casa cuando llegaste.", "I was at home when you arrived."),
+            _ex("Estaba en casa cuando llegaste.", "I was at home when you arrived."),
             _ex("Mientras cocinaba, sonó el teléfono.", "While I was cooking, the phone rang."),
         ],
         [
@@ -593,7 +593,7 @@ _FUTURE = {
             _sp(),
             _ex("Mañana hablaré con mi jefe.", "Tomorrow I'll talk to my boss."),
             _ex("¿Qué hora será? —Serán las tres.",
-                "I wonder what time it is. —It's probably about three."),
+                "I wonder what time it is. —It's probably three."),
         ],
         [
             _h("Irregular stems"),
@@ -921,7 +921,7 @@ _PRES_SUBJ = {
         ],
         [
             _h("Six irregulars"),
-            _t("Their yo form does not end in -o (doy, estoy, voy, he, sé, soy), so learn them "
+            _t("Their yo form does not end in a plain -o (doy, estoy, voy, he, sé, soy), so learn them "
                "whole. **dé** has an accent to tell it apart from de ~of~."),
             {"type": "conj", "verbs": ["dar", "estar", "ir"], "tenses": ["pres_subj"]},
             _sp(2),
@@ -1064,7 +1064,7 @@ _SUBJ_WHEN = {
                   "Si **fuera** rico, **compraría** una finca. ~If I were rich, I would buy a "
                   "farm.~"],
              ]},
-            _t("After si, never use the present subjunctive (Si **tengo**, not \"si tenga\") or "
+            _t("After si (if), never use the present subjunctive (Si **tengo**, not \"si tenga\") or "
                "the conditional (Si **tuviera**, not \"si tendría\"). The halves can swap "
                "places: Viajaría si tuviera tiempo."),
             _sp(),
@@ -1191,7 +1191,7 @@ _COMMANDS = {
              "rows": [_ud_row(v, en) for v, en in _UD_IRREG],
              "widths": [0.2, 0.17, 0.17, 0.18, 0.28], "gray_rows": []},
             _t("**dé** has an accent so it isn't confused with the word **de** ~of, from~. "
-               "**¡Oiga!** is also a way to get someone's attention, like \"Excuse me!\""),
+               "**¡Oiga!** is also a way to get someone's attention, like \"Excuse me!\", but it can sound abrupt; **disculpe** is more polite."),
             _h("Polite requests"),
             _t("With service staff, a question often sounds friendlier than a command: "
                "**¿Me trae** la cuenta, por favor? ~Could you bring me the check?~ In Colombia "
@@ -1212,8 +1212,8 @@ _COMMANDS = {
                       for v, en in _TU_REGULAR],
              "widths": [0.22, 0.22, 0.26, 0.30], "gray_rows": []},
             _h("The 8 irregular tú commands"),
-            _t("Only the affirmative is irregular. The negative is regular: **no** + tú "
-               "subjunctive, as always."),
+            _t("Only the affirmative is irregular. The negative follows the normal rule: **no** + tú "
+               "subjunctive."),
             {"type": "table", "header": ["Infinitive", "tú: do it", "tú: don't", "English"],
              "rows": [[v, f"**{tu}**", "no " + _f(v, "pres_subj", 1), en]
                       for v, tu, en in TU_IRREGULAR],
@@ -1432,8 +1432,9 @@ _HELPERS = {
                   "Quiero aprender a bailar salsa. ~I want to learn to dance salsa.~"],
              ],
              "widths": [0.17, 0.2, 0.25, 0.38], "gray_rows": []},
-            _t("Strongest to softest: **tener que**, **deber**, **hay que**, **necesitar**, "
-               "**debería**. **debería** is the conditional of deber, the polite \"should.\""),
+            _t("**tener que** and **deber** are both strong; **necesitar** is a real need; **debería** is "
+               "soft, friendly advice. **hay que** is the impersonal \"you have to,\" with no specific "
+               "person. **debería** is the conditional of deber, the polite \"should.\""),
             _ex("No tienes que venir, pero me gustaría verte.",
                 "You don't have to come, but I'd like to see you."),
         ],
@@ -1549,7 +1550,7 @@ _WHICH_TENSE = {
                 ]},
                 {"q": "Is it about the future?", "answers": [
                     _a("A plan: what you are going to do", "Future with ir a", "ir-a"),
-                    _a("A prediction or a promise: \"will\"", "Future tense", "future"),
+                    _a("A prediction or a promise: \"will\" (ir a works too)", "Future tense", "future"),
                     _a("A fixed plan with a time word (mañana)", "Present tense", "present"),
                 ]},
                 {"q": "Is it about the past?", "answers": [
@@ -1687,7 +1688,7 @@ _OVERVIEW = {
             {"type": "table", "header": ["Tense", "hablar", "comer", "vivir", "English (hablar)"],
              "rows": _OVERVIEW_ROWS,
              "widths": [0.24, 0.17, 0.17, 0.17, 0.25], "gray_rows": []},
-            _t("**que** is not part of the verb, but the subjunctive almost always follows it."),
+            _t("**que** is not part of the verb, but the subjunctive usually follows it."),
             _sp(),
             {"type": "xref", "text": "Choosing a tense: **Which tense do I use?**",
              "dest": "t-which-tense"},

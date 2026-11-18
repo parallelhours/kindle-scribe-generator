@@ -45,7 +45,7 @@ PHRASES = [
                   ("Aunque llueva mañana, vamos a salir.",
                    "Even if it rains tomorrow, we're going to go out.")]},
     {"es": "bastante", "en": "quite, rather; enough; quite a lot (of)",
-     "use": "Before an adj./adverb: quite. With a noun or after a verb: enough, or quite a lot.",
+     "use": "Before an adj./adverb: quite. With a noun or after a verb: enough, or quite a lot. With a plural noun it agrees: **bastantes** personas.",
      "examples": [("El examen fue bastante difícil.", "The exam was quite difficult."),
                   ("Había bastante gente en la fiesta.",
                    "There were quite a lot of people at the party.")]},
@@ -118,7 +118,7 @@ PHRASES = [
                   ("Ya no vivo en Cali.", "I don't live in Cali anymore.")]},
 
     # ---- common intermediate connectors ----
-    {"es": "a lo mejor", "en": "maybe, probably",
+    {"es": "a lo mejor", "en": "maybe, perhaps",
      "use": "Casual maybe; followed by the indicative, not the subjunctive.",
      "examples": [("A lo mejor llueve más tarde.", "Maybe it'll rain later."),
                   ("A lo mejor está en el trabajo.", "Maybe she's at work.")]},
@@ -170,7 +170,7 @@ PHRASES = [
                   ("No está lejos. De hecho, podemos ir caminando.",
                    "It isn't far. In fact, we can walk.")]},
     {"es": "de repente", "en": "suddenly, all of a sudden",
-     "use": "Something unexpected in a story; usually with the preterite.",
+     "use": "Something unexpected in a story; usually with the preterite. In Colombia it can also mean maybe: De repente llueve. ~(Maybe it'll rain.)~",
      "examples": [("Estábamos comiendo y de repente se fue la luz.",
                    "We were eating, and suddenly the power went out."),
                   ("De repente empezó a llover.", "Suddenly it started to rain.")]},
