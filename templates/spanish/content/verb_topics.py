@@ -309,7 +309,8 @@ _STRONG = [
     ("u", "saber", None, None, None, "~I found out~"),
     ("u", "caber", "cupe", "cupo", "cupieron", "~I fit~"),
     ("u", "andar", "anduve", "anduvo", "anduvieron", "~I walked~"),
-    ("u", "haber", None, None, None, "él: hubo ~there was, there were~"),
+    # existential haber: only hubo, even with plurals (never "hubieron muchas personas")
+    ("u", "haber", "—", "hubo", "—", "hubo = ~there was, there were~ (never \"hubieron\")"),
     ("i", "querer", None, None, None, "~I tried~ (no quise ~I refused~)"),
     ("i", "venir", None, None, None, "~I came~"),
     ("i", "hacer", None, None, None, "~I did, I made~ (z in hizo)"),
@@ -400,6 +401,8 @@ _PRETERITE = {
              "widths": [0.05, 0.15, 0.15, 0.15, 0.18, 0.32], "gray_rows": []},
             _t("Meaning shifts: in the preterite, **supe** = ~I found out~, **pude** = "
                "~I managed to~, **quise** = ~I tried~, and **conocí** = ~I met~."),
+            _t("**hay / hubo / había** never go plural: **Hubo** muchos problemas. "
+               "~There were a lot of problems.~"),
         ],
         [
             _h("ser, ir, dar, ver"),
