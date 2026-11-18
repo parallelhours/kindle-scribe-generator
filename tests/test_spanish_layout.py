@@ -208,3 +208,10 @@ def test_xref_to_known_dest_is_linked_with_page_number():
     block = {"type": "xref", "text": "Ver pretérito", "dest": "a"}
     texts, fonts = _drawn_strings(block, CtxStub())
     assert "p.3" in texts and "Helvetica-Bold" in fonts
+
+
+def test_unresolved_xref_with_bold_markup_uses_no_bold_font():
+    block = {"type": "xref", "text": "Ver **x**", "dest": "zzz"}
+    texts, fonts = _drawn_strings(block, CtxStub())
+    assert "Helvetica-Bold" not in fonts
+    assert "".join(texts) == "Ver x"

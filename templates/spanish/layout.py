@@ -522,7 +522,8 @@ def draw_block(c, frame: Frame, block: dict, ctx) -> None:
             linked = ctx.link((x, top - lh, x + w, top), dest)
         if dest and not linked:
             # unresolved destination: plain text, no underline, no page number
-            lines, _ = _text_h(block["text"], w - _XREF_PAGE_W, BODY_SIZE)
+            flat = [("normal", t) for _, t in parse_rich(block["text"])]
+            lines = _wrap_chunks(flat, w - _XREF_PAGE_W, BODY_SIZE)
         _draw_lines(c, lines, x, top, BODY_SIZE, lead)
         if linked:
             c.setStrokeGray(0)
