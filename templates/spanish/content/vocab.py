@@ -55,7 +55,7 @@ _ENDINGS = [
     ("-o", "masculine", "el libro, el carro, el vaso",
      "la mano, la foto, la moto, la radio"),
     ("-a", "feminine", "la casa, la mesa, la playa",
-     "el día, el mapa, el sofá, el planeta; most -ma words (below)"),
+     "el día, el mapa, el sofá, el planeta; Greek -ma words (below)"),
     ("-ción, -sión", "feminine", "la canción, la estación, la televisión", "none"),
     ("-dad, -tad, -tud", "feminine", "la ciudad, la libertad, la actitud", "none"),
     ("-umbre", "feminine", "la costumbre, la cumbre", "none"),
