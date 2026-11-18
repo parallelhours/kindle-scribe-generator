@@ -171,7 +171,9 @@ def test_all_content_is_winansi():
 from templates.spanish.content.verb_topics import VERB_TOPICS  # noqa: E402
 
 REQUIRED_VERB_TOPICS = ["present", "progressive", "ir-a", "acabar-de", "preterite", "imperfect",
-                        "cmp-pret-imp"]  # extended in Tasks 8 and 9
+                        "cmp-pret-imp",
+                        "future", "conditional", "pres-perfect", "past-perfect", "cmp-perfects",
+                        "pres-subj", "past-subj", "subj-when", "cmp-ind-subj"]  # extended in Task 9
 
 
 def _blocks(topic):
@@ -203,3 +205,8 @@ def test_verbs_section_renders(tmp_path):
     out = tmp_path / "verbs.pdf"
     generate(str(out), sections="verbs", verb_pages="0")  # raises LayoutOverflow on overflow
     assert out.stat().st_size > 0
+
+
+def test_cmp_perfects_has_two_timelines():
+    topic = next(t for t in VERB_TOPICS if t["id"] == "cmp-perfects")
+    assert sum(1 for b in _blocks(topic) if b["type"] == "timeline") == 2

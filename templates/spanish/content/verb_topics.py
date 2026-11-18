@@ -546,6 +546,582 @@ _CMP_PRET_IMP = {
     ],
 }
 
+# --------------------------------------------------------------------------
+# 11. Future
+# --------------------------------------------------------------------------
+_INF_STEMS = _MODELS  # future and conditional endings go on the whole infinitive
+
+_FUT_IRREG = [
+    # (group, infinitive, stem, English for yo); yo form pulled from VERBS
+    ("drop e", "poder", "podr-", "~I will be able to~"),
+    ("drop e", "saber", "sabr-", "~I will know~"),
+    ("drop e", "querer", "querr-", "~I will want~"),
+    ("drop e", "haber", "habr-", "~I will have~ (helper); **habrá** = ~there will be~"),
+    ("drop e", "caber", "cabr-", "~I will fit~"),
+    ("vowel to d", "tener", "tendr-", "~I will have~"),
+    ("vowel to d", "salir", "saldr-", "~I will leave, I will go out~"),
+    ("vowel to d", "venir", "vendr-", "~I will come~"),
+    ("vowel to d", "poner", "pondr-", "~I will put~"),
+    ("short", "hacer", "har-", "~I will do, I will make~"),
+    ("short", "decir", "dir-", "~I will say, I will tell~"),
+]
+
+
+def _stem_form(verb, tense, typed):
+    """yo form from VERBS, or the typed form for verbs VERBS lacks (caber)."""
+    return _f(verb, tense, 0) if verb in VERBS else typed
+
+
+_FUTURE = {
+    "id": "future",
+    "title": "Future tense",
+    "pages": [
+        [
+            _h("When to use it"),
+            _b("What **will** happen: El concierto **será** en el estadio. ~The concert will "
+               "be at the stadium.~",
+               "Promises and predictions: Te **llamaré** mañana. ~I'll call you tomorrow.~",
+               "Guessing about **now** (\"probably,\" \"I wonder\"): ¿Dónde **estará** Ana? "
+               "~I wonder where Ana is.~ **Estará** en el trabajo. ~She's probably at work.~"),
+            _t("In everyday Latin American speech, **ir a** + infinitive (voy a llamar) is more "
+               "common for plans. The future tense sounds a little more formal or more certain, "
+               "and it is the normal way to guess."),
+            _h("How to form it"),
+            _t("Keep the **whole infinitive** and add the ending. All three classes use the "
+               "same endings, and every form except nosotros has an accent."),
+            _endings_table("future", stems=_INF_STEMS),
+            _sp(),
+            _ex("Mañana hablaré con mi jefe.", "Tomorrow I'll talk to my boss."),
+            _ex("¿Qué hora será? —Serán las tres.",
+                "I wonder what time it is. —It's probably about three."),
+        ],
+        [
+            _h("Irregular stems"),
+            _t("These verbs change the stem, but the endings stay the same: **-é, -ás, -á, "
+               "-emos, -éis, -án**. The same stems are used for the conditional."),
+            {"type": "table", "header": ["Change", "Infinitive", "Stem", "yo", "English (yo)"],
+             "rows": [[g, v, stem, _stem_form(v, "future", "cabré"), en]
+                      for g, v, stem, en in _FUT_IRREG],
+             "widths": [0.17, 0.15, 0.12, 0.14, 0.42], "gray_rows": []},
+            _t("Verbs built on these keep the change: mantener (**mantendré**), "
+               "suponer (**supondré**)."),
+            _t("**habrá** ~there will be~ is always singular, like hay: **Habrá** muchas "
+               "personas. ~There will be a lot of people.~"),
+            _sp(),
+            _ex("El próximo año tendremos más tiempo para viajar.",
+                "Next year we'll have more time to travel."),
+            _ex("Te prometo que llegaré a tiempo.", "I promise I'll be on time."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 12. Conditional
+# --------------------------------------------------------------------------
+_COND_IRREG = ["tener", "poder", "hacer", "decir", "salir", "venir", "poner", "saber",
+               "querer", "haber"]
+_COND_EN = ["~I would have~", "~I could, I would be able to~", "~I would do, I would make~",
+            "~I would say, I would tell~", "~I would leave~", "~I would come~",
+            "~I would put~", "~I would know~", "~I would want~",
+            "~I would have~ (helper); **habría** = ~there would be~"]
+
+_CONDITIONAL = {
+    "id": "conditional",
+    "title": "Conditional",
+    "pages": [
+        [
+            _h("When to use it"),
+            _b("English **\"would\"**: Yo no **diría** eso. ~I wouldn't say that.~ With an "
+               "if-clause: Si tuviera dinero, **compraría** un carro. ~If I had money, I would "
+               "buy a car.~",
+               "**Politeness**: **Me gustaría** un café. ~I'd like a coffee.~ ¿**Podrías** "
+               "ayudarme? ~Could you help me?~ ¿**Podría** traerme la cuenta? ~Could you (Ud.) "
+               "bring me the check?~",
+               "**Advice** with deber: **Deberías** descansar. ~You should rest.~",
+               "The future seen from the past: Dijo que **llamaría**. ~He said he would call.~"),
+            _h("How to form it"),
+            _t("Like the future: keep the **whole infinitive** and add **-ía** endings. The "
+               "irregular verbs use the same stems as the future (tendr-, podr-, har-...)."),
+            _endings_table("conditional", stems=_INF_STEMS),
+            _t("Don't mix it up with the imperfect: com**ía** ~I was eating, I used to eat~, "
+               "comer**ía** ~I would eat~."),
+            _sp(2),
+            _ex("Me gustaría reservar una mesa para dos, por favor.",
+                "I'd like to reserve a table for two, please."),
+        ],
+        [
+            _h("Irregular stems (same as the future)"),
+            {"type": "table", "header": ["Infinitive", "yo", "English (yo)"],
+             "rows": [[v, _f(v, "conditional", 0), en] for v, en in zip(_COND_IRREG, _COND_EN)],
+             "widths": [0.2, 0.2, 0.6], "gray_rows": []},
+            _h("Sounding polite"),
+            {"type": "compare", "left": "Direct", "right": "Polite (conditional)",
+             "rows": [
+                 ["Quiero un café. ~I want a coffee.~",
+                  "**Me gustaría** un café. ~I'd like a coffee.~"],
+                 ["¿Puedes ayudarme? ~Can you help me?~",
+                  "¿**Podrías** ayudarme? ~Could you help me?~"],
+                 ["Debes llamar a tu mamá. ~You must call your mom.~",
+                  "**Deberías** llamar a tu mamá. ~You should call your mom.~"],
+             ]},
+            _t("**deber** in the present sounds strong (\"must\"); **debería** is friendly advice "
+               "(\"should\")."),
+            _t("When English \"would\" means \"used to,\" use the imperfect: De niño, **jugaba** "
+               "en la calle. ~As a kid, I would play in the street.~"),
+            _sp(),
+            _ex("¿Podría decirme dónde está la estación?",
+                "Could you tell me where the station is?"),
+            _ex("Deberías llevar una chaqueta; hace frío.",
+                "You should take a jacket; it's cold."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 13. Present perfect
+# --------------------------------------------------------------------------
+_PP_EN = ["~I have spoken~", "~you have spoken~", "~he/she has, you have spoken~",
+          "~we have spoken~", "~you all have spoken (Spain)~",
+          "~they have, you all have spoken~"]
+
+_IRREG_PART = [
+    ("hacer", "~done, made~"), ("decir", "~said, told~"), ("ver", "~seen~"),
+    ("escribir", "~written~"), ("poner", "~put~"), ("volver", "~returned, come back~"),
+    ("abrir", "~opened~"), ("romper", "~broken~"), ("morir", "~died~"),
+    ("cubrir", "~covered~"), ("descubrir", "~discovered~"), ("resolver", "~solved~"),
+]
+
+
+def _part_rows():
+    """Irregular participles from VERBS, two per row to save space."""
+    cells = [[v, f"**{VERBS[v]['participle']}**", en] for v, en in _IRREG_PART]
+    half = (len(cells) + 1) // 2
+    return [cells[i] + cells[i + half] for i in range(half)]
+
+
+_PRES_PERFECT = {
+    "id": "pres-perfect",
+    "title": "Present perfect",
+    "pages": [
+        [
+            _h("When to use it"),
+            _b("**Experiences** up to now, often with nunca, alguna vez, ya, todavía no, "
+               "dos veces: **He estado** en Colombia dos veces. ~I've been to Colombia twice.~ "
+               "**Nunca he probado** el mole. ~I've never tried mole.~",
+               "**A period that is still open** (este año, esta semana, últimamente): Este año "
+               "**hemos viajado** mucho. ~We've traveled a lot this year.~"),
+            _t("**Latin America:** for an action that is finished, even one from earlier today, "
+               "use the **preterite**: Hoy **comí** temprano. ~I ate early today.~ "
+               "¿Ya **comiste**? ~Have you eaten yet?~ \"Hoy he comido\" sounds like Spain."),
+            _h("How to form it"),
+            _t("**haber** (present) + **past participle**. haber means \"have\" only as this "
+               "helper; for \"to have\" (own), use tener."),
+            {"type": "table", "header": ["", "haber + participle", "English"],
+             "rows": [[p, f"**{_f('haber', 'present', i)}** hablado", _PP_EN[i]]
+                      for i, p in enumerate(_PERSONS)],
+             "widths": [0.22, 0.34, 0.44], "gray_rows": [_VOS]},
+            _sp(2),
+            {"type": "table", "header": ["", "-ar", "-er", "-ir"],
+             "rows": [["participle", "**-ado**", "**-ido**", "**-ido**"],
+                      ["example", f"habl**ado** ~spoken~", f"com**ido** ~eaten~",
+                       f"viv**ido** ~lived~"]],
+             "widths": [0.22, 0.26, 0.26, 0.26], "gray_rows": []},
+            _t("When the stem ends in a, e or o, the i takes an accent: "
+               f"**{VERBS['leer']['participle']}**, **{VERBS['oír']['participle']}**, "
+               f"**{VERBS['traer']['participle']}**, **creído**."),
+            _sp(),
+            _ex("¿Has estado en México? —Sí, he ido tres veces.",
+                "Have you been to Mexico? —Yes, I've been three times."),
+        ],
+        [
+            _h("Irregular participles"),
+            {"type": "table",
+             "header": ["Infinitive", "Participle", "English"] * 2,
+             "rows": _part_rows(),
+             "widths": [0.15, 0.15, 0.2] * 2, "gray_rows": []},
+            _t("Verbs built on these follow them: devolver (devuelto), describir (descrito)."),
+            _h("Rules"),
+            _b("**haber + participle never split.** Pronouns and **no** go before haber: "
+               "**Se lo** he dicho. ~I've told him.~ **No lo** he visto. ~I haven't seen it.~",
+               "**The participle never changes** for gender or number: Las **he comprado**. "
+               "~I've bought them.~ María **ha llegado**. ~María has arrived.~",
+               "**hay** becomes **ha habido** ~there has been, there have been~, always "
+               "singular: **Ha habido** muchos problemas."),
+            _sp(),
+            _ex("Hemos practicado mucho esta semana.", "We've practiced a lot this week."),
+            _ex("Todavía no he terminado el libro.", "I haven't finished the book yet."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 14. Past perfect
+# --------------------------------------------------------------------------
+_PLUP_EN = ["~I had eaten~", "~you had eaten~", "~he/she, you had eaten~",
+            "~we had eaten~", "~you all had eaten (Spain)~", "~they, you all had eaten~"]
+
+_PAST_PERFECT = {
+    "id": "past-perfect",
+    "title": "Past perfect",
+    "pages": [
+        [
+            _h("When to use it"),
+            _t("For an action that happened **before another past event**: English \"had "
+               "done.\" Common with ya ~already~, todavía no ~not yet~, nunca ~never~, "
+               "antes ~before~ and cuando ~when~."),
+            _h("How to form it"),
+            _t("**haber** (imperfect) + **past participle**. The participles are the same as in "
+               "the present perfect (hablado, comido, hecho, dicho...)."),
+            {"type": "table", "header": ["", "haber + participle", "English"],
+             "rows": [[p, f"**{_f('haber', 'imperfect', i)}** comido", _PLUP_EN[i]]
+                      for i, p in enumerate(_PERSONS)],
+             "widths": [0.22, 0.34, 0.44], "gray_rows": [_VOS]},
+            _h("Good to know"),
+            _b("Same rules as the present perfect: pronouns and no go **before haber** (ya **se "
+               "lo** había dicho), the two words never split, and the participle never changes.",
+               "**había** on its own means ~there was, there were~ and is always singular: "
+               "**Había** muchas personas, never \"habían muchas personas.\"",
+               "\"Had just\" is **acababa de** + infinitive: Acababa de llegar. ~I had just "
+               "arrived.~"),
+            _sp(),
+            _ex("Había comido antes de salir.", "I had eaten before I left."),
+            _ex("Ya habían llegado cuando llamé.", "They had already arrived when I called."),
+            _ex("Cuando llegamos al cine, la película ya había empezado.",
+                "When we got to the movie theater, the movie had already started."),
+            _ex("Nunca había visto el mar antes de ese viaje.",
+                "I had never seen the ocean before that trip."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 15. Present perfect vs. past perfect
+# --------------------------------------------------------------------------
+_CMP_PERFECTS = {
+    "id": "cmp-perfects",
+    "title": "Present perfect vs. past perfect",
+    "pages": [
+        [
+            _t("Both are **haber + participle**. The difference is the reference point: the "
+               "present perfect looks back from **now**; the past perfect looks back from "
+               "**a moment in the past**."),
+            {"type": "compare", "left": "Present perfect: up to now",
+             "right": "Past perfect: before another past event",
+             "rows": [
+                 ["haber in the present: **he, has, ha, hemos, han** + participle",
+                  "haber in the imperfect: **había, habías, había, habíamos, habían** + "
+                  "participle"],
+                 ["English: have/has done", "English: had done"],
+                 ["Experiences so far; a period still open (este año)",
+                  "An action finished before something else in the past"],
+                 ["Clues: nunca, alguna vez, ya, todavía no, este año",
+                  "Clues: ya... cuando, antes de, todavía no... cuando"],
+             ]},
+            _h("Present perfect: the period reaches now"),
+            {"type": "timeline", "events": [
+                {"pos": 0.15, "label": "2019: Cartagena", "mark": "point"},
+                {"pos": 0.55, "label": "2024: Medellín", "mark": "point"},
+                {"pos": 1.0, "label": "ahora", "mark": "now"},
+            ], "caption": "**He estado** en Colombia dos veces. ~I've been to Colombia twice.~ "
+                          "Both trips are counted in a period that is still open, up to **now**."},
+            _h("Past perfect: one past event before another"),
+            {"type": "timeline", "events": [
+                {"pos": 0.2, "label": "1. **habían llegado**", "mark": "point"},
+                {"pos": 0.6, "label": "2. **llamé**", "mark": "point"},
+                {"pos": 1.0, "label": "ahora", "mark": "now"},
+            ], "caption": "Ya **habían llegado** cuando **llamé**. ~They had already arrived when "
+                          "I called.~ First they arrived, then I called; both are in the past."},
+            _ex("Este mes hemos ido al cine tres veces.",
+                "We've gone to the movies three times this month."),
+            _ex("Cuando llegué a la fiesta, Ana ya se había ido.",
+                "When I got to the party, Ana had already left."),
+        ],
+        [
+            _h("Same verb, two perfects"),
+            {"type": "compare", "left": "Present perfect", "right": "Past perfect",
+             "rows": [
+                 ["Nunca **he visto** nieve. ~I've never seen snow.~",
+                  "Nunca **había visto** nieve antes de ese viaje. ~I had never seen snow "
+                  "before that trip.~"],
+                 ["**He leído** ese libro dos veces. ~I've read that book twice.~",
+                  "**Había leído** el libro antes de ver la película. ~I had read the book "
+                  "before I saw the movie.~"],
+                 ["Todavía no **ha llegado**. ~He hasn't arrived yet.~",
+                  "Todavía no **había llegado** cuando salimos. ~He hadn't arrived yet when "
+                  "we left.~"],
+                 ["**Se lo he dicho** muchas veces. ~I've told him many times.~",
+                  "Ya **se lo había dicho**. ~I had already told him.~"],
+             ]},
+            _h("Rules for both"),
+            _b("Pronouns and **no** go **before haber**: **se lo** he dicho, **no lo** había "
+               "visto. Never between haber and the participle.",
+               "The participle never changes: Las **he comprado**. Las **había comprado**. "
+               "~I've bought them. I had bought them.~"),
+            _h("Latin America: present perfect or preterite?"),
+            {"type": "compare", "left": "Present perfect", "right": "Preterite",
+             "rows": [
+                 ["Experiences up to now: **He estado** en Colombia dos veces. ~I've been to "
+                  "Colombia twice.~",
+                  "Finished actions, even earlier today: Hoy **comí** arroz. ~Today I ate "
+                  "rice.~"],
+                 ["Never, so far: Nunca **he probado** el mole. ~I've never tried mole.~",
+                  "Esta mañana **fui** al banco. ~This morning I went to the bank.~"],
+                 ["Still open: Esta semana **he trabajado** mucho. ~I've worked a lot this "
+                  "week.~",
+                  "¿Ya **comiste**? ~Have you eaten yet?~ (normal in Latin America)"],
+             ]},
+            _sp(),
+            {"type": "xref", "text": "All the forms: **Present perfect**", "dest": "t-pres-perfect"},
+            {"type": "xref", "text": "All the forms: **Past perfect**", "dest": "t-past-perfect"},
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 16. Present subjunctive
+# --------------------------------------------------------------------------
+_SUBJ_STEPS = ["hablar", "comer", "vivir", "tener", "hacer", "conocer", "decir"]
+_SUBJ_STEPS_EN = ["~(that) I speak~", "~(that) I eat~", "~(that) I live~", "~(that) I have~",
+                  "~(that) I do, make~", "~(that) I know~", "~(that) I say~"]
+
+_SPELLING_SUBJ = [
+    ("-car", "c becomes **qu**", "buscar", "~look for~"),
+    ("-gar", "g becomes **gu**", "llegar", "~arrive~"),
+    ("-zar", "z becomes **c**", "empezar", "~begin~ (also e to ie)"),
+    ("-ger", "g becomes **j**", "escoger", "~choose~"),
+    ("-guir", "gu becomes **g**", "seguir", "~follow~ (also e to i)"),
+]
+
+_PRES_SUBJ = {
+    "id": "pres-subj",
+    "title": "Present subjunctive",
+    "pages": [
+        [
+            _h("What it is"),
+            _t("The subjunctive is a **mood**, not a time. It usually appears after **que** when "
+               "the first part of the sentence expresses a wish, a feeling, a doubt or a "
+               "recommendation: Quiero que **vengas**. ~I want you to come.~"),
+            _h("How to form it"),
+            _t("1. Take the **yo** form of the present. 2. Drop the **-o**. 3. Add the "
+               "\"opposite\" endings: -ar verbs take **e** endings; -er and -ir verbs take "
+               "**a** endings. Irregular yo forms carry over (tengo, tenga)."),
+            {"type": "table", "header": ["Infinitive", "yo present", "subjunctive (yo)",
+                                         "English"],
+             "rows": [[v, _f(v, "present", 0), f"**{_f(v, 'pres_subj', 0)}**", en]
+                      for v, en in zip(_SUBJ_STEPS, _SUBJ_STEPS_EN)],
+             "widths": [0.2, 0.2, 0.25, 0.35], "gray_rows": []},
+            _sp(2),
+            _endings_table("pres_subj"),
+            _t("yo and él/ella have the same form."),
+            _sp(2),
+            _ex("Quiero que hables con ella.", "I want you to talk to her."),
+            _sp(),
+            {"type": "xref", "text": "The triggers: **When to use the subjunctive**",
+             "dest": "t-subj-when"},
+        ],
+        [
+            _h("Six irregulars"),
+            _t("Their yo form does not end in -o (doy, estoy, voy, he, sé, soy), so learn them "
+               "whole. **dé** has an accent to tell it apart from de ~of~."),
+            {"type": "conj", "verbs": ["dar", "estar", "ir"], "tenses": ["pres_subj"]},
+            _sp(2),
+            {"type": "conj", "verbs": ["haber", "saber", "ser"], "tenses": ["pres_subj"]},
+            _t("As \"there is, there are,\" **haya** stays singular: Ojalá **haya** buenas "
+               "noticias. ~I hope there's good news.~"),
+            _sp(),
+            _ex("Es importante que estés aquí a las ocho.",
+                "It's important for you to be here at eight."),
+            _ex("Ojalá que sea verdad.", "I hope it's true."),
+        ],
+        [
+            _h("Spelling changes"),
+            _t("To keep the sound of the consonant, the spelling changes in **every** person."),
+            {"type": "table", "header": ["Ending", "Change", "Infinitive", "subj. (yo)",
+                                         "English"],
+             "rows": [[e, ch, v, f"**{_f(v, 'pres_subj', 0)}**", en]
+                      for e, ch, v, en in _SPELLING_SUBJ],
+             "widths": [0.12, 0.22, 0.18, 0.18, 0.30], "gray_rows": []},
+            _h("Stem-changing verbs"),
+            _t("-ar and -er verbs change like the present: all forms except nosotros and "
+               "vosotros. -ir verbs also change **nosotros and vosotros**: e becomes i, "
+               "o becomes u (durmamos, sintamos). pedir-type verbs keep the i everywhere: "
+               f"{_f('pedir', 'pres_subj', 0)}, {_f('pedir', 'pres_subj', 3)}."),
+            {"type": "conj", "verbs": ["pensar", "volver", "dormir", "sentir"],
+             "tenses": ["pres_subj"]},
+            _sp(),
+            _ex("Espero que te sientas mejor.", "I hope you feel better."),
+            _ex("Es mejor que lleguemos temprano.", "It's better if we get there early."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 17. Past subjunctive
+# --------------------------------------------------------------------------
+_PAST_SUBJ_STEPS = ["hablar", "comer", "tener", "ir", "decir", "poder", "hacer", "leer",
+                    "dormir", "pedir"]
+_PAST_SUBJ_EN = ["~(that) I spoke~", "~(that) I ate~", "~(that) I had~",
+                 "~(that) I went~ (ser: ~(that) I were~)", "~(that) I said~", "~(that) I could~",
+                 "~(that) I did, made~", "~(that) I read~", "~(that) I slept~",
+                 "~(that) I asked for~"]
+
+_PAST_SUBJ = {
+    "id": "past-subj",
+    "title": "Past subjunctive",
+    "pages": [
+        [
+            _h("When to use it"),
+            _b("The same triggers as the present subjunctive, when the main verb is in the "
+               "**past** or the **conditional**: Quiero que **vengas**. ~I want you to come.~ "
+               "Quería que **vinieras**. ~I wanted you to come.~",
+               "**If** something were true (si-clauses): Si **tuviera** tiempo, viajaría. "
+               "~If I had time, I would travel.~",
+               "Wishes that are unlikely or impossible: Ojalá **pudiera** ir. ~I wish I could "
+               "go.~",
+               "Extra-polite requests: **Quisiera** un café. ~I'd like a coffee.~"),
+            _h("How to form it"),
+            _t("1. Take the **ellos** form of the preterite. 2. Drop **-ron**. 3. Add **-ra, "
+               "-ras, -ra, -ramos, -rais, -ran**. Regular -ar verbs end in **-ara**, -er/-ir verbs "
+               "in **-iera**, and every preterite irregular carries over (tuvieron, tuviera). "
+               "nosotros takes an accent: habl**áramos**, com**iéramos**."),
+            _endings_table("past_subj"),
+        ],
+        [
+            _h("From the preterite"),
+            {"type": "table", "header": ["Infinitive", "ellos preterite", "past subj. (yo)",
+                                         "English"],
+             "rows": [[v, _f(v, "preterite", 5), f"**{_f(v, 'past_subj', 0)}**", en]
+                      for v, en in zip(_PAST_SUBJ_STEPS, _PAST_SUBJ_EN)],
+             "widths": [0.18, 0.24, 0.24, 0.34], "gray_rows": []},
+            _t("You will also see **-se** forms (hablase, tuviese), mostly in Spain and in "
+               "writing. They mean the same; you only need to recognize them."),
+            _t("As \"there were,\" **hubiera** stays singular, like hay: Si **hubiera** más "
+               "tiempo... ~If there were more time...~"),
+            _sp(),
+            _ex("Me pidió que lo llamara.", "He asked me to call him."),
+            _ex("Si yo fuera tú, hablaría con ella.", "If I were you, I'd talk to her."),
+            _ex("Era importante que todos llegaran a tiempo.",
+                "It was important for everyone to arrive on time."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 18. When to use the subjunctive
+# --------------------------------------------------------------------------
+_SUBJ_WHEN = {
+    "id": "subj-when",
+    "title": "When to use the subjunctive",
+    "pages": [
+        [
+            _t("The subjunctive goes in the part after **que** when the first part is **not a "
+               "plain statement of fact**: a wish, a feeling, a judgment, a doubt. Usually there "
+               "are **two different subjects**; with one subject, use the infinitive: Quiero "
+               "**ir**. ~I want to go.~ Quiero que **vayas**. ~I want you to go.~"),
+            {"type": "table", "header": ["Trigger", "Expressions", "Example"],
+             "rows": [
+                 ["Wishes", "querer que, esperar que, preferir que, pedir que",
+                  "Quiero que **vengas**. ~I want you to come.~"],
+                 ["Advice", "recomendar que, sugerir que, aconsejar que",
+                  "Te recomiendo que **pruebes** el ajiaco. ~I recommend you try the "
+                  "ajiaco.~"],
+                 ["Emotion", "me alegra que, me gusta que, siento que ~I'm sorry that~, tener miedo de que",
+                  "Me alegra que **estés** aquí. ~I'm glad you're here.~"],
+                 ["Impersonal", "es importante que, es necesario que, es mejor que, es posible "
+                  "que", "Es mejor que **salgamos** temprano. ~It's better if we leave early.~"],
+                 ["Doubt, denial", "dudar que, no creer que, no es verdad que",
+                  "Dudo que **llueva**. ~I doubt it will rain.~"],
+                 ["Ojalá", "ojalá, ojalá que ~I hope, I wish~",
+                  "Ojalá **haga** buen tiempo. ~I hope the weather is nice.~"],
+                 ["Linking words", "para que, antes de que, sin que, a menos que",
+                  "Llámame antes de que **salgas**. ~Call me before you leave.~"],
+             ],
+             "widths": [0.17, 0.35, 0.48], "gray_rows": []},
+            _t("Certainty takes the **indicative**: es verdad que, es obvio que, creo que, "
+               "estoy seguro de que: Creo que **viene**. ~I think he's coming.~"),
+            _ex("Mis papás quieren que estudie más.", "My parents want me to study more."),
+            _ex("Te lo explico para que lo entiendas.",
+                "I'll explain it to you so that you understand it."),
+        ],
+        [
+            _h("aunque and cuando: fact or not yet?"),
+            {"type": "compare", "left": "Indicative: a fact", "right": "Subjunctive: uncertain or not yet",
+             "rows": [
+                 ["Aunque **llueve**, vamos a salir. ~Even though it's raining, we're going "
+                  "out.~",
+                  "Aunque **llueva**, vamos a salir. ~Even if it rains, we're going out.~"],
+                 ["Cuando **llego** a casa, ceno. ~When I get home, I have dinner.~ (habit)",
+                  "Cuando **llegues** a casa, llámame. ~When you get home, call me.~ (future)"],
+             ]},
+            _h("si-clauses: real or imagined?"),
+            {"type": "compare", "left": "Real or likely", "right": "Unreal or unlikely",
+             "rows": [
+                 ["si + **present**, then present, future or command",
+                  "si + **past subjunctive**, then **conditional**"],
+                 ["Si **tengo** tiempo, **viajo**. ~If I have time, I travel.~",
+                  "Si **tuviera** tiempo, **viajaría**. ~If I had time, I would travel.~"],
+                 ["Si **llueve**, nos **quedaremos** en casa. ~If it rains, we'll stay home.~",
+                  "Si **fuera** rico, **compraría** una finca. ~If I were rich, I would buy a "
+                  "farm.~"],
+             ]},
+            _t("After si, never use the present subjunctive (Si **tengo**, not \"si tenga\") or "
+               "the conditional (Si **tuviera**, not \"si tendría\"). The halves can swap "
+               "places: Viajaría si tuviera tiempo."),
+            _sp(),
+            _ex("Ojalá que no llueva mañana.", "I hope it doesn't rain tomorrow."),
+            _ex("Si tuviera más dinero, compraría un carro nuevo.",
+                "If I had more money, I would buy a new car."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 19. Indicative vs. subjunctive
+# --------------------------------------------------------------------------
+_CMP_IND_SUBJ = {
+    "id": "cmp-ind-subj",
+    "title": "Indicative vs. subjunctive",
+    "pages": [
+        [
+            _t("The **indicative** states facts and what you believe is true. The "
+               "**subjunctive** is for what you want, doubt, feel about, or what is not real "
+               "yet. Same sentence frame, different mood:"),
+            {"type": "compare", "left": "Indicative", "right": "Subjunctive",
+             "rows": [
+                 ["Creo que **viene**. ~I think he's coming.~",
+                  "No creo que **venga**. ~I don't think he's coming.~"],
+                 ["Sé que **está** en casa. ~I know she's at home.~",
+                  "Dudo que **esté** en casa. ~I doubt she's at home.~"],
+                 ["Es verdad que **habla** inglés. ~It's true that he speaks English.~",
+                  "Es posible que **hable** inglés. ~It's possible that he speaks English.~"],
+                 ["Tengo un amigo que **habla** japonés. ~I have a friend who speaks "
+                  "Japanese.~",
+                  "Busco a alguien que **hable** japonés. ~I'm looking for someone who speaks "
+                  "Japanese.~"],
+                 ["Cuando **llego** a casa, ceno. ~When I get home, I have dinner.~",
+                  "Cuando **llegue** a casa, te llamo. ~When I get home, I'll call you.~"],
+                 ["Aunque **está** cansado, trabaja. ~Even though he's tired, he works.~",
+                  "Aunque **esté** cansado, va a trabajar. ~Even if he's tired, he's going to "
+                  "work.~"],
+                 ["Si **tengo** tiempo, te ayudo. ~If I have time, I'll help you.~",
+                  "Si **tuviera** tiempo, te ayudaría. ~If I had time, I would help you.~"],
+             ]},
+            _t("Quick test: am I saying it is true? Use the indicative. Am I wishing, "
+               "doubting, reacting, or talking about something not yet real? Use the "
+               "subjunctive. **creer que** and **pensar que** take the indicative; **no creer "
+               "que** and **no pensar que** take the subjunctive."),
+            _ex("Creo que mañana va a hacer sol, pero no creo que haga calor.",
+                "I think it'll be sunny tomorrow, but I don't think it'll be hot."),
+            _ex("Sé que tienes razón, pero dudo que ella lo acepte.",
+                "I know you're right, but I doubt she'll accept it."),
+            _sp(),
+            {"type": "xref", "text": "All the forms: **Present subjunctive**", "dest": "t-pres-subj"},
+            {"type": "xref", "text": "The triggers: **When to use the subjunctive**",
+             "dest": "t-subj-when"},
+        ],
+    ],
+}
+
 _PADDED = {"table", "conj", "compare", "timeline"}
 
 
@@ -572,6 +1148,15 @@ _TOPICS = [
     _PRETERITE,
     _IMPERFECT,
     _CMP_PRET_IMP,
+    _FUTURE,
+    _CONDITIONAL,
+    _PRES_PERFECT,
+    _PAST_PERFECT,
+    _CMP_PERFECTS,
+    _PRES_SUBJ,
+    _PAST_SUBJ,
+    _SUBJ_WHEN,
+    _CMP_IND_SUBJ,
 ]
 
 VERB_TOPICS = [_spaced(t) for t in _TOPICS]
