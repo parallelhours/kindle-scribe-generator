@@ -43,6 +43,7 @@ Generated PDFs land in `output/` by default (git-ignored).
 |-----|------|-------|-------------|
 | `crossword` | Cruza y Aprende | 1+2N | Spanish vocabulary crossword puzzles — cover page plus puzzle/solution pairs; difficulty controls grid size, vocabulary depth, and word count |
 | `sudoku` | Sudoku | 1+2N | Sudoku puzzle notebook — cover page plus puzzle/solution pairs at four difficulty levels (easy/medium/hard/expert) |
+| `spanish` | Cuaderno de español | dynamic | Spanish reference notebook — verb charts and tense topics, phrases and grammar, vocab; every topic has a practice page, plus blank fill-in pages |
 | `scorecard` | Baseball Scorecard | 6 (+1) | Full baseball scoring sheet — game header, summary, and four lineup pages; optional cover page |
 | `weekly-activities` | Weekly Planner | 7+ | Daily planner — one page per day with task sections, hourly schedule, and brain dump; configurable start day and page count |
 | `worklog` | Colorado MyUI Worklog | 3 | Colorado UI work-search activity log — 5 entries per page |
@@ -125,6 +126,31 @@ python generate.py sudoku --params difficulty:hard count:5
 # Custom output path
 python generate.py sudoku --params difficulty:expert count:10 -o output/expert-sudoku.pdf
 ```
+
+Parameters are prompted interactively if omitted.
+
+### Cuaderno de español — Spanish reference notebook (`spanish`)
+
+A Spanish reference notebook (Latin American Spanish) that you write in on the Scribe. Page count depends on the options chosen. Every topic is followed by a practice page, and the contents/index pages print page numbers.
+
+- **Verbs** — which-tense chart, master irregulars, tense overview, 21 tense/verb topics, and blank My Verbs fill-in pages
+- **Phrases & Grammar** — A–Z index with about 57 connector phrases, blank phrase pages, grammar rules, and commonly confused words
+- **Vocab** — gender rules, pronouns, and word-list pages
+
+Options (via `--params`): `sections` (`all`, or a comma list of `verbs`, `phrases`, `vocab`), `verb_pages` (default 10), `phrase_pages` (default 8), `vocab_pages` (default 20). The cover (`--cover title:... subtitle:...`) is always drawn with an edition date; the cover thumbnail is embedded only when `--cover` is given.
+
+```bash
+# Whole notebook with a cover
+python generate.py spanish --params sections:all --cover title:"Mi cuaderno de español" -o output/cuaderno-de-espanol.pdf
+
+# Verbs only, 15 blank verb pages
+python generate.py spanish --params sections:verbs verb_pages:15
+
+# Export all printed content as Markdown (for proofreading)
+python -m templates.spanish.export > output/spanish-content.md
+```
+
+Navigation: the PDF includes bookmarks, which appear in the Kindle's menu if your firmware supports them. The contents and index pages print page numbers regardless.
 
 Parameters are prompted interactively if omitted.
 
