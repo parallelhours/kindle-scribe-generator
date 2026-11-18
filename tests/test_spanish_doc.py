@@ -76,3 +76,15 @@ def test_outline_and_footer(tmp_path):
     assert isinstance(r.outline[1], list) and r.outline[1][0].title == "Preterite"
     assert "Edición 2026-11-18 · 1" in r.pages[0].extract_text()
     assert "Edición 2026-11-18 · 2" in r.pages[1].extract_text()
+
+
+def test_header_section_labels(tmp_path):
+    p = tmp_path / "s.pdf"
+    d = Doc(canvas_at(p), "e")
+    for i, sec in enumerate(("verbs", "phrases", "vocab")):
+        d.start_page("reference", "T", sec, f"t{i}")
+        d.end_page()
+    d.c.save()
+    r = PdfReader(str(p))
+    for page, label in zip(r.pages, ("Verbs", "Phrases & Grammar", "Vocab")):
+        assert label in page.extract_text()
