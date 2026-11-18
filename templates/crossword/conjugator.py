@@ -355,6 +355,50 @@ IRREGULAR_VERBS = {
         "subjunctive": _t(["parezca", "parezcas", "parezca", "parezcamos","parezcáis","parezcan"]),
         "imperative":  _i(["parece",  "parezca",  "parezcamos","pareced","parezcan"]),
     },
+    # haber has no real imperative; conjugate() falls back for that tense.
+    "haber": {
+        "present":     _t(["he",      "has",      "ha",      "hemos",     "habéis",    "han"]),
+        "preterite":   _t(["hube",    "hubiste",  "hubo",    "hubimos",   "hubisteis", "hubieron"]),
+        "future":      _t(["habré",   "habrás",   "habrá",   "habremos",  "habréis",   "habrán"]),
+        "conditional": _t(["habría",  "habrías",  "habría",  "habríamos", "habríais",  "habrían"]),
+        "subjunctive": _t(["haya",    "hayas",    "haya",    "hayamos",   "hayáis",    "hayan"]),
+    },
+    "resolver": {
+        "present":     _t(["resuelvo","resuelves","resuelve","resolvemos","resolvéis","resuelven"]),
+        "subjunctive": _t(["resuelva","resuelvas","resuelva","resolvamos","resolváis","resuelvan"]),
+        "imperative":  _i(["resuelve","resuelva","resolvamos","resolved","resuelvan"]),
+    },
+    "leer": {
+        "preterite":   _t(["leí",     "leíste",   "leyó",    "leímos",    "leísteis",  "leyeron"]),
+    },
+    "seguir": {
+        "present":     _t(["sigo",    "sigues",   "sigue",   "seguimos",  "seguís",    "siguen"]),
+        "preterite":   _t(["seguí",   "seguiste", "siguió",  "seguimos",  "seguisteis","siguieron"]),
+        "subjunctive": _t(["siga",    "sigas",    "siga",    "sigamos",   "sigáis",    "sigan"]),
+        "imperative":  _i(["sigue",   "siga",     "sigamos", "seguid",    "sigan"]),
+    },
+    "incluir": {
+        "present":     _t(["incluyo", "incluyes", "incluye", "incluimos", "incluís",   "incluyen"]),
+        "preterite":   _t(["incluí",  "incluiste","incluyó", "incluimos", "incluisteis","incluyeron"]),
+        "subjunctive": _t(["incluya", "incluyas", "incluya", "incluyamos","incluyáis", "incluyan"]),
+        "imperative":  _i(["incluye", "incluya",  "incluyamos","incluid", "incluyan"]),
+    },
+    "sentir": {
+        "present":     _t(["siento",  "sientes",  "siente",  "sentimos",  "sentís",    "sienten"]),
+        "preterite":   _t(["sentí",   "sentiste", "sintió",  "sentimos",  "sentisteis","sintieron"]),
+        "subjunctive": _t(["sienta",  "sientas",  "sienta",  "sintamos",  "sintáis",   "sientan"]),
+        "imperative":  _i(["siente",  "sienta",   "sintamos","sentid",    "sientan"]),
+    },
+    "buscar": {
+        "preterite":   _t(["busqué",  "buscaste", "buscó",   "buscamos",  "buscasteis","buscaron"]),
+        "subjunctive": _t(["busque",  "busques",  "busque",  "busquemos", "busquéis",  "busquen"]),
+        "imperative":  _i(["busca",   "busque",   "busquemos","buscad",   "busquen"]),
+    },
+    "llegar": {
+        "preterite":   _t(["llegué",  "llegaste", "llegó",   "llegamos",  "llegasteis","llegaron"]),
+        "subjunctive": _t(["llegue",  "llegues",  "llegue",  "lleguemos", "lleguéis",  "lleguen"]),
+        "imperative":  _i(["llega",   "llegue",   "lleguemos","llegad",   "lleguen"]),
+    },
 }
 
 
