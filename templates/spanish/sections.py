@@ -6,8 +6,8 @@ from templates.spanish.content import (
 from templates.spanish.doc import SECTION_NAMES
 from templates.spanish.layout import LayoutOverflow, block_height, draw_block
 from templates.spanish.pages import (
-    WORD_ROWS_PER_PAGE, draw_contents_page, draw_my_verbs_page,
-    draw_phrase_blank_page, draw_practice_page, draw_word_page,
+    WORD_ROWS_PER_PAGE, draw_contents_page, draw_my_verbs_page, draw_phrase_blank_page,
+    draw_phrase_entries, draw_phrase_index, draw_practice_page, draw_word_page,
 )
 
 
@@ -17,14 +17,14 @@ def _mark(doc, dest):
     doc.dests[dest] = doc.page + 1
 
 
-def render_topic(doc, section, topic, level=1):
+def render_topic(doc, section, topic, level=1, extra_dests=()):
     tid, title = topic["id"], topic["title"]
     practice = topic.get("practice", True)
     kind = "reference" if practice else "nav"
     for i, blocks in enumerate(topic["pages"]):
         first = i == 0
         f = doc.start_page(kind, title if first else f"{title} (cont.)", section, tid,
-                           dests=(f"t-{tid}",) if first else ())
+                           dests=(f"t-{tid}", *extra_dests) if first else ())
         if first:
             doc.outline(title, f"t-{tid}", level)
         try:
@@ -52,10 +52,12 @@ def section_entries(section):
         return (_topic_entries(verb_topics.VERB_TOPICS)
                 + [("My Verbs", "verbs-my", 1)])
     if section == "phrases":
-        return ([("Phrases", "t-phrase-list", 1)]
-                + _topic_entries(grammar.TOPICS)
-                + _topic_entries(confused.TOPICS)
-                + [("My Phrases", "phrases-my", 1)])
+        return ([(PART_A, "phrases-index", 1), ("My Phrases", "phrases-my", 2),
+                 (PART_B, "phrases-part-b", 1)]
+                + _topic_entries(grammar.TOPICS, 2)
+                + [(PART_C, "phrases-part-c", 1)]
+                + _topic_entries(confused.TOPICS, 2)
+                + [(x["text"], x["dest"], 2) for x in confused.CONFUSED_XREFS])
     if section == "vocab":
         return (_topic_entries(vocab.TOPICS)
                 + [("Word pages", "vocab-words", 1)])
@@ -85,32 +87,29 @@ def build_verbs(doc, opts):
         draw_my_verbs_page(doc)
 
 
-def _draw_phrase_list(doc):
-    f = doc.start_page("nav", "Phrases", "phrases", "phrase-list", dests=("t-phrase-list",))
-    doc.outline("Phrases", "t-phrase-list", 1)
-    for p in phrases.PHRASES:
-        blocks = [{"type": "heading", "text": p["es"]},
-                  {"type": "text", "text": f"~{p['en']}~ {p['use']}"}]
-        blocks += [{"type": "example", "es": es, "en": en} for es, en in p["examples"]]
-        for b in blocks:
-            if block_height(b, f.width, doc.verbs) > f.remaining():
-                raise LayoutOverflow("phrase listing overflows its page")
-            draw_block(doc.c, f, b, doc)
-    doc.end_page()
+PART_A = "A. Connector phrases A–Z"
+PART_B = "B. Grammar rules"
+PART_C = "C. Commonly confused"
 
 
 def build_phrases(doc, opts):
     _begin(doc, "phrases")
-    _draw_phrase_list(doc)
-    for t in grammar.TOPICS:
-        render_topic(doc, "phrases", t)
-    for t in confused.TOPICS:
-        render_topic(doc, "phrases", t)
+    # Part A: index, printed entries (dests p-..., no outline entry each), blank pages
+    doc.outline(PART_A, "phrases-index", 1)
+    draw_phrase_index(doc, phrases.PHRASES)
+    draw_phrase_entries(doc, phrases.PHRASES, phrases.PHRASE_COMPARISONS)
     if opts.phrase_pages:
         _mark(doc, "phrases-my")
-        doc.outline("My Phrases", "phrases-my", 1)
+        doc.outline("My Phrases", "phrases-my", 2)
     for _ in range(opts.phrase_pages):
         draw_phrase_blank_page(doc)
+    # Parts B and C: topics, each followed by its practice page
+    # (outline entries are keyed by dest, so each Part needs its own dest)
+    for part, dest, topics in ((PART_B, "phrases-part-b", grammar.TOPICS),
+                               (PART_C, "phrases-part-c", confused.TOPICS)):
+        doc.outline(part, dest, 1)
+        for i, t in enumerate(topics):
+            render_topic(doc, "phrases", t, level=2, extra_dests=(dest,) if i == 0 else ())
 
 
 def build_vocab(doc, opts):

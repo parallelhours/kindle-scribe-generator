@@ -292,3 +292,182 @@ def test_irregular_tu_commands_match_conjugator():
     assert len(TU_IRREGULAR) == 8
     for verb, tu, _en in TU_IRREGULAR:
         assert tu == conjugate(verb, "imperative", "tú"), verb
+
+
+# --------------------------------------------------------------------------
+# Task 10: Phrases & Grammar
+# --------------------------------------------------------------------------
+from templates.spanish.content.confused import CONFUSED_XREFS  # noqa: E402
+from templates.spanish.content.confused import TOPICS as CONFUSED_TOPICS  # noqa: E402
+from templates.spanish.content.grammar import TOPICS as GRAMMAR_TOPICS  # noqa: E402
+from templates.spanish.content.phrases import PHRASE_COMPARISONS, PHRASES  # noqa: E402
+from templates.spanish.pages import phrase_dests, spanish_sort_key  # noqa: E402
+
+SEED = ["a pesar de", "además", "al mismo tiempo", "apenas", "aún", "aunque", "bastante",
+        "desde que", "en cambio", "entonces", "hasta", "los que", "por lo que", "sin embargo",
+        "sino", "tal vez", "tan", "tanto", "todavía", "ya"]
+GRAMMAR_IDS = ["hace", "comparatives", "equality", "superlatives", "negatives", "personal-a",
+               "que-cual"]
+CONFUSED_IDS = ["ser-estar", "por-para", "saber-conocer", "pedir-preguntar", "llevar-traer",
+                "tocar-jugar", "hay-esta", "pero-sino"]
+CMP_DESTS = ["t-cmp-pret-imp", "t-cmp-perfects", "t-cmp-ind-subj"]
+
+
+def test_seed_phrases_included():
+    assert set(SEED) <= {p["es"] for p in PHRASES}
+
+
+def test_phrase_count():
+    assert 45 <= len(PHRASES) <= 60
+
+
+def test_phrase_entries_complete():
+    seen = set()
+    for p in PHRASES:
+        assert p["es"] not in seen, p["es"]
+        seen.add(p["es"])
+        for k in ("es", "en", "use"):
+            assert isinstance(p[k], str) and p[k].strip(), (p["es"], k)
+        assert len(p["examples"]) == 2, p["es"]
+        for es, en in p["examples"]:
+            assert es.strip() and en.strip(), p["es"]
+
+
+def test_sort_key():
+    words = ["ya", "ñandú", "aún", "nunca", "además", "aun", "a pesar de"]
+    assert sorted(words, key=spanish_sort_key) == ["a pesar de", "además", "aun", "aún", "nunca",
+                                                   "ñandú", "ya"]
+
+
+def test_phrase_dests_unique_ascii():
+    dests = phrase_dests([p["es"] for p in PHRASES])
+    assert len(set(dests.values())) == len(PHRASES)
+    for d in dests.values():
+        assert d.startswith("p-") and d.isascii() and " " not in d and d == d.lower(), d
+
+
+def test_phrase_comparisons():
+    names = {p["es"] for p in PHRASES}
+    assert len(PHRASE_COMPARISONS) == 4
+    for cmp in PHRASE_COMPARISONS:
+        assert cmp["after"] in names, cmp["after"]
+        assert cmp["block"]["type"] == "compare" and cmp["block"]["rows"]
+
+
+class _SpyCanvas:
+    """Wraps reportlab's Canvas to record (page, dest) for every drawn link."""
+
+    def __new__(cls, *a, **kw):
+        from reportlab.pdfgen import canvas as rl_canvas
+
+        class Spy(rl_canvas.Canvas):
+            def __init__(self, *a, **kw):
+                super().__init__(*a, **kw)
+                self.drawn_links = []
+
+            def linkRect(self, contents, destinationname, Rect=None, **kw):
+                self.drawn_links.append((self.getPageNumber(), destinationname, Rect))
+                return super().linkRect(contents, destinationname, Rect, **kw)
+
+        return Spy(*a, **kw)
+
+
+def _two_pass(sections, **kw):
+    import io
+    from reportlab.pdfgen import canvas as rl_canvas
+    from core.dimensions import PAGE_H, PAGE_W
+    from templates.spanish.template import _render, parse_options
+    opts = parse_options({"sections": sections, **kw})
+    d1 = _render(rl_canvas.Canvas(io.BytesIO(), pagesize=(PAGE_W, PAGE_H)), opts, {}, None)
+    c2 = _SpyCanvas(io.BytesIO(), pagesize=(PAGE_W, PAGE_H))
+    d2 = _render(c2, opts, {}, dict(d1.dests))
+    assert d1.log == d2.log and d1.dests == d2.dests
+    return d2, c2.drawn_links
+
+
+def test_index_links_every_entry():
+    doc, links = _two_pass("phrases", phrase_pages="1")
+    index_pages = {r.page for r in doc.log if r.kind == "phrase-index"}
+    assert index_pages
+    expected = set(phrase_dests([p["es"] for p in PHRASES]).values())
+    on_index = [d for pg, d, _ in links if pg in index_pages and d.startswith("p-")]
+    assert sorted(on_index) == sorted(expected)
+    entry_pages = {r.page for r in doc.log if r.kind == "phrase-entries"}
+    for d in expected:
+        assert doc.dests[d] in entry_pages, d
+    # no outline entry per phrase: dests exist, but entries are not on contents
+    assert "phrases-index" in doc.dests
+
+
+def test_partial_xrefs_plain(tmp_path):
+    from pypdf import PdfReader
+    from templates.spanish.template import generate
+    out = tmp_path / "p.pdf"
+    generate(str(out), sections="phrases", phrase_pages="0")
+    text = " ".join(pg.extract_text() for pg in PdfReader(str(out)).pages[:3])
+    for x in CONFUSED_XREFS:
+        assert x["text"] in text, x["text"]
+    _doc, links = _two_pass("phrases", phrase_pages="0")
+    assert not {d for _, d, _ in links} & set(CMP_DESTS)
+    _doc, links = _two_pass("all", verb_pages="0", phrase_pages="0", vocab_pages="0")
+    assert set(CMP_DESTS) <= {d for _, d, _ in links}
+    assert sorted(x["dest"] for x in CONFUSED_XREFS) == sorted(CMP_DESTS)
+
+
+def test_grammar_and_confused_topics():
+    assert [t["id"] for t in GRAMMAR_TOPICS] == GRAMMAR_IDS
+    assert [t["id"] for t in CONFUSED_TOPICS] == CONFUSED_IDS
+    for t in GRAMMAR_TOPICS + CONFUSED_TOPICS:
+        ex = [b for b in _blocks(t) if b["type"] == "example"]
+        assert 2 <= len(ex) <= 4, t["id"]
+        for b in ex:
+            assert b["es"].strip() and b["en"].strip(), (t["id"], b)
+
+
+def test_phrases_section_layout_order():
+    doc, _ = _two_pass("phrases", phrase_pages="2")
+    kinds = [r.kind for r in doc.log]
+    first = {k: kinds.index(k) for k in ("contents", "phrase-index", "phrase-entries",
+                                         "fill-phrase")}
+    assert first["contents"] < first["phrase-index"] < first["phrase-entries"] < \
+        first["fill-phrase"]
+    topic_pages = [r for r in doc.log if r.topic_id in GRAMMAR_IDS + CONFUSED_IDS]
+    assert topic_pages and min(r.page for r in topic_pages) > \
+        max(r.page for r in doc.log if r.kind == "fill-phrase")
+    order = [r.topic_id for r in doc.log if r.kind == "reference"]
+    order = list(dict.fromkeys(order))
+    assert order == GRAMMAR_IDS + CONFUSED_IDS
+
+
+def test_index_link_rects_full_row_height():
+    from templates.spanish.pages import INDEX_ROW_H
+    doc, links = _two_pass("phrases", phrase_pages="0")
+    index_pages = {r.page for r in doc.log if r.kind == "phrase-index"}
+    for pg, d, rect in links:
+        if pg in index_pages and d.startswith("p-"):
+            assert abs((rect[3] - rect[1]) - INDEX_ROW_H) < 1e-6, (d, rect)
+
+
+def test_phrases_outline_parts(tmp_path):
+    from pypdf import PdfReader
+    from templates.spanish.template import generate
+    out = tmp_path / "p.pdf"
+    generate(str(out), sections="phrases", phrase_pages="1")
+    r = PdfReader(str(out))
+    rows = []
+
+    def walk(items, depth):
+        for it in items:
+            if isinstance(it, list):
+                walk(it, depth + 1)
+            else:
+                rows.append((depth, it.title))
+
+    walk(r.outline, 0)
+    assert rows[:3] == [(0, "Phrases & Grammar"), (1, "A. Connector phrases A–Z"),
+                        (2, "My Phrases")]
+    assert (1, "B. Grammar rules") in rows and (1, "C. Commonly confused") in rows
+    titles = [t for _, t in rows]
+    for t in GRAMMAR_TOPICS + CONFUSED_TOPICS:
+        assert (2, t["title"]) in rows, t["id"]
+    assert not any(t in titles for t in SEED)  # no outline entry per phrase

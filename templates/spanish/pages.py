@@ -1,10 +1,15 @@
 # Copyright (C) 2026 Paul Monday — GNU GPL v3 or later. See LICENSE.
-"""Shared page types: practice, contents and fill-in pages."""
+"""Shared page types: practice, contents, phrase index/entries and fill-in pages."""
+import re
+import unicodedata
+
 from reportlab.pdfbase.pdfmetrics import stringWidth
 
+from core.dimensions import MARGIN, PAGE_W
 from core.style import FONT_BOLD, FONT_NORMAL, GRID_LW, SHADE_HEADER_BG
 from templates.spanish.layout import (
-    BODY_SIZE, CELL_SIZE, EN_GRAY, FONT_EN, HEAD_SIZE,
+    BODY_SIZE, CELL_SIZE, EN_GRAY, FONT_EN, FONT_FOR, HEAD_SIZE, MIN_BODY, LayoutOverflow,
+    block_height, draw_block, fit_size, wrap_rich,
 )
 
 _RULE_GRAY = 0.65
@@ -209,11 +214,73 @@ def _verb_block(c, x, top, w, entry):
 
 
 # --------------------------------------------------------------------------
-# Phrase blank
+# Phrase entries: printed and blank share one drawing routine, so a handwritten
+# entry on a blank page has exactly the structure of a printed one.
 # --------------------------------------------------------------------------
 _PH_PITCH = 15.0
 _PH_LINES = 7
 _PH_GAP = 9.0
+_PH_PHRASE_SIZE = 8.5
+_PH_CMP_GAP = 5.0
+_PH_LABEL_GRAY = 0.35
+
+
+def _ph_fields(p):
+    """(label, label font, label size, label gray, label dx, rule dx, text, text size)."""
+    ex = list(p["examples"]) if p else [("", "")] * 2
+    fields = [
+        ("phrase", FONT_BOLD, CELL_SIZE, _PH_LABEL_GRAY, 0, None,
+         f"**{p['es']}**" if p else "", _PH_PHRASE_SIZE),
+        ("meaning", FONT_NORMAL, CELL_SIZE, _PH_LABEL_GRAY, 0, None,
+         f"~{p['en']}~" if p else "", BODY_SIZE),
+        ("when to use", FONT_NORMAL, CELL_SIZE, _PH_LABEL_GRAY, 0, None,
+         p["use"] if p else "", BODY_SIZE),
+    ]
+    for es, en in ex:
+        fields.append(("e.g.", FONT_NORMAL, CELL_SIZE, _PH_LABEL_GRAY, 0, 16, es, BODY_SIZE))
+        fields.append(("=", FONT_EN, BODY_SIZE, EN_GRAY, 8, 18, f"~{en}~" if en else "",
+                       BODY_SIZE))
+    return fields
+
+
+def _ph_plan(p, w):
+    """Fields with their wrapped text lines (an empty field still gets one line)."""
+    plan = []
+    for lab, font, lsize, lgray, ldx, rdx, text, tsize in _ph_fields(p):
+        if rdx is None:
+            rdx = stringWidth(lab + "  ", font, lsize)
+        lines = wrap_rich(text, w - rdx - 3, tsize) if text else []
+        plan.append((lab, font, lsize, lgray, ldx, rdx, lines or [[]], tsize))
+    return plan
+
+
+def phrase_entry_height(p, w):
+    return _PH_PITCH * sum(len(f[6]) for f in _ph_plan(p, w))
+
+
+def _draw_phrase_entry(c, x, top, w, p=None):
+    right = x + w
+    row = 0
+    for lab, font, lsize, lgray, ldx, rdx, lines, tsize in _ph_plan(p, w):
+        for i, line in enumerate(lines):
+            by = top - (row + 1) * _PH_PITCH + 4
+            if i == 0:
+                _label(c, x + ldx, by, lab, font, lsize, lgray)
+            _rule(c, x + rdx, right, by - 2)
+            tx = x + rdx + 2
+            for style, text in line:
+                c.setFont(FONT_FOR[style], tsize)
+                c.setFillGray(EN_GRAY if style == "en" else 0)
+                c.drawString(tx, by, text)
+                tx += stringWidth(text, FONT_FOR[style], tsize)
+            c.setFillGray(0)
+            row += 1
+    return row * _PH_PITCH
+
+
+def _ph_separator(c, f):
+    top = f.take(_PH_GAP)
+    _rule(c, f.x, f.x + f.width, top - _PH_GAP / 2 + 1, 0.8, 0.3)
 
 
 def draw_phrase_blank_page(doc):
@@ -223,27 +290,155 @@ def draw_phrase_blank_page(doc):
     eh = _PH_PITCH * _PH_LINES
     while f.remaining() >= eh:
         top = f.take(eh)
-        x, right = f.x, f.x + f.width
-        labels = [("phrase", FONT_BOLD), ("meaning", FONT_NORMAL), ("when to use", FONT_NORMAL)]
-        for i, (lab, font) in enumerate(labels):
-            by = top - (i + 1) * _PH_PITCH + 4
-            _label(c, x, by, lab, font, CELL_SIZE, 0.35)
-            lx = x + stringWidth(lab + "  ", font, CELL_SIZE)
-            _rule(c, lx, right, by - 2)
-        for k in range(2):
-            by = top - (3 + 2 * k + 1) * _PH_PITCH + 4
-            _label(c, x, by, "e.g.", FONT_NORMAL, CELL_SIZE, 0.35)
-            _rule(c, x + 16, right, by - 2)
-            by -= _PH_PITCH
-            _label(c, x + 8, by, "=", FONT_EN, BODY_SIZE, EN_GRAY)
-            _rule(c, x + 18, right, by - 2)
+        _draw_phrase_entry(c, f.x, top, f.width)
         if f.remaining() >= eh + _PH_GAP:
-            f.take(_PH_GAP)
-            _rule(c, x, right, top - eh - _PH_GAP / 2 + 1, 0.8, 0.3)
+            _ph_separator(c, f)
         else:
             break
     c.restoreState()
     doc.end_page()
+
+
+_FOLD = str.maketrans("áéíóúüàèìòùâêîôû", "aeiouuaeiouaeiou")
+
+
+def spanish_sort_key(s: str) -> tuple:
+    """Spanish dictionary order: accents and case ignored, ñ after n, and on a tie the
+    unaccented word first (aun < aún). Punctuation is ignored."""
+    low = s.lower()
+    primary, accents = [], []
+    for ch in low:
+        if ch == "ñ":
+            primary.append("n{")  # '{' sorts after every letter: n < ñ < o
+            accents.append(0)
+        elif ch.isalnum() or ch == " ":
+            base = ch.translate(_FOLD)
+            primary.append(base)
+            accents.append(0 if base == ch else 1)
+    return ("".join(primary).strip(), tuple(accents), s)
+
+
+def _slug(s):
+    folded = unicodedata.normalize("NFKD", s.lower())
+    folded = "".join(ch for ch in folded if not unicodedata.combining(ch))
+    words = re.sub(r"[^a-z0-9 ]+", " ", folded).split()
+    return "-".join(words) or "x"
+
+
+def phrase_dests(names) -> dict:
+    """Map each phrase to a unique destination name "p-{slug}" (aun: p-aun, aún: p-aun-2)."""
+    out, used = {}, set()
+    for name in sorted(names, key=spanish_sort_key):
+        base = f"p-{_slug(name)}"
+        d, n = base, 2
+        while d in used:
+            d, n = f"{base}-{n}", n + 1
+        used.add(d)
+        out[name] = d
+    return out
+
+
+def _initial(s):
+    k = spanish_sort_key(s)[0]
+    return "Ñ" if k.startswith("n{") else k[:1].upper()
+
+
+INDEX_ROW_H = 13.0
+_INDEX_LETTER_W = 12.0
+_INDEX_PHRASE_W = 92.0
+_INDEX_TITLE = "A. Connector phrases A–Z"
+
+
+def draw_phrase_index(doc, phrases):
+    """A-Z index: one full-row-height link per phrase to its entry."""
+    c = doc.c
+    phrases = sorted(phrases, key=lambda p: spanish_sort_key(p["es"]))
+    dests = phrase_dests([p["es"] for p in phrases])
+    idx, first = 0, True
+    while first or idx < len(phrases):
+        f = doc.start_page("phrase-index", _INDEX_TITLE if first else f"{_INDEX_TITLE} (cont.)",
+                           "phrases", dests=("phrases-index",) if first else ())
+        c.saveState()
+        prev = None
+        while idx < len(phrases) and f.remaining() >= INDEX_ROW_H:
+            p = phrases[idx]
+            top = f.take(INDEX_ROW_H)
+            letter = _initial(p["es"])
+            _index_row(doc, f, top, p, dests[p["es"]], letter if letter != prev else "",
+                       new_group=prev is not None and letter != prev)
+            prev = letter
+            idx += 1
+        first = False
+        c.restoreState()
+        doc.end_page()
+
+
+def _index_row(doc, f, top, p, dest, letter, new_group):
+    c = doc.c
+    x, right = f.x, f.x + f.width
+    bottom = top - INDEX_ROW_H
+    base = bottom + 4
+    if new_group:
+        _rule(c, x, right, top, 0.55, 0.5)
+    if letter:
+        _label(c, x, base, letter, FONT_BOLD, BODY_SIZE + 1, 0.35)
+    px = x + _INDEX_LETTER_W
+    if stringWidth(p["es"], FONT_BOLD, BODY_SIZE) > _INDEX_PHRASE_W - 4:
+        raise LayoutOverflow(f"index: phrase too wide: {p['es']!r}")
+    _label(c, px, base, p["es"], FONT_BOLD, BODY_SIZE)
+    mx = px + _INDEX_PHRASE_W
+    avail = right - _PNUM_W - mx - 2
+    size = fit_size(f"~{p['en']}~", avail, BODY_SIZE, MIN_BODY)
+    _label(c, mx, base, p["en"], FONT_EN, size, EN_GRAY)
+    # full-row-height tap target; pass 1 reserves the page-number space as well
+    doc.link((x, bottom, right, top), dest)
+    pg = doc.page_of(dest)
+    if pg is not None:
+        _label(c, right - stringWidth(f"p. {pg}", FONT_NORMAL, BODY_SIZE), base, f"p. {pg}",
+               FONT_NORMAL, BODY_SIZE)
+    _rule(c, px, right, bottom + 0.5, 0.88, 0.3)
+
+
+_ENTRY_W = PAGE_W - 2 * MARGIN
+_ENTRIES_TITLE = "A. Connector phrases"
+
+
+def draw_phrase_entries(doc, phrases, comparisons=()) -> None:
+    """Printed phrase entries in Spanish alphabetical order, as many per page as fit.
+    An entry (with the comparison box that follows it, if any) never splits across pages.
+    Each entry gets the destination from phrase_dests (no outline entry)."""
+    c = doc.c
+    phrases = sorted(phrases, key=lambda p: spanish_sort_key(p["es"]))
+    dests = phrase_dests([p["es"] for p in phrases])
+    after = {cmp["after"]: cmp["block"] for cmp in comparisons}
+    f, drawn = None, 0
+    for p in phrases:
+        block = after.get(p["es"])
+        need = phrase_entry_height(p, _ENTRY_W)
+        if block:
+            need += _PH_CMP_GAP + block_height(block, _ENTRY_W, doc.verbs)
+        if f is None or (_PH_GAP if drawn else 0) + need > f.remaining() + 1e-6:
+            if f is not None:
+                c.restoreState()
+                doc.end_page()
+            f = doc.start_page("phrase-entries", _ENTRIES_TITLE, "phrases")
+            c.saveState()
+            drawn = 0
+            if need > f.remaining() + 1e-6:
+                raise LayoutOverflow(f"phrase entry {p['es']!r} does not fit on one page")
+        if drawn:
+            _ph_separator(c, f)
+        c.bookmarkPage(dests[p["es"]])
+        doc.dests[dests[p["es"]]] = doc.page
+        top = f.take(phrase_entry_height(p, f.width))
+        _draw_phrase_entry(c, f.x, top, f.width, p)
+        if block:
+            f.take(_PH_CMP_GAP)
+            draw_block(c, f, block, doc)
+        drawn += 1
+    if f is not None:
+        c.restoreState()
+        doc.end_page()
 
 
 # --------------------------------------------------------------------------
