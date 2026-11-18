@@ -11,7 +11,7 @@ FOOTER_H = 12.0
 _TITLE_SIZE = 9.0
 _SMALL_SIZE = 6.5
 
-SECTION_NAMES = {"verbs": "Verbos", "phrases": "Frases", "vocab": "Vocabulario"}
+SECTION_NAMES = {"verbs": "Verbs", "phrases": "Phrases & Grammar", "vocab": "Vocab"}
 
 
 @dataclass
