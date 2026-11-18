@@ -250,6 +250,14 @@ def _draw_table(c, x, top, block, width, header_shade=SHADE_HEADER_BG):
         cx += cw
 
 
+TENSE_LABELS = {
+    "present": "present", "preterite": "preterite", "imperfect": "imperfect",
+    "future": "future", "conditional": "conditional",
+    "pres_subj": "pres. subjunctive", "past_subj": "past subjunctive",
+    "participle": "participle", "gerund": "-ndo form",
+}
+
+
 def _expand_conj(block, verbs):
     names, tenses = block["verbs"], block["tenses"]
     tables = []
@@ -262,7 +270,7 @@ def _expand_conj(block, verbs):
 
     if len(names) == 1:
         v = names[0]
-        header = [f"**{v}** ~{verbs[v]['en']}~"] + list(tenses)
+        header = [f"**{v}** ~{verbs[v]['en']}~"] + [TENSE_LABELS.get(t, t) for t in tenses]
         rows = [[_PERSONS[i]] + [cell(v, t, i) for t in tenses] for i in range(6)]
         n = len(tenses)
         widths = [0.22] + [0.78 / n] * n
@@ -271,7 +279,7 @@ def _expand_conj(block, verbs):
         n = len(names)
         widths = [0.22] + [0.78 / n] * n
         for t in tenses:
-            header = [t] + [f"**{v}** ~{verbs[v]['en']}~" for v in names]
+            header = [TENSE_LABELS.get(t, t)] + [f"**{v}** ~{verbs[v]['en']}~" for v in names]
             rows = [[_PERSONS[i]] + [cell(v, t, i) for v in names] for i in range(6)]
             tables.append({"header": header, "rows": rows, "widths": widths,
                            "gray_rows": [_VOS_ROW]})
@@ -508,19 +516,23 @@ def draw_block(c, frame: Frame, block: dict, ctx) -> None:
     elif t == "xref":
         lines, lh = _xref_lines(block, w)
         dest = block.get("dest")
-        _draw_lines(c, lines, x, top, BODY_SIZE, _body_lead(BODY_SIZE))
+        lead = _body_lead(BODY_SIZE)
+        linked = False
         if dest:
-            lead = _body_lead(BODY_SIZE)
-            rect = (x, top - lh, x + w, top)
-            if ctx.link(rect, dest):
-                c.setStrokeGray(0)
-                c.setLineWidth(0.4)
-                for i, ln in enumerate(lines):
-                    uy = top - i * lead - BODY_SIZE * 0.82 - 1.0
-                    c.line(x, uy, x + _line_w(ln, BODY_SIZE), uy)
-                pg = ctx.page_of(dest)
-                if pg is not None:
-                    c.setFont(FONT_NORMAL, CELL_SIZE)
-                    c.setFillGray(0)
-                    c.drawRightString(x + w, top - BODY_SIZE * 0.82, f"p.{pg}")
+            linked = ctx.link((x, top - lh, x + w, top), dest)
+        if dest and not linked:
+            # unresolved destination: plain text, no underline, no page number
+            lines, _ = _text_h(block["text"], w - _XREF_PAGE_W, BODY_SIZE)
+        _draw_lines(c, lines, x, top, BODY_SIZE, lead)
+        if linked:
+            c.setStrokeGray(0)
+            c.setLineWidth(0.4)
+            for i, ln in enumerate(lines):
+                uy = top - i * lead - BODY_SIZE * 0.82 - 1.0
+                c.line(x, uy, x + _line_w(ln, BODY_SIZE), uy)
+            pg = ctx.page_of(dest)
+            if pg is not None:
+                c.setFont(FONT_NORMAL, CELL_SIZE)
+                c.setFillGray(0)
+                c.drawRightString(x + w, top - BODY_SIZE * 0.82, f"p.{pg}")
     c.restoreState()

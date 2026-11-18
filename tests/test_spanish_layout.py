@@ -163,3 +163,48 @@ def test_conj_vosotros_row_is_gray():
     assert last_gray == VOS_GRAY
     j = events.index(("text", "tienen"))
     assert [g for k, g in events[:j] if k == "gray"][-1] != VOS_GRAY
+
+
+def _drawn_strings(block, ctx):
+    texts, fonts = [], []
+
+    class Rec(rl_canvas.Canvas):
+        def drawString(self, x, y, text, *a, **k):
+            texts.append(text)
+            fonts.append(self._fontname)
+            super().drawString(x, y, text, *a, **k)
+
+        def drawRightString(self, x, y, text, *a, **k):
+            texts.append(text)
+            fonts.append(self._fontname)
+            super().drawRightString(x, y, text, *a, **k)
+
+    c = _canvas(Rec)
+    frame = Frame(D.MARGIN, D.PAGE_W - 2 * D.MARGIN, D.PAGE_H - D.MARGIN, D.MARGIN)
+    draw_block(c, frame, block, ctx)
+    return texts, fonts
+
+
+def test_conj_header_uses_friendly_tense_labels():
+    block = {"type": "conj", "verbs": ["tener"], "tenses": ["present", "pres_subj"]}
+    texts, _ = _drawn_strings(block, CtxStub())
+    assert "pres. subjunctive" in texts
+    assert not any("pres_subj" in t for t in texts)
+    multi = {"type": "conj", "verbs": ["tener", "ser"], "tenses": ["past_subj"]}
+    texts, _ = _drawn_strings(multi, CtxStub())
+    assert "past subjunctive" in texts and "past_subj" not in texts
+
+
+def test_xref_to_absent_dest_is_plain_without_page_number():
+    block = {"type": "xref", "text": "Ver pretérito", "dest": "zzz"}
+    texts, fonts = _drawn_strings(block, CtxStub())
+    assert not any(t.startswith("p.") for t in texts)
+    assert "Helvetica-Bold" not in fonts
+    # height identical whether or not the destination resolves
+    assert block_height(block, 200, VERBS_STUB) == block_height({**block, "dest": "a"}, 200, VERBS_STUB)
+
+
+def test_xref_to_known_dest_is_linked_with_page_number():
+    block = {"type": "xref", "text": "Ver pretérito", "dest": "a"}
+    texts, fonts = _drawn_strings(block, CtxStub())
+    assert "p.3" in texts and "Helvetica-Bold" in fonts
