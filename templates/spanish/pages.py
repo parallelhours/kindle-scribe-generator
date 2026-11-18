@@ -8,8 +8,8 @@ from reportlab.pdfbase.pdfmetrics import stringWidth
 from core.dimensions import MARGIN, PAGE_W
 from core.style import FONT_BOLD, FONT_NORMAL, GRID_LW, SHADE_HEADER_BG
 from templates.spanish.layout import (
-    BODY_SIZE, CELL_SIZE, EN_GRAY, FONT_EN, FONT_FOR, HEAD_SIZE, MIN_BODY, LayoutOverflow,
-    block_height, draw_block, fit_size, wrap_rich,
+    BODY_SIZE, CELL_SIZE, EN_GRAY, FONT_EN, FONT_FOR, HEAD_SIZE, MIN_CELL, LayoutOverflow,
+    block_height, draw_block, wrap_rich,
 )
 
 _RULE_GRAY = 0.65
@@ -373,6 +373,14 @@ def draw_phrase_index(doc, phrases):
         doc.end_page()
 
 
+def _shrink(text, font, width, start, minimum):
+    """Largest size from start down to minimum (0.1 pt steps) that fits; else minimum."""
+    size = start
+    while size > minimum and stringWidth(text, font, size) > width:
+        size = round(size - 0.1, 1)
+    return size
+
+
 def _index_row(doc, f, top, p, dest, letter, new_group):
     c = doc.c
     x, right = f.x, f.x + f.width
@@ -383,13 +391,17 @@ def _index_row(doc, f, top, p, dest, letter, new_group):
     if letter:
         _label(c, x, base, letter, FONT_BOLD, BODY_SIZE + 1, 0.35)
     px = x + _INDEX_LETTER_W
-    if stringWidth(p["es"], FONT_BOLD, BODY_SIZE) > _INDEX_PHRASE_W - 4:
-        raise LayoutOverflow(f"index: phrase too wide: {p['es']!r}")
-    _label(c, px, base, p["es"], FONT_BOLD, BODY_SIZE)
-    mx = px + _INDEX_PHRASE_W
+    # long (e.g. user-added) phrases shrink to the minimum size, then push the meaning
+    # column right; the meaning shrinks and, as a last resort, is cut with an ellipsis
+    es_size = _shrink(p["es"], FONT_BOLD, _INDEX_PHRASE_W - 4, BODY_SIZE, MIN_CELL)
+    _label(c, px, base, p["es"], FONT_BOLD, es_size)
+    mx = max(px + _INDEX_PHRASE_W, px + stringWidth(p["es"], FONT_BOLD, es_size) + 6)
     avail = right - _PNUM_W - mx - 2
-    size = fit_size(f"~{p['en']}~", avail, BODY_SIZE, MIN_BODY)
-    _label(c, mx, base, p["en"], FONT_EN, size, EN_GRAY)
+    en = p["en"]
+    en_size = _shrink(en, FONT_EN, avail, BODY_SIZE, MIN_CELL)
+    while en and stringWidth(en, FONT_EN, en_size) > avail:
+        en = en[:-2].rstrip() + "…"
+    _label(c, mx, base, en, FONT_EN, en_size, EN_GRAY)
     # full-row-height tap target; pass 1 reserves the page-number space as well
     doc.link((x, bottom, right, top), dest)
     pg = doc.page_of(dest)

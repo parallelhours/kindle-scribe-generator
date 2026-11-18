@@ -318,7 +318,7 @@ def test_seed_phrases_included():
 
 
 def test_phrase_count():
-    assert 45 <= len(PHRASES) <= 60
+    assert len(PHRASES) >= 45
 
 
 def test_phrase_entries_complete():
@@ -446,6 +446,22 @@ def test_index_link_rects_full_row_height():
     for pg, d, rect in links:
         if pg in index_pages and d.startswith("p-"):
             assert abs((rect[3] - rect[1]) - INDEX_ROW_H) < 1e-6, (d, rect)
+
+
+def test_index_fits_long_user_phrase():
+    import io
+    from reportlab.pdfgen import canvas as rl_canvas
+    from core.dimensions import PAGE_H, PAGE_W
+    from templates.spanish.doc import Doc
+    from templates.spanish.pages import draw_phrase_index
+    long = [{"es": "por lo que respecta a", "en": "as far as ... is concerned", "use": "x",
+             "examples": [("a", "b"), ("c", "d")]},
+            {"es": "en lo que se refiere a la situación actual del país",
+             "en": "regarding the current situation of the country, as far as it goes",
+             "use": "x", "examples": [("a", "b"), ("c", "d")]}]
+    doc = Doc(rl_canvas.Canvas(io.BytesIO(), pagesize=(PAGE_W, PAGE_H)), "2026-01-01")
+    draw_phrase_index(doc, PHRASES + long)  # must not raise LayoutOverflow
+    assert any(r.kind == "phrase-index" for r in doc.log)
 
 
 def test_phrases_outline_parts(tmp_path):

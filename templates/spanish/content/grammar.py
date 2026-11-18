@@ -130,8 +130,9 @@ _COMPARATIVES = {
         ], [0.24, 0.20, 0.56]),
         _b("Plural: **mejores, peores, mayores, menores**. They don't change for gender.",
            "For quality and skill, say **mejor** and **peor**, not más bueno or más malo.",
-           "**mayor** and **menor** are for people's ages. For things, say **más viejo** "
-           "(older) or **más nuevo** (newer)."),
+           "Meaning older / younger, **mayor** and **menor** are for people. For things, say "
+           "**más viejo** / **más nuevo**. (With things, mayor / menor mean bigger / smaller: "
+           "el mayor problema.)"),
         _sp(2),
         _ex("Mi mamá cocina mejor que nadie.", "My mom cooks better than anyone."),
         _ex("Mi carro es más viejo que el tuyo.", "My car is older than yours."),
