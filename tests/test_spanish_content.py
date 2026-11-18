@@ -173,7 +173,10 @@ from templates.spanish.content.verb_topics import VERB_TOPICS  # noqa: E402
 REQUIRED_VERB_TOPICS = ["present", "progressive", "ir-a", "acabar-de", "preterite", "imperfect",
                         "cmp-pret-imp",
                         "future", "conditional", "pres-perfect", "past-perfect", "cmp-perfects",
-                        "pres-subj", "past-subj", "subj-when", "cmp-ind-subj"]  # extended in Task 9
+                        "pres-subj", "past-subj", "subj-when", "cmp-ind-subj",
+                        "commands", "reflexive", "gustar", "helpers", "weather"]
+
+NAV_TOPICS = ["which-tense", "master-irregulars", "tense-overview"]
 
 
 def _blocks(topic):
@@ -210,3 +213,82 @@ def test_verbs_section_renders(tmp_path):
 def test_cmp_perfects_has_two_timelines():
     topic = next(t for t in VERB_TOPICS if t["id"] == "cmp-perfects")
     assert sum(1 for b in _blocks(topic) if b["type"] == "timeline") == 2
+
+
+# --------------------------------------------------------------------------
+# Task 9: navigation pages, commands and special verbs
+# --------------------------------------------------------------------------
+def _topic(tid):
+    return next(t for t in VERB_TOPICS if t["id"] == tid)
+
+
+def test_verb_topic_order():
+    assert [t["id"] for t in VERB_TOPICS[:3]] == NAV_TOPICS
+    assert [t["id"] for t in VERB_TOPICS[3:]] == REQUIRED_VERB_TOPICS
+
+
+def test_chart_links_resolve():
+    ids = {t["id"] for t in VERB_TOPICS}
+    charts = [b for b in _blocks(_topic("which-tense")) if b["type"] == "chart"]
+    assert len(charts) == 1
+    dests = [a["dest"] for node in charts[0]["nodes"] for a in node["answers"]]
+    assert dests
+    for d in dests:
+        assert d.startswith("t-") and d[2:] in ids, d
+    covered = {d[2:] for d in dests}
+    tenses = {"present", "progressive", "ir-a", "acabar-de", "preterite", "imperfect", "future",
+              "conditional", "pres-perfect", "past-perfect", "pres-subj", "past-subj", "commands"}
+    assert tenses <= covered, tenses - covered
+
+
+def test_nav_topics_have_no_practice(tmp_path):
+    import io
+    from reportlab.pdfgen import canvas as rl_canvas
+    from core.dimensions import PAGE_H, PAGE_W
+    from templates.spanish.template import _render, parse_options
+    for tid in NAV_TOPICS:
+        assert _topic(tid).get("practice") is False, tid
+    opts = parse_options({"sections": "verbs", "verb_pages": "0"})
+    doc = _render(rl_canvas.Canvas(io.BytesIO(), pagesize=(PAGE_W, PAGE_H)), opts, {}, None)
+    for tid in NAV_TOPICS:
+        kinds = {r.kind for r in doc.log if r.topic_id == tid}
+        assert kinds == {"nav"}, (tid, kinds)
+    for tid in REQUIRED_VERB_TOPICS:
+        assert any(r.kind == "practice" and r.topic_id == tid for r in doc.log), tid
+
+
+def test_master_table_covers_master_verbs():
+    verbs = [v for b in _blocks(_topic("master-irregulars")) if b["type"] == "conj"
+             for v in b["verbs"]]
+    assert sorted(verbs) == sorted(MASTER)
+    for b in _blocks(_topic("master-irregulars")):
+        if b["type"] == "conj":
+            assert b["tenses"] == ["present", "preterite", "imperfect", "future", "conditional",
+                                   "pres_subj"]
+    text = " ".join(_strings(_topic("master-irregulars")))
+    for v in MASTER:  # participle and -ndo form printed under each verb's table
+        assert f"participle **{VERBS[v]['participle']}**" in text, v
+        assert f"-ndo form **{VERBS[v]['gerund']}**" in text, v
+    assert "hay, hubo, había, habrá, habría, haya" in text
+
+
+def test_weather_verbs_third_person():
+    text = " ".join(_strings(_topic("weather")))
+    for form in ["llueve", "llovió", "llovía", "va a llover", "lloverá", "ha llovido", "nieva",
+                 "hace frío", "hace calor", "hace sol", "hace viento", "hace buen tiempo",
+                 "está nublado", "está lloviendo", "hay niebla"]:
+        assert form in text.lower().replace("*", ""), form
+
+
+def test_irregular_tu_commands_listed():
+    text = " ".join(_strings(_topic("commands"))).replace("*", "")
+    for form in ["di", "haz", "ve", "pon", "sal", "sé", "ten", "ven", "dámelo", "no me lo des",
+                 "oiga"]:
+        assert f" {form}" in f" {text}", form
+
+
+def test_irregular_tu_commands_match_conjugator():
+    from templates.spanish.content.verb_topics import TU_IRREGULAR
+    assert len(TU_IRREGULAR) == 8
+    for verb, tu, _en in TU_IRREGULAR:
+        assert tu == conjugate(verb, "imperative", "tú"), verb

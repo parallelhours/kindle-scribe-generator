@@ -549,6 +549,18 @@ VERBS = {
         "participle": "gustado",
         "gerund": "gustando",
     },
+    "levantar": {
+        "en": "to raise, to lift",
+        "present": ["levanto", "levantas", "levanta", "levantamos", "levantáis", "levantan"],
+        "preterite": ["levanté", "levantaste", "levantó", "levantamos", "levantasteis", "levantaron"],
+        "imperfect": ["levantaba", "levantabas", "levantaba", "levantábamos", "levantabais", "levantaban"],
+        "future": ["levantaré", "levantarás", "levantará", "levantaremos", "levantaréis", "levantarán"],
+        "conditional": ["levantaría", "levantarías", "levantaría", "levantaríamos", "levantaríais", "levantarían"],
+        "pres_subj": ["levante", "levantes", "levante", "levantemos", "levantéis", "levanten"],
+        "past_subj": ["levantara", "levantaras", "levantara", "levantáramos", "levantarais", "levantaran"],
+        "participle": "levantado",
+        "gerund": "levantando",
+    },
     "llover": {
         "en": "to rain",
         "present": ["", "", "llueve", "", "", ""],

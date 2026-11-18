@@ -1122,6 +1122,581 @@ _CMP_IND_SUBJ = {
     ],
 }
 
+# --------------------------------------------------------------------------
+# 20. Commands
+# --------------------------------------------------------------------------
+# Formal commands = present subjunctive (Ud. = él form, Uds. = ellos form), pulled from VERBS.
+_UD_YO_RULE = [
+    ("hablar", "~speak~"), ("comer", "~eat~"), ("escribir", "~write~"),
+    ("tener", "~have~"), ("hacer", "~do, make~"), ("salir", "~leave, go out~"),
+    ("decir", "~say, tell~"), ("oír", "~listen, hear~"), ("traer", "~bring~"),
+    ("conducir", "~drive~"), ("volver", "~come back~"), ("pedir", "~ask for, order~"),
+]
+_UD_SPELLING = [("buscar", "~look for~"), ("llegar", "~arrive~"), ("empezar", "~begin~")]
+_UD_IRREG = [("ser", "~be~"), ("ir", "~go~"), ("dar", "~give~"), ("estar", "~be~"),
+             ("saber", "~know~")]
+
+# The 8 irregular tú commands (not stored in VERBS; tests check them against the conjugator).
+TU_IRREGULAR = [
+    ("decir", "di", "~say, tell~"), ("hacer", "haz", "~do, make~"), ("ir", "ve", "~go~"),
+    ("poner", "pon", "~put~"), ("salir", "sal", "~leave, go out~"), ("ser", "sé", "~be~"),
+    ("tener", "ten", "~have~"), ("venir", "ven", "~come~"),
+]
+_TU_REGULAR = [("hablar", "~speak~"), ("comer", "~eat~"), ("escribir", "~write~"),
+               ("pensar", "~think~"), ("volver", "~come back~"), ("pedir", "~ask for, order~"),
+               ("dormir", "~sleep~")]
+
+
+def _ud_row(v, en):
+    yo = _f(v, "present", 0)
+    return [v, yo, _f(v, "pres_subj", 2), _f(v, "pres_subj", 5), en]
+
+
+_COMMANDS = {
+    "id": "commands",
+    "title": "Commands",
+    "pages": [
+        [
+            _h("When to use them"),
+            _t("To tell someone to do something: instructions, directions, requests, advice. "
+               "Add **por favor** to soften them. Choose the form by who you are talking to:"),
+            _b("**tú**: a friend, family member, child, or someone your age in a casual setting.",
+               "**usted (Ud.)**: a stranger, an older person, a waiter, a driver, at work. In "
+               "much of Colombia, usted is common even between friends and family.",
+               "**ustedes (Uds.)**: more than one person, formal or not. In Latin America "
+               "ustedes is the only plural; vosotros commands (hablad, comed) are used only "
+               "in Spain."),
+            _h("Formal commands: Ud. and Uds."),
+            _t("1. Start with the **yo** form of the present. 2. Drop the **-o**. 3. Add the "
+               "**opposite** ending: -ar verbs take **-e / -en**; -er and -ir verbs take "
+               "**-a / -an**. The negative just adds **no**: **No hable.** These are the "
+               "Ud./Uds. forms of the present subjunctive."),
+            {"type": "table", "header": ["Infinitive", "yo", "Ud.", "Uds.", "English"],
+             "rows": [_ud_row(v, en) for v, en in _UD_YO_RULE],
+             "widths": [0.2, 0.17, 0.17, 0.18, 0.28], "gray_rows": []},
+            _t("The yo form carries its irregularity along: **tengo** gives **tenga**, "
+               "**oigo** gives **oiga**, **vuelvo** gives **vuelva**."),
+        ],
+        [
+            _h("Formal commands: spelling changes and irregulars"),
+            _t("To keep the sound of the consonant, **-car** becomes **-que**, **-gar** becomes "
+               "**-gue**, and **-zar** becomes **-ce**:"),
+            {"type": "table", "header": ["Infinitive", "Ud.", "Uds.", "English"],
+             "rows": [[v, _f(v, "pres_subj", 2), _f(v, "pres_subj", 5), en]
+                      for v, en in _UD_SPELLING],
+             "widths": [0.25, 0.22, 0.23, 0.30], "gray_rows": []},
+            _t("Five verbs whose yo form does not end in a plain -o are irregular; learn them "
+               "whole:"),
+            {"type": "table", "header": ["Infinitive", "yo", "Ud.", "Uds.", "English"],
+             "rows": [_ud_row(v, en) for v, en in _UD_IRREG],
+             "widths": [0.2, 0.17, 0.17, 0.18, 0.28], "gray_rows": []},
+            _t("**dé** has an accent so it isn't confused with the word **de** ~of, from~. "
+               "**¡Oiga!** is also a way to get someone's attention, like \"Excuse me!\""),
+            _h("Polite requests"),
+            _t("With service staff, a question often sounds friendlier than a command: "
+               "**¿Me trae** la cuenta, por favor? ~Could you bring me the check?~ In Colombia "
+               "you will hear **¿Me regala** un café? ~Can I have a coffee?~ (you still pay)."),
+            _ex("Siga derecho dos cuadras y voltee a la izquierda.",
+                "Go straight two blocks and turn left."),
+            _ex("Por favor, no hablen durante la película.",
+                "Please don't talk during the movie."),
+        ],
+        [
+            _h("Informal commands: tú"),
+            _t("**Affirmative** = the **él** form of the present: **habla**, **come**, "
+               "**escribe**. Stem changes stay. **Negative** = **no** + the **tú** form of the "
+               "present subjunctive: the Ud. command + **s** (dé gives "
+               "**des**, without the accent)."),
+            {"type": "table", "header": ["Infinitive", "tú: do it", "tú: don't", "English"],
+             "rows": [[v, _f(v, "present", 2), "no " + _f(v, "pres_subj", 1), en]
+                      for v, en in _TU_REGULAR],
+             "widths": [0.22, 0.22, 0.26, 0.30], "gray_rows": []},
+            _h("The 8 irregular tú commands"),
+            _t("Only the affirmative is irregular. The negative is regular: **no** + tú "
+               "subjunctive, as always."),
+            {"type": "table", "header": ["Infinitive", "tú: do it", "tú: don't", "English"],
+             "rows": [[v, f"**{tu}**", "no " + _f(v, "pres_subj", 1), en]
+                      for v, tu, en in TU_IRREGULAR],
+             "widths": [0.22, 0.22, 0.26, 0.30], "gray_rows": []},
+            _t("Four of them just drop the ending: **sal**, **ven**, **ten**, **pon**. **ve** "
+               "(go) looks like a form of ver, and **sé** (be) like \"I know\"; context makes it "
+               "clear."),
+        ],
+        [
+            _h("Where the pronouns go"),
+            _b("**Affirmative**: attach the pronouns to the end, written as one word: "
+               "**dime** ~tell me~, **siéntese** ~sit down (Ud.)~, **levántate** ~get up~.",
+               "**Negative**: put them **before** the verb, after no: **no me digas**, **no se "
+               "siente**, **no te levantes**.",
+               "**Order**: indirect (to whom) before direct (what): da + me + lo = **dámelo** "
+               "~give it to me~; **no me lo des** ~don't give it to me~.",
+               "**le / les** + lo, la becomes **se**: **dáselo** ~give it to him/her~; **no se "
+               "lo digas** ~don't tell him/her~."),
+            _h("The accent mark"),
+            _t("Adding pronouns makes the word longer, so write an accent to keep the stress "
+               "where it was: **da** + me + lo = **dámelo**; **traiga** + me = **tráigame**; "
+               "**levanta** + te = **levántate**. A one-syllable command plus one pronoun "
+               "needs none: **dime**, **hazlo**, **ponlo**."),
+            {"type": "table", "header": ["Command", "+ pronouns", "Negative", "English"],
+             "rows": [
+                 ["da", "**dámelo**", "no me lo des", "~give it to me~"],
+                 ["di", "**dime**", "no me digas", "~tell me~"],
+                 ["haz", "**hazlo**", "no lo hagas", "~do it~"],
+                 ["levanta", "**levántate**", "no te levantes", "~get up~"],
+                 ["traiga (Ud.)", "**tráigamelo**", "no me lo traiga", "~bring it to me~"],
+             ],
+             "widths": [0.2, 0.24, 0.27, 0.29], "gray_rows": []},
+            _t("\"Let's ...\": the everyday way is **vamos a** + infinitive: **¡Vamos a "
+               "comer!** ~Let's eat!~"),
+            _ex("Pásame la sal, por favor.", "Pass me the salt, please."),
+            _ex("Tráigame la cuenta, por favor.", "Bring me the check, please."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 21. Reflexive verbs
+# --------------------------------------------------------------------------
+_REFL_PRON = ["me", "te", "se", "nos", "os", "se"]
+_REFL_EN = ["~I get up~", "~you get up~", "~he/she gets, you get up~", "~we get up~",
+            "~you all get up (Spain)~", "~they get, you all get up~"]
+
+_REFLEXIVE = {
+    "id": "reflexive",
+    "title": "Reflexive verbs",
+    "pages": [
+        [
+            _h("When to use them"),
+            _t("A reflexive verb has **-se** on the infinitive (**levantarse**). The action "
+               "comes back to the subject: **Me levanto** ~I get up~ (literally \"I raise "
+               "myself\"). Daily routines are full of them. English often uses \"get\" or "
+               "nothing at all."),
+            _h("How to form it"),
+            _t("Conjugate the verb as usual and put the matching pronoun **before** it. Without "
+               "the pronoun, the meaning changes: **Levanto** la mano. ~I raise my hand.~"),
+            {"type": "table", "header": ["", "levantarse", "English"],
+             "rows": [[p, f"**{_REFL_PRON[i]}** {_f('levantar', 'present', i)}", _REFL_EN[i]]
+                      for i, p in enumerate(_PERSONS)],
+             "widths": [0.22, 0.34, 0.44], "gray_rows": [_VOS]},
+            _t("With an infinitive or -ndo form, the pronoun can go before the conjugated verb "
+               "or on the end: **Me voy a duchar** = **Voy a ducharme**; **Me estoy vistiendo** "
+               "= **Estoy vistiéndome** (add the accent). With affirmative commands it goes on "
+               "the end: **¡Levántate!**"),
+            _t("Use **el, la, los, las** (not mi, tu) with body parts and clothes: **Me lavo "
+               "las manos.** ~I wash my hands.~ **Ponte la chaqueta.** ~Put on your jacket.~"),
+            _ex("Me levanto a las seis y me ducho.", "I get up at six and take a shower."),
+            _ex("¿Cómo te llamas? —Me llamo Ana.", "What's your name? —My name is Ana."),
+        ],
+        [
+            _h("Common reflexive verbs"),
+            {"type": "table", "header": ["Infinitive", "yo", "English", "Note"],
+             "rows": [
+                 ["despertarse", "me despierto", "~to wake up~", "e to ie"],
+                 ["levantarse", "me levanto", "~to get up~", ""],
+                 ["ducharse", "me ducho", "~to take a shower~", ""],
+                 ["vestirse", "me visto", "~to get dressed~", "e to i"],
+                 ["acostarse", "me acuesto", "~to go to bed~", "o to ue"],
+                 ["llamarse", "me llamo", "~to be called, named~", ""],
+                 ["sentirse", "me siento", "~to feel~ (bien, mal...)", "e to ie"],
+                 ["sentarse", "me siento", "~to sit down~", "e to ie"],
+                 ["irse", "me voy", "~to leave, to go away~", "like ir"],
+                 ["quedarse", "me quedo", "~to stay~", ""],
+                 ["preocuparse", "me preocupo", "~to worry~", ""],
+             ],
+             "widths": [0.22, 0.24, 0.36, 0.18], "gray_rows": []},
+            _t("**me siento** means both \"I feel\" (sentirse) and \"I sit down\" (sentarse); "
+               "context tells them apart: Me siento bien. ~I feel fine.~"),
+            _h("Same verb, different meaning"),
+            {"type": "compare", "left": "Without se", "right": "With se",
+             "rows": [
+                 ["**ir** ~to go~: Voy al banco. ~I'm going to the bank.~",
+                  "**irse** ~to leave~: Me voy. ~I'm leaving.~"],
+                 ["**dormir** ~to sleep~: Duermo ocho horas. ~I sleep eight hours.~",
+                  "**dormirse** ~to fall asleep~: Me dormí. ~I fell asleep.~"],
+                 ["**llamar** ~to call~: Llamo a mi mamá. ~I call my mom.~",
+                  "**llamarse** ~to be named~: Se llama Luis. ~His name is Luis.~"],
+                 ["**quedar** ~to be located~: ¿Dónde queda el banco? ~Where is the bank?~",
+                  "**quedarse** ~to stay~: Me quedo en casa. ~I'm staying home.~"],
+                 ["**poner** ~to put~: Pongo la mesa. ~I set the table.~",
+                  "**ponerse** ~to put on; to become~: Me pongo nervioso. ~I get nervous.~"],
+             ]},
+            _ex("Me dormí viendo la película.", "I fell asleep watching the movie."),
+            _ex("Ya me voy; nos vemos mañana.", "I'm leaving now; see you tomorrow."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 22. Gustar-type verbs
+# --------------------------------------------------------------------------
+_GUSTA, _GUSTAN = _f("gustar", "present", 2), _f("gustar", "present", 5)
+
+_GUSTAR = {
+    "id": "gustar",
+    "title": "Gustar-type verbs",
+    "pages": [
+        [
+            _h("How gustar works"),
+            _t("**gustar** means \"to be pleasing.\" The thing you like is the **subject**, so "
+               "the verb agrees with **it**, not with you. The person who likes it is shown by a "
+               "pronoun in front: **Me gusta el café.** ~I like coffee~ (literally \"Coffee "
+               "pleases me\")."),
+            {"type": "table", "header": ["", "One thing or an infinitive", "Plural things"],
+             "rows": [
+                 ["**me**", f"me **{_GUSTA}** el café ~I like coffee~",
+                  f"me **{_GUSTAN}** los perros ~I like dogs~"],
+                 ["**te**", f"te {_GUSTA} bailar ~you like to dance~",
+                  f"te {_GUSTAN} las películas ~you like movies~"],
+                 ["**le**", f"le {_GUSTA} la playa ~he/she likes, you like the beach~",
+                  f"le {_GUSTAN} los tacos ~he/she likes, you like tacos~"],
+                 ["**nos**", f"nos {_GUSTA} viajar ~we like to travel~",
+                  f"nos {_GUSTAN} las montañas ~we like the mountains~"],
+                 ["**os**", f"os {_GUSTA} la música ~you all like music (Spain)~",
+                  f"os {_GUSTAN} los libros ~you all like books (Spain)~"],
+                 ["**les**", f"les {_GUSTA} el fútbol ~they, you all like soccer~",
+                  f"les {_GUSTAN} los gatos ~they, you all like cats~"],
+             ],
+             "widths": [0.1, 0.45, 0.45], "gray_rows": [_VOS]},
+            _b("Use **a** + person to say who, or for emphasis: **A Juan le gusta** el café. "
+               "~Juan likes coffee.~ **A mí me gusta, ¿y a ti?** ~I like it, and you?~",
+               "Negative: **no** goes first: **No me gustan** las cebollas. ~I don't like "
+               "onions.~",
+               "Past, for one experience: **Me gustó** la película. ~I liked the movie.~ "
+               "Polite wish: **Me gustaría** un café. ~I'd like a coffee.~",
+               "**Me gustas** means \"I like you\" romantically. For a person who is nice, say "
+               "**Me cae bien.** ~I like him/her.~"),
+            _ex("¿Te gusta la comida colombiana? —Sí, me encanta.",
+                "Do you like Colombian food? —Yes, I love it."),
+        ],
+        [
+            _h("Verbs that work like gustar"),
+            {"type": "table", "header": ["Verb", "English", "Example"],
+             "rows": [
+                 ["encantar", "~to love (things), to delight~",
+                  "Me encanta esta ciudad. ~I love this city.~"],
+                 ["interesar", "~to interest~",
+                  "Me interesa la historia. ~I'm interested in history.~"],
+                 ["molestar", "~to bother~",
+                  "Me molesta el ruido. ~The noise bothers me.~"],
+                 ["doler (o to ue)", "~to hurt~",
+                  "Me duele la cabeza. ~My head hurts.~ Me duelen los pies. ~My feet hurt.~"],
+                 ["importar", "~to matter, to care about~",
+                  "No me importa. ~I don't care.~ ¿Le importa si abro la ventana? ~Do you mind "
+                  "if I open the window?~"],
+                 ["faltar", "~to be missing, to lack~",
+                  "Me falta un tenedor. ~I'm missing a fork.~"],
+                 ["quedar", "~to have left; to fit, to suit~",
+                  "Me quedan diez dólares. ~I have ten dollars left.~ Esa camisa te queda "
+                  "bien. ~That shirt looks good on you.~"],
+             ],
+             "widths": [0.18, 0.27, 0.55], "gray_rows": []},
+            _t("**encantar** is already strong, so it doesn't need mucho: **Me encanta.** ~I love "
+               "it.~ With **doler**, use **la, los** for the body part, "
+               "not mi: **Me duele la espalda.** ~My back hurts.~"),
+            _ex("Me duelen los pies después de caminar todo el día.",
+                "My feet hurt after walking all day."),
+            _ex("A mis hijos no les gusta levantarse temprano.",
+                "My kids don't like getting up early."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 23. Helper verbs: should, have to, can
+# --------------------------------------------------------------------------
+_HELPERS = {
+    "id": "helpers",
+    "title": "Helper verbs: should, have to, can",
+    "pages": [
+        [
+            _h("Helper + infinitive"),
+            _t("Conjugate the helper and put the second verb in the **infinitive**: **Tengo que "
+               "trabajar.** ~I have to work.~ Of these, only **tener que** and **hay que** "
+               "need **que**."),
+            {"type": "table", "header": ["Helper", "English", "How strong it sounds", "Example"],
+             "rows": [
+                 ["**tener que**", "~to have to~", "strong; the everyday \"I have to\"",
+                  "Tengo que trabajar mañana. ~I have to work tomorrow.~"],
+                 ["**deber**", "~must, should~", "strong; duty or a rule",
+                  "Debes usar el cinturón de seguridad. ~You must wear your seat belt.~"],
+                 ["**hay que**", "~one has to, you have to~", "general rule, no person; "
+                  "always hay",
+                  "Hay que pagar en efectivo. ~You have to pay in cash.~"],
+                 ["**necesitar**", "~to need (to)~", "medium; a real need",
+                  "Necesito descansar. ~I need to rest.~"],
+                 ["**debería**", "~should, ought to~", "soft; friendly advice",
+                  "Debería dormir más. ~I should sleep more.~"],
+                 ["**poder**", "~can, to be able to, may~", "ability or permission",
+                  "¿Puedo pagar con tarjeta? ~Can I pay by card?~"],
+                 ["**querer**", "~to want (to)~", "a wish, not a duty",
+                  "Quiero aprender a bailar salsa. ~I want to learn to dance salsa.~"],
+             ],
+             "widths": [0.17, 0.2, 0.25, 0.38], "gray_rows": []},
+            _t("Strongest to softest: **tener que**, **deber**, **hay que**, **necesitar**, "
+               "**debería**. **debería** is the conditional of deber, the polite \"should.\""),
+            _ex("No tienes que venir, pero me gustaría verte.",
+                "You don't have to come, but I'd like to see you."),
+        ],
+        [
+            _h("\"I should\" and \"I have to\": the forms"),
+            {"type": "conj", "verbs": ["deber"], "tenses": ["present", "conditional"]},
+            _sp(2),
+            {"type": "conj", "verbs": ["tener", "poder"], "tenses": ["present"]},
+            _h("Watch out"),
+            _b("**no tener que** = \"don't have to\"; **no deber** = \"must not\": **No "
+               "tienes que** pagar. ~You don't have to pay.~ **No debes** fumar aquí. ~You must "
+               "not smoke here.~",
+               "In the past: **tuve que** ~I had to (and did)~, **tenía que** ~I had to, I was "
+               "supposed to~. **Debería haber** + participle = \"I should have\": "
+               "**Debería haber estudiado más.** ~I should have studied more.~",
+               "A softer \"I want\": **quisiera** ~I would like~: **Quisiera** una mesa para "
+               "dos. ~I'd like a table for two.~"),
+            _ex("Hay que llegar temprano; el vuelo sale a las siete.",
+                "You have to get there early; the flight leaves at seven."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 24. Weather
+# --------------------------------------------------------------------------
+_RAIN_ROWS = [
+    ("present", lambda v: _f(v, "present", 2), "~it rains, it's raining~"),
+    ("progressive", lambda v: f"{_f('estar', 'present', 2)} {VERBS[v]['gerund']}",
+     "~it's raining (right now)~"),
+    ("ir a", lambda v: f"{_f('ir', 'present', 2)} a {v}", "~it's going to rain~"),
+    ("preterite", lambda v: _f(v, "preterite", 2), "~it rained~"),
+    ("imperfect", lambda v: _f(v, "imperfect", 2), "~it was raining, it used to rain~"),
+    ("future", lambda v: _f(v, "future", 2), "~it will rain~"),
+    ("conditional", lambda v: _f(v, "conditional", 2), "~it would rain~"),
+    ("pres. perfect", lambda v: f"{_f('haber', 'present', 2)} {VERBS[v]['participle']}",
+     "~it has rained~"),
+    ("pres. subjunctive", lambda v: f"(que) {_f(v, 'pres_subj', 2)}", "~(that) it rains~"),
+]
+
+_WEATHER = {
+    "id": "weather",
+    "title": "Weather",
+    "pages": [
+        [
+            _h("To rain, to snow"),
+            _t("**llover** ~to rain~ (o to ue) and **nevar** ~to snow~ (e to ie) have only "
+               "one form per tense, the **él** form, with no subject: **Llueve.** ~It's "
+               "raining.~ Spanish has no word for \"it\" here. The nouns: **la lluvia** "
+               "~the rain~, **la nieve** ~the snow~."),
+            {"type": "table", "header": ["Tense", "llover", "nevar", "English (llover)"],
+             "rows": [[name, f"**{fn('llover')}**", f"**{fn('nevar')}**", en]
+                      for name, fn, en in _RAIN_ROWS],
+             "widths": [0.24, 0.2, 0.2, 0.36], "gray_rows": []},
+            _t("Ojalá no **llueva** mañana. ~I hope it doesn't rain tomorrow.~"),
+            _ex("Ayer llovió toda la tarde.", "It rained all afternoon yesterday."),
+            _ex("Lleva un paraguas; va a llover.", "Take an umbrella; it's going to rain."),
+        ],
+        [
+            _h("hace, está, hay"),
+            _t("Ask: **¿Qué tiempo hace?** or **¿Cómo está el clima?** ~What's the weather "
+               "like?~"),
+            {"type": "table", "header": ["Spanish", "English", "Spanish", "English"],
+             "rows": [
+                 ["**hace** frío", "~it's cold~", "**hace** calor", "~it's hot~"],
+                 ["**hace** sol", "~it's sunny~", "**hace** viento", "~it's windy~"],
+                 ["**hace** fresco", "~it's cool~", "**hace** buen tiempo",
+                  "~the weather is nice~"],
+                 ["**está** nublado", "~it's cloudy~", "**hace** mal tiempo",
+                  "~the weather is bad~"],
+                 ["**está** despejado", "~it's clear~", "**está** lloviendo",
+                  "~it's raining~"],
+                 ["**hay** niebla", "~it's foggy~", "**está** nevando", "~it's snowing~"],
+                 ["**hay** neblina", "~it's misty, foggy~", "**hay** tormenta",
+                  "~there's a storm~"],
+             ],
+             "widths": [0.24, 0.26, 0.24, 0.26], "gray_rows": []},
+            _b("**hace** + noun takes **mucho**, not muy: **Hace mucho frío.** ~It's very "
+               "cold.~",
+               "People feel with **tener**: **Tengo frío.** ~I'm cold.~ The weather uses "
+               "**hacer**: **Hace frío.** ~It's cold (out).~",
+               "In the past, describe with the imperfect: **Hacía** sol. ~It was sunny.~ Sum up "
+               "a whole period with the preterite: Ayer **hizo** mucho calor. ~It was very hot "
+               "yesterday.~",
+               "In Latin America, **el clima** is often used for the day's weather, too."),
+            _ex("En Bogotá hace frío por la mañana.", "In Bogotá it's cold in the morning."),
+            _ex("Cuando era niño, nevaba mucho en mi ciudad.",
+                "When I was a kid, it used to snow a lot in my city."),
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 1. Which tense do I use? (navigation: no practice page)
+# --------------------------------------------------------------------------
+def _a(label, tense, tid):
+    return {"label": label, "tense": tense, "dest": f"t-{tid}"}
+
+
+_WHICH_TENSE = {
+    "id": "which-tense",
+    "title": "Which tense do I use?",
+    "practice": False,
+    "pages": [
+        [
+            _t("Find the question that fits what you want to say, then tap the tense to go to "
+               "its page."),
+            {"type": "chart", "nodes": [
+                {"q": "Is it about now, or always true?", "answers": [
+                    _a("A habit, a routine or a fact", "Present tense", "present"),
+                    _a("Happening right now, at this moment", "Present progressive",
+                       "progressive"),
+                ]},
+                {"q": "Is it about the future?", "answers": [
+                    _a("A plan: what you are going to do", "Future with ir a", "ir-a"),
+                    _a("A prediction or a promise: \"will\"", "Future tense", "future"),
+                    _a("A fixed plan with a time word (mañana)", "Present tense", "present"),
+                ]},
+                {"q": "Is it about the past?", "answers": [
+                    _a("It happened a moment ago: \"I just ...\"", "Just did: acabar de",
+                       "acabar-de"),
+                    _a("A finished event: ayer, dos veces, en 2020", "Preterite",
+                       "preterite"),
+                    _a("Background, a description, a habit, or \"was ...-ing\"",
+                       "Imperfect", "imperfect"),
+                    _a("Not sure which of those two?", "Preterite vs. imperfect",
+                       "cmp-pret-imp"),
+                    _a("An experience, or still true now: \"I have ...\"", "Present perfect",
+                       "pres-perfect"),
+                    _a("Before another past event: \"I had ...\"", "Past perfect",
+                       "past-perfect"),
+                    _a("\"Have done\" or \"had done\"?", "Present perfect vs. past perfect",
+                       "cmp-perfects"),
+                ]},
+                {"q": "Is it imaginary, polite, or advice?", "answers": [
+                    _a("\"would\", \"could\", \"should\"", "Conditional", "conditional"),
+                    _a("An unreal \"if\": if I had, if I were", "Past subjunctive",
+                       "past-subj"),
+                ]},
+                {"q": "Does it follow que after a wish, a doubt, an emotion or advice?",
+                 "answers": [
+                    _a("The first verb is present, future or a command", "Present subjunctive",
+                       "pres-subj"),
+                    _a("The first verb is past or conditional", "Past subjunctive",
+                       "past-subj"),
+                    _a("Not sure the subjunctive is needed?", "When to use the subjunctive",
+                       "subj-when"),
+                    _a("The same sentence both ways", "Indicative vs. subjunctive",
+                       "cmp-ind-subj"),
+                 ]},
+                {"q": "Are you telling someone to do something?", "answers": [
+                    _a("Instructions, requests, directions", "Commands", "commands"),
+                ]},
+                {"q": "Something else?", "answers": [
+                    _a("Doing it to yourself: me levanto", "Reflexive verbs", "reflexive"),
+                    _a("Liking and hurting: me gusta, me duele", "Gustar-type verbs", "gustar"),
+                    _a("\"should\", \"have to\", \"can\"", "Helper verbs", "helpers"),
+                    _a("Rain, snow, hot or cold", "Weather", "weather"),
+                    _a("All irregular forms in one place", "Master irregular verbs",
+                       "master-irregulars"),
+                    _a("Every tense side by side", "Tense overview", "tense-overview"),
+                ]},
+            ]},
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 2. Master irregular verb table (navigation/reference: no practice page)
+# --------------------------------------------------------------------------
+MASTER_TENSES = ["present", "preterite", "imperfect", "future", "conditional", "pres_subj"]
+_MASTER_PAGES = [
+    ["ser", "estar", "ir", "tener"],
+    ["hacer", "decir", "venir", "poder"],
+    ["querer", "saber", "poner", "salir"],
+    ["dar", "ver", "oír", "traer"],
+    ["haber"],
+]
+
+
+def _master_verb(v):
+    return [{"type": "conj", "verbs": [v], "tenses": MASTER_TENSES},
+            _t(f"**{v}**: participle **{VERBS[v]['participle']}**, -ndo form "
+               f"**{VERBS[v]['gerund']}**")]
+
+
+def _master_page(verbs):
+    out = []
+    for v in verbs:
+        out += _master_verb(v)
+    return out
+
+
+_MASTER = {
+    "id": "master-irregulars",
+    "title": "Master irregular verbs",
+    "practice": False,
+    "pages": [_master_page(p) for p in _MASTER_PAGES[:-1]] + [
+        _master_page(_MASTER_PAGES[-1]) + [
+            _t("This table shows **haber** as the helper verb of the perfect tenses: **he** "
+               "hablado ~I have spoken~, **había** hablado ~I had spoken~. Its preterite "
+               "(hube...) is rare as a helper."),
+            _t("**Existential haber (there is/are) is always singular: hay, hubo, había, "
+               "habrá, habría, haya.** Hay dos bancos. ~There are two banks.~ Había muchas "
+               "personas (not habían). ~There were a lot of people.~"),
+            _sp(),
+            {"type": "xref", "text": "How to use them: **Present perfect**",
+             "dest": "t-pres-perfect"},
+            {"type": "xref", "text": "**Past perfect**", "dest": "t-past-perfect"},
+        ],
+    ],
+}
+
+# --------------------------------------------------------------------------
+# 3. Tense overview (navigation/reference: no practice page)
+# --------------------------------------------------------------------------
+def _ov(build, en, name):
+    return [name] + [build(v) for v in _MODELS] + [en]
+
+
+def _haber_plus(tense):
+    return lambda v: f"{_f('haber', tense, 0)} {VERBS[v]['participle']}"
+
+
+_OVERVIEW_ROWS = [
+    _ov(lambda v: _f(v, "present", 0), "~I speak~", "Present"),
+    _ov(lambda v: f"{_f('estar', 'present', 0)} {VERBS[v]['gerund']}", "~I am speaking~",
+        "Present progressive"),
+    _ov(lambda v: f"{_f('ir', 'present', 0)} a {v}", "~I'm going to speak~", "ir a + infinitive"),
+    _ov(lambda v: f"acabo de {v}", "~I just spoke~", "acabar de + infinitive"),
+    _ov(lambda v: _f(v, "preterite", 0), "~I spoke~", "Preterite"),
+    _ov(lambda v: _f(v, "imperfect", 0), "~I used to speak, I was speaking~", "Imperfect"),
+    _ov(lambda v: _f(v, "future", 0), "~I will speak~", "Future"),
+    _ov(lambda v: _f(v, "conditional", 0), "~I would speak~", "Conditional"),
+    _ov(_haber_plus("present"), "~I have spoken~", "Present perfect"),
+    _ov(_haber_plus("imperfect"), "~I had spoken~", "Past perfect"),
+    _ov(lambda v: f"que {_f(v, 'pres_subj', 0)}", "~that I speak~", "Present subjunctive"),
+    _ov(lambda v: f"que {_f(v, 'past_subj', 0)}", "~that I spoke~", "Past subjunctive"),
+    _ov(lambda v: f"{_f(v, 'present', 2)} / {_f(v, 'pres_subj', 2)}",
+        "~speak!~", "Command (tú / Ud.)"),
+]
+
+_OVERVIEW = {
+    "id": "tense-overview",
+    "title": "Tense overview",
+    "practice": False,
+    "pages": [
+        [
+            _t("One regular verb of each class in the **yo** form (commands: tú / Ud.). The "
+               "English is for hablar; comer ~to eat~ and vivir ~to live~ work the same way."),
+            {"type": "table", "header": ["Tense", "hablar", "comer", "vivir", "English (hablar)"],
+             "rows": _OVERVIEW_ROWS,
+             "widths": [0.24, 0.17, 0.17, 0.17, 0.25], "gray_rows": []},
+            _t("**que** is not part of the verb, but the subjunctive almost always follows it."),
+            _sp(),
+            {"type": "xref", "text": "Choosing a tense: **Which tense do I use?**",
+             "dest": "t-which-tense"},
+            {"type": "xref", "text": "All the irregular forms: **Master irregular verbs**",
+             "dest": "t-master-irregulars"},
+        ],
+    ],
+}
+
 _PADDED = {"table", "conj", "compare", "timeline"}
 
 
@@ -1141,6 +1716,9 @@ def _spaced(topic, gap=4):
 
 # Topic order = print order. Append new topics here.
 _TOPICS = [
+    _WHICH_TENSE,
+    _MASTER,
+    _OVERVIEW,
     _PRESENT,
     _PROGRESSIVE,
     _IR_A,
@@ -1157,6 +1735,11 @@ _TOPICS = [
     _PAST_SUBJ,
     _SUBJ_WHEN,
     _CMP_IND_SUBJ,
+    _COMMANDS,
+    _REFLEXIVE,
+    _GUSTAR,
+    _HELPERS,
+    _WEATHER,
 ]
 
 VERB_TOPICS = [_spaced(t) for t in _TOPICS]
