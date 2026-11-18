@@ -10,7 +10,7 @@ Cross-checked against templates/crossword/conjugator.py in tests/test_spanish_co
 
 VERBS = {
     "ser": {
-        "en": "to be (permanent)",
+        "en": "to be (identity, traits)",
         "present": ["soy", "eres", "es", "somos", "sois", "son"],
         "preterite": ["fui", "fuiste", "fue", "fuimos", "fuisteis", "fueron"],
         "imperfect": ["era", "eras", "era", "éramos", "erais", "eran"],
@@ -22,7 +22,7 @@ VERBS = {
         "gerund": "siendo",
     },
     "estar": {
-        "en": "to be (state/location)",
+        "en": "to be (states, location)",
         "present": ["estoy", "estás", "está", "estamos", "estáis", "están"],
         "preterite": ["estuve", "estuviste", "estuvo", "estuvimos", "estuvisteis", "estuvieron"],
         "imperfect": ["estaba", "estabas", "estaba", "estábamos", "estabais", "estaban"],

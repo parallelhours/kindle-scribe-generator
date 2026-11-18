@@ -49,7 +49,7 @@ def _topic_entries(topics, level=1):
 
 def section_entries(section):
     if section == "verbs":
-        return (_topic_entries(verb_topics.TOPICS)
+        return (_topic_entries(verb_topics.VERB_TOPICS)
                 + [("My Verbs", "verbs-my", 1)])
     if section == "phrases":
         return ([("Phrases", "t-phrase-list", 1)]
@@ -73,7 +73,7 @@ def _begin(doc, section):
 # --------------------------------------------------------------------------
 def build_verbs(doc, opts):
     _begin(doc, "verbs")
-    for t in verb_topics.TOPICS:
+    for t in verb_topics.VERB_TOPICS:
         render_topic(doc, "verbs", t)
     printed = additions.MY_VERBS
     if printed or opts.verb_pages:

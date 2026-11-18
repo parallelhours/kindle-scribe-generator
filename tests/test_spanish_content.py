@@ -163,3 +163,43 @@ def test_all_content_is_winansi():
                     s.encode("cp1252")
                 except UnicodeEncodeError:
                     pytest.fail(f"{mod.__name__}.{name}: non-cp1252 string {s!r}")
+
+
+# --------------------------------------------------------------------------
+# Verb topics (Task 7; extended in Tasks 8 and 9)
+# --------------------------------------------------------------------------
+from templates.spanish.content.verb_topics import VERB_TOPICS  # noqa: E402
+
+REQUIRED_VERB_TOPICS = ["present", "progressive", "ir-a", "acabar-de", "preterite", "imperfect",
+                        "cmp-pret-imp"]  # extended in Tasks 8 and 9
+
+
+def _blocks(topic):
+    for page in topic["pages"]:
+        yield from page
+
+
+def test_verb_topics_present():
+    assert [t["id"] for t in VERB_TOPICS if t["id"] in REQUIRED_VERB_TOPICS] == REQUIRED_VERB_TOPICS
+
+
+def test_verb_topic_ids_unique():
+    ids = [t["id"] for t in VERB_TOPICS]
+    assert len(ids) == len(set(ids))
+
+
+def test_every_topic_has_examples():
+    for t in VERB_TOPICS:
+        if t.get("practice", True) is False:
+            continue  # navigation pages (ruling R4)
+        ex = [b for b in _blocks(t) if b["type"] == "example"]
+        assert len(ex) >= 2, t["id"]
+        for b in ex:
+            assert b["es"].strip() and b["en"].strip(), (t["id"], b)
+
+
+def test_verbs_section_renders(tmp_path):
+    from templates.spanish.template import generate
+    out = tmp_path / "verbs.pdf"
+    generate(str(out), sections="verbs", verb_pages="0")  # raises LayoutOverflow on overflow
+    assert out.stat().st_size > 0
