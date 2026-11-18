@@ -460,9 +460,58 @@ _ROWS_PER_COL = int((449.28 - 2 * 6 - 14 - 2 - 12 - _WORD_TOP_H) // WORD_PITCH)
 WORD_ROWS_PER_PAGE = _ROWS_PER_COL * _WORD_COLS
 
 
+def word_cell_columns(doc_width, x0):
+    """(left, right) text spans of every cell in a word-page row: per column, the
+    article box, the word rule and the English rule, in that order."""
+    colw = (doc_width - _COL_GAP) / _WORD_COLS
+    spans = []
+    for col in range(_WORD_COLS):
+        x = x0 + col * (colw + _COL_GAP)
+        wx = x + _ARTICLE_W + 3
+        ex = wx + (colw - _ARTICLE_W - 3) * _WORD_W_FR
+        spans += [(x + 1.5, x + _ARTICLE_W - 1.5), (wx, ex - 4), (ex + 1, x + colw)]
+    return spans
+
+
+_WORD_LINE2 = 6.5  # baseline offset of a second text line in a word row
+
+
+def _fit_cell(c, x, base, right, text, font, start, gray=0.0):
+    """Draw text in [x, right]: shrink to MIN_CELL, then wrap onto two lines, then
+    truncate with an ellipsis as a last resort (never overruns the cell)."""
+    width = right - x
+    size = _shrink(text, font, width, start, MIN_CELL)
+    if stringWidth(text, font, size) <= width + 1e-6:
+        _label(c, x, base, text, font, size, gray)
+        return
+    size = MIN_CELL
+    words, first = text.split(), ""
+    for i, w in enumerate(words):
+        trial = f"{first} {w}".strip()
+        if first and stringWidth(trial, font, size) > width:
+            rest = " ".join(words[i:])
+            break
+        first = trial
+    else:
+        rest = ""
+    if stringWidth(first, font, size) > width:  # a single unbreakable word
+        while first and stringWidth(first + "\u2026", font, size) > width:
+            first = first[:-1]
+        first += "\u2026"
+    while rest and stringWidth(rest, font, size) > width:
+        rest = rest[:-2].rstrip() + "\u2026"
+    if rest:
+        _label(c, x, base + _WORD_LINE2, first, font, size, gray)
+        _label(c, x, base, rest, font, size, gray)
+    else:
+        _label(c, x, base, first, font, size, gray)
+
+
 def draw_word_page(doc, section, words=None, topic="", date=""):
     c = doc.c
     words = list(words or [])
+    if len(words) > WORD_ROWS_PER_PAGE:
+        raise ValueError(f"{len(words)} words exceed one page ({WORD_ROWS_PER_PAGE})")
     kind = "added-words" if words else "fill-word"
     title = "Vocab (added)" if words else "Vocab"
     f = doc.start_page(kind, title, section)
@@ -473,27 +522,31 @@ def draw_word_page(doc, section, words=None, topic="", date=""):
     lx = f.x + stringWidth("Topic / lesson date  ", FONT_BOLD, BODY_SIZE)
     _rule(c, lx, f.x + f.width, by - 2, 0.3, 0.5)
     if topic or date:
-        _label(c, lx + 2, by, " - ".join(s for s in (topic, date) if s), FONT_NORMAL, BODY_SIZE)
-    nrows = min(_ROWS_PER_COL, int(f.remaining() // WORD_PITCH))
-    colw = (f.width - _COL_GAP) / _WORD_COLS
+        _fit_cell(c, lx + 2, by, f.x + f.width, " - ".join(s for s in (topic, date) if s),
+                  FONT_NORMAL, BODY_SIZE)
+    nrows = int(f.remaining() // WORD_PITCH)
+    if nrows < _ROWS_PER_COL:
+        raise LayoutOverflow(f"word page has room for {nrows} rows, needs {_ROWS_PER_COL}")
+    nrows = _ROWS_PER_COL
+    spans = word_cell_columns(f.width, f.x)
     grid_top = f.y
     idx = 0
     for col in range(_WORD_COLS):
-        x = f.x + col * (colw + _COL_GAP)
+        (ax0, _ax1), (wx, wx1), (ex0, ex1) = spans[3 * col:3 * col + 3]
+        x = ax0 - 1.5
         for r in range(nrows):
             ry = grid_top - r * WORD_PITCH
             c.setStrokeGray(0.5)
             c.setLineWidth(GRID_LW)
             c.rect(x, ry - WORD_PITCH + 3, _ARTICLE_W, WORD_PITCH - 6, stroke=1, fill=0)
-            wx = x + _ARTICLE_W + 3
-            ex = wx + (colw - _ARTICLE_W - 3) * _WORD_W_FR
-            _rule(c, wx, ex - 3, ry - WORD_PITCH + 3)
-            _rule(c, ex, x + colw, ry - WORD_PITCH + 3)
+            _rule(c, wx, wx1 + 1, ry - WORD_PITCH + 3)
+            _rule(c, ex0 - 1, ex1, ry - WORD_PITCH + 3)
             if idx < len(words):
                 art, wd, en = words[idx]
-                _label(c, x + 2, ry - WORD_PITCH + 6.5, art, FONT_BOLD, CELL_SIZE)
-                _label(c, wx, ry - WORD_PITCH + 5.5, wd, FONT_NORMAL, BODY_SIZE)
-                _label(c, ex + 1, ry - WORD_PITCH + 5.5, en, FONT_EN, CELL_SIZE + 0.4, EN_GRAY)
+                _fit_cell(c, ax0 + 0.5, ry - WORD_PITCH + 6.5, _ax1, art, FONT_BOLD, CELL_SIZE)
+                _fit_cell(c, wx, ry - WORD_PITCH + 5.5, wx1, wd, FONT_NORMAL, BODY_SIZE)
+                _fit_cell(c, ex0, ry - WORD_PITCH + 5.5, ex1, en, FONT_EN, CELL_SIZE + 0.4,
+                          EN_GRAY)
             idx += 1
     c.restoreState()
     doc.end_page()

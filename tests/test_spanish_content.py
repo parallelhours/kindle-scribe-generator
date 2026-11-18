@@ -487,3 +487,115 @@ def test_phrases_outline_parts(tmp_path):
     for t in GRAMMAR_TOPICS + CONFUSED_TOPICS:
         assert (2, t["title"]) in rows, t["id"]
     assert not any(t in titles for t in SEED)  # no outline entry per phrase
+
+
+# --------------------------------------------------------------------------
+# Task 11: Vocab section
+# --------------------------------------------------------------------------
+from templates.spanish.content.vocab import TOPICS as VOCAB_TOPICS  # noqa: E402
+
+VOCAB_IDS = ["gender", "pronouns"]
+
+
+def _topic_text(topic):
+    return " ".join(_strings(topic["pages"]))
+
+
+def test_vocab_topics():
+    assert [t["id"] for t in VOCAB_TOPICS] == VOCAB_IDS
+    for t in VOCAB_TOPICS:
+        ex = [b for b in _blocks(t) if b["type"] == "example"]
+        assert 2 <= len(ex) <= 4, t["id"]
+        for b in ex:
+            assert b["es"].strip() and b["en"].strip(), (t["id"], b)
+
+
+def test_gender_topic_exceptions():
+    text = _topic_text(next(t for t in VOCAB_TOPICS if t["id"] == "gender"))
+    for w in ("la mano", "el día", "el mapa", "el agua"):
+        assert w in text, w
+
+
+def test_pronouns_topic_links_commands():
+    topic = next(t for t in VOCAB_TOPICS if t["id"] == "pronouns")
+    assert any(b["type"] == "xref" and b.get("dest") == "t-commands" for b in _blocks(topic))
+    tables = [b for b in _blocks(topic) if b["type"] == "table"]
+    assert any(b.get("gray_rows") and any("vosotros" in c for r in b["rows"] for c in r)
+               for b in tables)
+
+
+def _vocab_log(monkeypatch, words, vocab_pages="3"):
+    import io
+    from reportlab.pdfgen import canvas as rl_canvas
+    from core.dimensions import PAGE_H, PAGE_W
+    from templates.spanish import sections
+    from templates.spanish.template import _render, parse_options
+    monkeypatch.setattr(sections.additions, "MY_WORDS", words)
+    opts = parse_options({"sections": "vocab", "vocab_pages": vocab_pages})
+    buf = io.BytesIO()
+    c = rl_canvas.Canvas(buf, pagesize=(PAGE_W, PAGE_H))
+    doc = _render(c, opts, {}, None)
+    c.save()
+    return doc, buf
+
+
+def test_my_words_pages(monkeypatch):
+    import math
+    from pypdf import PdfReader
+    from templates.spanish.pages import WORD_ROWS_PER_PAGE
+    words = [("el", f"palabra{i:02d}", f"word {i:02d}") for i in range(45)]
+    doc, buf = _vocab_log(monkeypatch, [{"topic": "En la casa", "date": "2026-11-18",
+                                         "words": words}])
+    kinds = [r.kind for r in doc.log]
+    n = math.ceil(45 / WORD_ROWS_PER_PAGE)
+    i = kinds.index("added-words")
+    assert kinds[i:] == ["added-words"] * n + ["fill-word"] * 3
+    reader = PdfReader(buf)
+    text = " ".join(reader.pages[r.page - 1].extract_text() for r in doc.log
+                    if r.kind == "added-words")
+    for _, w, en in words:  # nothing silently dropped
+        assert w in text and en in text, w
+    assert text.count("En la casa") == n  # header continues on every page
+
+
+def test_word_page_rejects_overfull():
+    import io
+    from reportlab.pdfgen import canvas as rl_canvas
+    from core.dimensions import PAGE_H, PAGE_W
+    from templates.spanish.doc import Doc
+    from templates.spanish.pages import WORD_ROWS_PER_PAGE, draw_word_page
+    doc = Doc(rl_canvas.Canvas(io.BytesIO(), pagesize=(PAGE_W, PAGE_H)), "2026-01-01")
+    with pytest.raises(ValueError):
+        draw_word_page(doc, "vocab", words=[("el", "x", "y")] * (WORD_ROWS_PER_PAGE + 1))
+
+
+def test_word_page_fits_long_text():
+    import io
+    from reportlab.pdfbase.pdfmetrics import stringWidth
+    from reportlab.pdfgen import canvas as rl_canvas
+    from core.dimensions import MARGIN, PAGE_H, PAGE_W
+    from templates.spanish import pages as P
+    from templates.spanish.doc import Doc
+
+    drawn = []
+
+    class Spy(rl_canvas.Canvas):
+        def setFont(self, name, size, leading=None):
+            self._spy_font = (name, size)
+            return super().setFont(name, size, leading)
+
+        def drawString(self, x, y, text, *a, **kw):
+            drawn.append((x, y, text, *self._spy_font))
+            return super().drawString(x, y, text, *a, **kw)
+
+    doc = Doc(Spy(io.BytesIO(), pagesize=(PAGE_W, PAGE_H)), "2026-01-01")
+    long_w = ("el", "electrodoméstico", "household appliance, such as a refrigerator or a "
+              "washing machine")
+    P.draw_word_page(doc, "vocab", words=[long_w, ("la", "computadora", "computer")])
+    cells = P.word_cell_columns(doc_width=PAGE_W - 2 * MARGIN, x0=MARGIN)
+    for x, y, text, font, size in drawn:
+        if text in ("electrodoméstico", "computadora") or "appliance" in text or \
+                "machine" in text or text == "computer":
+            assert size >= 6.0 - 1e-6, (text, size)
+            right = x + stringWidth(text, font, size)
+            assert any(lo - 1e-6 <= x and right <= hi + 1e-6 for lo, hi in cells), (text, x, right)
