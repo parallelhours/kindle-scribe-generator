@@ -139,7 +139,7 @@ def _render(c, opts: Options, meta: dict, page_of):
         entries = []
         for s in opts.sections:
             entries.append((SECTION_NAMES[s], f"{s}-contents", 0))
-            entries += section_entries(s)
+            entries += section_entries(s, opts)
         doc.outline("Contents", "contents", 0)
         draw_contents_page(doc, None, "Contents", entries)
     for s in opts.sections:

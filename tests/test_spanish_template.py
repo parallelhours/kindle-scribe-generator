@@ -46,6 +46,8 @@ def test_generate_each_variant(tmp_path, sections):
     r = PdfReader(str(out))
     assert "Edición" in r.pages[0].extract_text()
     assert len(r.outline) > 0
+    assert len(r.pages) == len(_doc(sections, verb_pages="1", phrase_pages="1",
+                                    vocab_pages="1").log)
 
 
 def _outline_titles(path):
@@ -127,7 +129,7 @@ def test_no_dangling_links(tmp_path, sections):
             if d is None:
                 d = a["/A"]["/D"]
             assert d[0].idnum in page_ids
-    assert n_links > 0 or sections == "verbs"
+    assert n_links > 0
 
 
 def test_fill_page_counts():

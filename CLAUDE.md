@@ -101,8 +101,8 @@ Key files: `templates/spanish/template.py` (METADATA, options, `generate()`), `s
 1. The user writes in the generated notebook. When enough handwritten entries accumulate, they send the exported notebook PDF to Claude.
 2. Claude transcribes the fill-in pages:
    - phrases go to `content/phrases.py` (order does not matter; sorted alphabetically at render time; each needs es/en/use + exactly 2 examples)
-   - verbs go to `content/additions.py` `MY_VERBS` (printed as layout-B tables; shape `{"verb","en","forms":{tense:[5 forms: yo, tú, él, nosotros, ellos]},"examples":[(es,en)]}`)
-   - words go to `MY_WORDS` (list of `{"topic","date","words":[(article, word, en)]}`)
+   - verbs go to `content/additions.py` `MY_VERBS` (printed as layout-B tables; shape `{"verb","en","forms":{tense:[5 forms]},"examples":[(es,en)]}` with form keys exactly `present`, `preterite`, `imperfect`, `future`, `subjunctive` (not `pres_subj`), each list exactly 5 forms: yo, tú, él/ella/Ud., nosotros, ellos/Uds. — NO vosotros — and at most 2 examples; validated at build time, bad shapes raise ValueError)
+   - words go to `MY_WORDS` (list of `{"topic","date","words":[(article, word, en)]}`, 3-tuples; validated at build time)
 3. Run the content export and a proofreading pass after adding content, run tests, then regenerate a new edition. Handwriting on the old edition does not carry over.
 
 ### `scorecard` — Baseball Scorecard (6 pages)

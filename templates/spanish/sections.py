@@ -47,34 +47,41 @@ def _topic_entries(topics, level=1):
     return [(t["title"], f"t-{t['id']}", level) for t in topics]
 
 
-def section_entries(section):
+def section_entries(section, opts):
+    """Contents rows for a section; fill-in rows only when those pages will be drawn
+    (the same conditions the builders use, so both render passes lay out identically)."""
     if section == "verbs":
         return (_topic_entries(verb_topics.VERB_TOPICS)
-                + [("My Verbs", "verbs-my", 1)])
+                + ([("My Verbs", "verbs-my", 1)]
+                   if additions.MY_VERBS or opts.verb_pages else []))
     if section == "phrases":
-        return ([(PART_A, "phrases-index", 1), ("My Phrases", "phrases-my", 2),
-                 (PART_B, "phrases-part-b", 1)]
+        return ([(PART_A, "phrases-index", 1)]
+                + ([("My Phrases", "phrases-my", 2)] if opts.phrase_pages else [])
+                + [(PART_B, "phrases-part-b", 1)]
                 + _topic_entries(grammar.TOPICS, 2)
                 + [(PART_C, "phrases-part-c", 1)]
                 + _topic_entries(confused.TOPICS, 2)
                 + [(x["text"], x["dest"], 2) for x in confused.CONFUSED_XREFS])
     if section == "vocab":
         return (_topic_entries(vocab.TOPICS)
-                + [("Word pages", "vocab-words", 1)])
+                + ([("Word pages", "vocab-words", 1)]
+                   if additions.MY_WORDS or opts.vocab_pages else []))
     raise ValueError(f"unknown section {section!r}")
 
 
-def _begin(doc, section):
+def _begin(doc, section, opts):
     title = SECTION_NAMES[section]
     doc.outline(title, f"{section}-contents", 0)
-    draw_contents_page(doc, section, f"{title} contents", section_entries(section))
+    draw_contents_page(doc, section, f"{title} contents", section_entries(section, opts))
 
 
 # --------------------------------------------------------------------------
 # Sections
 # --------------------------------------------------------------------------
 def build_verbs(doc, opts):
-    _begin(doc, "verbs")
+    _begin(doc, "verbs", opts)
+    for v in additions.MY_VERBS:
+        additions.validate_verb(v)
     for t in verb_topics.VERB_TOPICS:
         render_topic(doc, "verbs", t)
     printed = additions.MY_VERBS
@@ -93,7 +100,7 @@ PART_C = "C. Commonly confused"
 
 
 def build_phrases(doc, opts):
-    _begin(doc, "phrases")
+    _begin(doc, "phrases", opts)
     # Part A: index, printed entries (dests p-..., no outline entry each), blank pages
     doc.outline(PART_A, "phrases-index", 1)
     draw_phrase_index(doc, phrases.PHRASES)
@@ -113,7 +120,9 @@ def build_phrases(doc, opts):
 
 
 def build_vocab(doc, opts):
-    _begin(doc, "vocab")
+    _begin(doc, "vocab", opts)
+    for g in additions.MY_WORDS:
+        additions.validate_word_group(g)
     for t in vocab.TOPICS:
         render_topic(doc, "vocab", t)
     if additions.MY_WORDS or opts.vocab_pages:

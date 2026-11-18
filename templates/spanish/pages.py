@@ -164,8 +164,8 @@ def _verb_block(c, x, top, w, entry):
     _rule(c, vx, mid - 6, y - 1.5, 0.3, 0.5)
     _rule(c, mx, right, y - 1.5, 0.3, 0.5)
     if entry:
-        _label(c, vx + 2, y, entry["verb"], FONT_BOLD, BODY_SIZE)
-        _label(c, mx + 2, y, entry.get("en", ""), FONT_EN, BODY_SIZE, EN_GRAY)
+        _fit_cell(c, vx + 2, y, mid - 6, entry["verb"], FONT_BOLD, BODY_SIZE)
+        _fit_cell(c, mx + 2, y, right, entry.get("en", ""), FONT_EN, BODY_SIZE, EN_GRAY)
     # grid
     gt = top - _VERB_HEAD_H
     pw = w * 0.2
@@ -196,10 +196,8 @@ def _verb_block(c, x, top, w, entry):
             for j, t in enumerate(_TENSES5):
                 forms = entry.get("forms", {}).get(t)
                 if forms and i < len(forms) and forms[i]:
-                    size = CELL_SIZE
-                    while size > 6.0 and stringWidth(forms[i], FONT_NORMAL, size) > cw - 3:
-                        size = round(size - 0.1, 1)
-                    _label(c, x + pw + j * cw + 2, ry, forms[i], FONT_NORMAL, size)
+                    fx = x + pw + j * cw + 2
+                    _fit_cell(c, fx, ry, fx + cw - 3, forms[i], FONT_NORMAL, CELL_SIZE)
     # examples
     ey = gt - gh - 4
     exs = list(entry.get("examples", [])) if entry else []
@@ -209,8 +207,10 @@ def _verb_block(c, x, top, w, entry):
         _rule(c, x + 10, right, ly - _EX_PITCH)
         _label(c, x + 2, ly - _EX_PITCH + 3, "=", FONT_EN, BODY_SIZE, EN_GRAY)
         if k < len(exs):
-            _label(c, x + 2, ly + 2.5, exs[k][0], FONT_NORMAL, BODY_SIZE)
-            _label(c, x + 13, ly - _EX_PITCH + 2.5, exs[k][1], FONT_EN, BODY_SIZE, EN_GRAY)
+            _fit_cell(c, x + 2, ly + 2.5, right, exs[k][0], FONT_NORMAL, BODY_SIZE,
+                      strict=True)
+            _fit_cell(c, x + 13, ly - _EX_PITCH + 2.5, right, exs[k][1], FONT_EN, BODY_SIZE,
+                      EN_GRAY, strict=True)
 
 
 # --------------------------------------------------------------------------
@@ -346,6 +346,7 @@ def _initial(s):
 INDEX_ROW_H = 13.0
 _INDEX_LETTER_W = 12.0
 _INDEX_PHRASE_W = 92.0
+_INDEX_PHRASE_MAX = 250.0  # widest phrase (at the minimum size) the index row can hold
 _INDEX_TITLE = "A. Connector phrases A–Z"
 
 
@@ -394,12 +395,17 @@ def _index_row(doc, f, top, p, dest, letter, new_group):
     # long (e.g. user-added) phrases shrink to the minimum size, then push the meaning
     # column right; the meaning shrinks and, as a last resort, is cut with an ellipsis
     es_size = _shrink(p["es"], FONT_BOLD, _INDEX_PHRASE_W - 4, BODY_SIZE, MIN_CELL)
+    if stringWidth(p["es"], FONT_BOLD, es_size) > _INDEX_PHRASE_MAX:
+        raise LayoutOverflow(
+            f"phrase {p['es'][:60]!r} is too long for the index row "
+            f"({stringWidth(p['es'], FONT_BOLD, es_size):.0f}pt at {es_size}pt, "
+            f"max {_INDEX_PHRASE_MAX:.0f}pt); shorten it")
     _label(c, px, base, p["es"], FONT_BOLD, es_size)
     mx = max(px + _INDEX_PHRASE_W, px + stringWidth(p["es"], FONT_BOLD, es_size) + 6)
     avail = right - _PNUM_W - mx - 2
     en = p["en"]
     en_size = _shrink(en, FONT_EN, avail, BODY_SIZE, MIN_CELL)
-    while en and stringWidth(en, FONT_EN, en_size) > avail:
+    while len(en) > 1 and stringWidth(en, FONT_EN, en_size) > avail:
         en = en[:-2].rstrip() + "…"
     _label(c, mx, base, en, FONT_EN, en_size, EN_GRAY)
     # full-row-height tap target; pass 1 reserves the page-number space as well
@@ -476,9 +482,10 @@ def word_cell_columns(doc_width, x0):
 _WORD_LINE2 = 6.5  # baseline offset of a second text line in a word row
 
 
-def _fit_cell(c, x, base, right, text, font, start, gray=0.0):
+def _fit_cell(c, x, base, right, text, font, start, gray=0.0, strict=False):
     """Draw text in [x, right]: shrink to MIN_CELL, then wrap onto two lines, then
-    truncate with an ellipsis as a last resort (never overruns the cell)."""
+    truncate with an ellipsis as a last resort (never overruns the cell). With
+    strict=True, text that would need truncating raises LayoutOverflow instead."""
     width = right - x
     size = _shrink(text, font, width, start, MIN_CELL)
     if stringWidth(text, font, size) <= width + 1e-6:
@@ -494,6 +501,9 @@ def _fit_cell(c, x, base, right, text, font, start, gray=0.0):
         first = trial
     else:
         rest = ""
+    if strict and (stringWidth(first, font, size) > width
+                   or (rest and stringWidth(rest, font, size) > width)):
+        raise LayoutOverflow(f"{text[:60]!r} does not fit in {width:.0f}pt on two lines")
     if stringWidth(first, font, size) > width:  # a single unbreakable word
         while first and stringWidth(first + "\u2026", font, size) > width:
             first = first[:-1]
