@@ -64,6 +64,37 @@ On your Kindle Scribe, find the document in your library and open it. Tap the pe
 
 ---
 
+## Spanish notebook (Cuaderno de español)
+
+The `spanish` template is a long-lived reference notebook rather than a one-off sheet, so it has a slightly different routine.
+
+### Generate and send an edition
+
+```bash
+python generate.py spanish --params sections:all --cover title:"Mi cuaderno de español" \
+  -o output/2026-11-18-cuaderno-de-espanol.pdf
+```
+
+Put the date in the filename: each edition is a separate document on the Scribe, and the date tells them apart. The same date is printed on the cover and in every page footer ("Edición 2026-11-18"). Send it with Send to Kindle as above.
+
+### Getting around on the device
+
+- Page 2 is the **contents**. Tap a row to jump to that section or topic; each row also prints its page number.
+- Every page has a **contents** link in its header to get back.
+- The Phrases section has an A–Z **index** with tappable rows.
+- The PDF carries bookmarks, which appear in the Kindle's table-of-contents menu (confirmed on a Scribe).
+- Tappable links (contents, index, header) work on the Scribe. Every contents row also prints its page number as a fallback for *Go to page*.
+
+### Sending your notes back
+
+When your fill-in pages (My Verbs, phrases, word lists) are getting full:
+
+1. Open the notebook on the Scribe, tap **Share** (or the menu, then *Share*/*Export*), and email it to yourself. The exported PDF includes your handwriting.
+2. Save the PDF somewhere on your computer and give the path to Claude Code in this repo, asking it to make a new edition.
+3. Claude transcribes your entries into the content files, proofreads them, and you generate the next dated edition. Keep the old one in a collection as an archive; handwriting doesn't carry over to the new PDF.
+
+---
+
 ## Document management
 
 Kindle Scribe's on-device organisation is basic: you can create collections (folders) and pin favourites, but there is no bulk management or renaming. A few habits that help:

@@ -43,6 +43,7 @@ Generated PDFs land in `output/` by default (git-ignored).
 |-----|------|-------|-------------|
 | `crossword` | Cruza y Aprende | 1+2N | Spanish vocabulary crossword puzzles — cover page plus puzzle/solution pairs; difficulty controls grid size, vocabulary depth, and word count |
 | `sudoku` | Sudoku | 1+2N | Sudoku puzzle notebook — cover page plus puzzle/solution pairs at four difficulty levels (easy/medium/hard/expert) |
+| `spanish` | Cuaderno de español | ~180 (varies) | Spanish reference notebook — verb charts and tense topics, phrases and grammar, vocab; every topic has a practice page, plus blank fill-in pages |
 | `scorecard` | Baseball Scorecard | 6 (+1) | Full baseball scoring sheet — game header, summary, and four lineup pages; optional cover page |
 | `weekly-activities` | Weekly Planner | 7+ | Daily planner — one page per day with task sections, hourly schedule, and brain dump; configurable start day and page count |
 | `worklog` | Colorado MyUI Worklog | 3 | Colorado UI work-search activity log — 5 entries per page |
@@ -50,7 +51,7 @@ Generated PDFs land in `output/` by default (git-ignored).
 
 ### Cruza y Aprende — Spanish Crossword (`crossword`)
 
-A Spanish vocabulary crossword puzzle notebook. Each notebook has a cover page followed by N puzzle pairs (puzzle page + solution page). Vocabulary is drawn from a curated 726-entry word list built from LinkedIn Learning Spanish Parts 1–4.
+A Spanish vocabulary crossword puzzle notebook. Each notebook has a cover page followed by N puzzle pairs (puzzle page + solution page). Vocabulary is drawn from a curated word list (about 1,350 entries: words, phrases, and verbs) built from LinkedIn Learning Spanish Parts 1–4.
 
 **Difficulty** controls grid size, word count, and vocabulary depth simultaneously:
 
@@ -127,6 +128,62 @@ python generate.py sudoku --params difficulty:expert count:10 -o output/expert-s
 ```
 
 Parameters are prompted interactively if omitted.
+
+### Cuaderno de español — Spanish reference notebook (`spanish`)
+
+A Spanish reference notebook (Latin American Spanish) that you write in on the Scribe. It replaces a messy all-in-one handwritten notebook: printed reference pages to study from, a practice page after every topic, and blank fill-in pages for your own verbs, phrases, and words. Page count depends on the options (the full notebook is about 180 pages).
+
+| Section | What's printed | Fill-in pages |
+|---------|----------------|---------------|
+| **Verbs** | "Which tense do I use?" chart, master irregular table, tense overview, 21 topics (present → commands, plus reflexives, *gustar*, helper verbs like *deber*, weather) | **My Verbs**: one verb across several tenses, 2 per page |
+| **Phrases & Grammar** | A–Z index of ~57 connector phrases with examples, grammar rules (*hace*, comparatives, negatives…), commonly confused pairs (ser/estar, por/para…) | blank phrase entries |
+| **Vocab** | gender rules, pronouns | word lists (article · word · translation) |
+
+#### Generate it
+
+```bash
+# Whole notebook with a cover (recommended)
+python generate.py spanish --params sections:all --cover title:"Mi cuaderno de español" \
+  -o output/2026-11-18-cuaderno-de-espanol.pdf
+
+# One section only, e.g. verbs with 15 My Verbs pages
+python generate.py spanish --params sections:verbs verb_pages:15 -o output/cuaderno-verbos.pdf
+
+# Two sections
+python generate.py spanish --params sections:phrases,vocab
+```
+
+| Option (`--params`) | Default | Meaning |
+|---------------------|---------|---------|
+| `sections` | `all` | `all`, or a comma list of `verbs`, `phrases`, `vocab` |
+| `verb_pages` | `10` | My Verbs fill-in pages (2 verbs each) |
+| `phrase_pages` | `8` | blank phrase-entry pages |
+| `vocab_pages` | `20` | word-list pages |
+
+`--cover title:... subtitle:...` sets the cover text and embeds a library thumbnail. The cover page is always drawn and carries the edition date. Any option you leave out is prompted for interactively. To run without prompts (scripts, CI), redirect stdin: `... < /dev/null`.
+
+Then send the PDF to your Scribe as described in [SCRIBE.md](SCRIBE.md#spanish-notebook-cuaderno-de-español).
+
+#### Navigate it
+
+- **Contents page** (page 2) and the **phrase index** print page numbers and are tappable links.
+- Every page header has a **contents** link back to page 2.
+- The PDF has **bookmarks** (sections → topics), shown in the Kindle Scribe's table-of-contents menu (confirmed on device).
+
+#### New editions (adding your own entries)
+
+Handwriting lives on top of a specific PDF, so the notebook grows by editions:
+
+1. Fill in My Verbs, phrase, and word pages on the Scribe.
+2. Export the annotated notebook as a PDF (see [SCRIBE.md](SCRIBE.md#sending-your-notes-back)) and give it to Claude Code in this repo.
+3. Claude transcribes your entries into `templates/spanish/content/` (phrases into `phrases.py`, verbs and words into `additions.py`), proofreads them, and runs the tests.
+4. Generate a new edition with a new dated filename. Your entries are now printed; the blank pages start fresh.
+
+To proofread all printed content as one Markdown file:
+
+```bash
+python -m templates.spanish.export > output/spanish-content.md
+```
 
 ### Baseball Scorecard (`scorecard`)
 
@@ -292,10 +349,19 @@ Template-specific helpers (column widths, custom drawing functions, etc.) belong
 │   │   ├── template.py       # METADATA + generate() + draw_cover()
 │   │   ├── generator.py      # Word selection + backtracking grid placer
 │   │   ├── clues.py          # Difficulty-gated candidate pool + clue strings
-│   │   ├── conjugator.py     # Regular rules + irregular verb tables (47 verbs)
+│   │   ├── conjugator.py     # Regular rules + irregular verb tables (55 verbs)
 │   │   ├── renderer.py       # ReportLab: cover, puzzle page, solution page
 │   │   ├── prepare_vocab.py  # Build/validate vocabulary.json from source
-│   │   └── vocabulary.json   # 726-entry curated word list (committed)
+│   │   └── vocabulary.json   # ~1,350-entry curated word list (committed)
+│   ├── spanish/              # Cuaderno de español reference notebook
+│   │   ├── template.py       # METADATA + options + generate() + draw_cover()
+│   │   ├── sections.py       # Verbs / Phrases & Grammar / Vocab builders
+│   │   ├── pages.py          # Practice, contents, index, fill-in pages
+│   │   ├── layout.py         # Block measuring/drawing (tables, charts, examples)
+│   │   ├── doc.py            # Page records, links, bookmarks (two-pass)
+│   │   ├── export.py         # Markdown export of all printed content
+│   │   └── content/          # The Spanish itself: verbs, phrases, grammar, vocab, additions
+│   ├── sudoku/               # Sudoku puzzle notebook
 │   ├── scorecard/            # Baseball scorecard template
 │   │   ├── template.py       # METADATA + generate() + page drawing
 │   │   └── utils.py          # Column/row constants and draw helpers
@@ -308,8 +374,12 @@ Template-specific helpers (column widths, custom drawing functions, etc.) belong
 ├── output/                   # Generated PDFs (git-ignored)
 └── tests/
     ├── conftest.py           # Shared pytest fixtures
-    ├── test_pages.py         # Page-render and dimension tests
-    └── test_utils.py         # Unit tests for drawing helpers
+    ├── test_pages.py         # Scorecard page-render and dimension tests
+    ├── test_utils.py         # Unit tests for drawing helpers
+    ├── test_crossword_*.py   # Crossword vocab, conjugator, clues, generator, renderer
+    ├── test_spanish_*.py     # Spanish notebook layout, doc, content, template, editions
+    ├── test_sudoku.py
+    └── test_thumbnail.py     # Cover thumbnail embedding
 ```
 
 ## Running tests

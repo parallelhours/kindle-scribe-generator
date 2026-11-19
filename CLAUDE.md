@@ -75,7 +75,35 @@ Key files:
 - `templates/crossword/generator.py` — backtracking crossword placer; `_MAX_CALLS = 200_000` budget
 - `templates/crossword/clues.py` — builds candidate pool from vocabulary filtered by difficulty tenses
 - `templates/crossword/renderer.py` — cover, puzzle page (grid + clues), solution page; cell size is computed dynamically from grid size
-- `templates/crossword/vocabulary.json` — curated 726-entry word list
+- `templates/crossword/vocabulary.json` — curated word list (~1,350 entries: words, phrases, verbs)
+
+### `spanish` — Cuaderno de español, Spanish reference notebook (dynamic page count)
+
+Latin American Spanish (vosotros appears only in reference tables). Every drawn string must be cp1252-encodable. Every topic is followed by a practice page.
+
+| Section | Content |
+|---------|---------|
+| verbs | which-tense chart, master irregulars, tense overview, 21 tense/verb topics, My Verbs fill-in pages |
+| phrases | A–Z index + ~57 connector phrases, blank phrase pages, Part B grammar rules, Part C commonly confused |
+| vocab | gender rules, pronouns, word-list pages |
+
+Options via `--params`: `sections` (`all` or comma list of verbs, phrases, vocab), `verb_pages` (10), `phrase_pages` (8), `vocab_pages` (20). Cover via `--cover title:... subtitle:...`; the cover always carries an edition date; the thumbnail is embedded only when `--cover` is given.
+
+```bash
+python generate.py spanish --params sections:all --cover title:"Mi cuaderno de español" -o output/cuaderno-de-espanol.pdf
+python -m templates.spanish.export > output/spanish-content.md   # content export for proofreading
+```
+
+Key files: `templates/spanish/template.py` (METADATA, options, `generate()`), `sections.py` (section builders), `export.py` (Markdown export), `content/*.py` (phrases, grammar, confused, verb topics, vocab), `content/additions.py` (`MY_VERBS`, `MY_WORDS`). Tests: `tests/test_spanish_*.py`.
+
+#### Edition workflow
+
+1. The user writes in the generated notebook. When enough handwritten entries accumulate, they send the exported notebook PDF to Claude.
+2. Claude transcribes the fill-in pages:
+   - phrases go to `content/phrases.py` (order does not matter; sorted alphabetically at render time; each needs es/en/use + exactly 2 examples)
+   - verbs go to `content/additions.py` `MY_VERBS` (printed as layout-B tables; shape `{"verb","en","forms":{tense:[5 forms]},"examples":[(es,en)]}` with form keys exactly `present`, `preterite`, `imperfect`, `future`, `subjunctive` (not `pres_subj`), each list exactly 5 forms: yo, tú, él/ella/Ud., nosotros, ellos/Uds. — NO vosotros — and at most 2 examples; validated at build time, bad shapes raise ValueError)
+   - words go to `MY_WORDS` (list of `{"topic","date","words":[(article, word, en)]}`, 3-tuples; validated at build time)
+3. Run the content export and a proofreading pass after adding content, run tests, then regenerate a new edition. Handwriting on the old edition does not carry over.
 
 ### `scorecard` — Baseball Scorecard (6 pages)
 
@@ -111,6 +139,7 @@ Total ≈ 449 pt, leaving ~0.3 pt slack within the page height.
 python generate.py                  # interactive menu
 python generate.py scorecard        # direct generation
 python generate.py scorecard -o path/to/file.pdf
+python generate.py spanish --params sections:verbs --cover title:"Mi cuaderno"
 python generate.py --list
 ```
 
@@ -124,3 +153,4 @@ pytest tests/
 
 - `tests/test_pages.py` — render and page-count checks for each scorecard page
 - `tests/test_utils.py` — unit tests for `draw_diamond`, column positions, dimension constants
+- `tests/test_crossword_*.py`, `tests/test_spanish_*.py`, `tests/test_sudoku.py`, `tests/test_thumbnail.py` — per-template suites
