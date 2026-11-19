@@ -168,7 +168,7 @@ Then send the PDF to your Scribe as described in [SCRIBE.md](SCRIBE.md#spanish-n
 
 - **Contents page** (page 2) and the **phrase index** print page numbers and are tappable links.
 - Every page header has a **contents** link back to page 2.
-- The PDF has **bookmarks** (sections → topics), shown in the Kindle's table-of-contents menu where the firmware supports it.
+- The PDF has **bookmarks** (sections → topics), shown in the Kindle Scribe's table-of-contents menu (confirmed on device).
 
 #### New editions (adding your own entries)
 
