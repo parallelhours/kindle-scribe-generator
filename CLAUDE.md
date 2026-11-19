@@ -62,7 +62,7 @@ Template-specific helpers (column widths, custom drawing functions, domain const
 
 ### `crossword` — Cruza y Aprende Spanish Crossword (1 + 2N pages)
 
-Difficulty drives grid size, word count, and vocabulary depth:
+Difficulty drives grid size, word count, vocabulary depth, and the clue mix (`_DIFFICULTY_CONFIG["mix"]`: vocab / verb / connector shares):
 
 | Difficulty | Grid | Words | Tenses |
 |------------|------|-------|--------|
@@ -70,12 +70,21 @@ Difficulty drives grid size, word count, and vocabulary depth:
 | medium | 11×11 | 10 | + preterite + imperfect |
 | hard | 15×15 | 15 | + future + conditional + subjunctive + imperative |
 
+Latin American Spanish, same as the notebook: vosotros forms are never answers. Answers keep accents and are lower-cased with edge punctuation stripped (`clues.normalize_answer`).
+
 Key files:
-- `templates/crossword/template.py` — `METADATA` + `generate()` + `draw_cover()`; `_DIFFICULTY_CONFIG` maps difficulty → grid size/target/label
-- `templates/crossword/generator.py` — backtracking crossword placer; `_MAX_CALLS = 200_000` budget
-- `templates/crossword/clues.py` — builds candidate pool from vocabulary filtered by difficulty tenses
-- `templates/crossword/renderer.py` — cover, puzzle page (grid + clues), solution page; cell size is computed dynamically from grid size
-- `templates/crossword/vocabulary.json` — curated word list (~1,350 entries: words, phrases, verbs)
+- `templates/crossword/template.py`: `METADATA`, `generate()`, `draw_cover()`; `_DIFFICULTY_CONFIG` maps difficulty to grid size, target, label, and mix
+- `templates/crossword/generator.py`: backtracking crossword placer with a `_MAX_CALLS = 200_000` budget; `_pick_working` balances kinds and allows one candidate per source (one form per verb)
+- `templates/crossword/clues.py`: builds the candidate pool (`kind` = vocab | verb | connector); connectors come from `templates/spanish/content/phrases.py` with the answer blanked out of a notebook example sentence
+- `templates/crossword/frames.py`: verb clue sentences, `<marker> <subject> ___ (<infinitive>) <complement>.`. It contains:
+  - `TENSE_FRAME` markers
+  - `COMPLEMENT` per verb (every verb needs one, or an entry in `THIRD_PERSON`/`SPECIAL`, or a test fails)
+  - `THIRD_PERSON` (gustar-type, weather, thing subjects)
+  - `SPECIAL` (ser, haber perfect tenses, parecer, morir…)
+  - `SKIP_TENSES` and `NO_COMMAND`
+- `templates/crossword/conjugator.py`: regular endings plus rules for stem changes (`STEM_CHANGES`: ie/ue/i, with the -ir weak change) and spelling changes (-car/-gar/-zar, -ger/-gir, -guir, -uir→y, -eer/-aer→y, vowel+cer/cir→zc); `IRREGULAR_VERBS` tables override per tense. A test checks that the rules reproduce every hand table.
+- `templates/crossword/renderer.py`: cover, puzzle page, solution page. Clues wrap, and the grid shrinks (down to `MIN_CELL`) before the clue font does (`puzzle_layout`).
+- `templates/crossword/vocabulary.json`: curated word list (~1,350 entries). Verb forms are pre-built, so after any conjugator change run `python templates/crossword/prepare_vocab.py --reconjugate` (a test fails if they go stale). Hand fixes to source rows use `"source": "curated"`; deletions go in `prepare_vocab.REMOVED_IDS`.
 
 ### `spanish` — Cuaderno de español, Spanish reference notebook (dynamic page count)
 
@@ -104,6 +113,7 @@ Key files: `templates/spanish/template.py` (METADATA, options, `generate()`), `s
    - verbs go to `content/additions.py` `MY_VERBS` (printed as layout-B tables; shape `{"verb","en","forms":{tense:[5 forms]},"examples":[(es,en)]}` with form keys exactly `present`, `preterite`, `imperfect`, `future`, `subjunctive` (not `pres_subj`), each list exactly 5 forms: yo, tú, él/ella/Ud., nosotros, ellos/Uds. — NO vosotros — and at most 2 examples; validated at build time, bad shapes raise ValueError)
    - words go to `MY_WORDS` (list of `{"topic","date","words":[(article, word, en)]}`, 3-tuples; validated at build time)
 3. Run the content export and a proofreading pass after adding content, run tests, then regenerate a new edition. Handwriting on the old edition does not carry over.
+4. The crossword picks up the notebook automatically: new phrases in `phrases.py` become crossword connector clues. For a verb from `MY_VERBS` to appear in crosswords too, add it to `templates/crossword/vocabulary.json` (source `cuaderno`), run `prepare_vocab.py --reconjugate`, and add its complement in `frames.py`.
 
 ### `scorecard` — Baseball Scorecard (6 pages)
 

@@ -41,7 +41,7 @@ Generated PDFs land in `output/` by default (git-ignored).
 
 | Key | Name | Pages | Description |
 |-----|------|-------|-------------|
-| `crossword` | Cruza y Aprende | 1+2N | Spanish vocabulary crossword puzzles — cover page plus puzzle/solution pairs; difficulty controls grid size, vocabulary depth, and word count |
+| `crossword` | Cruza y Aprende | 1+2N | Spanish crossword puzzles: cover page plus puzzle/solution pairs; textbook-style sentence clues; drills the Cuaderno's verbs and connectors |
 | `sudoku` | Sudoku | 1+2N | Sudoku puzzle notebook — cover page plus puzzle/solution pairs at four difficulty levels (easy/medium/hard/expert) |
 | `spanish` | Cuaderno de español | ~180 (varies) | Spanish reference notebook — verb charts and tense topics, phrases and grammar, vocab; every topic has a practice page, plus blank fill-in pages |
 | `scorecard` | Baseball Scorecard | 6 (+1) | Full baseball scoring sheet — game header, summary, and four lineup pages; optional cover page |
@@ -51,15 +51,26 @@ Generated PDFs land in `output/` by default (git-ignored).
 
 ### Cruza y Aprende — Spanish Crossword (`crossword`)
 
-A Spanish vocabulary crossword puzzle notebook. Each notebook has a cover page followed by N puzzle pairs (puzzle page + solution page). Vocabulary is drawn from a curated word list (about 1,350 entries: words, phrases, and verbs) built from LinkedIn Learning Spanish Parts 1–4.
+A Spanish vocabulary crossword puzzle notebook. Each notebook has a cover page followed by N puzzle pairs (puzzle page + solution page). Vocabulary comes from a curated word list (about 1,350 entries: words, phrases, and verbs) built from LinkedIn Learning Spanish Parts 1–4. It also pulls in the verbs and connector phrases from the Cuaderno de español notebook, so the puzzles drill what the notebook teaches.
 
-**Difficulty** controls grid size, word count, and vocabulary depth simultaneously:
+**Difficulty** controls grid size, word count, vocabulary depth, and the mix of clue types:
 
-| Difficulty | Grid | Words | Vocabulary |
-|------------|------|-------|------------|
-| Easy | 9×9 | 8 | Words, phrases, infinitives, present tense |
-| Medium | 11×11 | 10 | Easy + preterite + imperfect |
-| Hard | 15×15 | 15 | Medium + future + conditional + subjunctive + imperative |
+| Difficulty | Grid | Words | Verb tenses | Mix (vocab / verbs / connectors) |
+|------------|------|-------|-------------|----------------------------------|
+| Easy | 9×9 | 8 | present | 55% / 30% / 15% |
+| Medium | 11×11 | 10 | + preterite, imperfect | 40% / 45% / 15% |
+| Hard | 15×15 | 15 | + future, conditional, subjunctive, commands | 30% / 55% / 15% |
+
+**Clue style.** Clues follow standard textbook drills, in Latin American Spanish (no vosotros):
+
+| Kind | Example |
+|------|---------|
+| Verb form | `Ayer yo ___ (comprar) pan.` (the time marker cues the tense: *Ayer* for preterite, *Antes siempre* for imperfect, *Ojalá que* for subjunctive, and so on) |
+| Command | `¡___ (comer) fruta, señor! (usted)` |
+| Connector (from the notebook) | `El hotel era caro. Sin ___, valió la pena. (however)` |
+| Vocabulary | `la ___: pear` · `Hace ___. (It’s windy.)` |
+
+A puzzle never uses two forms of the same verb. Answers keep their accents (*hablé*, not *hable*), because the accent is part of the conjugation.
 
 ```bash
 # Default: 3 easy puzzles (9×9, 8 words each)
@@ -76,7 +87,7 @@ Parameters are prompted interactively if omitted.
 
 #### Updating the vocabulary list
 
-The vocabulary is stored in `templates/crossword/vocabulary.json` — a flat list of words, phrases, and verbs committed to the repo. You can extend it in three ways:
+The vocabulary is stored in `templates/crossword/vocabulary.json`, a flat list of words, phrases, and verbs committed to the repo. Verb clue sentences live in `templates/crossword/frames.py`. You can extend the list in three ways:
 
 **By hand:** Add entries directly to `vocabulary.json` following the schema. Set `"source": "added-by-user"`. Minimum fields:
 
@@ -85,9 +96,15 @@ The vocabulary is stored in `templates/crossword/vocabulary.json` — a flat lis
   "tags": [], "source": "added-by-user" }
 ```
 
-Verb entries require a `"conjugations"` object with all 7 tenses (`present`, `preterite`, `imperfect`, `future`, `conditional`, `subjunctive`, `imperative`), each mapping the 6 subjects (`yo`, `tú`, `él`, `nosotros`, `vosotros`, `ellos`) plus `usted`/`ustedes` for imperative.
+For a new verb, add an entry with `"type": "verb"` and an empty `"conjugations": {}`, run `--reconjugate` (below), and give it a sentence complement in `frames.py` `COMPLEMENT` (for example `"comprar": "pan"`). The tests fail until it has one.
 
-**From an index file:** If you have an `index.json` source file (same format as the LinkedIn Learning export), re-derive `vocabulary.json` with:
+**After fixing the conjugator:** `vocabulary.json` stores pre-built verb forms. Rebuild them from `conjugator.py` with:
+
+```bash
+python templates/crossword/prepare_vocab.py --reconjugate
+```
+
+**From an index file:** If you have an `index.json` source file (same format as the LinkedIn Learning export), re-derive `vocabulary.json` with the command below. Entries with source `added-by-user`, `curated` (hand-corrected source rows), or `cuaderno` (notebook verbs) are preserved, and the rows in `REMOVED_IDS` stay out.
 
 ```bash
 python templates/crossword/prepare_vocab.py \
@@ -101,7 +118,7 @@ python templates/crossword/prepare_vocab.py \
 python templates/crossword/prepare_vocab.py --validate
 ```
 
-This checks schema validity, flags duplicate entries, and reports entries shorter than 3 characters (which are skipped during puzzle generation).
+This flags duplicate entries (same answer and type), entries shorter than 3 characters (verb infinitives are exempt, since their forms are used), and entries that aren't a single word of letters.
 
 ### Sudoku (`sudoku`)
 
@@ -349,7 +366,8 @@ Template-specific helpers (column widths, custom drawing functions, etc.) belong
 │   │   ├── template.py       # METADATA + generate() + draw_cover()
 │   │   ├── generator.py      # Word selection + backtracking grid placer
 │   │   ├── clues.py          # Difficulty-gated candidate pool + clue strings
-│   │   ├── conjugator.py     # Regular rules + irregular verb tables (55 verbs)
+│   │   ├── frames.py         # Sentence frames for verb clues ("Ayer yo ___ (comprar) pan.")
+│   │   ├── conjugator.py     # Regular + spelling/stem-change rules, irregular tables
 │   │   ├── renderer.py       # ReportLab: cover, puzzle page, solution page
 │   │   ├── prepare_vocab.py  # Build/validate vocabulary.json from source
 │   │   └── vocabulary.json   # ~1,350-entry curated word list (committed)
