@@ -75,7 +75,7 @@ Key files:
 - `templates/crossword/generator.py` — backtracking crossword placer; `_MAX_CALLS = 200_000` budget
 - `templates/crossword/clues.py` — builds candidate pool from vocabulary filtered by difficulty tenses
 - `templates/crossword/renderer.py` — cover, puzzle page (grid + clues), solution page; cell size is computed dynamically from grid size
-- `templates/crossword/vocabulary.json` — curated 726-entry word list
+- `templates/crossword/vocabulary.json` — curated word list (~1,350 entries: words, phrases, verbs)
 
 ### `spanish` — Cuaderno de español, Spanish reference notebook (dynamic page count)
 
@@ -153,3 +153,4 @@ pytest tests/
 
 - `tests/test_pages.py` — render and page-count checks for each scorecard page
 - `tests/test_utils.py` — unit tests for `draw_diamond`, column positions, dimension constants
+- `tests/test_crossword_*.py`, `tests/test_spanish_*.py`, `tests/test_sudoku.py`, `tests/test_thumbnail.py` — per-template suites
