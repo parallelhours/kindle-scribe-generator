@@ -82,8 +82,8 @@ Put the date in the filename: each edition is a separate document on the Scribe,
 - Page 2 is the **contents**. Tap a row to jump to that section or topic; each row also prints its page number.
 - Every page has a **contents** link in its header to get back.
 - The Phrases section has an A–Z **index** with tappable rows.
-- The PDF carries bookmarks, which appear in the Kindle's table-of-contents menu (confirmed on a Scribe).
-- Tappable links (contents, index, header) work on the Scribe. Every contents row also prints its page number as a fallback for *Go to page*.
+- The PDF carries bookmarks, which appear in the Kindle's table-of-contents menu if your firmware shows them for PDFs.
+- Links work most reliably in reading mode. If a tap draws a dot instead of jumping, switch out of the pen, or use the printed page number with *Go to page*.
 
 ### Sending your notes back
 

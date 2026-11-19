@@ -202,11 +202,40 @@ def _backtrack(candidates, grid, placed, target, size, used_entries, counter,
     return False
 
 
+def _pick_working(pool: list, n: int, mix: dict = None) -> list:
+    """Choose up to n candidates for one attempt.
+
+    mix maps a candidate "kind" to its share of the puzzle (e.g. {"vocab": .4,
+    "verb": .45, "connector": .15}); without it the choice is uniform. At most
+    one candidate per source_id, so a puzzle never holds two forms of one verb.
+    """
+    random.shuffle(pool)
+    if mix:
+        by_kind = {}
+        for c in pool:
+            by_kind.setdefault(c.get("kind", "vocab"), []).append(c)
+        chosen = []
+        for kind, share in mix.items():
+            chosen += by_kind.get(kind, [])[:round(n * share)]
+        picked = {id(c) for c in chosen}
+        chosen += [c for c in pool if id(c) not in picked][:max(0, n - len(chosen))]
+        random.shuffle(chosen)
+    else:
+        chosen = pool[:n]
+    seen, out = set(), []
+    for c in chosen:
+        if c["source_id"] not in seen:
+            seen.add(c["source_id"])
+            out.append(c)
+    return out
+
+
 def generate_puzzle(candidate_pool: list, grid_size: int, target_count: int,
-                    max_retries: int = 5) -> PuzzleResult:
+                    max_retries: int = 5, mix: dict = None) -> PuzzleResult:
     """
     Place target_count words from candidate_pool onto a grid_size×grid_size grid.
     Retries up to max_retries times; reduces target by 3 if all retries fail.
+    mix (optional) balances candidate kinds; see _pick_working.
     """
     pool = [c for c in candidate_pool if 3 <= len(c["entry"]) <= grid_size]
     if not pool:
@@ -217,8 +246,8 @@ def generate_puzzle(candidate_pool: list, grid_size: int, target_count: int,
 
     for attempt in range(max_retries + 1):
         current_target = max(3, target_count - (3 if attempt == max_retries else 0))
-        random.shuffle(pool)
-        working = sorted(pool[:current_target * 4], key=lambda c: len(c["entry"]), reverse=True)
+        working = sorted(_pick_working(pool, current_target * 4, mix),
+                         key=lambda c: len(c["entry"]), reverse=True)
 
         grid = _empty_grid(grid_size)
         placed = []

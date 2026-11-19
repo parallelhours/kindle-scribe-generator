@@ -90,3 +90,44 @@ def test_validate_vocab_passes_valid():
               "tags": [], "source": "linkedin-learning"}]
     errors = validate_vocab(vocab)
     assert errors == []
+
+
+def test_validate_vocab_allows_same_answer_different_type():
+    vocab = [
+        {"id": "a", "entry": "verdad", "type": "word", "definition": "right?"},
+        {"id": "b", "entry": "verdad", "type": "phrase", "definition": "truth",
+         "clue_template": "la ___: truth"},
+    ]
+    assert validate_vocab(vocab) == []
+
+
+def test_validate_vocab_allows_short_verb_infinitive():
+    # ir is too short for the grid, but its forms (voy, iba, fui...) are used.
+    vocab = [{"id": "ir", "entry": "ir", "type": "verb", "definition": "to go"}]
+    assert validate_vocab(vocab) == []
+
+
+def test_validate_vocab_catches_unusable_answer():
+    vocab = [{"id": "a", "entry": "o…o", "type": "word", "definition": "either…or"}]
+    errors = validate_vocab(vocab)
+    assert any("letters" in e.lower() for e in errors)
+
+
+def test_committed_vocabulary_is_valid():
+    import json
+    from templates.crossword.template import _VOCAB_PATH
+    with open(_VOCAB_PATH, encoding="utf-8") as f:
+        vocab = json.load(f)
+    assert validate_vocab(vocab) == []
+
+
+def test_committed_vocabulary_matches_conjugator():
+    """vocabulary.json stores pre-built forms; they must not go stale."""
+    import json
+    from templates.crossword.template import _VOCAB_PATH
+    from templates.crossword.conjugator import get_all_conjugations
+    with open(_VOCAB_PATH, encoding="utf-8") as f:
+        vocab = json.load(f)
+    for item in vocab:
+        if item["type"] == "verb":
+            assert item["conjugations"] == get_all_conjugations(item["entry"]), item["entry"]

@@ -19,10 +19,16 @@ from templates.crossword.renderer import (
 _VOCAB_PATH = Path(__file__).parent / "vocabulary.json"
 
 # difficulty drives both grid size and word count
+# mix: share of each puzzle by candidate kind (vocab words/phrases, verb
+# forms, Cuaderno connectors). Verbs grow with difficulty; connectors stay
+# a steady slice so the notebook's phrases keep coming back.
 _DIFFICULTY_CONFIG = {
-    "easy":   {"grid_size": 9,  "target": 8,  "size_label": "Small"},
-    "medium": {"grid_size": 11, "target": 10, "size_label": "Medium"},
-    "hard":   {"grid_size": 15, "target": 15, "size_label": "Large"},
+    "easy":   {"grid_size": 9,  "target": 8,  "size_label": "Small",
+               "mix": {"vocab": 0.55, "verb": 0.30, "connector": 0.15}},
+    "medium": {"grid_size": 11, "target": 10, "size_label": "Medium",
+               "mix": {"vocab": 0.40, "verb": 0.45, "connector": 0.15}},
+    "hard":   {"grid_size": 15, "target": 15, "size_label": "Large",
+               "mix": {"vocab": 0.30, "verb": 0.55, "connector": 0.15}},
 }
 
 METADATA = {
@@ -72,7 +78,8 @@ def generate(output_path: str, **meta):
     c.showPage()
 
     for i in range(count):
-        puzzle = generate_puzzle(candidate_pool, grid_size=grid_size, target_count=target_words)
+        puzzle = generate_puzzle(candidate_pool, grid_size=grid_size, target_count=target_words,
+                                 mix=cfg["mix"])
         draw_puzzle_page(c, puzzle, puzzle_num=i + 1, size_label=size_label, difficulty=difficulty)
         c.showPage()
         draw_solution_page(c, puzzle, puzzle_num=i + 1)

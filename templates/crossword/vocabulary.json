@@ -59,9 +59,9 @@
     "id": "mal",
     "entry": "mal",
     "type": "word",
-    "definition": "not well",
+    "definition": "badly, not well",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "buenos-d-as",
@@ -97,9 +97,9 @@
     "id": "soy--",
     "entry": "Soy….",
     "type": "word",
-    "definition": "I am….",
+    "definition": "I am (ser)",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "mi-nombre-es--",
@@ -1004,22 +1004,6 @@
     "entry": "nosotras",
     "type": "word",
     "definition": "we [feminine]",
-    "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
-    "id": "vosotros",
-    "entry": "vosotros",
-    "type": "word",
-    "definition": "you [masculine plural, informal]",
-    "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
-    "id": "vosotras",
-    "entry": "vosotras",
-    "type": "word",
-    "definition": "you [feminine plural, informal]",
     "tags": [],
     "source": "linkedin-learning"
   },
@@ -2002,7 +1986,7 @@
     "id": "escuchar",
     "entry": "escuchar",
     "type": "verb",
-    "definition": "to hear",
+    "definition": "to listen (to)",
     "conjugations": {
       "present": {
         "yo": "escucho",
@@ -2064,7 +2048,7 @@
     "tags": [
       "ar-verb"
     ],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "viajar",
@@ -2377,7 +2361,7 @@
         "ellos": "llegan"
       },
       "preterite": {
-        "yo": "llegé",
+        "yo": "llegué",
         "tú": "llegaste",
         "él": "llegó",
         "nosotros": "llegamos",
@@ -2409,24 +2393,25 @@
         "ellos": "llegarían"
       },
       "subjunctive": {
-        "yo": "llege",
-        "tú": "lleges",
-        "él": "llege",
-        "nosotros": "llegemos",
-        "vosotros": "llegéis",
-        "ellos": "llegen"
+        "yo": "llegue",
+        "tú": "llegues",
+        "él": "llegue",
+        "nosotros": "lleguemos",
+        "vosotros": "lleguéis",
+        "ellos": "lleguen"
       },
       "imperative": {
         "tú": "llega",
-        "usted": "llege",
-        "nosotros": "llegemos",
+        "usted": "llegue",
+        "nosotros": "lleguemos",
         "vosotros": "llegad",
-        "ustedes": "llegen"
+        "ustedes": "lleguen"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "ar-verb"
+      "ar-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -2649,7 +2634,7 @@
         "ellos": "indican"
       },
       "preterite": {
-        "yo": "indicé",
+        "yo": "indiqué",
         "tú": "indicaste",
         "él": "indicó",
         "nosotros": "indicamos",
@@ -2681,19 +2666,19 @@
         "ellos": "indicarían"
       },
       "subjunctive": {
-        "yo": "indice",
-        "tú": "indices",
-        "él": "indice",
-        "nosotros": "indicemos",
-        "vosotros": "indicéis",
-        "ellos": "indicen"
+        "yo": "indique",
+        "tú": "indiques",
+        "él": "indique",
+        "nosotros": "indiquemos",
+        "vosotros": "indiquéis",
+        "ellos": "indiquen"
       },
       "imperative": {
         "tú": "indica",
-        "usted": "indice",
-        "nosotros": "indicemos",
+        "usted": "indique",
+        "nosotros": "indiquemos",
         "vosotros": "indicad",
-        "ustedes": "indicen"
+        "ustedes": "indiquen"
       }
     },
     "irregular": false,
@@ -2785,7 +2770,7 @@
         "ellos": "dedican"
       },
       "preterite": {
-        "yo": "dedicé",
+        "yo": "dediqué",
         "tú": "dedicaste",
         "él": "dedicó",
         "nosotros": "dedicamos",
@@ -2817,19 +2802,19 @@
         "ellos": "dedicarían"
       },
       "subjunctive": {
-        "yo": "dedice",
-        "tú": "dedices",
-        "él": "dedice",
-        "nosotros": "dedicemos",
-        "vosotros": "dedicéis",
-        "ellos": "dedicen"
+        "yo": "dedique",
+        "tú": "dediques",
+        "él": "dedique",
+        "nosotros": "dediquemos",
+        "vosotros": "dediquéis",
+        "ellos": "dediquen"
       },
       "imperative": {
         "tú": "dedica",
-        "usted": "dedice",
-        "nosotros": "dedicemos",
+        "usted": "dedique",
+        "nosotros": "dediquemos",
         "vosotros": "dedicad",
-        "ustedes": "dedicen"
+        "ustedes": "dediquen"
       }
     },
     "irregular": false,
@@ -3125,7 +3110,7 @@
         "ellos": "buscan"
       },
       "preterite": {
-        "yo": "buscé",
+        "yo": "busqué",
         "tú": "buscaste",
         "él": "buscó",
         "nosotros": "buscamos",
@@ -3157,24 +3142,25 @@
         "ellos": "buscarían"
       },
       "subjunctive": {
-        "yo": "busce",
-        "tú": "busces",
-        "él": "busce",
-        "nosotros": "buscemos",
-        "vosotros": "buscéis",
-        "ellos": "buscen"
+        "yo": "busque",
+        "tú": "busques",
+        "él": "busque",
+        "nosotros": "busquemos",
+        "vosotros": "busquéis",
+        "ellos": "busquen"
       },
       "imperative": {
         "tú": "busca",
-        "usted": "busce",
-        "nosotros": "buscemos",
+        "usted": "busque",
+        "nosotros": "busquemos",
         "vosotros": "buscad",
-        "ustedes": "buscen"
+        "ustedes": "busquen"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "ar-verb"
+      "ar-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -4263,11 +4249,11 @@
       },
       "preterite": {
         "yo": "leí",
-        "tú": "leiste",
-        "él": "leió",
-        "nosotros": "leimos",
-        "vosotros": "leisteis",
-        "ellos": "leieron"
+        "tú": "leíste",
+        "él": "leyó",
+        "nosotros": "leímos",
+        "vosotros": "leísteis",
+        "ellos": "leyeron"
       },
       "imperfect": {
         "yo": "leía",
@@ -4309,9 +4295,10 @@
         "ustedes": "lean"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "er-verb"
+      "er-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -4399,11 +4386,11 @@
       },
       "preterite": {
         "yo": "creí",
-        "tú": "creiste",
-        "él": "creió",
-        "nosotros": "creimos",
-        "vosotros": "creisteis",
-        "ellos": "creieron"
+        "tú": "creíste",
+        "él": "creyó",
+        "nosotros": "creímos",
+        "vosotros": "creísteis",
+        "ellos": "creyeron"
       },
       "imperfect": {
         "yo": "creía",
@@ -4658,10 +4645,70 @@
   {
     "id": "deber",
     "entry": "deber",
-    "type": "word",
-    "definition": "should",
-    "tags": [],
-    "source": "linkedin-learning"
+    "type": "verb",
+    "definition": "should, must; to owe",
+    "tags": [
+      "er-verb"
+    ],
+    "source": "curated",
+    "conjugations": {
+      "present": {
+        "yo": "debo",
+        "tú": "debes",
+        "él": "debe",
+        "nosotros": "debemos",
+        "vosotros": "debéis",
+        "ellos": "deben"
+      },
+      "preterite": {
+        "yo": "debí",
+        "tú": "debiste",
+        "él": "debió",
+        "nosotros": "debimos",
+        "vosotros": "debisteis",
+        "ellos": "debieron"
+      },
+      "imperfect": {
+        "yo": "debía",
+        "tú": "debías",
+        "él": "debía",
+        "nosotros": "debíamos",
+        "vosotros": "debíais",
+        "ellos": "debían"
+      },
+      "future": {
+        "yo": "deberé",
+        "tú": "deberás",
+        "él": "deberá",
+        "nosotros": "deberemos",
+        "vosotros": "deberéis",
+        "ellos": "deberán"
+      },
+      "conditional": {
+        "yo": "debería",
+        "tú": "deberías",
+        "él": "debería",
+        "nosotros": "deberíamos",
+        "vosotros": "deberíais",
+        "ellos": "deberían"
+      },
+      "subjunctive": {
+        "yo": "deba",
+        "tú": "debas",
+        "él": "deba",
+        "nosotros": "debamos",
+        "vosotros": "debáis",
+        "ellos": "deban"
+      },
+      "imperative": {
+        "tú": "debe",
+        "usted": "deba",
+        "nosotros": "debamos",
+        "vosotros": "debed",
+        "ustedes": "deban"
+      }
+    },
+    "irregular": false
   },
   {
     "id": "mi---mis",
@@ -4694,20 +4741,12 @@
     "source": "linkedin-learning"
   },
   {
-    "id": "-no-",
-    "entry": "no",
-    "type": "word",
-    "definition": "Isn’t that so?",
-    "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
     "id": "-verdad-",
     "entry": "verdad",
     "type": "word",
-    "definition": "right?",
+    "definition": "Es fácil, ¿___? (right?)",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "los-parientes",
@@ -5355,29 +5394,11 @@
     "id": "nuestro-s----nuestra-s-",
     "entry": "nuestras",
     "type": "phrase",
-    "full_phrase": "nuestro(s) / nuestra(s)",
-    "clue_template": "nuestro(s) / nuestra(s): our",
+    "full_phrase": "nuestras amigas",
+    "clue_template": "___ amigas: our (female) friends",
     "definition": "our",
     "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
-    "id": "vuestro-s----vuestra-s-",
-    "entry": "vuestras",
-    "type": "phrase",
-    "full_phrase": "vuestro(s) / vuestra(s)",
-    "clue_template": "vuestro(s) / vuestra(s): your [informal, plural]",
-    "definition": "your [informal, plural]",
-    "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
-    "id": "-cierto-",
-    "entry": "cierto",
-    "type": "word",
-    "definition": "right?",
-    "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "el-abuelo",
@@ -5587,7 +5608,7 @@
     "id": "pasar",
     "entry": "pasar",
     "type": "verb",
-    "definition": "to happen",
+    "definition": "to pass, to spend (time), to happen",
     "conjugations": {
       "present": {
         "yo": "paso",
@@ -5649,7 +5670,7 @@
     "tags": [
       "ar-verb"
     ],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "-c-mo-",
@@ -6139,9 +6160,9 @@
     "id": "-entiendes-",
     "entry": "Entiendes",
     "type": "word",
-    "definition": "Do you understand? [informal, singular]",
+    "definition": "¿___? (Do you understand? [tú])",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "lunes",
@@ -6579,10 +6600,10 @@
     "entry": "sueño",
     "type": "phrase",
     "full_phrase": "tener sueño",
-    "clue_template": "tener ___: to be tired",
-    "definition": "to be tired",
+    "clue_template": "tener ___: to be sleepy",
+    "definition": "to be sleepy",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "tener-prisa",
@@ -7173,7 +7194,7 @@
         "ellos": "explican"
       },
       "preterite": {
-        "yo": "explicé",
+        "yo": "expliqué",
         "tú": "explicaste",
         "él": "explicó",
         "nosotros": "explicamos",
@@ -7205,35 +7226,25 @@
         "ellos": "explicarían"
       },
       "subjunctive": {
-        "yo": "explice",
-        "tú": "explices",
-        "él": "explice",
-        "nosotros": "explicemos",
-        "vosotros": "explicéis",
-        "ellos": "explicen"
+        "yo": "explique",
+        "tú": "expliques",
+        "él": "explique",
+        "nosotros": "expliquemos",
+        "vosotros": "expliquéis",
+        "ellos": "expliquen"
       },
       "imperative": {
         "tú": "explica",
-        "usted": "explice",
-        "nosotros": "explicemos",
+        "usted": "explique",
+        "nosotros": "expliquemos",
         "vosotros": "explicad",
-        "ustedes": "explicen"
+        "ustedes": "expliquen"
       }
     },
     "irregular": false,
     "tags": [
       "ar-verb"
     ],
-    "source": "linkedin-learning"
-  },
-  {
-    "id": "-c-mo-est--carla-",
-    "entry": "Carla",
-    "type": "phrase",
-    "full_phrase": "¿Cómo está Carla?",
-    "clue_template": "¿Cómo está ___?: How is Carla?",
-    "definition": "How is Carla?",
-    "tags": [],
     "source": "linkedin-learning"
   },
   {
@@ -8779,7 +8790,7 @@
         "ellos": "tocan"
       },
       "preterite": {
-        "yo": "tocé",
+        "yo": "toqué",
         "tú": "tocaste",
         "él": "tocó",
         "nosotros": "tocamos",
@@ -8811,19 +8822,19 @@
         "ellos": "tocarían"
       },
       "subjunctive": {
-        "yo": "toce",
-        "tú": "toces",
-        "él": "toce",
-        "nosotros": "tocemos",
-        "vosotros": "tocéis",
-        "ellos": "tocen"
+        "yo": "toque",
+        "tú": "toques",
+        "él": "toque",
+        "nosotros": "toquemos",
+        "vosotros": "toquéis",
+        "ellos": "toquen"
       },
       "imperative": {
         "tú": "toca",
-        "usted": "toce",
-        "nosotros": "tocemos",
+        "usted": "toque",
+        "nosotros": "toquemos",
         "vosotros": "tocad",
-        "ustedes": "tocen"
+        "ustedes": "toquen"
       }
     },
     "irregular": false,
@@ -11245,10 +11256,70 @@
   {
     "id": "o-r",
     "entry": "oír",
-    "type": "word",
+    "type": "verb",
     "definition": "to hear",
-    "tags": [],
-    "source": "linkedin-learning"
+    "tags": [
+      "irregular"
+    ],
+    "source": "curated",
+    "conjugations": {
+      "present": {
+        "yo": "oigo",
+        "tú": "oyes",
+        "él": "oye",
+        "nosotros": "oímos",
+        "vosotros": "oís",
+        "ellos": "oyen"
+      },
+      "preterite": {
+        "yo": "oí",
+        "tú": "oíste",
+        "él": "oyó",
+        "nosotros": "oímos",
+        "vosotros": "oísteis",
+        "ellos": "oyeron"
+      },
+      "imperfect": {
+        "yo": "oía",
+        "tú": "oías",
+        "él": "oía",
+        "nosotros": "oíamos",
+        "vosotros": "oíais",
+        "ellos": "oían"
+      },
+      "future": {
+        "yo": "oiré",
+        "tú": "oirás",
+        "él": "oirá",
+        "nosotros": "oiremos",
+        "vosotros": "oiréis",
+        "ellos": "oirán"
+      },
+      "conditional": {
+        "yo": "oiría",
+        "tú": "oirías",
+        "él": "oiría",
+        "nosotros": "oiríamos",
+        "vosotros": "oiríais",
+        "ellos": "oirían"
+      },
+      "subjunctive": {
+        "yo": "oiga",
+        "tú": "oigas",
+        "él": "oiga",
+        "nosotros": "oigamos",
+        "vosotros": "oigáis",
+        "ellos": "oigan"
+      },
+      "imperative": {
+        "tú": "oye",
+        "usted": "oiga",
+        "nosotros": "oigamos",
+        "vosotros": "oíd",
+        "ustedes": "oigan"
+      }
+    },
+    "irregular": true
   },
   {
     "id": "el-pa-s",
@@ -12011,12 +12082,12 @@
     "definition": "to toast",
     "conjugations": {
       "present": {
-        "yo": "tosto",
-        "tú": "tostas",
-        "él": "tosta",
+        "yo": "tuesto",
+        "tú": "tuestas",
+        "él": "tuesta",
         "nosotros": "tostamos",
         "vosotros": "tostáis",
-        "ellos": "tostan"
+        "ellos": "tuestan"
       },
       "preterite": {
         "yo": "tosté",
@@ -12051,24 +12122,25 @@
         "ellos": "tostarían"
       },
       "subjunctive": {
-        "yo": "toste",
-        "tú": "tostes",
-        "él": "toste",
+        "yo": "tueste",
+        "tú": "tuestes",
+        "él": "tueste",
         "nosotros": "tostemos",
         "vosotros": "tostéis",
-        "ellos": "tosten"
+        "ellos": "tuesten"
       },
       "imperative": {
-        "tú": "tosta",
-        "usted": "toste",
+        "tú": "tuesta",
+        "usted": "tueste",
         "nosotros": "tostemos",
         "vosotros": "tostad",
-        "ustedes": "tosten"
+        "ustedes": "tuesten"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "ar-verb"
+      "ar-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -12448,9 +12520,9 @@
     "id": "realmente",
     "entry": "realmente",
     "type": "word",
-    "definition": "actually",
+    "definition": "really, truly",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "cuidadoso",
@@ -12823,26 +12895,10 @@
     "source": "linkedin-learning"
   },
   {
-    "id": "o-o",
-    "entry": "o…o",
-    "type": "word",
-    "definition": "either…or",
-    "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
     "id": "tampoco",
     "entry": "tampoco",
     "type": "word",
     "definition": "neither",
-    "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
-    "id": "ni-ni",
-    "entry": "ni…ni",
-    "type": "word",
-    "definition": "neither…nor",
     "tags": [],
     "source": "linkedin-learning"
   },
@@ -13084,9 +13140,9 @@
     "id": "alguno",
     "entry": "alguno",
     "type": "word",
-    "definition": "any, one",
+    "definition": "some, any",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "algunos",
@@ -13630,9 +13686,9 @@
     "id": "les",
     "entry": "les",
     "type": "word",
-    "definition": "to them, to ustedes",
+    "definition": "(to/for) them, you all [indirect object]",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "el-impermeable",
@@ -15269,16 +15325,6 @@
     "source": "linkedin-learning"
   },
   {
-    "id": "el-pl-tano-la-banana-el-banano",
-    "entry": "plátano/la",
-    "type": "phrase",
-    "full_phrase": "el plátano/la banana/el banano",
-    "clue_template": "el ___ banana/el banano: banana",
-    "definition": "banana",
-    "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
     "id": "la-pera",
     "entry": "pera",
     "type": "phrase",
@@ -15531,12 +15577,12 @@
     "definition": "to fly",
     "conjugations": {
       "present": {
-        "yo": "volo",
-        "tú": "volas",
-        "él": "vola",
+        "yo": "vuelo",
+        "tú": "vuelas",
+        "él": "vuela",
         "nosotros": "volamos",
         "vosotros": "voláis",
-        "ellos": "volan"
+        "ellos": "vuelan"
       },
       "preterite": {
         "yo": "volé",
@@ -15571,24 +15617,25 @@
         "ellos": "volarían"
       },
       "subjunctive": {
-        "yo": "vole",
-        "tú": "voles",
-        "él": "vole",
+        "yo": "vuele",
+        "tú": "vueles",
+        "él": "vuele",
         "nosotros": "volemos",
         "vosotros": "voléis",
-        "ellos": "volen"
+        "ellos": "vuelen"
       },
       "imperative": {
-        "tú": "vola",
-        "usted": "vole",
+        "tú": "vuela",
+        "usted": "vuele",
         "nosotros": "volemos",
         "vosotros": "volad",
-        "ustedes": "volen"
+        "ustedes": "vuelen"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "ar-verb"
+      "ar-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -16091,14 +16138,6 @@
     "source": "linkedin-learning"
   },
   {
-    "id": "sumo",
-    "entry": "sumo",
-    "type": "word",
-    "definition": "extreme",
-    "tags": [],
-    "source": "linkedin-learning"
-  },
-  {
     "id": "sumamente",
     "entry": "sumamente",
     "type": "word",
@@ -16415,7 +16454,7 @@
     "definition": "to pick up",
     "conjugations": {
       "present": {
-        "yo": "recogo",
+        "yo": "recojo",
         "tú": "recoges",
         "él": "recoge",
         "nosotros": "recogemos",
@@ -16455,19 +16494,19 @@
         "ellos": "recogerían"
       },
       "subjunctive": {
-        "yo": "recoga",
-        "tú": "recogas",
-        "él": "recoga",
-        "nosotros": "recogamos",
-        "vosotros": "recogáis",
-        "ellos": "recogan"
+        "yo": "recoja",
+        "tú": "recojas",
+        "él": "recoja",
+        "nosotros": "recojamos",
+        "vosotros": "recojáis",
+        "ellos": "recojan"
       },
       "imperative": {
         "tú": "recoge",
-        "usted": "recoga",
-        "nosotros": "recogamos",
+        "usted": "recoja",
+        "nosotros": "recojamos",
         "vosotros": "recoged",
-        "ustedes": "recogan"
+        "ustedes": "recojan"
       }
     },
     "irregular": false,
@@ -17737,12 +17776,12 @@
     "definition": "to ski",
     "conjugations": {
       "present": {
-        "yo": "esquio",
-        "tú": "esquias",
-        "él": "esquia",
+        "yo": "esquío",
+        "tú": "esquías",
+        "él": "esquía",
         "nosotros": "esquiamos",
         "vosotros": "esquiáis",
-        "ellos": "esquian"
+        "ellos": "esquían"
       },
       "preterite": {
         "yo": "esquié",
@@ -17777,24 +17816,25 @@
         "ellos": "esquiarían"
       },
       "subjunctive": {
-        "yo": "esquie",
-        "tú": "esquies",
-        "él": "esquie",
+        "yo": "esquíe",
+        "tú": "esquíes",
+        "él": "esquíe",
         "nosotros": "esquiemos",
         "vosotros": "esquiéis",
-        "ellos": "esquien"
+        "ellos": "esquíen"
       },
       "imperative": {
-        "tú": "esquia",
-        "usted": "esquie",
+        "tú": "esquía",
+        "usted": "esquíe",
         "nosotros": "esquiemos",
         "vosotros": "esquiad",
-        "ustedes": "esquien"
+        "ustedes": "esquíen"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "ar-verb"
+      "ar-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -17803,10 +17843,10 @@
     "entry": "acuático",
     "type": "phrase",
     "full_phrase": "el esquí acuático",
-    "clue_template": "el esquí ___: water skiiing",
-    "definition": "water skiiing",
+    "clue_template": "el esquí ___: water skiing",
+    "definition": "water skiing",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "el-buceo",
@@ -18340,7 +18380,7 @@
     "id": "bajar",
     "entry": "bajar",
     "type": "verb",
-    "definition": "to take down",
+    "definition": "to go down, to take down",
     "conjugations": {
       "present": {
         "yo": "bajo",
@@ -18402,7 +18442,7 @@
     "tags": [
       "ar-verb"
     ],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "avanzar",
@@ -18419,7 +18459,7 @@
         "ellos": "avanzan"
       },
       "preterite": {
-        "yo": "avanzé",
+        "yo": "avancé",
         "tú": "avanzaste",
         "él": "avanzó",
         "nosotros": "avanzamos",
@@ -18451,19 +18491,19 @@
         "ellos": "avanzarían"
       },
       "subjunctive": {
-        "yo": "avanze",
-        "tú": "avanzes",
-        "él": "avanze",
-        "nosotros": "avanzemos",
-        "vosotros": "avanzéis",
-        "ellos": "avanzen"
+        "yo": "avance",
+        "tú": "avances",
+        "él": "avance",
+        "nosotros": "avancemos",
+        "vosotros": "avancéis",
+        "ellos": "avancen"
       },
       "imperative": {
         "tú": "avanza",
-        "usted": "avanze",
-        "nosotros": "avanzemos",
+        "usted": "avance",
+        "nosotros": "avancemos",
         "vosotros": "avanzad",
-        "ustedes": "avanzen"
+        "ustedes": "avancen"
       }
     },
     "irregular": false,
@@ -18777,7 +18817,7 @@
         "ellos": "critican"
       },
       "preterite": {
-        "yo": "criticé",
+        "yo": "critiqué",
         "tú": "criticaste",
         "él": "criticó",
         "nosotros": "criticamos",
@@ -18809,19 +18849,19 @@
         "ellos": "criticarían"
       },
       "subjunctive": {
-        "yo": "critice",
-        "tú": "critices",
-        "él": "critice",
-        "nosotros": "criticemos",
-        "vosotros": "criticéis",
-        "ellos": "criticen"
+        "yo": "critique",
+        "tú": "critiques",
+        "él": "critique",
+        "nosotros": "critiquemos",
+        "vosotros": "critiquéis",
+        "ellos": "critiquen"
       },
       "imperative": {
         "tú": "critica",
-        "usted": "critice",
-        "nosotros": "criticemos",
+        "usted": "critique",
+        "nosotros": "critiquemos",
         "vosotros": "criticad",
-        "ustedes": "criticen"
+        "ustedes": "critiquen"
       }
     },
     "irregular": false,
@@ -18902,7 +18942,7 @@
     "id": "afirmar",
     "entry": "afirmar",
     "type": "verb",
-    "definition": "to declare",
+    "definition": "to state, to affirm",
     "conjugations": {
       "present": {
         "yo": "afirmo",
@@ -18964,7 +19004,7 @@
     "tags": [
       "ar-verb"
     ],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "existir",
@@ -19359,7 +19399,7 @@
     "definition": "to fit",
     "conjugations": {
       "present": {
-        "yo": "cabo",
+        "yo": "quepo",
         "tú": "cabes",
         "él": "cabe",
         "nosotros": "cabemos",
@@ -19367,12 +19407,12 @@
         "ellos": "caben"
       },
       "preterite": {
-        "yo": "cabí",
-        "tú": "cabiste",
-        "él": "cabió",
-        "nosotros": "cabimos",
-        "vosotros": "cabisteis",
-        "ellos": "cabieron"
+        "yo": "cupe",
+        "tú": "cupiste",
+        "él": "cupo",
+        "nosotros": "cupimos",
+        "vosotros": "cupisteis",
+        "ellos": "cupieron"
       },
       "imperfect": {
         "yo": "cabía",
@@ -19383,40 +19423,41 @@
         "ellos": "cabían"
       },
       "future": {
-        "yo": "caberé",
-        "tú": "caberás",
-        "él": "caberá",
-        "nosotros": "caberemos",
-        "vosotros": "caberéis",
-        "ellos": "caberán"
+        "yo": "cabré",
+        "tú": "cabrás",
+        "él": "cabrá",
+        "nosotros": "cabremos",
+        "vosotros": "cabréis",
+        "ellos": "cabrán"
       },
       "conditional": {
-        "yo": "cabería",
-        "tú": "caberías",
-        "él": "cabería",
-        "nosotros": "caberíamos",
-        "vosotros": "caberíais",
-        "ellos": "caberían"
+        "yo": "cabría",
+        "tú": "cabrías",
+        "él": "cabría",
+        "nosotros": "cabríamos",
+        "vosotros": "cabríais",
+        "ellos": "cabrían"
       },
       "subjunctive": {
-        "yo": "caba",
-        "tú": "cabas",
-        "él": "caba",
-        "nosotros": "cabamos",
-        "vosotros": "cabáis",
-        "ellos": "caban"
+        "yo": "quepa",
+        "tú": "quepas",
+        "él": "quepa",
+        "nosotros": "quepamos",
+        "vosotros": "quepáis",
+        "ellos": "quepan"
       },
       "imperative": {
         "tú": "cabe",
-        "usted": "caba",
-        "nosotros": "cabamos",
+        "usted": "quepa",
+        "nosotros": "quepamos",
         "vosotros": "cabed",
-        "ustedes": "caban"
+        "ustedes": "quepan"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "er-verb"
+      "er-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -19435,12 +19476,12 @@
         "ellos": "andan"
       },
       "preterite": {
-        "yo": "andé",
-        "tú": "andaste",
-        "él": "andó",
-        "nosotros": "andamos",
-        "vosotros": "andasteis",
-        "ellos": "andaron"
+        "yo": "anduve",
+        "tú": "anduviste",
+        "él": "anduvo",
+        "nosotros": "anduvimos",
+        "vosotros": "anduvisteis",
+        "ellos": "anduvieron"
       },
       "imperfect": {
         "yo": "andaba",
@@ -19482,9 +19523,10 @@
         "ustedes": "anden"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "ar-verb"
+      "ar-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -19667,20 +19709,20 @@
     "definition": "to run away",
     "conjugations": {
       "present": {
-        "yo": "huo",
-        "tú": "hues",
-        "él": "hue",
+        "yo": "huyo",
+        "tú": "huyes",
+        "él": "huye",
         "nosotros": "huimos",
         "vosotros": "huís",
-        "ellos": "huen"
+        "ellos": "huyen"
       },
       "preterite": {
         "yo": "huí",
         "tú": "huiste",
-        "él": "huió",
+        "él": "huyó",
         "nosotros": "huimos",
         "vosotros": "huisteis",
-        "ellos": "huieron"
+        "ellos": "huyeron"
       },
       "imperfect": {
         "yo": "huía",
@@ -19707,19 +19749,19 @@
         "ellos": "huirían"
       },
       "subjunctive": {
-        "yo": "hua",
-        "tú": "huas",
-        "él": "hua",
-        "nosotros": "huamos",
-        "vosotros": "huáis",
-        "ellos": "huan"
+        "yo": "huya",
+        "tú": "huyas",
+        "él": "huya",
+        "nosotros": "huyamos",
+        "vosotros": "huyáis",
+        "ellos": "huyan"
       },
       "imperative": {
-        "tú": "hue",
-        "usted": "hua",
-        "nosotros": "huamos",
+        "tú": "huye",
+        "usted": "huya",
+        "nosotros": "huyamos",
         "vosotros": "huid",
-        "ustedes": "huan"
+        "ustedes": "huyan"
       }
     },
     "irregular": false,
@@ -19735,20 +19777,20 @@
     "definition": "to include",
     "conjugations": {
       "present": {
-        "yo": "incluo",
-        "tú": "inclues",
-        "él": "inclue",
+        "yo": "incluyo",
+        "tú": "incluyes",
+        "él": "incluye",
         "nosotros": "incluimos",
         "vosotros": "incluís",
-        "ellos": "incluen"
+        "ellos": "incluyen"
       },
       "preterite": {
         "yo": "incluí",
         "tú": "incluiste",
-        "él": "incluió",
+        "él": "incluyó",
         "nosotros": "incluimos",
         "vosotros": "incluisteis",
-        "ellos": "incluieron"
+        "ellos": "incluyeron"
       },
       "imperfect": {
         "yo": "incluía",
@@ -19775,24 +19817,25 @@
         "ellos": "incluirían"
       },
       "subjunctive": {
-        "yo": "inclua",
-        "tú": "incluas",
-        "él": "inclua",
-        "nosotros": "incluamos",
-        "vosotros": "incluáis",
-        "ellos": "incluan"
+        "yo": "incluya",
+        "tú": "incluyas",
+        "él": "incluya",
+        "nosotros": "incluyamos",
+        "vosotros": "incluyáis",
+        "ellos": "incluyan"
       },
       "imperative": {
-        "tú": "inclue",
-        "usted": "inclua",
-        "nosotros": "incluamos",
+        "tú": "incluye",
+        "usted": "incluya",
+        "nosotros": "incluyamos",
         "vosotros": "incluid",
-        "ustedes": "incluan"
+        "ustedes": "incluyan"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "ir-verb"
+      "ir-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -19803,20 +19846,20 @@
     "definition": "to influence",
     "conjugations": {
       "present": {
-        "yo": "influo",
-        "tú": "influes",
-        "él": "influe",
+        "yo": "influyo",
+        "tú": "influyes",
+        "él": "influye",
         "nosotros": "influimos",
         "vosotros": "influís",
-        "ellos": "influen"
+        "ellos": "influyen"
       },
       "preterite": {
         "yo": "influí",
         "tú": "influiste",
-        "él": "influió",
+        "él": "influyó",
         "nosotros": "influimos",
         "vosotros": "influisteis",
-        "ellos": "influieron"
+        "ellos": "influyeron"
       },
       "imperfect": {
         "yo": "influía",
@@ -19843,19 +19886,19 @@
         "ellos": "influirían"
       },
       "subjunctive": {
-        "yo": "influa",
-        "tú": "influas",
-        "él": "influa",
-        "nosotros": "influamos",
-        "vosotros": "influáis",
-        "ellos": "influan"
+        "yo": "influya",
+        "tú": "influyas",
+        "él": "influya",
+        "nosotros": "influyamos",
+        "vosotros": "influyáis",
+        "ellos": "influyan"
       },
       "imperative": {
-        "tú": "influe",
-        "usted": "influa",
-        "nosotros": "influamos",
+        "tú": "influye",
+        "usted": "influya",
+        "nosotros": "influyamos",
         "vosotros": "influid",
-        "ustedes": "influan"
+        "ustedes": "influyan"
       }
     },
     "irregular": false,
@@ -19871,20 +19914,20 @@
     "definition": "to build",
     "conjugations": {
       "present": {
-        "yo": "construo",
-        "tú": "construes",
-        "él": "construe",
+        "yo": "construyo",
+        "tú": "construyes",
+        "él": "construye",
         "nosotros": "construimos",
         "vosotros": "construís",
-        "ellos": "construen"
+        "ellos": "construyen"
       },
       "preterite": {
         "yo": "construí",
         "tú": "construiste",
-        "él": "construió",
+        "él": "construyó",
         "nosotros": "construimos",
         "vosotros": "construisteis",
-        "ellos": "construieron"
+        "ellos": "construyeron"
       },
       "imperfect": {
         "yo": "construía",
@@ -19911,19 +19954,19 @@
         "ellos": "construirían"
       },
       "subjunctive": {
-        "yo": "construa",
-        "tú": "construas",
-        "él": "construa",
-        "nosotros": "construamos",
-        "vosotros": "construáis",
-        "ellos": "construan"
+        "yo": "construya",
+        "tú": "construyas",
+        "él": "construya",
+        "nosotros": "construyamos",
+        "vosotros": "construyáis",
+        "ellos": "construyan"
       },
       "imperative": {
-        "tú": "construe",
-        "usted": "construa",
-        "nosotros": "construamos",
+        "tú": "construye",
+        "usted": "construya",
+        "nosotros": "construyamos",
         "vosotros": "construid",
-        "ustedes": "construan"
+        "ustedes": "construyan"
       }
     },
     "irregular": false,
@@ -19967,7 +20010,7 @@
         "ellos": "organizan"
       },
       "preterite": {
-        "yo": "organizé",
+        "yo": "organicé",
         "tú": "organizaste",
         "él": "organizó",
         "nosotros": "organizamos",
@@ -19999,19 +20042,19 @@
         "ellos": "organizarían"
       },
       "subjunctive": {
-        "yo": "organize",
-        "tú": "organizes",
-        "él": "organize",
-        "nosotros": "organizemos",
-        "vosotros": "organizéis",
-        "ellos": "organizen"
+        "yo": "organice",
+        "tú": "organices",
+        "él": "organice",
+        "nosotros": "organicemos",
+        "vosotros": "organicéis",
+        "ellos": "organicen"
       },
       "imperative": {
         "tú": "organiza",
-        "usted": "organize",
-        "nosotros": "organizemos",
+        "usted": "organice",
+        "nosotros": "organicemos",
         "vosotros": "organizad",
-        "ustedes": "organizen"
+        "ustedes": "organicen"
       }
     },
     "irregular": false,
@@ -20238,23 +20281,23 @@
     "id": "despedir",
     "entry": "despedir",
     "type": "verb",
-    "definition": "to fire",
+    "definition": "to fire (from a job), to see off",
     "conjugations": {
       "present": {
-        "yo": "despedo",
-        "tú": "despedes",
-        "él": "despede",
+        "yo": "despido",
+        "tú": "despides",
+        "él": "despide",
         "nosotros": "despedimos",
         "vosotros": "despedís",
-        "ellos": "despeden"
+        "ellos": "despiden"
       },
       "preterite": {
         "yo": "despedí",
         "tú": "despediste",
-        "él": "despedió",
+        "él": "despidió",
         "nosotros": "despedimos",
         "vosotros": "despedisteis",
-        "ellos": "despedieron"
+        "ellos": "despidieron"
       },
       "imperfect": {
         "yo": "despedía",
@@ -20281,26 +20324,27 @@
         "ellos": "despedirían"
       },
       "subjunctive": {
-        "yo": "despeda",
-        "tú": "despedas",
-        "él": "despeda",
-        "nosotros": "despedamos",
-        "vosotros": "despedáis",
-        "ellos": "despedan"
+        "yo": "despida",
+        "tú": "despidas",
+        "él": "despida",
+        "nosotros": "despidamos",
+        "vosotros": "despidáis",
+        "ellos": "despidan"
       },
       "imperative": {
-        "tú": "despede",
-        "usted": "despeda",
-        "nosotros": "despedamos",
+        "tú": "despide",
+        "usted": "despida",
+        "nosotros": "despidamos",
         "vosotros": "despedid",
-        "ustedes": "despedan"
+        "ustedes": "despidan"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "ir-verb"
+      "ir-verb",
+      "irregular"
     ],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "el-cajero-autom-tico",
@@ -20349,20 +20393,20 @@
     "definition": "to contribute",
     "conjugations": {
       "present": {
-        "yo": "contribuo",
-        "tú": "contribues",
-        "él": "contribue",
+        "yo": "contribuyo",
+        "tú": "contribuyes",
+        "él": "contribuye",
         "nosotros": "contribuimos",
         "vosotros": "contribuís",
-        "ellos": "contribuen"
+        "ellos": "contribuyen"
       },
       "preterite": {
         "yo": "contribuí",
         "tú": "contribuiste",
-        "él": "contribuió",
+        "él": "contribuyó",
         "nosotros": "contribuimos",
         "vosotros": "contribuisteis",
-        "ellos": "contribuieron"
+        "ellos": "contribuyeron"
       },
       "imperfect": {
         "yo": "contribuía",
@@ -20389,19 +20433,19 @@
         "ellos": "contribuirían"
       },
       "subjunctive": {
-        "yo": "contribua",
-        "tú": "contribuas",
-        "él": "contribua",
-        "nosotros": "contribuamos",
-        "vosotros": "contribuáis",
-        "ellos": "contribuan"
+        "yo": "contribuya",
+        "tú": "contribuyas",
+        "él": "contribuya",
+        "nosotros": "contribuyamos",
+        "vosotros": "contribuyáis",
+        "ellos": "contribuyan"
       },
       "imperative": {
-        "tú": "contribue",
-        "usted": "contribua",
-        "nosotros": "contribuamos",
+        "tú": "contribuye",
+        "usted": "contribuya",
+        "nosotros": "contribuyamos",
         "vosotros": "contribuid",
-        "ustedes": "contribuan"
+        "ustedes": "contribuyan"
       }
     },
     "irregular": false,
@@ -20417,20 +20461,20 @@
     "definition": "to destroy",
     "conjugations": {
       "present": {
-        "yo": "destruo",
-        "tú": "destrues",
-        "él": "destrue",
+        "yo": "destruyo",
+        "tú": "destruyes",
+        "él": "destruye",
         "nosotros": "destruimos",
         "vosotros": "destruís",
-        "ellos": "destruen"
+        "ellos": "destruyen"
       },
       "preterite": {
         "yo": "destruí",
         "tú": "destruiste",
-        "él": "destruió",
+        "él": "destruyó",
         "nosotros": "destruimos",
         "vosotros": "destruisteis",
-        "ellos": "destruieron"
+        "ellos": "destruyeron"
       },
       "imperfect": {
         "yo": "destruía",
@@ -20457,19 +20501,19 @@
         "ellos": "destruirían"
       },
       "subjunctive": {
-        "yo": "destrua",
-        "tú": "destruas",
-        "él": "destrua",
-        "nosotros": "destruamos",
-        "vosotros": "destruáis",
-        "ellos": "destruan"
+        "yo": "destruya",
+        "tú": "destruyas",
+        "él": "destruya",
+        "nosotros": "destruyamos",
+        "vosotros": "destruyáis",
+        "ellos": "destruyan"
       },
       "imperative": {
-        "tú": "destrue",
-        "usted": "destrua",
-        "nosotros": "destruamos",
+        "tú": "destruye",
+        "usted": "destruya",
+        "nosotros": "destruyamos",
         "vosotros": "destruid",
-        "ustedes": "destruan"
+        "ustedes": "destruyan"
       }
     },
     "irregular": false,
@@ -20485,7 +20529,7 @@
     "definition": "to fall",
     "conjugations": {
       "present": {
-        "yo": "cao",
+        "yo": "caigo",
         "tú": "caes",
         "él": "cae",
         "nosotros": "caemos",
@@ -20494,11 +20538,11 @@
       },
       "preterite": {
         "yo": "caí",
-        "tú": "caiste",
-        "él": "caió",
-        "nosotros": "caimos",
-        "vosotros": "caisteis",
-        "ellos": "caieron"
+        "tú": "caíste",
+        "él": "cayó",
+        "nosotros": "caímos",
+        "vosotros": "caísteis",
+        "ellos": "cayeron"
       },
       "imperfect": {
         "yo": "caía",
@@ -20525,24 +20569,25 @@
         "ellos": "caerían"
       },
       "subjunctive": {
-        "yo": "caa",
-        "tú": "caas",
-        "él": "caa",
-        "nosotros": "caamos",
-        "vosotros": "caáis",
-        "ellos": "caan"
+        "yo": "caiga",
+        "tú": "caigas",
+        "él": "caiga",
+        "nosotros": "caigamos",
+        "vosotros": "caigáis",
+        "ellos": "caigan"
       },
       "imperative": {
         "tú": "cae",
-        "usted": "caa",
-        "nosotros": "caamos",
+        "usted": "caiga",
+        "nosotros": "caigamos",
         "vosotros": "caed",
-        "ustedes": "caan"
+        "ustedes": "caigan"
       }
     },
-    "irregular": false,
+    "irregular": true,
     "tags": [
-      "er-verb"
+      "er-verb",
+      "irregular"
     ],
     "source": "linkedin-learning"
   },
@@ -20927,7 +20972,7 @@
         "ellos": "descargan"
       },
       "preterite": {
-        "yo": "descargé",
+        "yo": "descargué",
         "tú": "descargaste",
         "él": "descargó",
         "nosotros": "descargamos",
@@ -20959,19 +21004,19 @@
         "ellos": "descargarían"
       },
       "subjunctive": {
-        "yo": "descarge",
-        "tú": "descarges",
-        "él": "descarge",
-        "nosotros": "descargemos",
-        "vosotros": "descargéis",
-        "ellos": "descargen"
+        "yo": "descargue",
+        "tú": "descargues",
+        "él": "descargue",
+        "nosotros": "descarguemos",
+        "vosotros": "descarguéis",
+        "ellos": "descarguen"
       },
       "imperative": {
         "tú": "descarga",
-        "usted": "descarge",
-        "nosotros": "descargemos",
+        "usted": "descargue",
+        "nosotros": "descarguemos",
         "vosotros": "descargad",
-        "ustedes": "descargen"
+        "ustedes": "descarguen"
       }
     },
     "irregular": false,
@@ -21102,13 +21147,13 @@
   },
   {
     "id": "el-tel-fono-celular-el-celular-el-m-vil",
-    "entry": "celular/el",
+    "entry": "celular",
     "type": "phrase",
-    "full_phrase": "el teléfono celular/el celular/el móvil",
-    "clue_template": "el teléfono ___ ___ móvil: cell phone",
+    "full_phrase": "el teléfono celular",
+    "clue_template": "el teléfono ___: cell phone",
     "definition": "cell phone",
     "tags": [],
-    "source": "linkedin-learning"
+    "source": "curated"
   },
   {
     "id": "animar",
@@ -21473,11 +21518,11 @@
     "source": "added-by-user"
   },
   {
-    "id": "la-betabel",
+    "id": "el-betabel",
     "entry": "betabel",
     "type": "phrase",
-    "full_phrase": "la betabel",
-    "clue_template": "la ___: beet",
+    "full_phrase": "el betabel",
+    "clue_template": "el ___: beet (Mex.)",
     "definition": "beet",
     "tags": [
       "noun"
@@ -21549,8 +21594,8 @@
     "entry": "cebollita",
     "type": "phrase",
     "full_phrase": "la cebollita",
-    "clue_template": "la ___: shallot",
-    "definition": "shallot",
+    "clue_template": "la ___: green onion, small onion (Mex.)",
+    "definition": "green onion, small onion",
     "tags": [
       "noun"
     ],
@@ -22011,5 +22056,692 @@
       "noun"
     ],
     "source": "added-by-user"
+  },
+  {
+    "id": "ir",
+    "entry": "ir",
+    "type": "verb",
+    "definition": "to go",
+    "conjugations": {
+      "present": {
+        "yo": "voy",
+        "tú": "vas",
+        "él": "va",
+        "nosotros": "vamos",
+        "vosotros": "vais",
+        "ellos": "van"
+      },
+      "preterite": {
+        "yo": "fui",
+        "tú": "fuiste",
+        "él": "fue",
+        "nosotros": "fuimos",
+        "vosotros": "fuisteis",
+        "ellos": "fueron"
+      },
+      "imperfect": {
+        "yo": "iba",
+        "tú": "ibas",
+        "él": "iba",
+        "nosotros": "íbamos",
+        "vosotros": "ibais",
+        "ellos": "iban"
+      },
+      "future": {
+        "yo": "iré",
+        "tú": "irás",
+        "él": "irá",
+        "nosotros": "iremos",
+        "vosotros": "iréis",
+        "ellos": "irán"
+      },
+      "conditional": {
+        "yo": "iría",
+        "tú": "irías",
+        "él": "iría",
+        "nosotros": "iríamos",
+        "vosotros": "iríais",
+        "ellos": "irían"
+      },
+      "subjunctive": {
+        "yo": "vaya",
+        "tú": "vayas",
+        "él": "vaya",
+        "nosotros": "vayamos",
+        "vosotros": "vayáis",
+        "ellos": "vayan"
+      },
+      "imperative": {
+        "tú": "ve",
+        "usted": "vaya",
+        "nosotros": "vayamos",
+        "vosotros": "id",
+        "ustedes": "vayan"
+      }
+    },
+    "irregular": true,
+    "tags": [
+      "ir-verb",
+      "irregular"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "haber",
+    "entry": "haber",
+    "type": "verb",
+    "definition": "to have (helper verb)",
+    "conjugations": {
+      "present": {
+        "yo": "he",
+        "tú": "has",
+        "él": "ha",
+        "nosotros": "hemos",
+        "vosotros": "habéis",
+        "ellos": "han"
+      },
+      "preterite": {
+        "yo": "hube",
+        "tú": "hubiste",
+        "él": "hubo",
+        "nosotros": "hubimos",
+        "vosotros": "hubisteis",
+        "ellos": "hubieron"
+      },
+      "imperfect": {
+        "yo": "había",
+        "tú": "habías",
+        "él": "había",
+        "nosotros": "habíamos",
+        "vosotros": "habíais",
+        "ellos": "habían"
+      },
+      "future": {
+        "yo": "habré",
+        "tú": "habrás",
+        "él": "habrá",
+        "nosotros": "habremos",
+        "vosotros": "habréis",
+        "ellos": "habrán"
+      },
+      "conditional": {
+        "yo": "habría",
+        "tú": "habrías",
+        "él": "habría",
+        "nosotros": "habríamos",
+        "vosotros": "habríais",
+        "ellos": "habrían"
+      },
+      "subjunctive": {
+        "yo": "haya",
+        "tú": "hayas",
+        "él": "haya",
+        "nosotros": "hayamos",
+        "vosotros": "hayáis",
+        "ellos": "hayan"
+      },
+      "imperative": {
+        "tú": "habe",
+        "usted": "haba",
+        "nosotros": "habamos",
+        "vosotros": "habed",
+        "ustedes": "haban"
+      }
+    },
+    "irregular": true,
+    "tags": [
+      "er-verb",
+      "irregular"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "romper",
+    "entry": "romper",
+    "type": "verb",
+    "definition": "to break",
+    "conjugations": {
+      "present": {
+        "yo": "rompo",
+        "tú": "rompes",
+        "él": "rompe",
+        "nosotros": "rompemos",
+        "vosotros": "rompéis",
+        "ellos": "rompen"
+      },
+      "preterite": {
+        "yo": "rompí",
+        "tú": "rompiste",
+        "él": "rompió",
+        "nosotros": "rompimos",
+        "vosotros": "rompisteis",
+        "ellos": "rompieron"
+      },
+      "imperfect": {
+        "yo": "rompía",
+        "tú": "rompías",
+        "él": "rompía",
+        "nosotros": "rompíamos",
+        "vosotros": "rompíais",
+        "ellos": "rompían"
+      },
+      "future": {
+        "yo": "romperé",
+        "tú": "romperás",
+        "él": "romperá",
+        "nosotros": "romperemos",
+        "vosotros": "romperéis",
+        "ellos": "romperán"
+      },
+      "conditional": {
+        "yo": "rompería",
+        "tú": "romperías",
+        "él": "rompería",
+        "nosotros": "romperíamos",
+        "vosotros": "romperíais",
+        "ellos": "romperían"
+      },
+      "subjunctive": {
+        "yo": "rompa",
+        "tú": "rompas",
+        "él": "rompa",
+        "nosotros": "rompamos",
+        "vosotros": "rompáis",
+        "ellos": "rompan"
+      },
+      "imperative": {
+        "tú": "rompe",
+        "usted": "rompa",
+        "nosotros": "rompamos",
+        "vosotros": "romped",
+        "ustedes": "rompan"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "er-verb"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "cubrir",
+    "entry": "cubrir",
+    "type": "verb",
+    "definition": "to cover",
+    "conjugations": {
+      "present": {
+        "yo": "cubro",
+        "tú": "cubres",
+        "él": "cubre",
+        "nosotros": "cubrimos",
+        "vosotros": "cubrís",
+        "ellos": "cubren"
+      },
+      "preterite": {
+        "yo": "cubrí",
+        "tú": "cubriste",
+        "él": "cubrió",
+        "nosotros": "cubrimos",
+        "vosotros": "cubristeis",
+        "ellos": "cubrieron"
+      },
+      "imperfect": {
+        "yo": "cubría",
+        "tú": "cubrías",
+        "él": "cubría",
+        "nosotros": "cubríamos",
+        "vosotros": "cubríais",
+        "ellos": "cubrían"
+      },
+      "future": {
+        "yo": "cubriré",
+        "tú": "cubrirás",
+        "él": "cubrirá",
+        "nosotros": "cubriremos",
+        "vosotros": "cubriréis",
+        "ellos": "cubrirán"
+      },
+      "conditional": {
+        "yo": "cubriría",
+        "tú": "cubrirías",
+        "él": "cubriría",
+        "nosotros": "cubriríamos",
+        "vosotros": "cubriríais",
+        "ellos": "cubrirían"
+      },
+      "subjunctive": {
+        "yo": "cubra",
+        "tú": "cubras",
+        "él": "cubra",
+        "nosotros": "cubramos",
+        "vosotros": "cubráis",
+        "ellos": "cubran"
+      },
+      "imperative": {
+        "tú": "cubre",
+        "usted": "cubra",
+        "nosotros": "cubramos",
+        "vosotros": "cubrid",
+        "ustedes": "cubran"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ir-verb"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "resolver",
+    "entry": "resolver",
+    "type": "verb",
+    "definition": "to solve, to resolve",
+    "conjugations": {
+      "present": {
+        "yo": "resuelvo",
+        "tú": "resuelves",
+        "él": "resuelve",
+        "nosotros": "resolvemos",
+        "vosotros": "resolvéis",
+        "ellos": "resuelven"
+      },
+      "preterite": {
+        "yo": "resolví",
+        "tú": "resolviste",
+        "él": "resolvió",
+        "nosotros": "resolvimos",
+        "vosotros": "resolvisteis",
+        "ellos": "resolvieron"
+      },
+      "imperfect": {
+        "yo": "resolvía",
+        "tú": "resolvías",
+        "él": "resolvía",
+        "nosotros": "resolvíamos",
+        "vosotros": "resolvíais",
+        "ellos": "resolvían"
+      },
+      "future": {
+        "yo": "resolveré",
+        "tú": "resolverás",
+        "él": "resolverá",
+        "nosotros": "resolveremos",
+        "vosotros": "resolveréis",
+        "ellos": "resolverán"
+      },
+      "conditional": {
+        "yo": "resolvería",
+        "tú": "resolverías",
+        "él": "resolvería",
+        "nosotros": "resolveríamos",
+        "vosotros": "resolveríais",
+        "ellos": "resolverían"
+      },
+      "subjunctive": {
+        "yo": "resuelva",
+        "tú": "resuelvas",
+        "él": "resuelva",
+        "nosotros": "resolvamos",
+        "vosotros": "resolváis",
+        "ellos": "resuelvan"
+      },
+      "imperative": {
+        "tú": "resuelve",
+        "usted": "resuelva",
+        "nosotros": "resolvamos",
+        "vosotros": "resolved",
+        "ustedes": "resuelvan"
+      }
+    },
+    "irregular": true,
+    "tags": [
+      "er-verb",
+      "irregular"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "seguir",
+    "entry": "seguir",
+    "type": "verb",
+    "definition": "to follow, to continue",
+    "conjugations": {
+      "present": {
+        "yo": "sigo",
+        "tú": "sigues",
+        "él": "sigue",
+        "nosotros": "seguimos",
+        "vosotros": "seguís",
+        "ellos": "siguen"
+      },
+      "preterite": {
+        "yo": "seguí",
+        "tú": "seguiste",
+        "él": "siguió",
+        "nosotros": "seguimos",
+        "vosotros": "seguisteis",
+        "ellos": "siguieron"
+      },
+      "imperfect": {
+        "yo": "seguía",
+        "tú": "seguías",
+        "él": "seguía",
+        "nosotros": "seguíamos",
+        "vosotros": "seguíais",
+        "ellos": "seguían"
+      },
+      "future": {
+        "yo": "seguiré",
+        "tú": "seguirás",
+        "él": "seguirá",
+        "nosotros": "seguiremos",
+        "vosotros": "seguiréis",
+        "ellos": "seguirán"
+      },
+      "conditional": {
+        "yo": "seguiría",
+        "tú": "seguirías",
+        "él": "seguiría",
+        "nosotros": "seguiríamos",
+        "vosotros": "seguiríais",
+        "ellos": "seguirían"
+      },
+      "subjunctive": {
+        "yo": "siga",
+        "tú": "sigas",
+        "él": "siga",
+        "nosotros": "sigamos",
+        "vosotros": "sigáis",
+        "ellos": "sigan"
+      },
+      "imperative": {
+        "tú": "sigue",
+        "usted": "siga",
+        "nosotros": "sigamos",
+        "vosotros": "seguid",
+        "ustedes": "sigan"
+      }
+    },
+    "irregular": true,
+    "tags": [
+      "ir-verb",
+      "irregular"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "sentir",
+    "entry": "sentir",
+    "type": "verb",
+    "definition": "to feel",
+    "conjugations": {
+      "present": {
+        "yo": "siento",
+        "tú": "sientes",
+        "él": "siente",
+        "nosotros": "sentimos",
+        "vosotros": "sentís",
+        "ellos": "sienten"
+      },
+      "preterite": {
+        "yo": "sentí",
+        "tú": "sentiste",
+        "él": "sintió",
+        "nosotros": "sentimos",
+        "vosotros": "sentisteis",
+        "ellos": "sintieron"
+      },
+      "imperfect": {
+        "yo": "sentía",
+        "tú": "sentías",
+        "él": "sentía",
+        "nosotros": "sentíamos",
+        "vosotros": "sentíais",
+        "ellos": "sentían"
+      },
+      "future": {
+        "yo": "sentiré",
+        "tú": "sentirás",
+        "él": "sentirá",
+        "nosotros": "sentiremos",
+        "vosotros": "sentiréis",
+        "ellos": "sentirán"
+      },
+      "conditional": {
+        "yo": "sentiría",
+        "tú": "sentirías",
+        "él": "sentiría",
+        "nosotros": "sentiríamos",
+        "vosotros": "sentiríais",
+        "ellos": "sentirían"
+      },
+      "subjunctive": {
+        "yo": "sienta",
+        "tú": "sientas",
+        "él": "sienta",
+        "nosotros": "sintamos",
+        "vosotros": "sintáis",
+        "ellos": "sientan"
+      },
+      "imperative": {
+        "tú": "siente",
+        "usted": "sienta",
+        "nosotros": "sintamos",
+        "vosotros": "sentid",
+        "ustedes": "sientan"
+      }
+    },
+    "irregular": true,
+    "tags": [
+      "ir-verb",
+      "irregular"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "levantar",
+    "entry": "levantar",
+    "type": "verb",
+    "definition": "to lift, to raise",
+    "conjugations": {
+      "present": {
+        "yo": "levanto",
+        "tú": "levantas",
+        "él": "levanta",
+        "nosotros": "levantamos",
+        "vosotros": "levantáis",
+        "ellos": "levantan"
+      },
+      "preterite": {
+        "yo": "levanté",
+        "tú": "levantaste",
+        "él": "levantó",
+        "nosotros": "levantamos",
+        "vosotros": "levantasteis",
+        "ellos": "levantaron"
+      },
+      "imperfect": {
+        "yo": "levantaba",
+        "tú": "levantabas",
+        "él": "levantaba",
+        "nosotros": "levantábamos",
+        "vosotros": "levantabais",
+        "ellos": "levantaban"
+      },
+      "future": {
+        "yo": "levantaré",
+        "tú": "levantarás",
+        "él": "levantará",
+        "nosotros": "levantaremos",
+        "vosotros": "levantaréis",
+        "ellos": "levantarán"
+      },
+      "conditional": {
+        "yo": "levantaría",
+        "tú": "levantarías",
+        "él": "levantaría",
+        "nosotros": "levantaríamos",
+        "vosotros": "levantaríais",
+        "ellos": "levantarían"
+      },
+      "subjunctive": {
+        "yo": "levante",
+        "tú": "levantes",
+        "él": "levante",
+        "nosotros": "levantemos",
+        "vosotros": "levantéis",
+        "ellos": "levanten"
+      },
+      "imperative": {
+        "tú": "levanta",
+        "usted": "levante",
+        "nosotros": "levantemos",
+        "vosotros": "levantad",
+        "ustedes": "levanten"
+      }
+    },
+    "irregular": false,
+    "tags": [
+      "ar-verb"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "llover",
+    "entry": "llover",
+    "type": "verb",
+    "definition": "to rain",
+    "conjugations": {
+      "present": {
+        "yo": "lluevo",
+        "tú": "llueves",
+        "él": "llueve",
+        "nosotros": "llovemos",
+        "vosotros": "llovéis",
+        "ellos": "llueven"
+      },
+      "preterite": {
+        "yo": "lloví",
+        "tú": "lloviste",
+        "él": "llovió",
+        "nosotros": "llovimos",
+        "vosotros": "llovisteis",
+        "ellos": "llovieron"
+      },
+      "imperfect": {
+        "yo": "llovía",
+        "tú": "llovías",
+        "él": "llovía",
+        "nosotros": "llovíamos",
+        "vosotros": "llovíais",
+        "ellos": "llovían"
+      },
+      "future": {
+        "yo": "lloveré",
+        "tú": "lloverás",
+        "él": "lloverá",
+        "nosotros": "lloveremos",
+        "vosotros": "lloveréis",
+        "ellos": "lloverán"
+      },
+      "conditional": {
+        "yo": "llovería",
+        "tú": "lloverías",
+        "él": "llovería",
+        "nosotros": "lloveríamos",
+        "vosotros": "lloveríais",
+        "ellos": "lloverían"
+      },
+      "subjunctive": {
+        "yo": "llueva",
+        "tú": "lluevas",
+        "él": "llueva",
+        "nosotros": "llovamos",
+        "vosotros": "llováis",
+        "ellos": "lluevan"
+      },
+      "imperative": {
+        "tú": "llueve",
+        "usted": "llueva",
+        "nosotros": "llovamos",
+        "vosotros": "lloved",
+        "ustedes": "lluevan"
+      }
+    },
+    "irregular": true,
+    "tags": [
+      "er-verb",
+      "irregular"
+    ],
+    "source": "cuaderno"
+  },
+  {
+    "id": "nevar",
+    "entry": "nevar",
+    "type": "verb",
+    "definition": "to snow",
+    "conjugations": {
+      "present": {
+        "yo": "nievo",
+        "tú": "nievas",
+        "él": "nieva",
+        "nosotros": "nevamos",
+        "vosotros": "neváis",
+        "ellos": "nievan"
+      },
+      "preterite": {
+        "yo": "nevé",
+        "tú": "nevaste",
+        "él": "nevó",
+        "nosotros": "nevamos",
+        "vosotros": "nevasteis",
+        "ellos": "nevaron"
+      },
+      "imperfect": {
+        "yo": "nevaba",
+        "tú": "nevabas",
+        "él": "nevaba",
+        "nosotros": "nevábamos",
+        "vosotros": "nevabais",
+        "ellos": "nevaban"
+      },
+      "future": {
+        "yo": "nevaré",
+        "tú": "nevarás",
+        "él": "nevará",
+        "nosotros": "nevaremos",
+        "vosotros": "nevaréis",
+        "ellos": "nevarán"
+      },
+      "conditional": {
+        "yo": "nevaría",
+        "tú": "nevarías",
+        "él": "nevaría",
+        "nosotros": "nevaríamos",
+        "vosotros": "nevaríais",
+        "ellos": "nevarían"
+      },
+      "subjunctive": {
+        "yo": "nieve",
+        "tú": "nieves",
+        "él": "nieve",
+        "nosotros": "nevemos",
+        "vosotros": "nevéis",
+        "ellos": "nieven"
+      },
+      "imperative": {
+        "tú": "nieva",
+        "usted": "nieve",
+        "nosotros": "nevemos",
+        "vosotros": "nevad",
+        "ustedes": "nieven"
+      }
+    },
+    "irregular": true,
+    "tags": [
+      "ar-verb",
+      "irregular"
+    ],
+    "source": "cuaderno"
   }
 ]

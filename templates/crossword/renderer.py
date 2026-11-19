@@ -68,16 +68,52 @@ def _draw_cell_numbers(c, placed_words, origin_x, origin_y, cell_size):
         c.drawString(x, y, str(num))
 
 
-def _draw_clues(c, placed_words, area_x, area_y, area_w, area_h):
-    """
-    Draw ACROSS and DOWN clues in two columns.
-    area_y is the TOP of the clue area in ReportLab coords.
-    """
+CLUE_FONT_STEPS = (7, 6.5, 6)   # shrink clue text before the grid gets tiny
+MIN_CELL = 15                    # pt; smallest grid cell worth writing in
+_CLUE_INDENT = "00. "
+
+
+def _wrap_clue(c, number, clue, width, size):
+    """Wrap 'N. clue' to width; continuation lines hang under the clue text."""
+    indent = c.stringWidth(_CLUE_INDENT, "Helvetica", size)
+    lines, cur, avail = [], f"{number}.", width
+    for word in clue.split():
+        trial = f"{cur} {word}"
+        if c.stringWidth(trial, "Helvetica", size) <= avail:
+            cur = trial
+            continue
+        lines.append(cur)
+        cur, avail = word, width - indent
+        while c.stringWidth(cur, "Helvetica", size) > avail and len(cur) > 1:
+            cur = cur[:-2] + "…"
+    lines.append(cur)
+    return lines
+
+
+def _clue_columns(placed_words):
     across = sorted([pw for pw in placed_words if pw.direction == "across"], key=lambda pw: pw.number)
     down   = sorted([pw for pw in placed_words if pw.direction == "down"],   key=lambda pw: pw.number)
+    return across, down
 
+
+def _clue_block_height(c, placed_words, col_w, size):
+    line_h = size + 1.5
+    tallest = 0
+    for column in _clue_columns(placed_words):
+        n = sum(len(_wrap_clue(c, pw.number, pw.clue, col_w - 4, size)) for pw in column)
+        tallest = max(tallest, n)
+    return LABEL_FONT + 1 + line_h + 1 + tallest * line_h
+
+
+def _draw_clues(c, placed_words, area_x, area_y, area_w, area_h, size=CLUE_FONT):
+    """
+    Draw ACROSS and DOWN clues in two columns, wrapping long clues.
+    area_y is the TOP of the clue area in ReportLab coords.
+    """
+    across, down = _clue_columns(placed_words)
     col_w = area_w / 2
-    line_h = CLUE_FONT + 1.5
+    line_h = size + 1.5
+    indent = c.stringWidth(_CLUE_INDENT, "Helvetica", size)
 
     def _draw_column(clue_list, col_x, header):
         c.setFont("Helvetica-Bold", LABEL_FONT)
@@ -87,18 +123,32 @@ def _draw_clues(c, placed_words, area_x, area_y, area_w, area_h):
         c.setLineWidth(0.3)
         c.line(col_x, y - 1, col_x + col_w - 4, y - 1)
         y -= line_h + 1
-        c.setFont("Helvetica", CLUE_FONT)
+        c.setFont("Helvetica", size)
         for pw in clue_list:
-            if y < area_y - area_h:
-                break
-            text = f"{pw.number}. {pw.clue}"
-            while c.stringWidth(text, "Helvetica", CLUE_FONT) > col_w - 4:
-                text = text[:-2] + "…"
-            c.drawString(col_x, y, text)
-            y -= line_h
+            for i, line in enumerate(_wrap_clue(c, pw.number, pw.clue, col_w - 4, size)):
+                if y < area_y - area_h:
+                    return
+                c.drawString(col_x + (indent if i else 0), y, line)
+                y -= line_h
 
     _draw_column(across, area_x, "ACROSS")
     _draw_column(down, area_x + col_w, "DOWN")
+
+
+def puzzle_layout(c, puzzle_result):
+    """Return (cell_size, clue_font): the largest grid that leaves room for
+    every wrapped clue, shrinking clue text before going below MIN_CELL."""
+    gs = puzzle_result.grid_size
+    usable_w = PAGE_W - 2 * MARGIN
+    header_y = PAGE_H - MARGIN - HEADER_FONT
+    avail_h = (header_y - 6) - 6 - MARGIN          # grid top → bottom margin, minus gap
+    col_w = usable_w / 2
+    for size in CLUE_FONT_STEPS:
+        need = _clue_block_height(c, puzzle_result.placed_words, col_w, size)
+        cell = min(22, usable_w / gs, (avail_h - need) / gs)
+        if cell >= MIN_CELL:
+            return cell, size
+    return MIN_CELL, CLUE_FONT_STEPS[-1]
 
 
 def draw_puzzle_page(c, puzzle_result, puzzle_num: int, size_label: str, difficulty: str):
@@ -112,9 +162,7 @@ def draw_puzzle_page(c, puzzle_result, puzzle_num: int, size_label: str, difficu
     header_y = PAGE_H - MARGIN - HEADER_FONT
     c.drawCentredString(PAGE_W / 2, header_y, header)
 
-    usable_w = PAGE_W - 2 * MARGIN
-    _max_grid_h = PAGE_H - MARGIN - HEADER_FONT - 10 - 80  # header + gap + min clue area
-    cell_size = min(usable_w / gs, _max_grid_h / gs, 22)
+    cell_size, clue_font = puzzle_layout(c, puzzle_result)
     grid_w = cell_size * gs
     grid_h = cell_size * gs  # same value — grid is square
     grid_x = (PAGE_W - grid_w) / 2
@@ -127,7 +175,7 @@ def draw_puzzle_page(c, puzzle_result, puzzle_num: int, size_label: str, difficu
     clue_h = clue_top - MARGIN
     _draw_clues(c, puzzle_result.placed_words,
                 area_x=MARGIN, area_y=clue_top,
-                area_w=PAGE_W - 2 * MARGIN, area_h=clue_h)
+                area_w=PAGE_W - 2 * MARGIN, area_h=clue_h, size=clue_font)
 
 
 def draw_solution_page(c, puzzle_result, puzzle_num: int):
