@@ -132,3 +132,44 @@ def test_word_termination_constraint():
         assert after is None, (
             f"'{pw.entry}' ({pw.direction}) at ({pw.row},{pw.col}) has letter after it"
         )
+
+
+# --- Crossword review 2026-11-18: balanced mix, one form per verb ---
+from templates.crossword.generator import _pick_working
+
+
+def _fake_pool():
+    pool = [{"entry": f"voc{i:03d}", "clue": "c", "source_id": f"v{i}", "kind": "vocab"} for i in range(300)]
+    pool += [{"entry": f"verb{i:03d}", "clue": "c", "source_id": f"verb{i // 10}", "kind": "verb"} for i in range(300)]
+    pool += [{"entry": f"con{i:03d}", "clue": "c", "source_id": f"c{i}", "kind": "connector"} for i in range(40)]
+    return pool
+
+
+def test_pick_working_respects_mix():
+    import random
+    random.seed(1)
+    picked = _pick_working(_fake_pool(), 40, {"vocab": 0.5, "verb": 0.25, "connector": 0.25})
+    kinds = [c["kind"] for c in picked]
+    assert kinds.count("connector") == 10
+    assert kinds.count("vocab") >= 20
+
+
+def test_pick_working_one_candidate_per_source():
+    import random
+    random.seed(2)
+    picked = _pick_working(_fake_pool(), 60, {"verb": 1.0})
+    sources = [c["source_id"] for c in picked]
+    assert len(sources) == len(set(sources))
+
+
+def test_real_puzzle_has_one_form_per_verb():
+    import json, random
+    from templates.crossword.template import _VOCAB_PATH, _DIFFICULTY_CONFIG
+    from templates.crossword.clues import build_candidate_pool
+    with open(_VOCAB_PATH, encoding="utf-8") as f:
+        pool = build_candidate_pool(json.load(f), "hard")
+    random.seed(3)
+    cfg = _DIFFICULTY_CONFIG["hard"]
+    result = generate_puzzle(pool, cfg["grid_size"], cfg["target"], mix=cfg["mix"])
+    sources = [pw.source_id for pw in result.placed_words]
+    assert len(sources) == len(set(sources))

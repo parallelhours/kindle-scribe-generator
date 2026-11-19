@@ -159,3 +159,93 @@ def test_get_all_conjugations_returns_all_tenses():
     assert set(result.keys()) == tenses
     assert result["present"]["yo"] == "hablo"
     assert result["imperative"]["tú"] == "habla"
+
+
+# --- Spelling-change and stem-change rules (crossword review 2026-11-18) ---
+import pytest
+from templates.crossword.conjugator import (
+    IRREGULAR_VERBS, STEM_CHANGES, _conjugate_regular, SUBJECTS, TENSES,
+)
+
+
+@pytest.mark.parametrize("verb,tense,subject,expected", [
+    # -car → qu before e
+    ("tocar", "preterite", "yo", "toqué"),
+    ("tocar", "subjunctive", "nosotros", "toquemos"),
+    ("indicar", "imperative", "usted", "indique"),
+    ("explicar", "preterite", "yo", "expliqué"),
+    ("criticar", "subjunctive", "ellos", "critiquen"),
+    # -gar → gu before e
+    ("descargar", "preterite", "yo", "descargué"),
+    ("descargar", "subjunctive", "yo", "descargue"),
+    # -zar → c before e
+    ("organizar", "preterite", "yo", "organicé"),
+    ("avanzar", "subjunctive", "nosotros", "avancemos"),
+    # -ger/-gir → j before a/o
+    ("recoger", "present", "yo", "recojo"),
+    ("recoger", "subjunctive", "él", "recoja"),
+    # -uir → y
+    ("huir", "present", "yo", "huyo"),
+    ("huir", "preterite", "él", "huyó"),
+    ("huir", "preterite", "ellos", "huyeron"),
+    ("huir", "present", "nosotros", "huimos"),
+    ("construir", "present", "ellos", "construyen"),
+    ("destruir", "subjunctive", "yo", "destruya"),
+    ("contribuir", "imperative", "tú", "contribuye"),
+    ("influir", "preterite", "ellos", "influyeron"),
+    # -eer / -aer → y in 3rd-person preterite, accented í elsewhere
+    ("creer", "preterite", "él", "creyó"),
+    ("creer", "preterite", "ellos", "creyeron"),
+    ("creer", "preterite", "tú", "creíste"),
+    ("creer", "preterite", "nosotros", "creímos"),
+    ("caer", "preterite", "él", "cayó"),
+    ("caer", "present", "yo", "caigo"),
+    ("caer", "subjunctive", "nosotros", "caigamos"),
+    ("caer", "imperative", "usted", "caiga"),
+    # stem changers added
+    ("volar", "present", "yo", "vuelo"),
+    ("volar", "present", "nosotros", "volamos"),
+    ("tostar", "subjunctive", "él", "tueste"),
+    ("despedir", "present", "yo", "despido"),
+    ("despedir", "preterite", "ellos", "despidieron"),
+    ("despedir", "subjunctive", "nosotros", "despidamos"),
+    # true irregulars added
+    ("caber", "present", "yo", "quepo"),
+    ("caber", "preterite", "él", "cupo"),
+    ("caber", "future", "yo", "cabré"),
+    ("caber", "subjunctive", "yo", "quepa"),
+    ("andar", "preterite", "yo", "anduve"),
+    ("andar", "preterite", "ellos", "anduvieron"),
+    ("esquiar", "present", "yo", "esquío"),
+    ("esquiar", "present", "nosotros", "esquiamos"),
+    ("esquiar", "subjunctive", "ellos", "esquíen"),
+    ("oír", "present", "yo", "oigo"),
+    ("oír", "present", "él", "oye"),
+    ("oír", "preterite", "ellos", "oyeron"),
+    ("oír", "imperative", "usted", "oiga"),
+])
+def test_spelling_and_stem_rules(verb, tense, subject, expected):
+    assert conjugate(verb, tense, subject) == expected
+
+
+def test_stem_change_rules_reproduce_hand_tables():
+    """The rule engine, ignoring the hand tables, must agree with every
+    hand-written stem-changer table (the tables are the known-good data)."""
+    checked = 0
+    for verb in STEM_CHANGES:
+        table = IRREGULAR_VERBS.get(verb)
+        if not table:
+            continue
+        for tense, forms in table.items():
+            for subject, form in forms.items():
+                assert _conjugate_regular(verb, tense, subject) == form, (verb, tense, subject)
+                checked += 1
+    assert checked > 200
+
+
+def test_regular_verbs_unaffected_by_rules():
+    assert conjugate("hablar", "preterite", "yo") == "hablé"
+    assert conjugate("comer", "preterite", "él") == "comió"
+    assert conjugate("vivir", "present", "yo") == "vivo"
+    assert conjugate("pasear", "preterite", "yo") == "paseé"
+    assert conjugate("leer", "preterite", "él") == "leyó"

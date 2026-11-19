@@ -54,12 +54,104 @@ _REGULAR = {
 _FUTURE_CONDITIONAL_TENSES = {"future", "conditional"}
 
 
+# Stem-changing verbs: "ie" (e→ie), "ue" (o→ue), "i" (e→i, -ir only).
+# -ir verbs also take the weak change (e→i, o→u) in the 3rd-person preterite,
+# nosotros/vosotros subjunctive and the nosotros command.
+STEM_CHANGES = {
+    # e → ie
+    "pensar": "ie", "cerrar": "ie", "comenzar": "ie", "empezar": "ie",
+    "entender": "ie", "perder": "ie", "mentir": "ie", "preferir": "ie",
+    "sentir": "ie", "despertar": "ie", "divertir": "ie", "recomendar": "ie",
+    "nevar": "ie",
+    # o → ue
+    "volver": "ue", "devolver": "ue", "resolver": "ue", "encontrar": "ue",
+    "recordar": "ue", "mostrar": "ue", "almorzar": "ue", "costar": "ue",
+    "dormir": "ue", "morir": "ue", "volar": "ue", "tostar": "ue",
+    "acostar": "ue", "llover": "ue", "probar": "ue", "soñar": "ue",
+    # e → i
+    "pedir": "i", "servir": "i", "repetir": "i", "corregir": "i",
+    "seguir": "i", "despedir": "i", "vestir": "i", "elegir": "i",
+}
+
+_BOOT = {
+    "present":     {"yo", "tú", "él", "ellos"},
+    "subjunctive": {"yo", "tú", "él", "ellos"},
+    "imperative":  {"tú", "usted", "ustedes"},
+}
+_WEAK_IR = {
+    "preterite":   {"él", "ellos"},
+    "subjunctive": {"nosotros", "vosotros"},
+    "imperative":  {"nosotros"},
+}
+_STRONG_CHANGE = {"ie": ("e", "ie"), "ue": ("o", "ue"), "i": ("e", "i")}
+_WEAK_CHANGE   = {"ie": ("e", "i"),  "ue": ("o", "u"),  "i": ("e", "i")}
+_VOWELS = "aeiouáéíóú"
+_UNACCENT = str.maketrans("áéíóú", "aeiou")
+
+
+def _replace_last(stem, old, new):
+    i = stem.rfind(old)
+    return stem if i < 0 else stem[:i] + new + stem[i + 1:]
+
+
+def _apply_stem_change(stem, kind, ending, tense, subject):
+    if subject in _BOOT.get(tense, ()):
+        return _replace_last(stem, *_STRONG_CHANGE[kind])
+    if ending == "ir" and subject in _WEAK_IR.get(tense, ()):
+        return _replace_last(stem, *_WEAK_CHANGE[kind])
+    return stem
+
+
+_EER_PRETERITE = {"ió": "yó", "ieron": "yeron", "iste": "íste",
+                  "imos": "ímos", "isteis": "ísteis"}
+
+
+def _orthography(stem, ending, tense, suffix):
+    """Spelling changes that keep the consonant sound (or add y)."""
+    first = suffix[0].translate(_UNACCENT)
+    if ending == "ar":
+        if first == "e":
+            if stem.endswith("c"):
+                stem = stem[:-1] + "qu"      # tocar → toqué
+            elif stem.endswith("g"):
+                stem = stem + "u"            # llegar → llegué
+            elif stem.endswith("z"):
+                stem = stem[:-1] + "c"       # organizar → organicé
+        return stem, suffix
+    if first in "ao":
+        if ending == "ir" and stem.endswith("gu"):
+            stem = stem[:-1]                 # seguir → sigo
+        elif stem.endswith("g"):
+            stem = stem[:-1] + "j"           # recoger → recojo
+        elif len(stem) > 1 and stem.endswith("c") and stem[-2] in _VOWELS:
+            stem = stem[:-1] + "zc"          # conocer → conozco
+    if ending == "ir" and stem.endswith("u") and not stem.endswith(("gu", "qu")):
+        if suffix == "ió":                   # huir → huyó
+            suffix = "yó"
+        elif suffix.startswith("ie"):        # huir → huyeron
+            suffix = "y" + suffix[1:]
+        elif first != "i":                   # huir → huyo, huya
+            stem = stem + "y"
+    if ending == "er" and stem[-1:] in ("a", "e", "o") and tense == "preterite":
+        suffix = _EER_PRETERITE.get(suffix, suffix)   # creer → creyó, creíste
+    return stem, suffix
+
+
 def _conjugate_regular(infinitive, tense, subject):
     stem, ending = _stem(infinitive)
-    endings = _REGULAR[ending][tense]
+    suffix = _REGULAR[ending][tense][subject]
     if tense in _FUTURE_CONDITIONAL_TENSES:
-        return infinitive + endings[subject]
-    return stem + endings[subject]
+        return infinitive + suffix
+    kind = STEM_CHANGES.get(infinitive)
+    if kind:
+        stem = _apply_stem_change(stem, kind, ending, tense, subject)
+    stem, suffix = _orthography(stem, ending, tense, suffix)
+    return stem + suffix
+
+
+def is_irregular(infinitive: str) -> bool:
+    """Irregular or stem-changing (spelling-only changes count as regular)."""
+    return infinitive in IRREGULAR_VERBS or infinitive in STEM_CHANGES
 
 
 # ── Irregular verbs ───────────────────────────────────────────────────────────
@@ -393,6 +485,38 @@ IRREGULAR_VERBS = {
         "preterite":   _t(["busqué",  "buscaste", "buscó",   "buscamos",  "buscasteis","buscaron"]),
         "subjunctive": _t(["busque",  "busques",  "busque",  "busquemos", "busquéis",  "busquen"]),
         "imperative":  _i(["busca",   "busque",   "busquemos","buscad",   "busquen"]),
+    },
+    "caber": {
+        "present":     _t(["quepo",   "cabes",    "cabe",    "cabemos",   "cabéis",    "caben"]),
+        "preterite":   _t(["cupe",    "cupiste",  "cupo",    "cupimos",   "cupisteis", "cupieron"]),
+        "future":      _t(["cabré",   "cabrás",   "cabrá",   "cabremos",  "cabréis",   "cabrán"]),
+        "conditional": _t(["cabría",  "cabrías",  "cabría",  "cabríamos", "cabríais",  "cabrían"]),
+        "subjunctive": _t(["quepa",   "quepas",   "quepa",   "quepamos",  "quepáis",   "quepan"]),
+        "imperative":  _i(["cabe",    "quepa",    "quepamos","cabed",     "quepan"]),
+    },
+    "andar": {
+        "preterite":   _t(["anduve",  "anduviste","anduvo",  "anduvimos", "anduvisteis","anduvieron"]),
+    },
+    # caer: preterite (cayó, caíste) comes from the -aer spelling rule.
+    "caer": {
+        "present":     _t(["caigo",   "caes",     "cae",     "caemos",    "caéis",     "caen"]),
+        "subjunctive": _t(["caiga",   "caigas",   "caiga",   "caigamos",  "caigáis",   "caigan"]),
+        "imperative":  _i(["cae",     "caiga",    "caigamos","caed",      "caigan"]),
+    },
+    "esquiar": {
+        "present":     _t(["esquío",  "esquías",  "esquía",  "esquiamos", "esquiáis",  "esquían"]),
+        "subjunctive": _t(["esquíe",  "esquíes",  "esquíe",  "esquiemos", "esquiéis",  "esquíen"]),
+        "imperative":  _i(["esquía",  "esquíe",   "esquiemos","esquiad",  "esquíen"]),
+    },
+    # oír ends in -ír, so every tense is listed.
+    "oír": {
+        "present":     _t(["oigo",    "oyes",     "oye",     "oímos",     "oís",       "oyen"]),
+        "preterite":   _t(["oí",      "oíste",    "oyó",     "oímos",     "oísteis",   "oyeron"]),
+        "imperfect":   _t(["oía",     "oías",     "oía",     "oíamos",    "oíais",     "oían"]),
+        "future":      _t(["oiré",    "oirás",    "oirá",    "oiremos",   "oiréis",    "oirán"]),
+        "conditional": _t(["oiría",   "oirías",   "oiría",   "oiríamos",  "oiríais",   "oirían"]),
+        "subjunctive": _t(["oiga",    "oigas",    "oiga",    "oigamos",   "oigáis",    "oigan"]),
+        "imperative":  _i(["oye",     "oiga",     "oigamos", "oíd",       "oigan"]),
     },
     "llegar": {
         "preterite":   _t(["llegué",  "llegaste", "llegó",   "llegamos",  "llegasteis","llegaron"]),

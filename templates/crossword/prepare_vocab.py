@@ -13,7 +13,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parents[2]))
 
-from templates.crossword.conjugator import get_all_conjugations
+from templates.crossword.conjugator import get_all_conjugations, is_irregular
 
 _VOCAB_PATH = Path(__file__).parent / "vocabulary.json"
 
@@ -57,7 +57,7 @@ def build_vocab_entry(term: str, definition: str, source: str) -> dict:
             "type": "verb",
             "definition": definition,
             "conjugations": get_all_conjugations(term),
-            "irregular": term in _get_irregular_set(),
+            "irregular": is_irregular(term),
             "tags": _infer_verb_tags(term),
             "source": source,
         }
@@ -86,9 +86,36 @@ def build_vocab_entry(term: str, definition: str, source: str) -> dict:
     }
 
 
-def _get_irregular_set():
-    from templates.crossword.conjugator import IRREGULAR_VERBS
-    return set(IRREGULAR_VERBS.keys())
+# Entries removed during curation (vosotros-only words, broken source rows,
+# proper names). Kept out when vocabulary.json is rebuilt from --source.
+REMOVED_IDS = {
+    "vosotros", "vosotras", "vuestro-s----vuestra-s-", "-c-mo-est--carla-",
+    "el-pl-tano-la-banana-el-banano", "sumo", "o-o", "ni-ni", "-no-", "-cierto-",
+}
+
+# Sources whose entries survive a rebuild from --source. "curated" marks a
+# source entry corrected by hand; it replaces the rebuilt entry with its id.
+# "cuaderno" marks verbs added so the crossword covers the notebook.
+_PRESERVED_SOURCES = ("added-by-user", "curated", "cuaderno")
+
+
+def reconjugate(vocab: list) -> int:
+    """Recompute conjugations, irregular flag and tags for every verb entry
+    from the conjugator. Returns how many entries changed."""
+    changed = 0
+    for item in vocab:
+        if item.get("type") != "verb":
+            continue
+        inf = item["entry"]
+        new = {
+            "conjugations": get_all_conjugations(inf),
+            "irregular": is_irregular(inf),
+            "tags": _infer_verb_tags(inf),
+        }
+        if any(item.get(k) != v for k, v in new.items()):
+            item.update(new)
+            changed += 1
+    return changed
 
 
 def _infer_verb_tags(infinitive: str) -> list:
@@ -99,23 +126,33 @@ def _infer_verb_tags(infinitive: str) -> list:
         tags.append("er-verb")
     elif infinitive.endswith("ir"):
         tags.append("ir-verb")
-    if infinitive in _get_irregular_set():
+    if is_irregular(infinitive):
         tags.append("irregular")
     return tags
 
 
 def validate_vocab(vocab: list) -> list:
-    """Return list of error strings. Empty list means valid."""
+    """Return list of error strings. Empty list means valid.
+
+    The same answer may appear under different types (e.g. the word
+    "verdad" = right? and the phrase "la verdad" = truth) — they give
+    different clues. Verb infinitives may be short: their forms are used.
+    """
+    from templates.crossword.clues import normalize_answer
     errors = []
     seen_entries = {}
     for item in vocab:
         entry = item.get("entry", "")
-        if len(entry) < 3:
+        kind = item.get("type")
+        if len(entry) < 3 and kind != "verb":
             errors.append(f"[{item.get('id')}] entry '{entry}' below minimum length of 3")
-        if entry in seen_entries:
-            errors.append(f"Duplicate entry '{entry}': ids {seen_entries[entry]} and {item.get('id')}")
+        if normalize_answer(entry) is None:
+            errors.append(f"[{item.get('id')}] entry '{entry}' is not a single word of letters")
+        key = (entry.lower(), kind)
+        if key in seen_entries:
+            errors.append(f"Duplicate entry '{entry}': ids {seen_entries[key]} and {item.get('id')}")
         else:
-            seen_entries[entry] = item.get("id")
+            seen_entries[key] = item.get("id")
     return errors
 
 
@@ -152,7 +189,19 @@ def main():
     parser.add_argument("--out", default=str(_VOCAB_PATH), help="Output path")
     parser.add_argument("--existing", default=str(_VOCAB_PATH), help="Path to existing vocabulary.json to preserve user-added entries from")
     parser.add_argument("--validate", action="store_true", help="Validate existing vocabulary.json")
+    parser.add_argument("--reconjugate", action="store_true",
+                        help="Recompute every verb's conjugations from conjugator.py (after fixing the conjugator)")
     args = parser.parse_args()
+
+    if args.reconjugate:
+        with open(args.out, encoding="utf-8") as f:
+            vocab = json.load(f)
+        n = reconjugate(vocab)
+        with open(args.out, "w", encoding="utf-8") as f:
+            json.dump(vocab, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        print(f"Reconjugated {n} verb entries in {args.out}")
+        return
 
     if args.validate:
         with open(args.out, encoding="utf-8") as f:
@@ -174,9 +223,12 @@ def main():
     if existing_path.exists():
         with open(existing_path, encoding="utf-8") as f:
             existing = json.load(f)
-        preserved = [e for e in existing if e.get("source") == "added-by-user"]
+        preserved = [e for e in existing if e.get("source") in _PRESERVED_SOURCES]
 
-    entries = squash(args.source, args.out)
+    entries = [e for e in squash(args.source, args.out) if e["id"] not in REMOVED_IDS]
+    curated = {e["id"]: e for e in preserved if e.get("source") == "curated"}
+    entries = [curated.pop(e["id"], e) for e in entries]
+    preserved = [e for e in preserved if e.get("source") != "curated"] + list(curated.values())
 
     # Merge preserved entries, skipping any whose entry string already appears
     existing_entry_strings = {e["entry"] for e in entries}
